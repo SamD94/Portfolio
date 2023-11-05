@@ -1,0 +1,58 @@
+@font-face {
+  font-family: new-rodin;
+  src: url(./FOT-NewRodinProDB.otf);
+}
+:root {
+  --background: rgb(51, 51, 51);
+  --dominant: rgba(0, 194, 55, 0.5);
+  --secondary: rgba(0, 210, 105, 0.5);
+  --accent: rgb(13, 10, 253);
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 10px;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1 {
+  text-align: center;
+}
+h2, p {
+  margin: 10px;
+}
+html {
+  height: 100%;
+}
+body {
+  font-family: new-rodin;
+  background-color: var(--background);
+  color: white;
+}
+i {
+  font-size: 2rem;
+  padding: 10px;
+}
+.col {
+  margin: 1em;
+  background-color: var(--secondary);
+  border-radius: 1em;
+}
+.footer, nav {
+  background-color: var(--dominant);
+}
+.navbar-brand {
+  margin: 10px;
+}
+.navbar-toggler {
+  margin: 10px;
+}
+.nav-item {
+  color: var(--accent);
+}
+.main-row {
+  background-color: rgba(102, 102, 102, 0.5);
+  border-radius: 1em;
+}

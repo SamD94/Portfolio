@@ -1,0 +1,1142 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		91754CC79D3B4DC7AEBD0A51 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 4078081FCCFE40528D75BD48 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				9913CAE862D87C0A303C41FB /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				91E8A91D664B4E4EBC911682 /* PBXTargetDependency */,
+				D2C1188B39814269BC3D7DF0 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+		9EBBB3F661FC41B082FC8989 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E53602C6D3BC422686C2F954 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				C59ED1910572D812A0061AE2 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		ACE9AD7F64BC42E4A826EDAB /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = CDD39D1B087C47ADB509F39C /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				2AAFF7E01711415DACF1F961 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		AD626F25C0584D9BB39E101E /* sandbox_autogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A4D7D21D0D374E9AB9B332F8 /* Build configuration list for PBXAggregateTarget "sandbox_autogen" */;
+			buildPhases = (
+				261E8553E146E794C5D2D277 /* Generate CMakeFiles/sandbox_autogen */,
+			);
+			dependencies = (
+				CC31027136C4427FA94BCA25 /* PBXTargetDependency */,
+			);
+			name = sandbox_autogen;
+			productName = sandbox_autogen;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		02A28617C31F48F0B9A9734C /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.cpp */ = {isa = PBXBuildFile; fileRef = 7625DDBE6016482E86ED7B36 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.cpp */; };
+		533A8E5B0A1F42F5A377F01B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/main.cpp */ = {isa = PBXBuildFile; fileRef = B91472B2213A424884EDA3F8 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/main.cpp */; };
+		88762ED6999142CE98A048FA /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.h */ = {isa = PBXBuildFile; fileRef = C1551DD3CCC24E94AF8FB654 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.h */; };
+		90320B65BE134F49B4EA44A6 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/mocs_compilation.cpp */ = {isa = PBXBuildFile; fileRef = 3F6442F0956C4DCDAFCB0A90 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/mocs_compilation.cpp */; };
+		968BA447A6764A6082D113A4 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox.dir/Info.plist */ = {isa = PBXBuildFile; fileRef = 6E33CADFE0D24B30A9D80EB2 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox.dir/Info.plist */; };
+		B729B8356467457F8A5BC6F2 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.ui */ = {isa = PBXBuildFile; fileRef = 15ADE9DCF48A4A9B92B0E03A /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.ui */; };
+		BA3825CD46F042989CEB1924 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 280457E2B82A4A7299F4FE8C /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/CMakeLists.txt */; };
+		BBCA11DA5D644187A2C1647E /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/sandbox/LaunchScreen.storyboard */ = {isa = PBXBuildFile; fileRef = 783E60C2D2ED4335AE53945B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/sandbox/LaunchScreen.storyboard */; };
+		C294FB84DD0043C991B0C059 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include/ui_mainwindow.h */ = {isa = PBXBuildFile; fileRef = 15D6A62D794F4DD89E5A4601 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include/ui_mainwindow.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		362317575DCB4949987F94DB /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		41B49297EB2848C29D2F4AC6 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		6414F9D08D8F4844B18291D4 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		BD6ECA99F86C4CA081F10804 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		04F93EBEFF254782BA9D8B90 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9058DB1AA38842669EBE85D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 214EC6F1F6DF46369C1E0776;
+			remoteInfo = sandbox;
+		};
+		438580E68BB84CD9B3375C10 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9058DB1AA38842669EBE85D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EBBB3F661FC41B082FC8989;
+			remoteInfo = ZERO_CHECK;
+		};
+		56D2F133946144038ACF60D0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9058DB1AA38842669EBE85D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AD626F25C0584D9BB39E101E;
+			remoteInfo = sandbox_autogen;
+		};
+		8F53AE426E974F0596CE55A5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9058DB1AA38842669EBE85D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91754CC79D3B4DC7AEBD0A51;
+			remoteInfo = ALL_BUILD;
+		};
+		A9C52A2B71604C9BADEDF442 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9058DB1AA38842669EBE85D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EBBB3F661FC41B082FC8989;
+			remoteInfo = ZERO_CHECK;
+		};
+		F65CC47ED81541A9AE9B5088 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9058DB1AA38842669EBE85D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EBBB3F661FC41B082FC8989;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		15ADE9DCF48A4A9B92B0E03A /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.ui */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = mainwindow.ui; path = mainwindow.ui; sourceTree = SOURCE_ROOT; };
+		15D6A62D794F4DD89E5A4601 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include/ui_mainwindow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ui_mainwindow.h; path = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include/ui_mainwindow.h"; sourceTree = "<absolute>"; };
+		280457E2B82A4A7299F4FE8C /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		3F6442F0956C4DCDAFCB0A90 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/mocs_compilation.cpp"; sourceTree = "<absolute>"; };
+		582000DF56A840AEA3CC724C /* sandbox */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = sandbox; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AAC7F5482B148C7B775EF6C /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		6E33CADFE0D24B30A9D80EB2 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox.dir/Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; name = Info.plist; path = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox.dir/Info.plist"; sourceTree = "<absolute>"; };
+		7625DDBE6016482E86ED7B36 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mainwindow.cpp; path = mainwindow.cpp; sourceTree = SOURCE_ROOT; };
+		783E60C2D2ED4335AE53945B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/sandbox/LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/sandbox/LaunchScreen.storyboard"; sourceTree = "<absolute>"; };
+		9676C34A32164A77B29B34E7 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		B91472B2213A424884EDA3F8 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		C1551DD3CCC24E94AF8FB654 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mainwindow.h; path = mainwindow.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F23577BFD418470AA1618D21 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CB4D82205744F8F89633B46 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				783E60C2D2ED4335AE53945B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/sandbox/LaunchScreen.storyboard */,
+				6E33CADFE0D24B30A9D80EB2 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox.dir/Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		158395C7666144269843A31D /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				26F49EDC8D0D488384583FD6 /* CMake Rules */,
+				5AAC7F5482B148C7B775EF6C /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		26F49EDC8D0D488384583FD6 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		4DCAC2DFDB1F485A892BE477 /* sandbox */ = {
+			isa = PBXGroup;
+			children = (
+				6C84DCE9FBAA46508CB74360 /* Source Files */,
+				D55EC6654FA74E21BDF0F4B0 /* Header Files */,
+				0CB4D82205744F8F89633B46 /* Resources */,
+				280457E2B82A4A7299F4FE8C /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/CMakeLists.txt */,
+				15ADE9DCF48A4A9B92B0E03A /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.ui */,
+			);
+			name = sandbox;
+			sourceTree = "<group>";
+		};
+		596C1C3F1946495ABC0D2497 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				582000DF56A840AEA3CC724C /* sandbox */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6C84DCE9FBAA46508CB74360 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F6442F0956C4DCDAFCB0A90 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/mocs_compilation.cpp */,
+				B91472B2213A424884EDA3F8 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/main.cpp */,
+				7625DDBE6016482E86ED7B36 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		B094E77433C643AF8FF74A24 /* sandbox_autogen */ = {
+			isa = PBXGroup;
+			children = (
+				DF1DC52B251445148B110680 /* CMake Rules */,
+				9676C34A32164A77B29B34E7 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/CMakeLists.txt */,
+			);
+			name = sandbox_autogen;
+			sourceTree = "<group>";
+		};
+		D55EC6654FA74E21BDF0F4B0 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				15D6A62D794F4DD89E5A4601 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include/ui_mainwindow.h */,
+				C1551DD3CCC24E94AF8FB654 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		DF1DC52B251445148B110680 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		F6943B25C0714E0E82B05736 = {
+			isa = PBXGroup;
+			children = (
+				4DCAC2DFDB1F485A892BE477 /* sandbox */,
+				B094E77433C643AF8FF74A24 /* sandbox_autogen */,
+				158395C7666144269843A31D /* ALL_BUILD */,
+				596C1C3F1946495ABC0D2497 /* Products */,
+				FE113B05367D4E998C9AC944 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FE113B05367D4E998C9AC944 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		214EC6F1F6DF46369C1E0776 /* sandbox */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F763B690FFA84C7186FC23C6 /* Build configuration list for PBXNativeTarget "sandbox" */;
+			buildPhases = (
+				9DFA455018474BF892C76800 /* Resources */,
+				67B9F21706274E79A5ECA7C2 /* Sources */,
+				F23577BFD418470AA1618D21 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EAAC236055E7449BB6EFD1BB /* PBXTargetDependency */,
+				33E6054654B74873ADDBF271 /* PBXTargetDependency */,
+			);
+			name = sandbox;
+			productName = sandbox;
+			productReference = 582000DF56A840AEA3CC724C /* sandbox */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9058DB1AA38842669EBE85D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1420;
+			};
+			buildConfigurationList = 211B2614BE834E54994D6F12 /* Build configuration list for PBXProject "sandbox" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				6414F9D08D8F4844B18291D4 /* Debug */,
+				BD6ECA99F86C4CA081F10804 /* Release */,
+				41B49297EB2848C29D2F4AC6 /* MinSizeRel */,
+				362317575DCB4949987F94DB /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = F6943B25C0714E0E82B05736;
+			projectDirPath = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox";
+			projectRoot = "";
+			targets = (
+				91754CC79D3B4DC7AEBD0A51 /* ALL_BUILD */,
+				9EBBB3F661FC41B082FC8989 /* ZERO_CHECK */,
+				ACE9AD7F64BC42E4A826EDAB /* install */,
+				214EC6F1F6DF46369C1E0776 /* sandbox */,
+				AD626F25C0584D9BB39E101E /* sandbox_autogen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		261E8553E146E794C5D2D277 /* Generate CMakeFiles/sandbox_autogen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/sandbox_autogen";
+			outputPaths = (
+"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox_autogen","/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include_Debug/ui_mainwindow.h","/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include_MinSizeRel/ui_mainwindow.h","/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include_RelWithDebInfo/ui_mainwindow.h","/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include_Release/ui_mainwindow.h","/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/mocs_compilation.cpp"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox_autogen.dir/AutogenInfo.json Debug
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox_autogen.dir/AutogenInfo.json Release
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox_autogen.dir/AutogenInfo.json MinSizeRel
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox_autogen.dir/AutogenInfo.json RelWithDebInfo
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		2CFE1A058342A97BAD527E62 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		87AF4882E018677E2624B544 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9913CAE862D87C0A303C41FB /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		C59ED1910572D812A0061AE2 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  make -f /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  make -f /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  make -f /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS
+  make -f /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9DFA455018474BF892C76800 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBCA11DA5D644187A2C1647E /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/sandbox/LaunchScreen.storyboard */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		67B9F21706274E79A5ECA7C2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90320B65BE134F49B4EA44A6 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/mocs_compilation.cpp */,
+				533A8E5B0A1F42F5A377F01B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/main.cpp */,
+				02A28617C31F48F0B9A9734C /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/sandbox/mainwindow.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2AAFF7E01711415DACF1F961 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 91754CC79D3B4DC7AEBD0A51 /* ALL_BUILD */;
+			targetProxy = 8F53AE426E974F0596CE55A5 /* PBXContainerItemProxy */;
+		};
+		33E6054654B74873ADDBF271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EBBB3F661FC41B082FC8989 /* ZERO_CHECK */;
+			targetProxy = 438580E68BB84CD9B3375C10 /* PBXContainerItemProxy */;
+		};
+		91E8A91D664B4E4EBC911682 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EBBB3F661FC41B082FC8989 /* ZERO_CHECK */;
+			targetProxy = A9C52A2B71604C9BADEDF442 /* PBXContainerItemProxy */;
+		};
+		CC31027136C4427FA94BCA25 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EBBB3F661FC41B082FC8989 /* ZERO_CHECK */;
+			targetProxy = F65CC47ED81541A9AE9B5088 /* PBXContainerItemProxy */;
+		};
+		D2C1188B39814269BC3D7DF0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 214EC6F1F6DF46369C1E0776 /* sandbox */;
+			targetProxy = 04F93EBEFF254782BA9D8B90 /* PBXContainerItemProxy */;
+		};
+		EAAC236055E7449BB6EFD1BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AD626F25C0584D9BB39E101E /* sandbox_autogen */;
+			targetProxy = 56D2F133946144038ACF60D0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		043932F7896C4C3CBDBA65F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		20CD26DFB6BF44F799CEF532 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		26F0E20385774153B48ACE0D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				DEVELOPMENT_TEAM = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/build";
+			};
+			name = RelWithDebInfo;
+		};
+		2AA07411554C4A9CA27FDD1E /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include_RelWithDebInfo","$(inherited)");
+				INFOPLIST_FILE = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox.dir/Info.plist";
+				INSTALL_PATH = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-DQT_QML_DEBUG        -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = ("'-Wl,-e,_qt_main_wrapper' -Wl,-headerpad_max_install_names","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QGifPlugin_init/QGifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QICNSPlugin_init/QICNSPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QICOPlugin_init/QICOPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/platforms/objects-Debug/QIOSIntegrationPlugin_init/QIOSIntegrationPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QJpegPlugin_init/QJpegPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QMacHeifPlugin_init/QMacHeifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QMacJp2Plugin_init/QMacJp2Plugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QPdfPlugin_init/QPdfPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/iconengines/objects-Debug/QSvgIconPlugin_init/QSvgIconPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QSvgPlugin_init/QSvgPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QTgaPlugin_init/QTgaPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QTiffPlugin_init/QTiffPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QWbmpPlugin_init/QWbmpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QWebpPlugin_init/QWebpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_1/.rcc/qrc_qstyle.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_2/.rcc/qrc_qstyle1.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_3/.rcc/qrc_qmessagebox.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Gui_resources_1/.rcc/qrc_qpdf.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Gui_resources_2/.rcc/qrc_gui_shaders.cpp.o",/Applications/Qt/6.6.0/ios/lib/libQt6Core.a,/Applications/Qt/6.6.0/ios/lib/libQt6Widgets.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqgif.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqicns.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqico.a,/Applications/Qt/6.6.0/ios/plugins/platforms/libqios.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqjpeg.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacheif.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacjp2.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqpdf.a,/Applications/Qt/6.6.0/ios/plugins/iconengines/libqsvgicon.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqsvg.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtga.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtiff.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwbmp.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwebp.a,"-framework AudioToolbox","-framework QuartzCore",/Applications/Qt/6.6.0/ios/lib/libQt6OpenGL.a,"-framework AssetsLibrary","-framework UniformTypeIdentifiers","-framework Photos",/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibjpeg.a,/Applications/Qt/6.6.0/ios/lib/libQt6Pdf.a,/Applications/Qt/6.6.0/ios/lib/libQt6Network.a,"-framework Security","-framework CFNetwork","-framework SystemConfiguration",/Applications/Qt/6.6.0/ios/lib/libQt6Svg.a,/Applications/Qt/6.6.0/ios/lib/libQt6Gui.a,"-framework CoreGraphics","-framework ImageIO",/Applications/Qt/6.6.0/ios/lib/libQt6Core.a,"-framework IOKit","-framework CoreFoundation","-lm",/Applications/Qt/6.6.0/ios/lib/libQt6BundledPcre2.a,"-framework MobileCoreServices","-framework OpenGLES","-framework CoreText","-framework Foundation","-framework UIKit","-framework Metal",/Applications/Qt/6.6.0/ios/lib/libQt6BundledHarfbuzz.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledFreetype.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibpng.a,"-lz","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sandbox;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Applications/Qt/6.6.0/ios/include/QtCore,/Applications/Qt/6.6.0/ios/include,"/Applications/Qt/6.6.0/ios/mkspecs/macx-ios-clang",/Applications/Qt/6.6.0/ios/include/QtWidgets,/Applications/Qt/6.6.0/ios/include/QtGui,"$(inherited)");
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		3142B069F2CD4C78ABA93082 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sandbox_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		4933913B47BF4538B6A5B493 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		4A3CA11D38B143BBB9E4AB1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include_Release","$(inherited)");
+				INFOPLIST_FILE = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox.dir/Info.plist";
+				INSTALL_PATH = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-DQT_QML_DEBUG     -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = ("'-Wl,-e,_qt_main_wrapper' -Wl,-headerpad_max_install_names","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QGifPlugin_init/QGifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QICNSPlugin_init/QICNSPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QICOPlugin_init/QICOPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/platforms/objects-Release/QIOSIntegrationPlugin_init/QIOSIntegrationPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QJpegPlugin_init/QJpegPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QMacHeifPlugin_init/QMacHeifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QMacJp2Plugin_init/QMacJp2Plugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QPdfPlugin_init/QPdfPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/iconengines/objects-Release/QSvgIconPlugin_init/QSvgIconPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QSvgPlugin_init/QSvgPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QTgaPlugin_init/QTgaPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QTiffPlugin_init/QTiffPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QWbmpPlugin_init/QWbmpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QWebpPlugin_init/QWebpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Release/Widgets_resources_1/.rcc/qrc_qstyle.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Release/Widgets_resources_2/.rcc/qrc_qstyle1.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Release/Widgets_resources_3/.rcc/qrc_qmessagebox.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Release/Gui_resources_1/.rcc/qrc_qpdf.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Release/Gui_resources_2/.rcc/qrc_gui_shaders.cpp.o",/Applications/Qt/6.6.0/ios/lib/libQt6Core.a,/Applications/Qt/6.6.0/ios/lib/libQt6Widgets.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqgif.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqicns.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqico.a,/Applications/Qt/6.6.0/ios/plugins/platforms/libqios.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqjpeg.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacheif.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacjp2.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqpdf.a,/Applications/Qt/6.6.0/ios/plugins/iconengines/libqsvgicon.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqsvg.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtga.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtiff.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwbmp.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwebp.a,"-framework AudioToolbox","-framework QuartzCore",/Applications/Qt/6.6.0/ios/lib/libQt6OpenGL.a,"-framework AssetsLibrary","-framework UniformTypeIdentifiers","-framework Photos",/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibjpeg.a,/Applications/Qt/6.6.0/ios/lib/libQt6Pdf.a,/Applications/Qt/6.6.0/ios/lib/libQt6Network.a,"-framework Security","-framework CFNetwork","-framework SystemConfiguration",/Applications/Qt/6.6.0/ios/lib/libQt6Svg.a,/Applications/Qt/6.6.0/ios/lib/libQt6Gui.a,"-framework CoreGraphics","-framework ImageIO",/Applications/Qt/6.6.0/ios/lib/libQt6Core.a,"-framework IOKit","-framework CoreFoundation","-lm",/Applications/Qt/6.6.0/ios/lib/libQt6BundledPcre2.a,"-framework MobileCoreServices","-framework OpenGLES","-framework CoreText","-framework Foundation","-framework UIKit","-framework Metal",/Applications/Qt/6.6.0/ios/lib/libQt6BundledHarfbuzz.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledFreetype.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibpng.a,"-lz","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sandbox;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Applications/Qt/6.6.0/ios/include/QtCore,/Applications/Qt/6.6.0/ios/include,"/Applications/Qt/6.6.0/ios/mkspecs/macx-ios-clang",/Applications/Qt/6.6.0/ios/include/QtWidgets,/Applications/Qt/6.6.0/ios/include/QtGui,"$(inherited)");
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		5F9E2ED8DBE84853966FD98C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		6FA7AB6E209F486095C56D3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				DEVELOPMENT_TEAM = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/build";
+			};
+			name = Debug;
+		};
+		72B8BDF8985247BDB50389FA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sandbox_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		755CF446C4EF4B9EA1CC3BC2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		7CE28DD7BEA14252AB376009 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				DEVELOPMENT_TEAM = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/build";
+			};
+			name = Release;
+		};
+		82A4A5DB468742D9A2B2608E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				DEVELOPMENT_TEAM = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/build";
+			};
+			name = MinSizeRel;
+		};
+		83CBBB6FB007491ABE0118FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		84E86EC4683A4C619C1C822D /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		98A8DE4635E2446F840510B1 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		9CCBC7C2743E4FC9A067000A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include_Debug","$(inherited)");
+				INFOPLIST_FILE = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox.dir/Info.plist";
+				INSTALL_PATH = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-DQT_QML_DEBUG    '-std=gnu++17' ";
+				OTHER_LDFLAGS = ("'-Wl,-e,_qt_main_wrapper' -Wl,-headerpad_max_install_names","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QGifPlugin_init/QGifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QICNSPlugin_init/QICNSPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QICOPlugin_init/QICOPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/platforms/objects-Debug/QIOSIntegrationPlugin_init/QIOSIntegrationPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QJpegPlugin_init/QJpegPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QMacHeifPlugin_init/QMacHeifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QMacJp2Plugin_init/QMacJp2Plugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QPdfPlugin_init/QPdfPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/iconengines/objects-Debug/QSvgIconPlugin_init/QSvgIconPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QSvgPlugin_init/QSvgPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QTgaPlugin_init/QTgaPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QTiffPlugin_init/QTiffPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QWbmpPlugin_init/QWbmpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QWebpPlugin_init/QWebpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_1/.rcc/qrc_qstyle.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_2/.rcc/qrc_qstyle1.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_3/.rcc/qrc_qmessagebox.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Gui_resources_1/.rcc/qrc_qpdf.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Gui_resources_2/.rcc/qrc_gui_shaders.cpp.o",/Applications/Qt/6.6.0/ios/lib/libQt6Core_debug.a,/Applications/Qt/6.6.0/ios/lib/libQt6Widgets_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqgif_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqicns_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqico_debug.a,/Applications/Qt/6.6.0/ios/plugins/platforms/libqios_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqjpeg_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacheif_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacjp2_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqpdf_debug.a,/Applications/Qt/6.6.0/ios/plugins/iconengines/libqsvgicon_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqsvg_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtga_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtiff_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwbmp_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwebp_debug.a,"-framework AudioToolbox","-framework QuartzCore",/Applications/Qt/6.6.0/ios/lib/libQt6OpenGL_debug.a,"-framework AssetsLibrary","-framework UniformTypeIdentifiers","-framework Photos",/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibjpeg_debug.a,/Applications/Qt/6.6.0/ios/lib/libQt6Pdf_debug.a,/Applications/Qt/6.6.0/ios/lib/libQt6Network_debug.a,"-framework Security","-framework CFNetwork","-framework SystemConfiguration",/Applications/Qt/6.6.0/ios/lib/libQt6Svg_debug.a,/Applications/Qt/6.6.0/ios/lib/libQt6Gui_debug.a,"-framework CoreGraphics","-framework ImageIO",/Applications/Qt/6.6.0/ios/lib/libQt6Core_debug.a,"-framework IOKit","-framework CoreFoundation","-lm",/Applications/Qt/6.6.0/ios/lib/libQt6BundledPcre2_debug.a,"-framework MobileCoreServices","-framework OpenGLES","-framework CoreText","-framework Foundation","-framework UIKit","-framework Metal",/Applications/Qt/6.6.0/ios/lib/libQt6BundledHarfbuzz_debug.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledFreetype_debug.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibpng_debug.a,"-lz","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sandbox;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Applications/Qt/6.6.0/ios/include/QtCore,/Applications/Qt/6.6.0/ios/include,"/Applications/Qt/6.6.0/ios/mkspecs/macx-ios-clang",/Applications/Qt/6.6.0/ios/include/QtWidgets,/Applications/Qt/6.6.0/ios/include/QtGui,"$(inherited)");
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		BDFCB3841BDF4C889BDA7100 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C7B9BADC74024720AF40CE84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sandbox_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		D1A7426DEFD44C6489E80A8B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sandbox_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		EFA6474A6DBE486DA9772DA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		F10367D2A6B64616BF183DC2 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F88C2FF0E7BE41808CAB153E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/sandbox_autogen/include_MinSizeRel","$(inherited)");
+				INFOPLIST_FILE = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox.dir/Info.plist";
+				INSTALL_PATH = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-DQT_QML_DEBUG     -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = ("'-Wl,-e,_qt_main_wrapper' -Wl,-headerpad_max_install_names","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QGifPlugin_init/QGifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QICNSPlugin_init/QICNSPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QICOPlugin_init/QICOPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/platforms/objects-Debug/QIOSIntegrationPlugin_init/QIOSIntegrationPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QJpegPlugin_init/QJpegPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QMacHeifPlugin_init/QMacHeifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QMacJp2Plugin_init/QMacJp2Plugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QPdfPlugin_init/QPdfPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/iconengines/objects-Debug/QSvgIconPlugin_init/QSvgIconPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QSvgPlugin_init/QSvgPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QTgaPlugin_init/QTgaPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QTiffPlugin_init/QTiffPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QWbmpPlugin_init/QWbmpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QWebpPlugin_init/QWebpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_1/.rcc/qrc_qstyle.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_2/.rcc/qrc_qstyle1.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_3/.rcc/qrc_qmessagebox.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Gui_resources_1/.rcc/qrc_qpdf.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Gui_resources_2/.rcc/qrc_gui_shaders.cpp.o",/Applications/Qt/6.6.0/ios/lib/libQt6Core.a,/Applications/Qt/6.6.0/ios/lib/libQt6Widgets.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqgif.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqicns.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqico.a,/Applications/Qt/6.6.0/ios/plugins/platforms/libqios.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqjpeg.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacheif.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacjp2.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqpdf.a,/Applications/Qt/6.6.0/ios/plugins/iconengines/libqsvgicon.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqsvg.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtga.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtiff.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwbmp.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwebp.a,"-framework AudioToolbox","-framework QuartzCore",/Applications/Qt/6.6.0/ios/lib/libQt6OpenGL.a,"-framework AssetsLibrary","-framework UniformTypeIdentifiers","-framework Photos",/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibjpeg.a,/Applications/Qt/6.6.0/ios/lib/libQt6Pdf.a,/Applications/Qt/6.6.0/ios/lib/libQt6Network.a,"-framework Security","-framework CFNetwork","-framework SystemConfiguration",/Applications/Qt/6.6.0/ios/lib/libQt6Svg.a,/Applications/Qt/6.6.0/ios/lib/libQt6Gui.a,"-framework CoreGraphics","-framework ImageIO",/Applications/Qt/6.6.0/ios/lib/libQt6Core.a,"-framework IOKit","-framework CoreFoundation","-lm",/Applications/Qt/6.6.0/ios/lib/libQt6BundledPcre2.a,"-framework MobileCoreServices","-framework OpenGLES","-framework CoreText","-framework Foundation","-framework UIKit","-framework Metal",/Applications/Qt/6.6.0/ios/lib/libQt6BundledHarfbuzz.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledFreetype.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibpng.a,"-lz","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = sandbox;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Applications/Qt/6.6.0/ios/include/QtCore,/Applications/Qt/6.6.0/ios/include,"/Applications/Qt/6.6.0/ios/mkspecs/macx-ios-clang",/Applications/Qt/6.6.0/ios/include/QtWidgets,/Applications/Qt/6.6.0/ios/include/QtGui,"$(inherited)");
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		F8F44603D35344EB83547D6A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		211B2614BE834E54994D6F12 /* Build configuration list for PBXProject "sandbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6FA7AB6E209F486095C56D3A /* Debug */,
+				7CE28DD7BEA14252AB376009 /* Release */,
+				82A4A5DB468742D9A2B2608E /* MinSizeRel */,
+				26F0E20385774153B48ACE0D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		4078081FCCFE40528D75BD48 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F9E2ED8DBE84853966FD98C /* Debug */,
+				F8F44603D35344EB83547D6A /* Release */,
+				BDFCB3841BDF4C889BDA7100 /* MinSizeRel */,
+				98A8DE4635E2446F840510B1 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A4D7D21D0D374E9AB9B332F8 /* Build configuration list for PBXAggregateTarget "sandbox_autogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D1A7426DEFD44C6489E80A8B /* Debug */,
+				C7B9BADC74024720AF40CE84 /* Release */,
+				3142B069F2CD4C78ABA93082 /* MinSizeRel */,
+				72B8BDF8985247BDB50389FA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		CDD39D1B087C47ADB509F39C /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4933913B47BF4538B6A5B493 /* Debug */,
+				043932F7896C4C3CBDBA65F2 /* Release */,
+				F10367D2A6B64616BF183DC2 /* MinSizeRel */,
+				84E86EC4683A4C619C1C822D /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E53602C6D3BC422686C2F954 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83CBBB6FB007491ABE0118FB /* Debug */,
+				EFA6474A6DBE486DA9772DA1 /* Release */,
+				20CD26DFB6BF44F799CEF532 /* MinSizeRel */,
+				755CF446C4EF4B9EA1CC3BC2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F763B690FFA84C7186FC23C6 /* Build configuration list for PBXNativeTarget "sandbox" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9CCBC7C2743E4FC9A067000A /* Debug */,
+				4A3CA11D38B143BBB9E4AB1F /* Release */,
+				F88C2FF0E7BE41808CAB153E /* MinSizeRel */,
+				2AA07411554C4A9CA27FDD1E /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9058DB1AA38842669EBE85D5 /* Project object */;
+}

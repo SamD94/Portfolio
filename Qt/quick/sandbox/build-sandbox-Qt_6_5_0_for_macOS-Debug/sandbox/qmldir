@@ -1,0 +1,5 @@
+module sandbox
+typeinfo appsandbox.qmltypes
+prefer :/sandbox/
+Main 1.0 Main.qml
+

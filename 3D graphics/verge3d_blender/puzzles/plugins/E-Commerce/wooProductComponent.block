@@ -1,0 +1,66 @@
+<template
+    color="#d4af37"
+    inline="true"
+    output="Number String Dictionary"
+
+    tooltip="Get WooCommerce product component."
+>
+    <value name="NAME" type="String">
+        <label>product component</label>
+    </value>
+
+    <dummy align="right">
+        <dropdown name="PARAM">
+            <option name="NAME">product name</option>
+            <option name="SKU">sku</option>
+            <option name="QUANTITY">quantity</option>
+            <option name="TYPE">type</option>
+            <option name="WEIGHT">weight</option>
+            <option name="WIDTH">width</option>
+            <option name="HEIGHT">height</option>
+            <option name="LENGTH">length</option>
+            <option name="ATTRIBUTES">attributes</option>
+            <option name="TITLE">component title</option>
+            <option name="ID">component id</option>
+        </dropdown>
+    </dummy>
+
+</template>
+
+<script>
+function template(block) {
+    block.setHelpUrl(Plug.getPuzzlesDocUrl('ECommerce.html#woo_product_component'));
+}
+
+function code(block) {
+    const name = Blockly.JavaScript.valueToCode(block, 'NAME', Blockly.JavaScript.ORDER_NONE) || '\'\'';
+    const param = block.getFieldValue('PARAM').toLowerCase();
+
+    const fun = Plug.provide('wooProductComponent', function(name, param) {
+        // wooProductComponent puzzle
+        const nameID = name.toLowerCase();
+        const components = _pGlob.wooProductInfo.components;
+
+        if (!components)
+            return;
+
+        // search for ID first
+        for (let i = 0; i < components.length; i++) {
+            const component = components[i];
+            if (String(component.id).toLowerCase() == nameID)
+                return component[param];
+        }
+
+        // search for title if not found
+        for (let i = 0; i < components.length; i++) {
+            const component = components[i];
+            if (component.title.toLowerCase() == nameID)
+                return component[param];
+        }
+
+        return;
+    });
+
+    return [`${fun}(${name}, '${param}')`, Blockly.JavaScript.ORDER_FUNCTION_CALL];
+}
+</script>

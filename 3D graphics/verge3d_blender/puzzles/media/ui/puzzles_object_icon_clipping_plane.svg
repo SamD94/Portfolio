@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="16"
+   height="16"
+   viewBox="0 0 4.2333334 4.2333334"
+   version="1.1"
+   id="svg38348"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   sodipodi:docname="puzzles_object_icon_clipping_plane.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview38350"
+     pagecolor="#505050"
+     bordercolor="#eeeeee"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="px"
+     showgrid="false"
+     inkscape:zoom="45.254834"
+     inkscape:cx="9.534893"
+     inkscape:cy="9.8553007"
+     inkscape:window-width="1920"
+     inkscape:window-height="1177"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs38345" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect17018"
+       style="color:#000000;fill:#4fb1b6;stroke-width:0.984011;stroke-linecap:round;stroke-linejoin:round;-inkscape-stroke:none;paint-order:fill markers stroke"
+       d="M 1.2514508,2.8247746e-5 C 1.1016359,0.00150346 0.92804415,0.06685737 0.81929304,0.16700599 0.65357697,0.31961343 0.59090682,0.54533766 0.59090681,0.81312275 V 2.776957 c 0,0.2044167 0.0944222,0.4008502 0.23035135,0.5171463 0.13592907,0.1162962 0.28665914,0.1773585 0.45358364,0.2496745 l 1.476181,0.6381698 C 2.9585896,4.2718706 3.2202652,4.2453526 3.3927522,4.0899086 3.5652392,3.9344641 3.6424266,3.696886 3.6424266,3.4171606 V 1.4528181 c 0,-0.2231237 -0.12066,-0.4184436 -0.259336,-0.53240146 C 3.2444145,0.80645887 3.0942425,0.74480787 2.9584915,0.68599727 L 1.4823106,0.04630192 C 1.4084795,0.01431652 1.3299253,-7.4448225e-4 1.2514508,2.8247746e-5 Z M 1.3244512,0.54133911 1.4558685,0.60311147 1.1116127,0.95346926 V 0.81312275 C 1.1102132,0.6247747 1.1753757,0.4862142 1.3244512,0.54133911 Z M 1.9684384,0.82430979 2.2170958,0.93160369 1.1116127,2.0370867 V 1.6984244 Z m 0.7622443,0.32950911 0.02034,0.00864 c 0.1323805,0.05735 0.243521,0.1140248 0.3015415,0.1617036 0.00348,0.00286 0.00651,0.005 0.00966,0.00763 L 1.3765422,3.0179868 C 1.2692903,2.968459 1.1939687,2.9275459 1.1594119,2.8979804 1.1143916,2.8594625 1.1116127,2.8647525 1.1116127,2.776957 V 2.771367 Z M 3.1217206,2.0086106 V 2.5898282 L 2.268963,3.4064822 1.8896206,3.2417277 Z m 0,1.3032902 V 3.4750384 C 3.1198341,3.6867981 2.9603505,3.7068939 2.9109493,3.6879074 L 2.7881434,3.6317486 Z"
+       sodipodi:nodetypes="sssssccssssccsccccccccccccsccsscccccccccccc" />
+  </g>
+</svg>

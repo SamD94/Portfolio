@@ -1,0 +1,23 @@
+# ninja log v5
+0	560	1678171202534380012	HelloUser_autogen/timestamp	6ee160b7d3d6b823
+0	560	1678171202534380012	HelloUser_autogen/mocs_compilation.cpp	6ee160b7d3d6b823
+0	560	1678171202534380012	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/HelloUser_autogen/timestamp	6ee160b7d3d6b823
+0	560	1678171202534380012	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/HelloUser_autogen/mocs_compilation.cpp	6ee160b7d3d6b823
+560	3766	1678171205743715522	CMakeFiles/HelloUser.dir/HelloUser_autogen/mocs_compilation.cpp.o	6575d02ca5106353
+561	3825	1678171205805425178	CMakeFiles/HelloUser.dir/main.cpp.o	ba0c9e5cf78eb553
+561	3899	1678171205879267127	CMakeFiles/HelloUser.dir/mainwindow.cpp.o	cb73c1c9267049db
+3899	4418	1678171206401157763	HelloUser.app/Contents/MacOS/HelloUser	fc7c17f81e95ab8f
+8	452	1678254417420767000	HelloUser_autogen/timestamp	6ee160b7d3d6b823
+8	452	1678254417420767000	HelloUser_autogen/mocs_compilation.cpp	6ee160b7d3d6b823
+8	452	1678254417420767000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/HelloUser_autogen/timestamp	6ee160b7d3d6b823
+8	452	1678254417420767000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/HelloUser_autogen/mocs_compilation.cpp	6ee160b7d3d6b823
+453	3723	1678254420703832275	CMakeFiles/HelloUser.dir/HelloUser_autogen/mocs_compilation.cpp.o	6575d02ca5106353
+453	3753	1678254420731377926	CMakeFiles/HelloUser.dir/main.cpp.o	ba0c9e5cf78eb553
+453	3979	1678254420960576244	CMakeFiles/HelloUser.dir/mainwindow.cpp.o	cb73c1c9267049db
+3979	4856	1678254421839546078	HelloUser.app/Contents/MacOS/HelloUser	fc7c17f81e95ab8f
+9	65	1678255046417762144	HelloUser_autogen/timestamp	6ee160b7d3d6b823
+9	65	1678255046417762144	HelloUser_autogen/mocs_compilation.cpp	6ee160b7d3d6b823
+9	65	1678255046417762144	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/HelloUser_autogen/timestamp	6ee160b7d3d6b823
+9	65	1678255046417762144	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/HelloUser_autogen/mocs_compilation.cpp	6ee160b7d3d6b823
+68	2029	1678255048372629628	CMakeFiles/HelloUser.dir/mainwindow.cpp.o	cb73c1c9267049db
+2029	2325	1678255048670319169	HelloUser.app/Contents/MacOS/HelloUser	fc7c17f81e95ab8f

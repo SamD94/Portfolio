@@ -1,0 +1,736 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Пазлы списков (Lists) — Софт Эйт Софт</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Эти пазлы предоставляют средства для различных операций со списками.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/puzzles/Lists.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Пазлы списков (Lists) — Софт Эйт Софт">
+            <meta property="og:description" content="Эти пазлы предоставляют средства для различных операций со списками.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/puzzles/Lists.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Пазлы списков (Lists) — Софт Эйт Софт">
+            <meta name="twitter:description" content="Эти пазлы предоставляют средства для различных операций со списками.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-create.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-create-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-create-example2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-length.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-length-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-get-remove.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-get-remove-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-set-insert.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-set-insert-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-create-empty.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-create-empty-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-create-with-item-repeated.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-create-with-item-repeated-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-reverse.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-reverse-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-is-empty.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-is-empty-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-find.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-find-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-check-item.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-get-sub-list.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-get-sub-list-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-sort.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-sort-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-list-text-conversion.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-list-text-conversion-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-lists-list-text-conversion-example2.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство&nbsp;«Вердж3Д»</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_Менеджер_приложений">Менеджер приложений</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Пазлы">Пазлы</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Спецификация">Спецификация</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_проекта">Структура проекта</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Установка_обновлений">Установка обновлений</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_Вопрос-ответ">Вопрос-ответ</a></li></ul></div><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_темы_Методы_оптимизации">Методы оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_темы_Компрессия_ассетов">Компрессия ассетов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html" id="Основные_темы_Текстурная_компрессия">Текстурная компрессия</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_темы_Интерфейс_на_основе_ХТМЛ">Интерфейс на основе ХТМЛ</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_темы_Рендеринг_текста">Рендеринг текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_темы_Вирт./доп._реальность">Вирт./доп. реальность</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_темы_Руководство_по_физике">Руководство по физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_темы_Персонализация_приложений">Персонализация приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_темы_«ВордПресс»-плагин">«ВордПресс»-плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_темы_Использование_«ЯваСкрипт»">Использование «ЯваСкрипт»</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_темы_Создание_десктопных_приложений">Создание десктопных приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_темы_Создание_мобильных_приложений">Создание мобильных приложений</a></li><li><a href="manual/ru/introduction/Creating-SCORM-Courses.html" id="Основные_темы_Создание_обучающих_приложений">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_темы_Поиск_проблем_с_производительностью">Поиск проблем с производительностью</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_темы_Исправление_неполадок">Исправление неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_темы_Тестирование_в_мобильных_браузерах">Тестирование в мобильных браузерах</a></li></ul></div><div><h2>Блендер</h2><ul id="Блендер"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Блендер_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Блендер_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Блендер_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Блендер_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/blender/Camera.html" id="Блендер_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Блендер_Обзор_шейдерных_нод">Обзор шейдерных нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Блендер_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Блендер_Ключи_формы_(морфинг)">Ключи формы (морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Блендер_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Блендер_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Блендер_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Блендер_Ограничители">Ограничители</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Блендер_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>3дс Макс</h2><ul id="3дс_Макс"><li><a href="manual/ru/max/Beginners-Guide.html" id="3дс_Макс_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="3дс_Макс_Установка">Установка</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="3дс_Макс_Настройка_вьюпорта">Настройка вьюпорта</a></li><li><a href="manual/ru/max/Material-System.html" id="3дс_Макс_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="3дс_Макс_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/max/Camera.html" id="3дс_Макс_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="3дс_Макс_Материалы_и_текстуры">Материалы и текстуры</a></li><li><a href="manual/ru/max/Animation.html" id="3дс_Макс_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="3дс_Макс_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="3дс_Макс_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="3дс_Макс_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="3дс_Макс_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="3дс_Макс_Анимационные_ограничители">Анимационные ограничители</a></li><li><a href="manual/ru/max/Material-Library.html" id="3дс_Макс_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Майя</h2><ul id="Майя"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Майя_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Майя_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Майя_Материалы_и_текстурные_ноды">Материалы и текстурные ноды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Майя_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/maya/Camera.html" id="Майя_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Майя_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Майя_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Майя_Бленд_шейпы_(морфинг)">Бленд шейпы (морфинг)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Майя_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Майя_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Майя_Ограничители">Ограничители</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Майя_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Пазлы</h2><ul id="Пазлы"><li><a href="manual/ru/puzzles/Initialization.html" id="Пазлы_Инициализация">Инициализация</a></li><li><a href="manual/ru/puzzles/Events.html" id="Пазлы_События">События</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Пазлы_Селекторы">Селекторы</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Пазлы_Объекты">Объекты</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Пазлы_Материалы">Материалы</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Пазлы_Анимация_и_ограничители">Анимация и ограничители</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Пазлы_Камера_и_свет">Камера и свет</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Пазлы_Сцены">Сцены</a></li><li><a href="manual/ru/puzzles/Time.html" id="Пазлы_Время">Время</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Пазлы_ХТМЛ">ХТМЛ</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Пазлы_ВР/ДР">ВР/ДР</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Пазлы_Аудио/видео">Аудио/видео</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Пазлы_Физика">Физика</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Пазлы_Постпроцессинг">Постпроцессинг</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Пазлы_Логические_операции">Логические операции</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Пазлы_Циклы">Циклы</a></li><li><a href="manual/ru/puzzles/Text.html" id="Пазлы_Текст">Текст</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Пазлы_Числа">Числа</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Пазлы_Списки">Списки</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Пазлы_Словари">Словари</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Пазлы_Переменные">Переменные</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Пазлы_Процедуры">Процедуры</a></li><li><a href="manual/ru/puzzles/System.html" id="Пазлы_Системные">Системные</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Пазлы_Продвинутые">Продвинутые</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Пазлы_Электронная_коммерция">Электронная коммерция</a></li><li><a href="manual/ru/puzzles/SCORM.html" id="Пазлы_Электронное_обучение">Электронное обучение</a></li><li><a href="manual/ru/puzzles/Library.html" id="Пазлы_Библиотеки">Библиотеки</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Пазлы_Плагины">Плагины</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="manual/ru/programmers_guide/Terms.html" id="Прочее_Словарь_терминов">Словарь терминов</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Пазлы списков (Lists)</h1>
+
+    <p>
+    Список - это упорядоченная коллекция элементов, например, список "to do" или список покупок. Элементы в списке могут быть любого типа, и одно и то же значение может появляться в списке несколько раз.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists.jpg">
+
+    <h2>Содержание</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/puzzles/Lists.html#introduction">Введение</a></li><li><a href="manual/ru/puzzles/Lists.html#puzzles_reference">Перечень пазлов</a><ul><li><a href="manual/ru/puzzles/Lists.html#create">create</a></li><li><a href="manual/ru/puzzles/Lists.html#length">length</a></li><li><a href="manual/ru/puzzles/Lists.html#get_remove">get / remove</a></li><li><a href="manual/ru/puzzles/Lists.html#set_insert">set / insert</a></li><li><a href="manual/ru/puzzles/Lists.html#create_empty">create empty</a></li><li><a href="manual/ru/puzzles/Lists.html#create_with_item_repeated">create with item repeated</a></li><li><a href="manual/ru/puzzles/Lists.html#reverse">reverse</a></li><li><a href="manual/ru/puzzles/Lists.html#is_empty">is empty</a></li><li><a href="manual/ru/puzzles/Lists.html#find">find</a></li><li><a href="manual/ru/puzzles/Lists.html#check_item">check item</a></li><li><a href="manual/ru/puzzles/Lists.html#get_sub_list">get sub-list</a></li><li><a href="manual/ru/puzzles/Lists.html#sort">sort</a></li><li><a href="manual/ru/puzzles/Lists.html#list_text_conversion">list from text / text from list</a></li></ul></li><li><a href="manual/ru/puzzles/Lists.html#see_also">Смотрите также</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#introduction" id="introduction" class="permalink">#</a></p>
+
+    <h2>Введение</h2>
+
+    <p>
+    Списки очень полезны, когда вам нужно обработать несколько элементов, например, объектов, в большом количестве. Кроме того, в списке можно хранить любую информацию, например, настраиваемые параметры, свойства похожих элементов HTML, значения RGB, координаты и т.д.
+    </p>
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#puzzles_reference" id="puzzles_reference" class="permalink">#</a></p>
+
+    <h2>Перечень пазлов</h2>
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#create" id="create" class="permalink">#</a></p>
+
+    <h3>create</h3>
+
+    <p>
+    Этот пазл позволяет создать новый список и указать начальные значения. Дополнительные исходные данные добавляются путем перетаскивания блока <strong>item</strong> из серой панели инструментов слева в блок <strong>list</strong>.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-create.jpg">
+
+    <p>
+    Следующий пример скрывает все 3 объекта, указанные в списке, как только пользователь щелкает на кубе.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-create-example.jpg">
+
+    <p>
+    Списки могут быть вложенными (например, список списков) или не иметь записей, указанных в какой-либо из позиций. В последнем случае в пропущенную позицию автоматически помещается значение <a href="manual/ru/puzzles/Logic.html#null">null</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-create-example2.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#length" id="length" class="permalink">#</a></p>
+
+    <h3>length</h3>
+
+    <p>
+    Этот пазл подсчитывает количество элементов в указанном списке. Значения <a href="manual/ru/puzzles/Logic.html#null">null</a>, автоматически вставленные в пропущенные позиции, также будут подсчитаны.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-length.jpg">
+
+    <p>
+    Пример:
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-length-example.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#get_remove" id="get_remove" class="permalink">#</a></p>
+
+    <h3>get / remove</h3>
+
+    <p>
+    Этот пазл извлекает (и/или удаляет) элемент с указанной позиции (элементы в списке индексируются, начиная с 0).
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-get-remove.jpg">
+
+    <p>
+    Пример:
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-get-remove-example.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#set_insert" id="set_insert" class="permalink">#</a></p>
+
+    <h3>set / insert</h3>
+
+    <p>
+    Этот пазл позволяет добавлять элементы в список. Вариант <strong>set</strong> заменяет элемент на указанной позиции в списке другим элементом (длина списка остается прежней). Вариант <strong>insert</strong> добавляет новый элемент в список на указанную позицию, смещая элемент, находившийся ранее на этой позиции (тем самым увеличивая длину списка). Помните, что элементы в списке индексируются, начиная с 0.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-set-insert.jpg">
+
+    <p>
+    Пример:
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-set-insert-example.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#create_empty" id="create_empty" class="permalink">#</a></p>
+
+    <h3>create empty</h3>
+
+    <p>
+    Этот пазл создает новый пустой список, который будет заполнен элементами позже.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-create-empty.jpg">
+
+    <p>
+    Пример:
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-create-empty-example.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#create_with_item_repeated" id="create_with_item_repeated" class="permalink">#</a></p>
+
+    <h3>create with item repeated</h3>
+
+    <p>
+    Этот пазл создает новый список и инициализирует все позиции с одним и тем же заданным элементом. Основное отличие от варианта <strong>create empty</strong> в том, что список инициализируется с заранее определенной длиной и с некоторыми начальными значениями.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-create-with-item-repeated.jpg">
+
+    <p>
+    Пример:
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-create-with-item-repeated-example.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#reverse" id="reverse" class="permalink">#</a></p>
+
+    <h3>reverse</h3>
+
+    <p>
+    Этот пазл создает <i>новый список</i>, заполненный элементами из исходного списка в обратном порядке. Исходный список не будет изменен.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-reverse.jpg">
+
+    <p>
+    Пример:
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-reverse-example.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#is_empty" id="is_empty" class="permalink">#</a></p>
+
+    <h3>is empty</h3>
+
+    <p>
+    Этот пазл проверяет, не содержит ли заданный список элементов, и выдает <strong>true</strong> в этом случае, или <strong>false</strong> в противном. Для использования с пазлами <a href="manual/ru/puzzles/Logic.html">Логики</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-is-empty.jpg">
+
+    <p>
+    Пример:
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-is-empty-example.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#find" id="find" class="permalink">#</a></p>
+
+    <h3>find</h3>
+
+    <p>
+    Этот пазл может быть использован для проверки того, содержится ли элемент в списке и, если да, то где он находится. Если элемент найден, то выдается его позиция (элементы в списке индексируются, начиная с 0). Если элемент не найден, пазл возвращает -1.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-find.jpg">
+
+    <p>
+    Пример:
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-find-example.jpg">
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#check_item" id="check_item" class="permalink">#</a></p>
+
+    <h3>check item</h3>
+
+    <p>
+    Этот пазл может быть использован для проверки того, содержится ли элемент в списке. Если элемент найден, то выдается булево значение <em>true</em>. Если элемент не найден, пазл выдает значение <em>false</em>.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-check-item.jpg">
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#get_sub_list" id="get_sub_list" class="permalink">#</a></p>
+
+    <h3>get sub-list</h3>
+
+    <p>
+    Этот пазл позволяет извлечь область списка между двумя указанными позициями в качестве нового списка (элементы в списке индексируются, начиная с 0). Исходный список при этом не изменяется.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-get-sub-list.jpg">
+
+    <p>
+    Пример:
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-get-sub-list-example.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#sort" id="sort" class="permalink">#</a></p>
+
+    <h3>sort</h3>
+
+    <p>
+    Этот пазл создает <i>новый список</i>, заполненный элементами из исходного списка, отсортированными в порядке возрастания или убывания. Исходный список не будет изменен.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-sort.jpg">
+
+    <p>
+    Примеры:
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-sort-example.jpg">
+
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#list_text_conversion" id="list_text_conversion" class="permalink">#</a></p>
+
+    <h3>list from text / text from list</h3>
+
+    <p>
+    Этот пазл позволяет создать список, разделив некоторый текст, или сделать обратное - объединить элементы списка в строку текста.
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-list-text-conversion.jpg">
+
+    <p>
+    Пример разбивки текста в список:
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-list-text-conversion-example.jpg">
+
+    <p>
+    Пример объединения списка в текст:
+    </p>
+
+    <img src="files/puzzles/puzzles-lists-list-text-conversion-example2.jpg">
+
+
+    <p><a href="manual/ru/puzzles/Lists.html#see_also" id="see_also" class="permalink">#</a></p>
+
+    <h2>Смотрите также</h2>
+
+    <p>Списки хранят элементы по числовому индексу. Если вам нужно хранилище с именованными элементами, обратитесь к <a href="manual/ru/puzzles/Dictionaries.html">пазлам словарей</a>.</p>
+
+
+    <h2>Проблемы с пазлами?</h2>
+
+    <p>Обращайтесь за помощью на наш <a href="https://www.soft8soft.com/ru/форумы/" target="_blank">форум</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

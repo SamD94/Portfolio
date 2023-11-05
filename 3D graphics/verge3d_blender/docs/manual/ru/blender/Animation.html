@@ -1,0 +1,451 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Вердж3Д для Блендера: Анимация — Софт Эйт Софт</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Данная страница содержит информацию о типах анимации Блендер поддерживаемых в Вердж3Д.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/blender/Animation.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Вердж3Д для Блендера: Анимация — Софт Эйт Софт">
+            <meta property="og:description" content="Данная страница содержит информацию о типах анимации Блендер поддерживаемых в Вердж3Д.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/blender/Animation.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Вердж3Д для Блендера: Анимация — Софт Эйт Софт">
+            <meta name="twitter:description" content="Данная страница содержит информацию о типах анимации Блендер поддерживаемых в Вердж3Д.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-blender/insert-keyframe.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-blender/skeletal-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-blender/shape-key-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-blender/shape-key-animation-insert-keyframe.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-blender/node-material-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-blender/node-material-animation-insert-keyframes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-blender/light-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-blender/curve-path-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-animation-animate-param.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-blender/blender-verge3d-animation-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-blender/interpolation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-blender/frame-rate.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство&nbsp;«Вердж3Д»</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_Менеджер_приложений">Менеджер приложений</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Пазлы">Пазлы</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Спецификация">Спецификация</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_проекта">Структура проекта</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Установка_обновлений">Установка обновлений</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_Вопрос-ответ">Вопрос-ответ</a></li></ul></div><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_темы_Методы_оптимизации">Методы оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_темы_Компрессия_ассетов">Компрессия ассетов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html" id="Основные_темы_Текстурная_компрессия">Текстурная компрессия</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_темы_Интерфейс_на_основе_ХТМЛ">Интерфейс на основе ХТМЛ</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_темы_Рендеринг_текста">Рендеринг текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_темы_Вирт./доп._реальность">Вирт./доп. реальность</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_темы_Руководство_по_физике">Руководство по физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_темы_Персонализация_приложений">Персонализация приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_темы_«ВордПресс»-плагин">«ВордПресс»-плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_темы_Использование_«ЯваСкрипт»">Использование «ЯваСкрипт»</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_темы_Создание_десктопных_приложений">Создание десктопных приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_темы_Создание_мобильных_приложений">Создание мобильных приложений</a></li><li><a href="manual/ru/introduction/Creating-SCORM-Courses.html" id="Основные_темы_Создание_обучающих_приложений">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_темы_Поиск_проблем_с_производительностью">Поиск проблем с производительностью</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_темы_Исправление_неполадок">Исправление неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_темы_Тестирование_в_мобильных_браузерах">Тестирование в мобильных браузерах</a></li></ul></div><div><h2>Блендер</h2><ul id="Блендер"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Блендер_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Блендер_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Блендер_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Блендер_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/blender/Camera.html" id="Блендер_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Блендер_Обзор_шейдерных_нод">Обзор шейдерных нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Блендер_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Блендер_Ключи_формы_(морфинг)">Ключи формы (морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Блендер_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Блендер_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Блендер_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Блендер_Ограничители">Ограничители</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Блендер_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>3дс Макс</h2><ul id="3дс_Макс"><li><a href="manual/ru/max/Beginners-Guide.html" id="3дс_Макс_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="3дс_Макс_Установка">Установка</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="3дс_Макс_Настройка_вьюпорта">Настройка вьюпорта</a></li><li><a href="manual/ru/max/Material-System.html" id="3дс_Макс_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="3дс_Макс_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/max/Camera.html" id="3дс_Макс_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="3дс_Макс_Материалы_и_текстуры">Материалы и текстуры</a></li><li><a href="manual/ru/max/Animation.html" id="3дс_Макс_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="3дс_Макс_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="3дс_Макс_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="3дс_Макс_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="3дс_Макс_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="3дс_Макс_Анимационные_ограничители">Анимационные ограничители</a></li><li><a href="manual/ru/max/Material-Library.html" id="3дс_Макс_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Майя</h2><ul id="Майя"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Майя_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Майя_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Майя_Материалы_и_текстурные_ноды">Материалы и текстурные ноды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Майя_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/maya/Camera.html" id="Майя_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Майя_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Майя_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Майя_Бленд_шейпы_(морфинг)">Бленд шейпы (морфинг)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Майя_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Майя_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Майя_Ограничители">Ограничители</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Майя_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Пазлы</h2><ul id="Пазлы"><li><a href="manual/ru/puzzles/Initialization.html" id="Пазлы_Инициализация">Инициализация</a></li><li><a href="manual/ru/puzzles/Events.html" id="Пазлы_События">События</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Пазлы_Селекторы">Селекторы</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Пазлы_Объекты">Объекты</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Пазлы_Материалы">Материалы</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Пазлы_Анимация_и_ограничители">Анимация и ограничители</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Пазлы_Камера_и_свет">Камера и свет</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Пазлы_Сцены">Сцены</a></li><li><a href="manual/ru/puzzles/Time.html" id="Пазлы_Время">Время</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Пазлы_ХТМЛ">ХТМЛ</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Пазлы_ВР/ДР">ВР/ДР</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Пазлы_Аудио/видео">Аудио/видео</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Пазлы_Физика">Физика</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Пазлы_Постпроцессинг">Постпроцессинг</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Пазлы_Логические_операции">Логические операции</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Пазлы_Циклы">Циклы</a></li><li><a href="manual/ru/puzzles/Text.html" id="Пазлы_Текст">Текст</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Пазлы_Числа">Числа</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Пазлы_Списки">Списки</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Пазлы_Словари">Словари</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Пазлы_Переменные">Переменные</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Пазлы_Процедуры">Процедуры</a></li><li><a href="manual/ru/puzzles/System.html" id="Пазлы_Системные">Системные</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Пазлы_Продвинутые">Продвинутые</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Пазлы_Электронная_коммерция">Электронная коммерция</a></li><li><a href="manual/ru/puzzles/SCORM.html" id="Пазлы_Электронное_обучение">Электронное обучение</a></li><li><a href="manual/ru/puzzles/Library.html" id="Пазлы_Библиотеки">Библиотеки</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Пазлы_Плагины">Плагины</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="manual/ru/programmers_guide/Terms.html" id="Прочее_Словарь_терминов">Словарь терминов</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Анимация / Блендер</h1>
+
+    <p>
+    Эта страница содержит информацию о типах анимации «Блендера», которые могут быть использованы в «Вердж3Д», а также о поддерживаемых параметрах воспроизведения и средствах интерактивного управления анимацией.
+    </p>
+
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/blender/Animation.html#Setting_Up_Blender">Настройка в «Блендере»</a><ul><li><a href="manual/ru/blender/Animation.html#Whole_Object_Animation">Объектная анимация</a></li><li><a href="manual/ru/blender/Animation.html#Skeletal_Animation">Скелетная анимация</a></li><li><a href="manual/ru/blender/Animation.html#Shape_Key_Animation">Анимация ключей формы (морфинг-анимация)</a></li><li><a href="manual/ru/blender/Animation.html#Material_Animation">Анимация материалов</a></li><li><a href="manual/ru/blender/Animation.html#light_animation">Анимация источников освещения</a></li><li><a href="manual/ru/blender/Animation.html#Path_Animation">Анимация пути</a></li><li><a href="manual/ru/blender/Animation.html#Procedural_Animation">Процедурная анимация</a></li></ul></li><li><a href="manual/ru/blender/Animation.html#Playback_Options">Параметры воспроизведения</a><ul><li><a href="manual/ru/blender/Animation.html#Verge3D_Per_Object_Settings">Настройки «Вердж3Д» на объектах</a></li><li><a href="manual/ru/blender/Animation.html#Interpolation">Интерполяция</a></li><li><a href="manual/ru/blender/Animation.html#Frame_Rate">Частота кадров</a></li></ul></li><li><a href="manual/ru/blender/Animation.html#Animation_Control_with_Puzzles">Управление анимацией с помощью пазлов</a></li></ul><!-- /TOC -->
+
+
+
+    <p><a href="manual/ru/blender/Animation.html#Setting_Up_Blender" id="Setting_Up_Blender" class="permalink">#</a></p>
+
+    <h2>Настройка в «Блендере»</h2>
+
+
+    <p><a href="manual/ru/blender/Animation.html#Whole_Object_Animation" id="Whole_Object_Animation" class="permalink">#</a></p>
+
+    <h3>Объектная анимация</h3>
+
+    <p>
+      Ключевые кадры анимации могут быть добавлены в «Блендер» стандартным путём, через меню Object → Animation → Insert Keyframe... (или при нажатии горячей клавиши <strong>I</strong>), после этого, на временной шкале выбирается другой кадр, объект перемещается/вращается/масштабируется и добавляется новый ключевой кадр для этих изменений.
+    </p>
+
+    <img src="files/animation-blender/insert-keyframe.jpg" alt="Вставка анимационных кейфреймов в Блендере">
+
+
+    <p>Ознакомьтесь со следующим обучающим видео:</p>
+
+    <iframe class="video-480p" src="https://rutube.ru/play/embed/44fe174fab8607083029afdee8e9dcf0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+
+
+    <p><a href="manual/ru/blender/Animation.html#Skeletal_Animation" id="Skeletal_Animation" class="permalink">#</a></p>
+
+    <h3>Скелетная анимация</h3>
+
+    <p>
+      Скелетная анимация объекта в «Блендере» осуществляется с использованием <a href="https://docs.blender.org/manual/ru/latest/animation/armatures/index.html" target="_blank">арматуры</a>. «Вердж3Д» поддерживает максимум 4 веса на одну кость (взаимодействовать с костью будут только 4 веса с самым большим значением влияния, остальные будут проигнорированы). Кости могут быть анимированы в <strong>Pose Mode</strong> (Ctrl+Tab), используя меню Pose → Animation → Insert Keyframe... (горячая клавиша <strong>I</strong>), после чего, на временной шкале выбирается другой кадр, кость перемещается/вращается/масштабируется и с данными изменениями добавляется новый ключевой кадр.
+    </p>
+
+    <img src="files/animation-blender/skeletal-animation.jpg" alt="Вставка кейфреймов скелетной анимации в Блендере">
+
+
+    <p><a href="manual/ru/blender/Animation.html#Shape_Key_Animation" id="Shape_Key_Animation" class="permalink">#</a></p>
+
+    <h3>Анимация ключей формы (морфинг-анимация)</h3>
+
+    <p>
+      В «Блендере» вы можете добавить <a href="manual/ru/blender/Morphing.html">ключи формы</a> к объекту стандартным путём (для получения более подробной информации пройдите по ссылке).
+    </p>
+
+    <img src="files/animation-blender/shape-key-animation.jpg" alt="Анимация ключей формы в Блендере" style="max-width: 889px">
+
+    <p>
+      Значения ключей формы могут быть анимированы в Блендер нажатием ПКМ на Value и выборе <strong>Insert Keyframe</strong> (или при наведении на него курсора и нажатии горячей клавиши <strong>I</strong>), затем выбирается другой кадр на временной шкале, в поле ввода устанавливается новое значение Value и добавляется новый анимационный ключ для этого значения.
+    </p>
+
+    <img src="files/animation-blender/shape-key-animation-insert-keyframe.jpg" alt="Вставка кейфреймов для ключей формы в Блендере" style="max-width: 199px">
+
+
+    <p><a href="manual/ru/blender/Animation.html#Material_Animation" id="Material_Animation" class="permalink">#</a></p>
+
+    <h3>Анимация материалов</h3>
+
+    <p>
+      В отличие от «Блендера», в «Вердж3Д» можно анимировать параметр материала, только подключив к нему ноду <strong>Value</strong> или <strong>RGB</strong>.
+    </p>
+
+    <img src="files/animation-blender/node-material-animation.jpg" alt="Анимация нодового материала в Блендере">
+
+    <p>
+      Значения цветов заданные этими нодами могут быть анимированы в «Блендере» нажатием ПКМ на соответсвующую ноду (или при наведении на него курсора и нажатии горячей клавиши <strong>I</strong>), затем выбирается другой кадр на временной шкале, устанавливается новое значение или цвет, которым добавляется анимационный ключ.
+    </p>
+
+    <img src="files/animation-blender/node-material-animation-insert-keyframes.jpg" alt="Вставка кейфремов для нодового материала в Блендере" style="max-width: 200px">
+
+
+    <p><a href="manual/ru/blender/Animation.html#light_animation" id="light_animation" class="permalink">#</a></p>
+
+    <h3>Анимация источников освещения</h3>
+
+    <p>
+      «Вердж3Д» поддерживает анимацию интенсивности источников освещения (носит название <strong>Power</strong> для точечных источников, прожекторов и источников-областей и <strong>Strength</strong> для солнечных источников).
+    </p>
+
+    <img src="files/animation-blender/light-animation.jpg" alt="Анимация интенсивности источников света в Блендере" style="max-width: 500px">
+
+    <p>
+      Также вы можете управлять источниками процедурно, с использованием пазла <a href="manual/ru/puzzles/Camera.html#set_light_param">set light param</a>.
+    </p>
+
+
+    <p><a href="manual/ru/blender/Animation.html#Path_Animation" id="Path_Animation" class="permalink">#</a></p>
+
+    <h3>Анимация пути</h3>
+
+    <p>
+      Чтобы проанимировать движение объекта вдоль кривой вам понадобится добавить на объект ограничитель <a href="manual/ru/blender/Object-Constraints.html#Follow_Path">Follow Path</a>. Далее нужно выбрать объект <strong>path</strong> (кривую) и открыть панель <strong>Object Data Properties</strong>, на которой расположена панель <strong>Path Animation</strong>. Здесь необходимо выставить кейфреймы анимации для параметра <strong>Evaluation Time</strong>.
+    </p>
+
+    <img src="files/animation-blender/curve-path-animation.jpg" alt="Опции анимирования объекта вдоль кривой">
+
+    <p class="note">В настоящий момент <strong>twist method</strong> может быть только <strong>Z-Up</strong>.</p>
+
+
+    <p><a href="manual/ru/blender/Animation.html#Procedural_Animation" id="Procedural_Animation" class="permalink">#</a></p>
+
+    <h3>Процедурная анимация</h3>
+
+    <p>
+      Вместо того, чтобы проигрывать анимацию созданную в «Блендере», вы можете использовать пазлы или «ЯваСкрипт» чтобы изменить координаты объектов и другие параметры. В частности, для этого хорошо подходит пазл <a href="manual/ru/puzzles/Animation.html#animate_param">animate param</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-animation-animate-param.jpg" alt="Использование пазла animate param для осуществления процедурной анимации в Вердж3Д">
+
+
+    <p><a href="manual/ru/blender/Animation.html#Playback_Options" id="Playback_Options" class="permalink">#</a></p>
+
+    <h2>Параметры воспроизведения</h2>
+
+
+    <p><a href="manual/ru/blender/Animation.html#Verge3D_Per_Object_Settings" id="Verge3D_Per_Object_Settings" class="permalink">#</a></p>
+
+    <h3>Настройки «Вердж3Д» на объектах</h3>
+
+    <p>
+      Каждому объекту в «Блендере» назначаются настройки «Вердж3Д», включая настройки воспроизведения анимации.
+    </p>
+
+    <img src="files/animation-blender/blender-verge3d-animation-settings.jpg" alt="Параметры анимации в Вердж3Д для Блендера" style="max-width: 403px">
+
+    <p>
+      Настройки анимации:
+    </p>
+
+    <dl>
+      <dt>Auto Start</dt>
+      <dd>Отвечает за начало проигрывания анимации при загрузке сцены.</dd>
+
+      <dt>Loop Mode</dt>
+      <dd>Режимы воспроизведения: <strong>Repeat</strong> — проигрывает анимацию от начала до конца, затем повторяет, <strong>Once</strong> — проигрывает один раз, затем останавливается, <strong>Ping Pong</strong> — проигрывает от начала до конца, затем воспроизводит анимацию в обратную сторону.</dd>
+
+      <dt>Repeat Infinitely</dt>
+      <dd>Если необходимо, чтобы анимация объекта проигрывалась бесконечно. Действительно только для режимов <strong>Repeat</strong> и <strong>Ping Pong</strong>.</dd>
+
+      <dt>Repeat Count</dt>
+      <dd>Отвечает за количество раз, которое будет проиграна анимация. Действительно только для <strong>Repeat</strong> и <strong>Ping Pong</strong>, если режим <strong>Repeat Infinitely</strong> отключен.</dd>
+
+      <dt>Offset</dt>
+      <dd>Какое количество кадров должно быть пропущено перед началом воспроизведения анимации.</dd>
+    </dl>
+
+
+    <p><a href="manual/ru/blender/Animation.html#Interpolation" id="Interpolation" class="permalink">#</a></p>
+
+    <h3>Интерполяция</h3>
+
+    <p>
+    Меню переключения интерполяции между ключевыми кадрами вызывается нажатием ПКМ в окне временной шкалы в «Блендере» (горячая клавиша <strong>T</strong>).
+    </p>
+
+    <img src="files/animation-blender/interpolation.jpg" alt="Интерполяция кейфреймов в Блендере">
+
+    <p>
+      «Вердж3Д» поддерживает все режимы интерполяции доступные в «Блендере».
+    </p>
+
+
+    <p><a href="manual/ru/blender/Animation.html#Frame_Rate" id="Frame_Rate" class="permalink">#</a></p>
+
+    <h3>Частота кадров</h3>
+
+    <p>
+      Значение частоты смены кадров (по умолчанию 24 кадра в секунду) влияет на скорость воспроизведения и может быть изменено во вкладке <strong>Output Properties</strong>.
+    </p>
+
+    <img src="files/animation-blender/frame-rate.jpg" alt="Установка частоты кадров в Блендере" style="max-width: 389px">
+
+
+    <p><a href="manual/ru/blender/Animation.html#Animation_Control_with_Puzzles" id="Animation_Control_with_Puzzles" class="permalink">#</a></p>
+
+    <h2>Управление анимацией с помощью пазлов</h2>
+
+    <p>
+      Вы можете использовать пазлы анимации для воспроизведения предварительно созданной анимации (для получения более подробной информации пройдите по <a href="manual/ru/puzzles/Animation.html">ссылке</a>).
+    </p>
+
+    <img src="files/puzzles/puzzles-animation.jpg" alt="Анимационные блоки визуального программирования">
+
+    <p>
+      Анимация также может быть реализована с использованием других пазлов — смотрите разделы <a href="manual/ru/puzzles/Camera.html">Камера и свет</a> и <a href="manual/ru/puzzles/Time.html">Время</a>.
+    </p>
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/ru/форумы/" target="_blank">форуме</a>!</p>
+
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

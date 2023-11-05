@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Текстурная компрессия в Вердж3Д — Софт Эйт Софт</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Вердж3Д позволяет использовать текстуры, сжатые с помощью высокоэффективного алгоритма КТХ-2/БазисУ. Узнайте как использовать его в ваших приложениях.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Texture-Compression.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Текстурная компрессия в Вердж3Д — Софт Эйт Софт">
+            <meta property="og:description" content="Вердж3Д позволяет использовать текстуры, сжатые с помощью высокоэффективного алгоритма КТХ-2/БазисУ. Узнайте как использовать его в ваших приложениях.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Texture-Compression.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Текстурная компрессия в Вердж3Д — Софт Эйт Софт">
+            <meta name="twitter:description" content="Вердж3Д позволяет использовать текстуры, сжатые с помощью высокоэффективного алгоритма КТХ-2/БазисУ. Узнайте как использовать его в ваших приложениях.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/ktx-comparison.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/enable-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/enable-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/enable-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/console-check.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/tweak-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/tweak-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/tweak-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство&nbsp;«Вердж3Д»</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_Менеджер_приложений">Менеджер приложений</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Пазлы">Пазлы</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Спецификация">Спецификация</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_проекта">Структура проекта</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Установка_обновлений">Установка обновлений</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_Вопрос-ответ">Вопрос-ответ</a></li></ul></div><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_темы_Методы_оптимизации">Методы оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_темы_Компрессия_ассетов">Компрессия ассетов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html" id="Основные_темы_Текстурная_компрессия">Текстурная компрессия</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_темы_Интерфейс_на_основе_ХТМЛ">Интерфейс на основе ХТМЛ</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_темы_Рендеринг_текста">Рендеринг текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_темы_Вирт./доп._реальность">Вирт./доп. реальность</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_темы_Руководство_по_физике">Руководство по физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_темы_Персонализация_приложений">Персонализация приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_темы_«ВордПресс»-плагин">«ВордПресс»-плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_темы_Использование_«ЯваСкрипт»">Использование «ЯваСкрипт»</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_темы_Создание_десктопных_приложений">Создание десктопных приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_темы_Создание_мобильных_приложений">Создание мобильных приложений</a></li><li><a href="manual/ru/introduction/Creating-SCORM-Courses.html" id="Основные_темы_Создание_обучающих_приложений">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_темы_Поиск_проблем_с_производительностью">Поиск проблем с производительностью</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_темы_Исправление_неполадок">Исправление неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_темы_Тестирование_в_мобильных_браузерах">Тестирование в мобильных браузерах</a></li></ul></div><div><h2>Блендер</h2><ul id="Блендер"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Блендер_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Блендер_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Блендер_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Блендер_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/blender/Camera.html" id="Блендер_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Блендер_Обзор_шейдерных_нод">Обзор шейдерных нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Блендер_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Блендер_Ключи_формы_(морфинг)">Ключи формы (морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Блендер_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Блендер_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Блендер_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Блендер_Ограничители">Ограничители</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Блендер_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>3дс Макс</h2><ul id="3дс_Макс"><li><a href="manual/ru/max/Beginners-Guide.html" id="3дс_Макс_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="3дс_Макс_Установка">Установка</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="3дс_Макс_Настройка_вьюпорта">Настройка вьюпорта</a></li><li><a href="manual/ru/max/Material-System.html" id="3дс_Макс_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="3дс_Макс_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/max/Camera.html" id="3дс_Макс_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="3дс_Макс_Материалы_и_текстуры">Материалы и текстуры</a></li><li><a href="manual/ru/max/Animation.html" id="3дс_Макс_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="3дс_Макс_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="3дс_Макс_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="3дс_Макс_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="3дс_Макс_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="3дс_Макс_Анимационные_ограничители">Анимационные ограничители</a></li><li><a href="manual/ru/max/Material-Library.html" id="3дс_Макс_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Майя</h2><ul id="Майя"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Майя_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Майя_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Майя_Материалы_и_текстурные_ноды">Материалы и текстурные ноды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Майя_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/maya/Camera.html" id="Майя_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Майя_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Майя_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Майя_Бленд_шейпы_(морфинг)">Бленд шейпы (морфинг)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Майя_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Майя_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Майя_Ограничители">Ограничители</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Майя_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Пазлы</h2><ul id="Пазлы"><li><a href="manual/ru/puzzles/Initialization.html" id="Пазлы_Инициализация">Инициализация</a></li><li><a href="manual/ru/puzzles/Events.html" id="Пазлы_События">События</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Пазлы_Селекторы">Селекторы</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Пазлы_Объекты">Объекты</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Пазлы_Материалы">Материалы</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Пазлы_Анимация_и_ограничители">Анимация и ограничители</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Пазлы_Камера_и_свет">Камера и свет</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Пазлы_Сцены">Сцены</a></li><li><a href="manual/ru/puzzles/Time.html" id="Пазлы_Время">Время</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Пазлы_ХТМЛ">ХТМЛ</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Пазлы_ВР/ДР">ВР/ДР</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Пазлы_Аудио/видео">Аудио/видео</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Пазлы_Физика">Физика</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Пазлы_Постпроцессинг">Постпроцессинг</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Пазлы_Логические_операции">Логические операции</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Пазлы_Циклы">Циклы</a></li><li><a href="manual/ru/puzzles/Text.html" id="Пазлы_Текст">Текст</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Пазлы_Числа">Числа</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Пазлы_Списки">Списки</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Пазлы_Словари">Словари</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Пазлы_Переменные">Переменные</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Пазлы_Процедуры">Процедуры</a></li><li><a href="manual/ru/puzzles/System.html" id="Пазлы_Системные">Системные</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Пазлы_Продвинутые">Продвинутые</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Пазлы_Электронная_коммерция">Электронная коммерция</a></li><li><a href="manual/ru/puzzles/SCORM.html" id="Пазлы_Электронное_обучение">Электронное обучение</a></li><li><a href="manual/ru/puzzles/Library.html" id="Пазлы_Библиотеки">Библиотеки</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Пазлы_Плагины">Плагины</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="manual/ru/programmers_guide/Terms.html" id="Прочее_Словарь_терминов">Словарь терминов</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Текстурная компрессия</h1>
+
+    <p>
+      «Вердж3Д» позволяет использовать текстуры, сжатые с помощью высокоэффективного алгоритма КТХ-2/БазисУ, что существенно снижает потребление видеопамяти и ускоряет рендеринг приложений.
+    </p>
+
+    <figure style="max-width: 900px">
+      <img src="files/texture-compression/ktx-comparison.jpg">
+      <figcaption>Сравнение тестовой модели использующей текстуры в разных форматах (изображение от консорциума «Кронос»).</figcaption>
+    </figure>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/Texture-Compression.html#enabling_texture_compression">Включение текстурной компрессии</a></li><li><a href="manual/ru/introduction/Texture-Compression.html#checking_your_files">Проверка файлов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html#tweaking_compression">Настройки компрессии</a></li><li><a href="manual/ru/introduction/Texture-Compression.html#compressing_hdr_textures">Специальный случай — ХДР текстуры</a></li><li><a href="manual/ru/introduction/Texture-Compression.html#limitations">Ограничения</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/introduction/Texture-Compression.html#enabling_texture_compression" id="enabling_texture_compression" class="permalink">#</a></p>
+
+    <h2>Включение текстурной компрессии</h2>
+
+    <p>
+      Чтобы включить автоматическую конверсию всех текстур при экспорте, активируйте соответствующую опцию в настройках экспорта:
+    </p>
+
+    <div class="v3d-tabs" style="null"><input type="radio" name="0.26087659601120583" checked="" class="v3d-tab-input" id="0.26087659601120583-0"><label class="v3d-tab-label" for="0.26087659601120583-0">Блендер</label><div class="v3d-tab-content">
+        <img src="files/texture-compression/enable-blender.jpg" style="max-width: 320px">
+      </div><input type="radio" name="0.26087659601120583" class="v3d-tab-input" id="0.26087659601120583-1"><label class="v3d-tab-label" for="0.26087659601120583-1">3дс Макс</label><div class="v3d-tab-content">
+        <img src="files/texture-compression/enable-max.jpg" style="max-width: 272px">
+      </div><input type="radio" name="0.26087659601120583" class="v3d-tab-input" id="0.26087659601120583-2"><label class="v3d-tab-label" for="0.26087659601120583-2">Майя</label><div class="v3d-tab-content">
+        <img src="files/texture-compression/enable-maya.jpg" style="max-width: 434px">
+      </div></div>
+
+
+    <p><a href="manual/ru/introduction/Texture-Compression.html#checking_your_files" id="checking_your_files" class="permalink">#</a></p>
+
+    <h2>Проверка файлов</h2>
+
+    <p>
+      Чтобы проверить, что приложение загружает текстуры с компрессией, запустите его (из менеджера приложений или сайта где оно развёрнуто). Далее откройте <a href="manual/ru/introduction/FAQ.html#browser_console">консоль браузера</a> и переключитесь на вкладку <strong>Network</strong>.
+    </p>
+
+    <img src="files/texture-compression/console-check.jpg">
+
+    <p>
+      Перезагрузите приложение, чтобы консоль начала показывать загрузку файлов с самого начала. Найдите в списке ваши текстуры — если всё нормально он будут иметь расширение <strong>.ktx2</strong>.
+    </p>
+
+    <p>
+      Другой способ проверки компрессии — посмотреть <a href="manual/ru/introduction/Performance-Bottlenecks.html#performance_profile">в профиле производительности</a>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Texture-Compression.html#tweaking_compression" id="tweaking_compression" class="permalink">#</a></p>
+
+    <h2>Настройки компрессии</h2>
+
+    <p>
+      Вы можете переключить используемый алгоритм компрессии для каждой текстуры, для чего предусмотрена соответствующая настройка:
+    </p>
+
+    <div class="v3d-tabs" style="null"><input type="radio" name="0.479824921499477" checked="" class="v3d-tab-input" id="0.479824921499477-0"><label class="v3d-tab-label" for="0.479824921499477-0">Блендер</label><div class="v3d-tab-content">
+        <img src="files/texture-compression/tweak-blender.jpg" style="max-width: 440px">
+      </div><input type="radio" name="0.479824921499477" class="v3d-tab-input" id="0.479824921499477-1"><label class="v3d-tab-label" for="0.479824921499477-1">3дс Макс</label><div class="v3d-tab-content">
+        <img src="files/texture-compression/tweak-max.jpg" style="max-width: 343px">
+      </div><input type="radio" name="0.479824921499477" class="v3d-tab-input" id="0.479824921499477-2"><label class="v3d-tab-label" for="0.479824921499477-2">Майя</label><div class="v3d-tab-content">
+        <img src="files/texture-compression/tweak-maya.jpg" style="max-width: 437px">
+      </div></div>
+
+    <dl>
+      <dt>Auto</dt>
+      <dd>Выбрать алгоритм автоматически. В данный момент эта опция просто включает UASTC.</dd>
+      <dt>UASTC</dt>
+      <dd>Самый совершенный алгоритм, обеспечивающий максимальное качество. Он подходит для любых текстур включая карты нормалей, ОРМ-карты и др.</dd>
+      <dt>ETC1S</dt>
+      <dd>Предлагает максимальную степень компрессии и генерирует файлы минимального размера. Тем не менее, он может вызывать артефакты компрессии, поэтому рекомендуется только для текстур с невысокой контрастностью (трава, дерево, кирпичи и т.д.).</dd>
+      <dt>Disable</dt>
+      <dd>Отключить текстурную компрессию для данной текстуры.</dd>
+    </dl>
+
+
+    <p><a href="manual/ru/introduction/Texture-Compression.html#compressing_hdr_textures" id="compressing_hdr_textures" class="permalink">#</a></p>
+
+    <h2>Специальный случай — ХДР текстуры</h2>
+
+    <p>
+      В силу своих особенностей, компрессия не работает для ХДР-изображений. Вместо этого мы используем алгоритм ЛЗМА для сжатия текстур без потерь (аналогичный метод мы используем для компрессии ГЛТФ-файлов). Использование ЛЗМА уменьшает размер файлов текстур в 4-6 раз, однако это никак не сказывается на количестве потребляемой видеопамяти. Если вы не хотите использовать такой вид сжатия, переключите настройку алгоритма в <strong>Disabled</strong>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Texture-Compression.html#limitations" id="limitations" class="permalink">#</a></p>
+
+    <h2>Ограничения</h2>
+
+    <p>
+      И хотя в целом мы рекомендуем включать компрессию для всех сцен, в ряде случаев вам следует иметь в виду некоторые ограничения, которые связаны с использованием этой функции.
+    </p>
+
+    <h3>Компрессия увеличивает размер загружаемых данных</h3>
+
+    <p>
+      Как заявлено в начале этого раздела, компрессия текстур существенно сокращает количество видеопамяти требуемое вашим приложениям. Однако это не всегда справедливо для файлов текстур, загружаемых по сети. При использовании алгоритма компрессии <strong>UASTC</strong> (или <strong>Auto</strong>), текстуры могут стать значительно больше чем исходные изображения. Если вам важнее именно скорость загрузки (или трафик), отключите компрессию полностью, либо переключитесь на более продвинутый алгоритм <strong>ETC1S</strong>.
+    </p>
+
+    <p>
+      Начиная с «Вердж3Д» версии 4.2, мы реализовали дополнительную защиту, чтобы размер текстур не увеличивался слишком сильно. Если сжатое изображение становится больше чем в 3 раза больше оригинального, экспортер автоматически отключает компрессию для данного изображения.
+    </p>
+
+    <h3>Замедление экспорта</h3>
+
+    <p>
+      Компрессия требует времени, что может замедлить экспорт. Чтобы ускорить процесс создания приложения, включайте компрессию только в самом конце.
+    </p>
+
+    <h3>Работает только для JPEG и PNG изображений</h3>
+
+    <p>
+      Компрессия работает только с JPEG/PNG текстурами. Другие форматы, такие как WebP, BMP и др. не поддерживаются.
+    </p>
+
+    <h3>Не поддерживается для размеров текстур не являющихся степенью двойки</h3>
+
+    <p>
+      Если экспортер установит, что размеры текстуры не являются степенью двойки (мы не рекомендуем создавать такие текстуры даже если компрессия не нужна), компрессии не произойдёт и в сцене окажется оригинальное изображение. В консоли пакета моделирования будет выведено соответствующее уведомление.
+    </p>
+
+    <h3>Не поддерживается для PNG текстур со встроенным ICC-профилем</h3>
+
+    <p>
+      PNG изображения со встроенным цветовым профилем (ICC или iCCP) не поддерживаются. Если экспортер обнаружит такой профиль, он будет удалён из изображения перед компрессией. Данная операция может исказить цвета текстуры, особенно если используется нестандартный цветовой профиль (не sRGB).
+    </p>
+
+    <p>
+      Если удаление профиля не приемлемо, откажитесь от компрессии или примените этот профиль к изображению в каком-нибудь инструменте редактирования («Фотошоп», «ГИМП» и др.).
+    </p>
+
+    <h3>Не работает с режимом дополненной реальностью на устройствах «Айос»</h3>
+
+    <p>
+      Отключите компрессию, если вам требуется использовать формат ЮСДЗ для показа в режиме дополненной реальности на устройствах «Айос». Другой способ — использовать две сцены с компрессией и без, либо статическая загрузка ЮСДЗ-моделей сделанных в каком-нибудь пакете моделирования или конвертере. Смотрите раздел <a href="manual/ru/introduction/AR-VR-development.html#creating_ar_apps_usdz">про дополненную реальность и ЮСДЗ</a> для получения дополнительной информации.
+    </p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/ru/форумы/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

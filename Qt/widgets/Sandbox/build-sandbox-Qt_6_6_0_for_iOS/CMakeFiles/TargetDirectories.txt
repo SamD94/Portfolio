@@ -1,0 +1,5 @@
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/install.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/sandbox_autogen.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/ALL_BUILD.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_iOS/CMakeFiles/ZERO_CHECK.dir

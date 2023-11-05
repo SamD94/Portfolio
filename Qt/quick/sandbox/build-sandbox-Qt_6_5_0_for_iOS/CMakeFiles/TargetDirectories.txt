@@ -1,0 +1,15 @@
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/appsandbox.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/appsandbox_automoc_json_extraction.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/appsandbox_qmltyperegistration.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/all_qmltyperegistrations.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/appsandbox_qmllint.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/appsandbox_qmllint_json.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/appsandbox_qmllint_module.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/all_qmllint.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/all_qmllint_json.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/all_qmllint_module.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/appsandbox_tooling.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/install.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/appsandbox_autogen.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/ALL_BUILD.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/CMakeFiles/ZERO_CHECK.dir

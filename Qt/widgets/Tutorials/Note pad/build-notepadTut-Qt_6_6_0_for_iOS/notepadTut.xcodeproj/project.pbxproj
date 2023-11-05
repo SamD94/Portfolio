@@ -1,0 +1,1142 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		26C79FE98A2F4057A1FFFABA /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = BF547F208AB0403799AB82F1 /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				882F67A5EBE44354885E41F8 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		71781BF3740044CC935E97F8 /* notepadTut_autogen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 7FE5CE11C77847E081E33217 /* Build configuration list for PBXAggregateTarget "notepadTut_autogen" */;
+			buildPhases = (
+				0C35CA6B13FCD18B5D7A760A /* Generate CMakeFiles/notepadTut_autogen */,
+			);
+			dependencies = (
+				6961356E86544AC8B17C99E4 /* PBXTargetDependency */,
+			);
+			name = notepadTut_autogen;
+			productName = notepadTut_autogen;
+		};
+		95A512E5AA434E37B90E21E1 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 6F11200AF1D94C3595031D41 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				40C979BEC9D55B90A17F05D6 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		D2623DDCB9224670BA7339DD /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C2C88419C40F4B14B6174730 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				FA7DBBE25F5B4F09CFB1893C /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				17F6D0F8AFFD4995BC8216D6 /* PBXTargetDependency */,
+				25BEEE350346482C9DF5AD45 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		03E2ED25C74E449EB16E5127 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 23BE4A74B848474CA615247F /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/CMakeLists.txt */; };
+		0AE30A26AF454CEC9AE471B3 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/mocs_compilation.cpp */ = {isa = PBXBuildFile; fileRef = 4530ACAC44F945F889F55538 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/mocs_compilation.cpp */; };
+		4B24B07BD8C44E3EB1D9FFB4 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/notepadTut/LaunchScreen.storyboard */ = {isa = PBXBuildFile; fileRef = 93DD8E113AA0410AA72DBC16 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/notepadTut/LaunchScreen.storyboard */; };
+		66B7DFA5BF69475BAFFAD18F /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut.dir/Info.plist */ = {isa = PBXBuildFile; fileRef = 2BCA7065FDFA4499A56A0D4B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut.dir/Info.plist */; };
+		79318C137A7A4897B2A5804A /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include/ui_mainwindow.h */ = {isa = PBXBuildFile; fileRef = CF3C7F37FB68496E95C76F56 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include/ui_mainwindow.h */; };
+		A8F6329EC1D5477E8F368139 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/main.cpp */ = {isa = PBXBuildFile; fileRef = 0D5627C450974E2FAB4EA36B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/main.cpp */; };
+		C2C810C14F88400E8316B657 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.ui */ = {isa = PBXBuildFile; fileRef = AF034D73169849D9BAFD77C7 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.ui */; };
+		D8889E9D0B954E2C86D27ADC /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.h */ = {isa = PBXBuildFile; fileRef = E7612CA86507400AB28D9763 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.h */; };
+		EFC08E0D7A9A441CBFE21894 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.cpp */ = {isa = PBXBuildFile; fileRef = 567DECA4D5034F03B8EAB15B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		4AB896C8898142688A869F79 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		84270D43C0E5452A991269EF /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		BCF451CFD2084E669D011025 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+		D33E94D8E022441A9E033787 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		0B2A4011EC3F455A8095FC15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34FA21EA484142AAB2D3F9E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 71781BF3740044CC935E97F8;
+			remoteInfo = notepadTut_autogen;
+		};
+		27F04A9E290542198E92D224 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34FA21EA484142AAB2D3F9E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95A512E5AA434E37B90E21E1;
+			remoteInfo = ZERO_CHECK;
+		};
+		363EBF1B445B489BA1509134 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34FA21EA484142AAB2D3F9E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CE16BC47D23A46A6A0219DD3;
+			remoteInfo = notepadTut;
+		};
+		581DEC4028C9482DB2BCBEAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34FA21EA484142AAB2D3F9E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95A512E5AA434E37B90E21E1;
+			remoteInfo = ZERO_CHECK;
+		};
+		C248F9347FB743E893DE33E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34FA21EA484142AAB2D3F9E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D2623DDCB9224670BA7339DD;
+			remoteInfo = ALL_BUILD;
+		};
+		F0406844CCD84504BA5272E7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34FA21EA484142AAB2D3F9E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95A512E5AA434E37B90E21E1;
+			remoteInfo = ZERO_CHECK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D5627C450974E2FAB4EA36B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/main.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = main.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		23BE4A74B848474CA615247F /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		2BCA7065FDFA4499A56A0D4B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut.dir/Info.plist */ = {isa = PBXFileReference; explicitFileType = sourcecode.text.plist; fileEncoding = 4; name = Info.plist; path = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut.dir/Info.plist"; sourceTree = "<absolute>"; };
+		4530ACAC44F945F889F55538 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/mocs_compilation.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mocs_compilation.cpp; path = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/mocs_compilation.cpp"; sourceTree = "<absolute>"; };
+		567DECA4D5034F03B8EAB15B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = mainwindow.cpp; path = mainwindow.cpp; sourceTree = SOURCE_ROOT; };
+		810C97D81849471097A153C0 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		93DD8E113AA0410AA72DBC16 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/notepadTut/LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/notepadTut/LaunchScreen.storyboard"; sourceTree = "<absolute>"; };
+		AF034D73169849D9BAFD77C7 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.ui */ = {isa = PBXFileReference; explicitFileType = sourcecode; fileEncoding = 4; name = mainwindow.ui; path = mainwindow.ui; sourceTree = SOURCE_ROOT; };
+		C36BC1D0D5E64299B7CDAEA6 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		CF3C7F37FB68496E95C76F56 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include/ui_mainwindow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ui_mainwindow.h; path = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include/ui_mainwindow.h"; sourceTree = "<absolute>"; };
+		E3572C3AA9204E4C9A454498 /* notepadTut */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = notepadTut; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7612CA86507400AB28D9763 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = mainwindow.h; path = mainwindow.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		32CB6714B3974AA09ABA2843 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1B9F98AB5BC749E2ABCDEC70 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				4530ACAC44F945F889F55538 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/mocs_compilation.cpp */,
+				0D5627C450974E2FAB4EA36B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/main.cpp */,
+				567DECA4D5034F03B8EAB15B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		3C4859E7122947DCBBB24E0D /* notepadTut */ = {
+			isa = PBXGroup;
+			children = (
+				1B9F98AB5BC749E2ABCDEC70 /* Source Files */,
+				C28803E15C9641D9B305C2C3 /* Header Files */,
+				7A0258105A13480EBDEC7D15 /* Resources */,
+				23BE4A74B848474CA615247F /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/CMakeLists.txt */,
+				AF034D73169849D9BAFD77C7 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.ui */,
+			);
+			name = notepadTut;
+			sourceTree = "<group>";
+		};
+		426923F4F5464D078DDEEE75 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		467DD6F685774E0383EF0618 /* notepadTut_autogen */ = {
+			isa = PBXGroup;
+			children = (
+				979F2B0CAEA9494481842FAA /* CMake Rules */,
+				C36BC1D0D5E64299B7CDAEA6 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/CMakeLists.txt */,
+			);
+			name = notepadTut_autogen;
+			sourceTree = "<group>";
+		};
+		5EA66B54D3E84DD0AB562EE2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3572C3AA9204E4C9A454498 /* notepadTut */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7A0258105A13480EBDEC7D15 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93DD8E113AA0410AA72DBC16 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/notepadTut/LaunchScreen.storyboard */,
+				2BCA7065FDFA4499A56A0D4B /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut.dir/Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		979F2B0CAEA9494481842FAA /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		9BB9C43E1EA448FB833977EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A8BC00C6EC114727B712EEF6 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				426923F4F5464D078DDEEE75 /* CMake Rules */,
+				810C97D81849471097A153C0 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		C28803E15C9641D9B305C2C3 /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF3C7F37FB68496E95C76F56 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include/ui_mainwindow.h */,
+				E7612CA86507400AB28D9763 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		C2B1380460924DB0B3AF9663 = {
+			isa = PBXGroup;
+			children = (
+				3C4859E7122947DCBBB24E0D /* notepadTut */,
+				467DD6F685774E0383EF0618 /* notepadTut_autogen */,
+				A8BC00C6EC114727B712EEF6 /* ALL_BUILD */,
+				5EA66B54D3E84DD0AB562EE2 /* Products */,
+				9BB9C43E1EA448FB833977EA /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE16BC47D23A46A6A0219DD3 /* notepadTut */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DAAAC61ADB447309A1C06AE /* Build configuration list for PBXNativeTarget "notepadTut" */;
+			buildPhases = (
+				8824C970EFBB47A59810FC38 /* Resources */,
+				6D0B83A4E1944ECC8D558DE5 /* Sources */,
+				32CB6714B3974AA09ABA2843 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DDED872397504AADA5AD560E /* PBXTargetDependency */,
+				02A1946C769A498A948AA4B3 /* PBXTargetDependency */,
+			);
+			name = notepadTut;
+			productName = notepadTut;
+			productReference = E3572C3AA9204E4C9A454498 /* notepadTut */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34FA21EA484142AAB2D3F9E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1420;
+			};
+			buildConfigurationList = 54B3F1A6C5964AA5ADCB0E87 /* Build configuration list for PBXProject "notepadTut" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				4AB896C8898142688A869F79 /* Debug */,
+				D33E94D8E022441A9E033787 /* Release */,
+				BCF451CFD2084E669D011025 /* MinSizeRel */,
+				84270D43C0E5452A991269EF /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = C2B1380460924DB0B3AF9663;
+			projectDirPath = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut";
+			projectRoot = "";
+			targets = (
+				D2623DDCB9224670BA7339DD /* ALL_BUILD */,
+				95A512E5AA434E37B90E21E1 /* ZERO_CHECK */,
+				26C79FE98A2F4057A1FFFABA /* install */,
+				CE16BC47D23A46A6A0219DD3 /* notepadTut */,
+				71781BF3740044CC935E97F8 /* notepadTut_autogen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C35CA6B13FCD18B5D7A760A /* Generate CMakeFiles/notepadTut_autogen */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/notepadTut_autogen";
+			outputPaths = (
+"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut_autogen","/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include_Debug/ui_mainwindow.h","/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include_MinSizeRel/ui_mainwindow.h","/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include_RelWithDebInfo/ui_mainwindow.h","/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include_Release/ui_mainwindow.h","/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/mocs_compilation.cpp"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut_autogen.dir/AutogenInfo.json\" Debug
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut_autogen.dir/AutogenInfo.json\" Release
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut_autogen.dir/AutogenInfo.json\" MinSizeRel
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -E cmake_autogen \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut_autogen.dir/AutogenInfo.json\" RelWithDebInfo
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		40C979BEC9D55B90A17F05D6 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/ZERO_CHECK"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  make -f /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  make -f /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  make -f /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  make -f /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		56F7C8889413B020F5BB08BE = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		87AF4882E018677E2624B544 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  /Applications/Qt/Tools/CMake/CMake.app/Contents/bin/cmake -DBUILD_TYPE=$CONFIGURATION -DEFFECTIVE_PLATFORM_NAME=$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		FA7DBBE25F5B4F09CFB1893C /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/ALL_BUILD"			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd \"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS\"
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8824C970EFBB47A59810FC38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B24B07BD8C44E3EB1D9FFB4 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/notepadTut/LaunchScreen.storyboard */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6D0B83A4E1944ECC8D558DE5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0AE30A26AF454CEC9AE471B3 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/mocs_compilation.cpp */,
+				A8F6329EC1D5477E8F368139 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/main.cpp */,
+				EFC08E0D7A9A441CBFE21894 /* /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/notepadTut/mainwindow.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		02A1946C769A498A948AA4B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 71781BF3740044CC935E97F8 /* notepadTut_autogen */;
+			targetProxy = 0B2A4011EC3F455A8095FC15 /* PBXContainerItemProxy */;
+		};
+		17F6D0F8AFFD4995BC8216D6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CE16BC47D23A46A6A0219DD3 /* notepadTut */;
+			targetProxy = 363EBF1B445B489BA1509134 /* PBXContainerItemProxy */;
+		};
+		25BEEE350346482C9DF5AD45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95A512E5AA434E37B90E21E1 /* ZERO_CHECK */;
+			targetProxy = F0406844CCD84504BA5272E7 /* PBXContainerItemProxy */;
+		};
+		6961356E86544AC8B17C99E4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95A512E5AA434E37B90E21E1 /* ZERO_CHECK */;
+			targetProxy = 27F04A9E290542198E92D224 /* PBXContainerItemProxy */;
+		};
+		882F67A5EBE44354885E41F8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D2623DDCB9224670BA7339DD /* ALL_BUILD */;
+			targetProxy = C248F9347FB743E893DE33E5 /* PBXContainerItemProxy */;
+		};
+		DDED872397504AADA5AD560E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95A512E5AA434E37B90E21E1 /* ZERO_CHECK */;
+			targetProxy = 581DEC4028C9482DB2BCBEAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0E1B4EFACCA74AE4A69E04AD /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = notepadTut_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		29272C7CEFBA4A5EBD688A5A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		3CD97DB409B2449E9609FCC0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		412BF97D5A3644359BE019D9 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				DEVELOPMENT_TEAM = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/build";
+			};
+			name = RelWithDebInfo;
+		};
+		49C82D8955C64DB7A6B97D80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = notepadTut_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		4D3AE1E856E440068EDCCCEB /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = notepadTut_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		53C496CCFBE54F51A03A2C55 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		613196E6A4694CCCA9DB96F5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				DEVELOPMENT_TEAM = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/build";
+			};
+			name = Debug;
+		};
+		786C4B0CAA3D465D8780E65C /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		79DC6FEA44AB4CFA80AA591B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		7BDBB74247AB4409889A1EE2 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		80E573FB95CA42DB9B7B010B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = notepadTut_autogen;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		90839246724D4C848A5FC22F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		9300F857FD4947538471CC1C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				DEVELOPMENT_TEAM = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/build";
+			};
+			name = Release;
+		};
+		A7EEF1EE15AF47518B78325B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include_Release\"","$(inherited)");
+				INFOPLIST_FILE = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut.dir/Info.plist";
+				INSTALL_PATH = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-DQT_QML_DEBUG     -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = ("'-Wl,-e,_qt_main_wrapper' -Wl,-headerpad_max_install_names","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QGifPlugin_init/QGifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QICNSPlugin_init/QICNSPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QICOPlugin_init/QICOPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/platforms/objects-Release/QIOSIntegrationPlugin_init/QIOSIntegrationPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QJpegPlugin_init/QJpegPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QMacHeifPlugin_init/QMacHeifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QMacJp2Plugin_init/QMacJp2Plugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QPdfPlugin_init/QPdfPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/iconengines/objects-Release/QSvgIconPlugin_init/QSvgIconPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QSvgPlugin_init/QSvgPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QTgaPlugin_init/QTgaPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QTiffPlugin_init/QTiffPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QWbmpPlugin_init/QWbmpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QWebpPlugin_init/QWebpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Release/Widgets_resources_1/.rcc/qrc_qstyle.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Release/Widgets_resources_2/.rcc/qrc_qstyle1.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Release/Widgets_resources_3/.rcc/qrc_qmessagebox.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Release/Gui_resources_1/.rcc/qrc_qpdf.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Release/Gui_resources_2/.rcc/qrc_gui_shaders.cpp.o",/Applications/Qt/6.6.0/ios/lib/libQt6Core.a,/Applications/Qt/6.6.0/ios/lib/libQt6Widgets.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqgif.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqicns.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqico.a,/Applications/Qt/6.6.0/ios/plugins/platforms/libqios.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqjpeg.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacheif.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacjp2.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqpdf.a,/Applications/Qt/6.6.0/ios/plugins/iconengines/libqsvgicon.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqsvg.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtga.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtiff.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwbmp.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwebp.a,"-framework AudioToolbox","-framework QuartzCore",/Applications/Qt/6.6.0/ios/lib/libQt6OpenGL.a,"-framework AssetsLibrary","-framework UniformTypeIdentifiers","-framework Photos",/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibjpeg.a,/Applications/Qt/6.6.0/ios/lib/libQt6Pdf.a,/Applications/Qt/6.6.0/ios/lib/libQt6Network.a,"-framework Security","-framework CFNetwork","-framework SystemConfiguration",/Applications/Qt/6.6.0/ios/lib/libQt6Svg.a,/Applications/Qt/6.6.0/ios/lib/libQt6Gui.a,"-framework CoreGraphics","-framework ImageIO",/Applications/Qt/6.6.0/ios/lib/libQt6Core.a,"-framework IOKit","-framework CoreFoundation","-lm",/Applications/Qt/6.6.0/ios/lib/libQt6BundledPcre2.a,"-framework MobileCoreServices","-framework OpenGLES","-framework CoreText","-framework Foundation","-framework UIKit","-framework Metal",/Applications/Qt/6.6.0/ios/lib/libQt6BundledHarfbuzz.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledFreetype.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibpng.a,"-lz","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = notepadTut;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Applications/Qt/6.6.0/ios/include/QtCore,/Applications/Qt/6.6.0/ios/include,"/Applications/Qt/6.6.0/ios/mkspecs/macx-ios-clang",/Applications/Qt/6.6.0/ios/include/QtWidgets,/Applications/Qt/6.6.0/ios/include/QtGui,"$(inherited)");
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		A879240C78864843B51DE98D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		A90910E0C83542D49BE33915 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		B25B9278237240E6A396CD7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		CAC287FBEA484A6CA63C2D2C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		CEE0D9AF57E84F59B0C74863 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				DEVELOPMENT_TEAM = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = iphoneos;
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/build";
+			};
+			name = MinSizeRel;
+		};
+		D5BE926222104777A095589F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include_RelWithDebInfo\"","$(inherited)");
+				INFOPLIST_FILE = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut.dir/Info.plist";
+				INSTALL_PATH = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-DQT_QML_DEBUG        -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = ("'-Wl,-e,_qt_main_wrapper' -Wl,-headerpad_max_install_names","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QGifPlugin_init/QGifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QICNSPlugin_init/QICNSPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QICOPlugin_init/QICOPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/platforms/objects-Debug/QIOSIntegrationPlugin_init/QIOSIntegrationPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QJpegPlugin_init/QJpegPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QMacHeifPlugin_init/QMacHeifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QMacJp2Plugin_init/QMacJp2Plugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QPdfPlugin_init/QPdfPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/iconengines/objects-Debug/QSvgIconPlugin_init/QSvgIconPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QSvgPlugin_init/QSvgPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QTgaPlugin_init/QTgaPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QTiffPlugin_init/QTiffPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QWbmpPlugin_init/QWbmpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QWebpPlugin_init/QWebpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_1/.rcc/qrc_qstyle.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_2/.rcc/qrc_qstyle1.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_3/.rcc/qrc_qmessagebox.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Gui_resources_1/.rcc/qrc_qpdf.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Gui_resources_2/.rcc/qrc_gui_shaders.cpp.o",/Applications/Qt/6.6.0/ios/lib/libQt6Core.a,/Applications/Qt/6.6.0/ios/lib/libQt6Widgets.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqgif.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqicns.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqico.a,/Applications/Qt/6.6.0/ios/plugins/platforms/libqios.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqjpeg.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacheif.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacjp2.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqpdf.a,/Applications/Qt/6.6.0/ios/plugins/iconengines/libqsvgicon.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqsvg.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtga.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtiff.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwbmp.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwebp.a,"-framework AudioToolbox","-framework QuartzCore",/Applications/Qt/6.6.0/ios/lib/libQt6OpenGL.a,"-framework AssetsLibrary","-framework UniformTypeIdentifiers","-framework Photos",/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibjpeg.a,/Applications/Qt/6.6.0/ios/lib/libQt6Pdf.a,/Applications/Qt/6.6.0/ios/lib/libQt6Network.a,"-framework Security","-framework CFNetwork","-framework SystemConfiguration",/Applications/Qt/6.6.0/ios/lib/libQt6Svg.a,/Applications/Qt/6.6.0/ios/lib/libQt6Gui.a,"-framework CoreGraphics","-framework ImageIO",/Applications/Qt/6.6.0/ios/lib/libQt6Core.a,"-framework IOKit","-framework CoreFoundation","-lm",/Applications/Qt/6.6.0/ios/lib/libQt6BundledPcre2.a,"-framework MobileCoreServices","-framework OpenGLES","-framework CoreText","-framework Foundation","-framework UIKit","-framework Metal",/Applications/Qt/6.6.0/ios/lib/libQt6BundledHarfbuzz.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledFreetype.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibpng.a,"-lz","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = notepadTut;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Applications/Qt/6.6.0/ios/include/QtCore,/Applications/Qt/6.6.0/ios/include,"/Applications/Qt/6.6.0/ios/mkspecs/macx-ios-clang",/Applications/Qt/6.6.0/ios/include/QtWidgets,/Applications/Qt/6.6.0/ios/include/QtGui,"$(inherited)");
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		DA57A2909F314E6C9D2EDD20 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include_Debug\"","$(inherited)");
+				INFOPLIST_FILE = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut.dir/Info.plist";
+				INSTALL_PATH = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-DQT_QML_DEBUG    '-std=gnu++17' ";
+				OTHER_LDFLAGS = ("'-Wl,-e,_qt_main_wrapper' -Wl,-headerpad_max_install_names","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QGifPlugin_init/QGifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QICNSPlugin_init/QICNSPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QICOPlugin_init/QICOPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/platforms/objects-Debug/QIOSIntegrationPlugin_init/QIOSIntegrationPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QJpegPlugin_init/QJpegPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QMacHeifPlugin_init/QMacHeifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QMacJp2Plugin_init/QMacJp2Plugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QPdfPlugin_init/QPdfPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/iconengines/objects-Debug/QSvgIconPlugin_init/QSvgIconPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QSvgPlugin_init/QSvgPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QTgaPlugin_init/QTgaPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QTiffPlugin_init/QTiffPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QWbmpPlugin_init/QWbmpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QWebpPlugin_init/QWebpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_1/.rcc/qrc_qstyle.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_2/.rcc/qrc_qstyle1.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_3/.rcc/qrc_qmessagebox.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Gui_resources_1/.rcc/qrc_qpdf.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Gui_resources_2/.rcc/qrc_gui_shaders.cpp.o",/Applications/Qt/6.6.0/ios/lib/libQt6Core_debug.a,/Applications/Qt/6.6.0/ios/lib/libQt6Widgets_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqgif_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqicns_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqico_debug.a,/Applications/Qt/6.6.0/ios/plugins/platforms/libqios_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqjpeg_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacheif_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacjp2_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqpdf_debug.a,/Applications/Qt/6.6.0/ios/plugins/iconengines/libqsvgicon_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqsvg_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtga_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtiff_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwbmp_debug.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwebp_debug.a,"-framework AudioToolbox","-framework QuartzCore",/Applications/Qt/6.6.0/ios/lib/libQt6OpenGL_debug.a,"-framework AssetsLibrary","-framework UniformTypeIdentifiers","-framework Photos",/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibjpeg_debug.a,/Applications/Qt/6.6.0/ios/lib/libQt6Pdf_debug.a,/Applications/Qt/6.6.0/ios/lib/libQt6Network_debug.a,"-framework Security","-framework CFNetwork","-framework SystemConfiguration",/Applications/Qt/6.6.0/ios/lib/libQt6Svg_debug.a,/Applications/Qt/6.6.0/ios/lib/libQt6Gui_debug.a,"-framework CoreGraphics","-framework ImageIO",/Applications/Qt/6.6.0/ios/lib/libQt6Core_debug.a,"-framework IOKit","-framework CoreFoundation","-lm",/Applications/Qt/6.6.0/ios/lib/libQt6BundledPcre2_debug.a,"-framework MobileCoreServices","-framework OpenGLES","-framework CoreText","-framework Foundation","-framework UIKit","-framework Metal",/Applications/Qt/6.6.0/ios/lib/libQt6BundledHarfbuzz_debug.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledFreetype_debug.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibpng_debug.a,"-lz","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = notepadTut;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Applications/Qt/6.6.0/ios/include/QtCore,/Applications/Qt/6.6.0/ios/include,"/Applications/Qt/6.6.0/ios/mkspecs/macx-ios-clang",/Applications/Qt/6.6.0/ios/include/QtWidgets,/Applications/Qt/6.6.0/ios/include/QtGui,"$(inherited)");
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		DBBAC4ED21984A89A14DFE83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		DE06050199C2409284CD2DF1 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_BITCODE = NO;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",QT_CORE_LIB,QT_NO_DEBUG,QT_WIDGETS_LIB,QT_GUI_LIB,"$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = ("\"/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include_MinSizeRel\"","$(inherited)");
+				INFOPLIST_FILE = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut.dir/Info.plist";
+				INSTALL_PATH = "$(inherited)";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CPLUSPLUSFLAGS = "-DQT_QML_DEBUG     -DNDEBUG '-std=gnu++17' ";
+				OTHER_LDFLAGS = ("'-Wl,-e,_qt_main_wrapper' -Wl,-headerpad_max_install_names","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QGifPlugin_init/QGifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QICNSPlugin_init/QICNSPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QICOPlugin_init/QICOPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/platforms/objects-Debug/QIOSIntegrationPlugin_init/QIOSIntegrationPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QJpegPlugin_init/QJpegPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QMacHeifPlugin_init/QMacHeifPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QMacJp2Plugin_init/QMacJp2Plugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QPdfPlugin_init/QPdfPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/iconengines/objects-Debug/QSvgIconPlugin_init/QSvgIconPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QSvgPlugin_init/QSvgPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QTgaPlugin_init/QTgaPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QTiffPlugin_init/QTiffPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QWbmpPlugin_init/QWbmpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Debug/QWebpPlugin_init/QWebpPlugin_init.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_1/.rcc/qrc_qstyle.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_2/.rcc/qrc_qstyle1.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Widgets_resources_3/.rcc/qrc_qmessagebox.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Gui_resources_1/.rcc/qrc_qpdf.cpp.o","/Applications/Qt/6.6.0/ios/lib/objects-Debug/Gui_resources_2/.rcc/qrc_gui_shaders.cpp.o",/Applications/Qt/6.6.0/ios/lib/libQt6Core.a,/Applications/Qt/6.6.0/ios/lib/libQt6Widgets.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqgif.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqicns.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqico.a,/Applications/Qt/6.6.0/ios/plugins/platforms/libqios.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqjpeg.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacheif.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqmacjp2.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqpdf.a,/Applications/Qt/6.6.0/ios/plugins/iconengines/libqsvgicon.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqsvg.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtga.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqtiff.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwbmp.a,/Applications/Qt/6.6.0/ios/plugins/imageformats/libqwebp.a,"-framework AudioToolbox","-framework QuartzCore",/Applications/Qt/6.6.0/ios/lib/libQt6OpenGL.a,"-framework AssetsLibrary","-framework UniformTypeIdentifiers","-framework Photos",/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibjpeg.a,/Applications/Qt/6.6.0/ios/lib/libQt6Pdf.a,/Applications/Qt/6.6.0/ios/lib/libQt6Network.a,"-framework Security","-framework CFNetwork","-framework SystemConfiguration",/Applications/Qt/6.6.0/ios/lib/libQt6Svg.a,/Applications/Qt/6.6.0/ios/lib/libQt6Gui.a,"-framework CoreGraphics","-framework ImageIO",/Applications/Qt/6.6.0/ios/lib/libQt6Core.a,"-framework IOKit","-framework CoreFoundation","-lm",/Applications/Qt/6.6.0/ios/lib/libQt6BundledPcre2.a,"-framework MobileCoreServices","-framework OpenGLES","-framework CoreText","-framework Foundation","-framework UIKit","-framework Metal",/Applications/Qt/6.6.0/ios/lib/libQt6BundledHarfbuzz.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledFreetype.a,/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibpng.a,"-lz","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = notepadTut;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS";
+				SYSTEM_HEADER_SEARCH_PATHS = (/Applications/Qt/6.6.0/ios/include/QtCore,/Applications/Qt/6.6.0/ios/include,"/Applications/Qt/6.6.0/ios/mkspecs/macx-ios-clang",/Applications/Qt/6.6.0/ios/include/QtWidgets,/Applications/Qt/6.6.0/ios/include/QtGui,"$(inherited)");
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3DAAAC61ADB447309A1C06AE /* Build configuration list for PBXNativeTarget "notepadTut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA57A2909F314E6C9D2EDD20 /* Debug */,
+				A7EEF1EE15AF47518B78325B /* Release */,
+				DE06050199C2409284CD2DF1 /* MinSizeRel */,
+				D5BE926222104777A095589F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		54B3F1A6C5964AA5ADCB0E87 /* Build configuration list for PBXProject "notepadTut" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				613196E6A4694CCCA9DB96F5 /* Debug */,
+				9300F857FD4947538471CC1C /* Release */,
+				CEE0D9AF57E84F59B0C74863 /* MinSizeRel */,
+				412BF97D5A3644359BE019D9 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		6F11200AF1D94C3595031D41 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				53C496CCFBE54F51A03A2C55 /* Debug */,
+				A90910E0C83542D49BE33915 /* Release */,
+				A879240C78864843B51DE98D /* MinSizeRel */,
+				90839246724D4C848A5FC22F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		7FE5CE11C77847E081E33217 /* Build configuration list for PBXAggregateTarget "notepadTut_autogen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80E573FB95CA42DB9B7B010B /* Debug */,
+				49C82D8955C64DB7A6B97D80 /* Release */,
+				4D3AE1E856E440068EDCCCEB /* MinSizeRel */,
+				0E1B4EFACCA74AE4A69E04AD /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BF547F208AB0403799AB82F1 /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DBBAC4ED21984A89A14DFE83 /* Debug */,
+				B25B9278237240E6A396CD7F /* Release */,
+				29272C7CEFBA4A5EBD688A5A /* MinSizeRel */,
+				7BDBB74247AB4409889A1EE2 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C2C88419C40F4B14B6174730 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79DC6FEA44AB4CFA80AA591B /* Debug */,
+				CAC287FBEA484A6CA63C2D2C /* Release */,
+				3CD97DB409B2449E9609FCC0 /* MinSizeRel */,
+				786C4B0CAA3D465D8780E65C /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34FA21EA484142AAB2D3F9E1 /* Project object */;
+}

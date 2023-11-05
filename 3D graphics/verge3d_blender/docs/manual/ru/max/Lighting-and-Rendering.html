@@ -1,0 +1,1087 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Вердж3Д для 3дс Макса: Освещение и Рендеринг — Софт Эйт Софт</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Эта страница содержит информацию о настройках освещения и рендеринга в 3дс Макс, поддерживаемых в Вердж3Д.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/max/Lighting-and-Rendering.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Вердж3Д для 3дс Макса: Освещение и Рендеринг — Софт Эйт Софт">
+            <meta property="og:description" content="Эта страница содержит информацию о настройках освещения и рендеринга в 3дс Макс, поддерживаемых в Вердж3Д.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/max/Lighting-and-Rendering.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Вердж3Д для 3дс Макса: Освещение и Рендеринг — Софт Эйт Софт">
+            <meta name="twitter:description" content="Эта страница содержит информацию о настройках освещения и рендеринга в 3дс Макс, поддерживаемых в Вердж3Д.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-cubemap-create.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-cubemap-effect.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-cubemap-params.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-plane-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-plane-create.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-plane-params.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/rendering-settings-global-common.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/shadows-max/shadow-settings-global.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-max/global-animation-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/rendering-settings-global-ao.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/outline-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/rendering-settings-global-ao.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/outline-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/outline-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/rendering-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/adv-rendering-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/hidpi-compositing.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/visibility-breakpoints.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/line-rendering-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/line-rendering-properties.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/clipping-plane-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/clipping-plane-new.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство&nbsp;«Вердж3Д»</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_Менеджер_приложений">Менеджер приложений</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Пазлы">Пазлы</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Спецификация">Спецификация</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_проекта">Структура проекта</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Установка_обновлений">Установка обновлений</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_Вопрос-ответ">Вопрос-ответ</a></li></ul></div><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_темы_Методы_оптимизации">Методы оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_темы_Компрессия_ассетов">Компрессия ассетов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html" id="Основные_темы_Текстурная_компрессия">Текстурная компрессия</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_темы_Интерфейс_на_основе_ХТМЛ">Интерфейс на основе ХТМЛ</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_темы_Рендеринг_текста">Рендеринг текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_темы_Вирт./доп._реальность">Вирт./доп. реальность</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_темы_Руководство_по_физике">Руководство по физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_темы_Персонализация_приложений">Персонализация приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_темы_«ВордПресс»-плагин">«ВордПресс»-плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_темы_Использование_«ЯваСкрипт»">Использование «ЯваСкрипт»</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_темы_Создание_десктопных_приложений">Создание десктопных приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_темы_Создание_мобильных_приложений">Создание мобильных приложений</a></li><li><a href="manual/ru/introduction/Creating-SCORM-Courses.html" id="Основные_темы_Создание_обучающих_приложений">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_темы_Поиск_проблем_с_производительностью">Поиск проблем с производительностью</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_темы_Исправление_неполадок">Исправление неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_темы_Тестирование_в_мобильных_браузерах">Тестирование в мобильных браузерах</a></li></ul></div><div><h2>Блендер</h2><ul id="Блендер"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Блендер_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Блендер_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Блендер_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Блендер_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/blender/Camera.html" id="Блендер_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Блендер_Обзор_шейдерных_нод">Обзор шейдерных нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Блендер_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Блендер_Ключи_формы_(морфинг)">Ключи формы (морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Блендер_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Блендер_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Блендер_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Блендер_Ограничители">Ограничители</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Блендер_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>3дс Макс</h2><ul id="3дс_Макс"><li><a href="manual/ru/max/Beginners-Guide.html" id="3дс_Макс_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="3дс_Макс_Установка">Установка</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="3дс_Макс_Настройка_вьюпорта">Настройка вьюпорта</a></li><li><a href="manual/ru/max/Material-System.html" id="3дс_Макс_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="3дс_Макс_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/max/Camera.html" id="3дс_Макс_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="3дс_Макс_Материалы_и_текстуры">Материалы и текстуры</a></li><li><a href="manual/ru/max/Animation.html" id="3дс_Макс_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="3дс_Макс_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="3дс_Макс_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="3дс_Макс_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="3дс_Макс_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="3дс_Макс_Анимационные_ограничители">Анимационные ограничители</a></li><li><a href="manual/ru/max/Material-Library.html" id="3дс_Макс_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Майя</h2><ul id="Майя"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Майя_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Майя_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Майя_Материалы_и_текстурные_ноды">Материалы и текстурные ноды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Майя_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/maya/Camera.html" id="Майя_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Майя_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Майя_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Майя_Бленд_шейпы_(морфинг)">Бленд шейпы (морфинг)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Майя_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Майя_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Майя_Ограничители">Ограничители</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Майя_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Пазлы</h2><ul id="Пазлы"><li><a href="manual/ru/puzzles/Initialization.html" id="Пазлы_Инициализация">Инициализация</a></li><li><a href="manual/ru/puzzles/Events.html" id="Пазлы_События">События</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Пазлы_Селекторы">Селекторы</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Пазлы_Объекты">Объекты</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Пазлы_Материалы">Материалы</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Пазлы_Анимация_и_ограничители">Анимация и ограничители</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Пазлы_Камера_и_свет">Камера и свет</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Пазлы_Сцены">Сцены</a></li><li><a href="manual/ru/puzzles/Time.html" id="Пазлы_Время">Время</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Пазлы_ХТМЛ">ХТМЛ</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Пазлы_ВР/ДР">ВР/ДР</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Пазлы_Аудио/видео">Аудио/видео</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Пазлы_Физика">Физика</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Пазлы_Постпроцессинг">Постпроцессинг</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Пазлы_Логические_операции">Логические операции</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Пазлы_Циклы">Циклы</a></li><li><a href="manual/ru/puzzles/Text.html" id="Пазлы_Текст">Текст</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Пазлы_Числа">Числа</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Пазлы_Списки">Списки</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Пазлы_Словари">Словари</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Пазлы_Переменные">Переменные</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Пазлы_Процедуры">Процедуры</a></li><li><a href="manual/ru/puzzles/System.html" id="Пазлы_Системные">Системные</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Пазлы_Продвинутые">Продвинутые</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Пазлы_Электронная_коммерция">Электронная коммерция</a></li><li><a href="manual/ru/puzzles/SCORM.html" id="Пазлы_Электронное_обучение">Электронное обучение</a></li><li><a href="manual/ru/puzzles/Library.html" id="Пазлы_Библиотеки">Библиотеки</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Пазлы_Плагины">Плагины</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="manual/ru/programmers_guide/Terms.html" id="Прочее_Словарь_терминов">Словарь терминов</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Освещение и Рендеринг / 3дс Макс</h1>
+
+    <p>
+      Данная страница содержит информацию об освещении и визуализации в «3дс Максе», которые могут быть использованы в «Вердж3Д».
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/max/Lighting-and-Rendering.html#renderers">Рендереры</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#environment_lighting">Освещение от окружающей среды</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#lights">Источники освещения</a><ul><li><a href="manual/ru/max/Lighting-and-Rendering.html#photometric_lights">Источники освещения типа Photometric</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#standard_lights">Источники освещения типа Standard</a></li></ul></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#light_probes">Зонды освещения в виде отражающих кубических текстур</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#reflection_plane_light_probes">Зонды освещения в виде планарных отражений</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings">Глобальные настройки рендеринга</a><ul><li><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings_common">Вкладка Common</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings_shadows">Вкладка Shadows</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings_animation">Вкладка Animation</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings_ao">Вкладка AO</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings_outline">Вкладка Outlining</a></li></ul></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#ambient_occlusion">Эмбиент окклюжн</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#outline_rendering">Визуализация контура</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#exposure_control">Контроль экспозиции</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#per_object_rendering_settings">Настройки рендеринга объектов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#hidpi_rendering">Рендеринг с высокой плотностью пикселей («ретина»)</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#visibility_breakpoints">Контрольные точки видимости</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#line_rendering">Рендеринг линий</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html#clipping_planes">Секущие плоскости</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#renderers" id="renderers" class="permalink">#</a></p>
+
+    <h2>Рендереры</h2>
+
+    <p>
+      «Вердж3Д» поддерживает три рендера, предоставляемые «3дс Максом»: «Сканлайн», «АРТ» и «Арнольд» (рекомендуется). Рендерер «Сканлайн» предназначен для использования со стандартным освещением и материалами, а «АРТ»/«Арнольд» обычно используется с фотометрическим освещением и физическими материалами.
+    </p>
+
+    <p>
+      Выбор правильного рендерера — это первое, о чем следует подумать перед началом работы с графикой. Если вы не уверены, какой рендерер выбрать, мы рекомендуем использовать «Арнольд». Чтобы установить рендерер в «3дс Максе», используйте окно <a href="manual/ru/max/Viewport-Render-Preview.html#arnold_scanline_rendering">"Render Setup..."</a>.
+    </p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#environment_lighting" id="environment_lighting" class="permalink">#</a></p>
+
+    <h2>Освещение от окружающей среды</h2>
+
+    <p>
+      Освещение от окружения — очень важный компонент графического пайплайна в «Вердж3Д», основанного на физических материалах. Вы можете освещать сцену только с помощью карты окружения, не используя другие источники освещения. Ознакомьтесь с демо-приложением <a href="http://localhost:8668/store?req=status#scooter" target="_blank" rel="nofollow" title="Открыть «Скутер» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Скутер»</a> в качестве примера такого подхода.
+    </p>
+
+    <iframe class="video-480p" src="https://rutube.ru/play/embed/2a8d339cfe8a883a8fda33a0581e8c8f" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <p>
+      Стандартные шаблоны приложений (с кубиком) уже предоставляют необходимую ХДР-текстуру (с расширением .hdr) для освещения. Вы можете заменить эту текстуру собственным файлом или настроить освещение окружения с нуля, как показано в этом <a href="https://www.youtube.com/watch?v=s_QjxCr8I6k" target="_blank">видеоролике</a>.
+    </p>
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#lights" id="lights" class="permalink">#</a></p>
+
+    <h2>Источники освещения</h2>
+
+    <p>
+      В ряде случаев, освещения на основе изображения может быть недостаточно. В частности, если вы хотите иметь некий реальный источник света (например торшер), вам требуются динамические тени, либо нужно перемещать источник в пространстве (как в случае с автомобильными фарами).
+    </p>
+
+    <p>
+      «Вердж3Д» поддерживает два типа источников освещения предоставляемых «3дс Максом»: <strong>standard</strong> и <strong>photometric</strong>.
+    </p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#photometric_lights" id="photometric_lights" class="permalink">#</a></p>
+
+    <h3>Источники освещения типа Photometric</h3>
+
+    <p>
+      Photometric источники обычно используются с <a href="manual/ru/max/Materials-Maps-Reference.html#Physical">физическими материалами</a>. «Вердж3Д» воспроизводит их, используя «Арнольд»-рендерер «3дс Макса» в качестве эталона. Кроме того, вы можете использовать настройки физической камеры <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2023/ENU/3DSMax-Rendering/files/GUID-E1A6D466-CABB-4C8A-97A9-0C191C69F9BD-htm.html" target="_blank">Exposure Controls</a> для настройки яркости и цветового диапазона ваших рендеров.
+    </p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#standard_lights" id="standard_lights" class="permalink">#</a></p>
+
+    <h3>Источники освещения типа Standard</h3>
+
+    <p>
+      Standard источники обычно используются со <a href="manual/ru/max/Materials-Maps-Reference.html#Standard">стандартными материалами</a>. «Вердж3Д» воспроизводит их, используя в качестве эталона рендер «Сканлайн».
+    </p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#light_probes" id="light_probes" class="permalink">#</a></p>
+
+    <h2>Зонды освещения в виде отражающих кубических текстур</h2>
+
+    <p>
+      «Вердж3Д» добавляет в «3дс Макс» объект типа <strong>V3DReflectionCubemap</strong>, представляющий собой точку собирания непрямого освещения для дальнейшего наложения на объекты.
+    </p>
+
+    <iframe class="video-480p" src="https://rutube.ru/play/embed/947b6c1a937aba3209d52d79e7a21898" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <p class="demoNote">Смотрите пример в магазине ассетов — <a href="http://localhost:8668/store?req=status#light_probe" target="_blank" rel="nofollow" title="Открыть «Зонды освещения» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Зонды освещения»</a>.</p>
+
+    <p>
+      Этот объект можно добавить используя панель <strong>Create</strong> → категория <strong>Helpers</strong> → подкатегория <strong>Verge3D</strong>:
+    </p>
+
+    <img src="files/lighting-max/light-probe-reflection-cubemap-create.png" style="max-width: 351px">
+
+    <p>
+      Объект отражения определяет объем влияния, представленный в виде коробки или сферы. Все объекты, находящиеся внутри этого объема, будут использовать локальную кубическую карту отражения, созданную во время загрузки движа, вместо глобальной текстуры/цвета окружения сцены.<br><br>
+
+      Преимущество использования локальной карты отражения заключается в том, что на ней прорисованы окружающие объекты, в то время как глобальная карта сцены содержит только фоновую текстуру/цвет, указанный в настройках окружения «3дс Макса». Локальные карты отражения также имеют эффект параллакса в зависимости от геометрии <a href="manual/ru/max/Lighting-and-Rendering.html#influence_volume">влияния</a> или <a href="manual/ru/max/Lighting-and-Rendering.html#parallax_volume">параллаксного</a> объема.
+    </p>
+
+    <figure style="max-width: 915px">
+      <img src="files/lighting-max/light-probe-reflection-cubemap-effect.png">
+      <figcaption>
+        Cлева — отражающий объект во вьюпорте «Макса», справа — эффект, который он добавляет к отражающему материалу в «Вердж3Д».
+      </figcaption>
+    </figure>
+
+    <p>
+      Объекты Reflection Cubemap имеют следующие параметры:
+    </p>
+
+    <img src="files/lighting-max/light-probe-reflection-cubemap-params.png" style="max-width: 312px">
+
+    <dl>
+      <dt>General</dt>
+      <dd>
+        Основные настройки:
+
+        <dl>
+          <dt id="influence_volume">Influence Type</dt>
+          <dd>
+            Тип объема влияния: <strong>Sphere</strong> или <strong>Box</strong>. Освещение зонда влияет только на объекты, расположенные внутри этого объема.
+          </dd>
+
+          <dt>Influence Distance</dt>
+          <dd>
+            Размер объема влияния. Можно также изменить масштабирование объекта и сделать форму объема влияния неоднородной.
+          </dd>
+
+          <dt>Intensity</dt>
+          <dd>
+            Интенсивность косвенного освещения. Любое значение, отличное от 1,0 не является физически корректным.
+          </dd>
+
+          <dt>Clipping Start</dt>
+          <dd>
+            Расстояние до отсечения. Объекты, расположенные ближе, чем это значение, не будут отображаться в кубической карте отражения.
+          </dd>
+
+          <dt>Clipping End</dt>
+          <dd>
+            Дальнее расстояние отсечения. Объекты, расположенные дальше этого значения, не будут отображаться в кубической карте отражения.
+          </dd>
+        </dl>
+      </dd>
+
+      <dt>Visibility Selection Set</dt>
+      <dd>
+        Настройки видимости объекта:
+
+        <dl>
+          <dt>Selection Set</dt>
+          <dd>
+            Ограничить объекты, которые должны появиться на кубокарте отражения, только теми, которые принадлежат этому сету. Выберите опцию пустой строки (""), чтобы не указывать никакого набора объектов - в этом случае все объекты сцены будут использованы для создания кубической карты отражения.
+          </dd>
+
+          <dt>Invert Visibility</dt>
+          <dd>
+            Инвертировать выбор объектов, видимых этим зондом, если <strong>election Set</strong>.
+          </dd>
+        </dl>
+      </dd>
+
+      <dt id="parallax_volume">Custom Parallax</dt>
+      <dd>
+        Настройки параллакса:
+
+        <dl>
+          <dt>Enable Custom Parallax</dt>
+          <dd>
+            Включить пользовательские настройки для коррекции параллакса. Эта группа настроек определяет объем параллакса, который используется для проецирования освещения, захваченного датчиком. Если функция <strong>Custom Parallax</strong> не включена эффект параллакса рассчитывается на основе <strong>Influence Type</strong> и <strong>Influence Distance</strong>.
+          </dd>
+
+          <dt>Parallax Type</dt>
+          <dd>
+            Тип параллактического объема: <strong>Sphere</strong> или <strong>Box</strong>.
+          </dd>
+
+          <dt>Parallax Distance</dt>
+          <dd>
+            Размер параллактического объема.
+          </dd>
+        </dl>
+      </dd>
+
+      <dt>Custom Influence</dt>
+      <dd>
+        Настройки влияния:
+
+        <dl>
+          <dt>Enable Custom Influence</dt>
+          <dd>
+            Включить настройки влияния светового зонда, позволяющие назначить коллекцию объектов, которая будет находиться под влиянием соответствующего зонда. При указании параметра <strong>Influence Selectoin Set</strong>, настройки <strong>Type</strong> и <strong>Radius/Distance</strong> будут проигнорированы.
+          </dd>
+          <dt>Influence Selection Set</dt>
+          <dd>
+            Коллекция объектов, на которую будет оказывать влияние зонд.
+          </dd>
+
+          <dt>Invert Influence</dt>
+          <dd>
+            Инвертировать объекты, указанные в коллекции <strong>Influence Selection Set</strong>.
+          </dd>
+        </dl>
+      </dd>
+    </dl>
+    
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#reflection_plane_light_probes" id="reflection_plane_light_probes" class="permalink">#</a></p>
+
+    <h2>Зонды освещения в виде планарных отражений</h2>
+
+    <p>
+      Зонды планарных отражений —&nbsp;удобный способ добавить непрямые зеркальные отражения на плоские объекты, в частности, на зеркала, пол, стены и т.д.
+    </p>
+
+    <figure style="max-width: 804px">
+      <img src="files/lighting-max/light-probe-reflection-plane-example.jpg" alt="Демо загрузить-выгрузить">
+      <figcaption>Планарные отражения в демо-приложении <a href="http://localhost:8668/store?req=status#load_unload" target="_blank" rel="nofollow" title="Открыть «Загружаем-выгружаем» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Загружаем-выгружаем»</a>.</figcaption>
+    </figure>
+
+    <p class="demoNote">Смотрите пример в магазине ассетов — <a href="http://localhost:8668/store?req=status#light_probe" target="_blank" rel="nofollow" title="Открыть «Зонды освещения» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Зонды освещения»</a>.</p>
+
+    <p>
+      «Вердж3Д» добавляет в «3дс Макс» объект типа <strong>V3DReflectionPlane</strong> реализующий логику планарных отражений. Этот объект находится на панели <strong>Create</strong> → категория <strong>Helpers</strong> → подкатегория <strong>Verge3D</strong>:
+    </p>
+
+    <img src="files/lighting-max/light-probe-reflection-plane-create.jpg" alt="Adding reflection plane helper in 3ds Max" style="max-width: 363px">
+
+    <p>
+      Поддерживаются следующие свойства планарных зондов:
+    </p>
+
+    <img src="files/lighting-max/light-probe-reflection-plane-params.jpg" alt="Свойства планарных зондов в 3дс Максе" style="max-width: 368px">
+
+    <dl>
+      <dt>Length</dt>
+      <dd>
+        Длина плоскости отражения.
+      </dd>
+      <dt>Width</dt>
+      <dd>
+        Ширина плоскости отражения.
+      </dd>
+      <dt>Distance</dt>
+      <dd>
+        Дистанция влияния зонда.
+      </dd>
+      <dt>Falloff</dt>
+      <dd>
+        Интенсивность спада влияния.
+      </dd>
+      <dt>Clipping Offset</dt>
+      <dd>
+        Ближняя плоскость отсечения для объектов, отображаемых в данном планарном зонде.
+      </dd>
+      <dt>Visibility Collection</dt>
+      <dd>
+        Коллекция объектов видимых данным зондом.
+      </dd>
+    </dl>
+
+    <h3>Производительность</h3>
+
+    <p>
+      Планарные зонды могут существенно ухудшить производительность ваших приложений, поскольку для их работы требуется <strong>N+1</strong> вызовов отрисовки. Чтобы ускорить рендеринг, всегда ограничивайте количество объектов с помощью группы видимости <strong>Visibility Selection Set</strong>.
+    </p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings" id="global_rendering_settings" class="permalink">#</a></p>
+
+    <h2>Глобальные настройки рендеринга</h2>
+
+    <p>Глобальные настройки рендеринга, доступны из диалогового окна <strong>Verge3D Export Settings</strong> (вызываются из меню «3дс Макса» <strong>Verge3D</strong> → <strong>Export Settings...</strong>).</p>
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings_common" id="global_rendering_settings_common" class="permalink">#</a></p>
+
+    <h3>Вкладка Common</h3>
+
+    <img src="files/lighting-max/rendering-settings-global-common.jpg" alt="Common rendering settings window" style="max-width: 272px">
+
+    <dl>
+      <dt>Scene Copyright</dt>
+      <dd>Назначьте информацию об авторском праве в этом поле, чтобы обозначить, что экспортированные модели принадлежат именно вам.</dd>
+
+      <dt>Bake Text</dt>
+      <dd>Экспортировать объекты текста как есть или запекать в геометрию (меши). Читайте подробнее об этих режимах <a href="manual/ru/introduction/Text-Rendering.html">в разделе про текст</a>.</dd>
+
+      <dt>Enable LZMA Compression</dt>
+      <dd>Включить ЛЗМА-компрессию для экспортированных файлов. Читайте подробности об использовании этой функции <a href="manual/ru/introduction/Asset-compression.html">здесь</a>.</dd>
+
+      <dt>Compress Textures</dt>
+      <dd>Экспортировать текстуры с <a href="manual/ru/introduction/Texture-Compression.html">компрессией</a>.</dd>
+
+      <dt>Anti-Aliasing</dt>
+      <dd>
+        Выберите, какой алгоритм сглаживания (анти-алиасинга) использовать для сцены:
+        <dl>
+          <dt>Auto</dt>
+          <dd>Использовать системный метод по умолчанию.</dd>
+
+          <dt>MSAA 4x</dt>
+          <dd>Использовать мультисемплинг с 4-мя семплами, если такая настройка поддерживается оборудованием.</dd>
+
+          <dt>MSAA 8x</dt>
+          <dd>Использовать мультисемплинг 8-ю семплами, если такая настройка поддерживается оборудованием.</dd>
+
+          <dt>MSAA 16x</dt>
+          <dd>Использовать мультисемплинг с 16-ю семплами, если такая настройка поддерживается оборудованием.</dd>
+
+          <dt>FXAA</dt>
+          <dd>Использовать БААА (быстрый аппроксимирующий анти-алиасинг). Включите этот алгоритм в случае проблем <a href="manual/ru/introduction/Hardware-Related-Issues.html#aa_issues">с алиасингом процедурных текстур</a>.</dd>
+
+          <dt>None</dt>
+          <dd>Отключить сглаживание.</dd>
+        </dl>
+      </dd>
+
+      <dt>Use HDR Rendering</dt>
+      <dd>Включить рендеринг с высоким динамическим диапазоном (ХДР).</dd>
+
+      <dt>Environment Map Size</dt>
+      <dd>
+        Размер карты используемой для освещения:
+        <dl>
+          <dt>256</dt>
+          <dd>Оптимальное качество и минимальное потребление видеопамяти (значение по умолчанию).</dd>
+          <dd>Улучшенное качество при умеренном потреблении памяти и снижении производительности. Используйте его для рендеринга отражений высокого качества, например, для рендеринга ювелирных изделий.</dd>
+          <dt>1024</dt>
+          <dd>Наилучшее качество при высоком потреблении памяти и низкой производительности (как правило, не рекомендуется).</dd>
+        </dl>
+      </dd>
+
+      <dt id="ibl_environment_mode">IBL Env. Mode</dt>
+      <dd>
+        Способ рендеринга карты отражений:
+
+        <dl>
+          <dt>PMREM (slow)</dt>
+          <dd>Высокое качество (значение по умолчанию).</dd>
+
+          <dt>Light Probe + Cubemap (medium)</dt>
+          <dd>Снижение качества зеркальных отражений на основе изображений, лучшая производительность.</dd>
+
+          <dt>Light Probe (fast)</dt>
+          <dd>Отключение зеркальных отражений на основе изображений, высочайшая производительность.</dd>
+        </dl>
+      </dd>
+
+      <dt>Optimize Mesh Attrs</dt>
+      <dd>Удалять неиспользуемые атрибуты геометрии (напрмер тангенты) из экспортируемых мешей.</dd>
+    </dl>
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings_shadows" id="global_rendering_settings_shadows" class="permalink">#</a></p>
+
+    <h3>Вкладка Shadows</h3>
+
+    <img src="files/shadows-max/shadow-settings-global.jpg" style="max-width: 272px">
+
+    <p>Глобальные настройки теней. Читайте о них <a href="manual/ru/max/Shadows.html#global_settings">в разделе о тенях</a>.</p>
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings_animation" id="global_rendering_settings_animation" class="permalink">#</a></p>
+
+    <h3>Вкладка Animation</h3>
+
+    <img src="files/animation-max/global-animation-settings.jpg" style="max-width: 272px">
+
+    <p>
+      Глобальные настройки анимации. Смотрите <a href="manual/ru/max/Animation.html#verge3d_global_settings">тут</a>.
+    </p>
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings_ao" id="global_rendering_settings_ao" class="permalink">#</a></p>
+
+    <h3>Вкладка AO</h3>
+
+    <img src="files/lighting-max/rendering-settings-global-ao.jpg" style="max-width: 272px">
+
+    <p>
+      Настройки эмбиент окклюжн. Читайте подробности <a href="manual/ru/max/Lighting-and-Rendering.html#ambient_occlusion">ниже</a>.
+    </p>
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#global_rendering_settings_outline" id="global_rendering_settings_outline" class="permalink">#</a></p>
+
+    <h3>Вкладка Outlining</h3>
+
+    <img src="files/lighting-max/outline-settings.jpg" alt="Outline settings window" style="max-width: 272px">
+
+    <p>
+      Настройки визуализации контура. Смотрите <a href="manual/ru/max/Lighting-and-Rendering.html#outline_rendering">ниже</a>.
+    </p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#ambient_occlusion" id="ambient_occlusion" class="permalink">#</a></p>
+
+    <h2>Эмбиент окклюжн</h2>
+
+    <p>
+      Эмбиент окклюжн (англ. ambient occlusion) — техника улучшающая реалистичность рендеринга посредством дополнительного затенения от непрямых источников. Степень этого затенения определяется тем, насколько видима рисуемая часть объекта, если смотреть не из камеры, а со стороны источников освещения.
+    </p>
+
+    <p>
+      Движок «Вердж3Д» воспроизводит алгоритм называемый GTAO (Ground Truth Ambient Occlusion). Настройки этого алгоритма находятся на вкладке <strong>AO</strong> настроек экспорта <strong>Verge3D Export Settings</strong> (вызываются из меню «3дс Макса» <strong>Verge3D</strong> → <strong>Export Settings...</strong>)
+    </p>
+
+    <img src="files/lighting-max/rendering-settings-global-ao.jpg" alt="Ambient occlusion settings window" style="max-width: 272px">
+
+    <p class="note">
+      «Вердж3Д» поддерживает эмбиент окклюжн только для физических материалов и только для сцен имеющих <a href="manual/ru/max/Lighting-and-Rendering.html#environment_lighting">освещение от окружения</a> (не важно однотонное или на основе текстуры).
+    </p>
+
+    <dl>
+      <dt>Enabled</dt>
+      <dd>
+        Включить/выключить эмбиент окклюжн.
+      </dd>
+      <dt>Distance</dt>
+      <dd>
+        Радиус (в системных единицах измерения) в пределах которого будет производиться расчёт эффекта. Большие значения делают эффект более заметным, но уменьшают производительность, соответственно меньшие значения делают эффект менее заметным.
+      </dd>
+      <dt>Factor</dt>
+      <dd>
+        Интенсивность эффекта эмбиент окклюжн.
+      </dd>
+      <dt>Trace Precision</dt>
+      <dd>
+        Более высокие значения увеличивают точность эффекта за счёт снижения производительности. Меньшие значения уменьшают качество, но увеличивают производительность.
+      </dd>
+      <dt>Bent Normals</dt>
+      <dd>
+        Использовать модифицированные («изогнутые», от англ. bent) нормали для семплирования карты окружения, вместо оригинальных. Направление модифицированных нормалей задаётся в сторону наименьшего затененения, что улучшает качество эффекта, но уменьшает производительность.
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#outline_rendering" id="outline_rendering" class="permalink">#</a></p>
+
+    <h2>Визуализация контура</h2>
+
+    <p>
+      Контурный рендеринг — распространенная техника нефотореалистичного рендеринга, которая может значительно улучшить визуальное восприятие вашей сцены. Этот эффект можно использовать в различных приложениях, таких как электронное обучение, игры, архитектурная визуализация и техническое рисование.
+    </p>
+
+    <figure style="max-width: 819px">
+      <img src="files/lighting-blender/outline-example.jpg">
+      <figcaption>Визуализация контура используется для выделения частей сложного объекта в демо-приложении «Промышленный робот».</figcaption>
+    </figure>
+
+    <p>
+      Чтобы использовать визуализацию контура (и дополнительное свечение) в «Вердж3Д»-приложении, сначала включите эффект в настройках экспорта <strong>Verge3D Export Settings</strong>:
+    </p>
+
+    <img src="files/lighting-max/outline-settings.jpg" style="max-width: 272px">
+
+    <p>
+      а затем используйте пазл <a href="manual/ru/puzzles/Objects.html#outline">outline</a>, чтобы применить его к объекту (объектам).
+    </p>
+
+    <p class="note">
+      Контурный рендеринг не работает с виртуальной и дополненной реальностью. Используйте другие методы выделения объектов, например анимацию или изменение цвета материала.
+    </p>
+
+    <p>Настроить контур можно с помощью следующих свойств:</p>
+
+    <dl>
+      <dt>Enabled</dt>
+      <dd>Включить контурный рендеринг.<p></p>
+
+      </dd><dt>Edge Strength</dt>
+      <dd>Фактор силы контура.<p></p>
+
+      </dd><dt>Edge Glow</dt>
+      <dd>Интенсивность дополнительного свечения (отрисовывается за пределами основного края контура).<p></p>
+
+      </dd><dt>Edge Thickness</dt>
+      <dd>Коэффициент толщины края контура.<p></p>
+
+      </dd><dt>Pulse Period</dt>
+      <dd>Период импульса в секундах. Укажите, чтобы сделать эффект анимированным.<p></p>
+
+      </dd><dt>Visible Edge Color</dt>
+      <dd>Цвет видимого контура.<p></p>
+
+      </dd><dt>Hidden Edge Color</dt>
+      <dd>Цвет края контура, отображаемого за другими объектами сцены.<p></p>
+
+      </dd><dt>Render Hidden Edge</dt>
+      <dd>Включить/выключить отрисовку края контура за другими объектами сцены.<p></p>
+    </dd></dl>
+
+    <p class="note">Хотя есть возможность визуализировать светящиеся объекты, в большинстве случаев контурный рендеринг используется для улучшения повышения чёткости сцены. Если вам нужно свечение от ламп или других ярких объектов, подумайте об использовании постобработки <a href="manual/ru/puzzles/Postprocessing.html#bloom">bloom</a> вместо этого.</p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#exposure_control" id="exposure_control" class="permalink">#</a></p>
+
+    <h2>Контроль экспозиции</h2>
+
+    <p>«Вердж3Д для 3дс Макса» поддерживает следующие алгоритмы управления экспозицией:</p>
+
+    <ul>
+      <li><strong>Physical Camera Exposure Control</strong></li>
+      <li><strong>Logarithmic Exposure Control</strong></li>
+    </ul>
+
+    <p>Дополнительные сведения о том, как настроить элементы управления экспозицией для сцены, см. в официальной <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2023/ENU/3DSMax-Rendering/files/GUID-E1A6D466-CABB-4C8A-97A9-0C191C69F9BD-htm.html" target="_blank">документации</a> Autodesk.
+    </p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#per_object_rendering_settings" id="per_object_rendering_settings" class="permalink">#</a></p>
+
+    <h2>Настройки рендеринга объектов</h2>
+
+    <h3>Панель Verge3D Rendering Params</h3>
+
+    <p>Содержит базовые настройки рендеринга:</p>
+
+    <img src="files/lighting-max/rendering-settings.jpg" style="max-width: 319px">
+
+    <dl>
+      <dt>Render Order</dt>
+      <dd>
+        Изменяет порядок рендеринга для конкретного объекта. Чем меньше индекс, тем раньше будет отрисован объект. В большинстве случаев это значение необходимо подстроить при использовании прозрачности типа <strong>blend</strong> для устранения артефактов прозрачности.
+      </dd>
+
+      <dt>Frustum Culling</dt>
+      <dd>
+        Включает/выключает оптимизацию фрустум каллинга. Снимите этот флажок, если у вас есть объект со скиннингом, который может выходить за пределы экранного пространства, чтобы предотвратить его пропадание.
+      </dd>
+    </dl>
+
+
+    <h3>Панель Verge3D Adv. Rendering Params</h3>
+
+    <p>Содержит расширенные настройки рендеринга:</p>
+
+    <img src="files/lighting-max/adv-rendering-settings.jpg" style="max-width: 362px">
+
+    <dl>
+      <dt>Fit to Camera Edge</dt>
+      <dd>
+        Смотрите <a href="manual/ru/max/Camera.html#fit_to_camera_edge">здесь</a> чтобы получить больше информации об этой функции.
+      </dd>
+
+      <dt>Visibility Breakpoints</dt>
+      <dd>
+        Включить контрольные точки видимости. Смотите <a href="manual/ru/max/Lighting-and-Rendering.html#visibility_breakpoints">здесь</a>.
+      </dd>
+
+      <dt>HiDPI Compositing</dt>
+      <dd>
+        Включить/выключить пасс рендеринга с высокой плотностью пикселей. Смотрите <a href="manual/ru/max/Lighting-and-Rendering.html#hidpi_rendering">ниже</a> для получения дополнительной информации.
+      </dd>
+
+      <dt>Fix Ortho Zoom</dt>
+      <dd>
+        Применять обратное увеличение к объектам, которые рендерятся с использованием ортографической камеры. Данная коррекция используется для того, чтобы сделать объекты, дочерние к такой камере, неподвижными и имеющими неизменяемые размеры.
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#hidpi_rendering" id="hidpi_rendering" class="permalink">#</a></p>
+
+    <h2>Рендеринг с высокой плотностью пикселей («ретина»)</h2>
+
+    <p>
+      На сегодняшний день экраны большинства мобильных устройств и многих десктопов имеют высокую плотность пикселей (так называемые «ретина»-дисплеи). Рендеринг на этих экранах в полном разрешении может значительно улучшить качество изображения, однако это может значительно ухудшить ситуацию с производительностью.
+    </p>
+
+    <p>
+      Есть 2 способа улучшить качество ВПП-рендеринга, но так чтобы производительность не уменьшалась слишком сильно:
+    </p>
+
+    <ul>
+      <li>Увеличить разрешение не так сильно, например выставив фактор масштабирования в 1.5. Смотрите <a href="manual/ru/puzzles/System.html#set_screen_scale">здесь</a> чтобы узнать подробнее об этой технике.</li>
+      <li>Использовать высокое разрешение только там, где это наиболее актуально, например чтобы улучшить качество текста и интерфейсных элементов.</li>
+    </ul>
+
+    <p>
+      Второй способ активируется с помощью настройки <strong>HiDPI Compositing</strong> расположенной на панели <strong>Verge3D Adv. Rendering Params</strong>:
+    </p>
+
+    <img src="files/lighting-max/hidpi-compositing.jpg" alt="Настройки рендеринга в высоком разрешении в 3дс Максе" style="max-width: 362px">
+
+    <p class="demoNote">Смотрите пример в магазине ассетов — <a href="http://localhost:8668/store?req=status#ring" target="_blank" rel="nofollow" title="Открыть «Кольцо» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Кольцо»</a>.</p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#visibility_breakpoints" id="visibility_breakpoints" class="permalink">#</a></p>
+
+    <h2>Контрольные точки видимости</h2>
+
+    <p>
+      Контрольные точки видимости (<em>Visibility Breakpoints</em> в «3дс Максе») позволяют скрывать/показывать объекты в зависимости от ширины/высоты 3Д-вьюпорта и его ориентации. Чаще всего эта функция требуется, чтобы адаптировать сцену для различных экранов. Например вы можете создать два объекта для вертикальной и горизонтальной компоновки экрана и показывать лишь один из них.
+    </p>
+
+    <p>
+      Контрольные точки могут быть назначены и для камер. В таком случае движок переключит активную камеру на альтернативную, если параметры её контрольных точек окажутся подходящими (в противном случае переключения не произойдет).
+    </p>
+
+    <p>
+      Контрольные точки видимости настраиваются на панели <strong>Verge3D Adv. Rendering Params</strong>:
+    </p>
+
+    <img src="files/lighting-max/visibility-breakpoints.jpg" alt="Контрольные точки видимости Вердж3Д" style="max-width: 362px">
+
+    <dl>
+      <dt>Min Width</dt>
+      <dd>
+        Минимальная ширина канваса при которой объект остаётся видимым.
+      </dd>
+      <dt>Max Width</dt>
+      <dd>
+        Максимальная ширина канваса при которой объект остаётся видимым.
+      </dd>
+      <dt>Min Height</dt>
+      <dd>
+        Минимальная высота канваса при которой объект остаётся видимым.
+      </dd>
+      <dt>Max Height</dt>
+      <dd>
+        Максимальная высота канваса при которой объект остаётся видимым.
+      </dd>
+      <dt>Orientation</dt>
+      <dd>
+        Ориентация экрана при которой объект остаётся видимым.
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#line_rendering" id="line_rendering" class="permalink">#</a></p>
+
+    <h2>Рендеринг линий</h2>
+
+    <p>
+      С помощью этой функции вы можете рендерить блендеровские объекты с помощью линий. Чаще всего эта функция используется для рендеринга кривых, которые не обладают собственной геометрией, однако также может использоваться для рендеринга скелета мешей и поверхностей.
+    </p>
+
+    <figure>
+      <img src="files/lighting-max/line-rendering-example.jpg" alt="Рендеринг скелета геометрического объекта">
+      <figcaption>Рендеринг скелета геометрического объекта.</figcaption>
+    </figure>
+
+    <p>
+      Рендеринг линий включается на панели <strong>Verge3D Settings</strong>, которая в свою очередь расположена на панели <strong>Object Data Properties</strong>:
+    </p>
+
+    <img src="files/lighting-max/line-rendering-properties.jpg" alt="Настройки рендеринга линий">
+
+    <p>
+      Тут также настройки цвета и толщины линий. В «Вердж3Д» линии рендерятся с помощью эмиссивного шейдера (без освещения).
+    </p>
+
+    <p class="demoNote">Смотрите пример в магазине ассетов — <a href="http://localhost:8668/store?req=status#lines" target="_blank" rel="nofollow" title="Открыть «Линии» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Линии»</a>.</p>
+
+
+    <p><a href="manual/ru/max/Lighting-and-Rendering.html#clipping_planes" id="clipping_planes" class="permalink">#</a></p>
+
+    <h2>Секущие плоскости</h2>
+
+    <p>
+      Секущие плоскости (они же плоскости сечений) - это способ, используемый для отображения внутреннего устройства сложных объектов, таких как здания, автомобили, приборы, гаджеты, машины и т.д.
+    </p>
+
+    <figure>
+      <img src="files/lighting-max/clipping-plane-example.jpg">
+      <figcaption>Секущие плоскости используются для показа внутренней структуры мясорубки.</figcaption>
+    </figure>
+
+    <p>
+      Чтобы добавить новую плоскость обрезания, используйте кнопку <strong>Create → Helpers → Verge3D → ClippingPlane</strong> в «3дс Максе»:
+    </p>
+
+    <img src="files/lighting-max/clipping-plane-new.jpg" style="max-width: 347px">
+
+    <p>
+      Объекты в вашей сцене будут обрезаны в отрицательном направлении <strong>Z</strong> объекта плоскости сечения.
+    </p>
+
+    <p>
+      Плоскости сечения обладают следующими свойствами:
+    </p>
+
+    <dl>
+      <dt>Affected Objects</dt>
+      <dd>
+        Коллекция объектов, с которыми будет взаимодействовать секущая плоскость. Если коллекция не назначена, все объекты сцены будут обрезаны.
+      </dd><dt>Negated</dt>
+      <dd>
+        Поменять местами обрезанную и необрезанную стороны.
+      </dd>
+      <dt>Clip Shadows</dt>
+      <dd>
+        Обрезать тени, отбрасываемые обрезанными объектами.
+      </dd>
+      <dt>Union Planes</dt>
+      <dd>
+        Постройте объединение из всех плоскостей сечения, воздействуя на объект, а не на их пересечение.
+      </dd>
+      <dt>Cross-Section</dt>
+      <dd>
+        Заполните отверстие образованное секущей плоскостью в затронутых объектах.
+      </dd>
+      <dt>Cross-Section Color</dt>
+      <dd>
+        Цвет и прозрачность поперечного сечения.
+      </dd>
+      <dt>Cross-Sect. Size</dt>
+      <dd>
+        Размер плоскости сечения. Увеличьте это значение, если вы используете сцену большего размера.
+      </dd>
+    </dl>
+
+    <p class="demoNote">Смотрите пример в магазине ассетов — <a href="http://localhost:8668/store?req=status#clipping_planes" target="_blank" rel="nofollow" title="Открыть «Мясорубка» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Мясорубка»</a>.</p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/ru/форумы/" target="_blank">форуме</a>!</p>
+
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

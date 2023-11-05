@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-e750fdbed7d15914a2e0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "calculatorTut",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "calculatorTut::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-calculatorTut-Debug-ad562251f410fcf79375.json",
+					"name" : "calculatorTut",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "calculatorTut_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-calculatorTut_autogen-Debug-a9492b79494ad7857d75.json",
+					"name" : "calculatorTut_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "calculatorTut_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-calculatorTut_autogen_timestamp_deps-Debug-5df41d3615c4c86a22d5.json",
+					"name" : "calculatorTut_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Calculator/build-calculatorTut-Qt_6_6_0_for_macOS-Debug",
+		"source" : "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Calculator/calculatorTut"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

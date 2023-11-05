@@ -1,0 +1,14 @@
+-rootPath
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/sandbox
+-cmake-output
+-output-file
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_macOS-Debug/.qt_plugins/Qt6_QmlPlugins_Imports_appsandbox.cmake
+-importPath
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_macOS-Debug/sandbox
+-importPath
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_macOS-Debug
+-importPath
+/Applications/Qt/6.6.0/macos/./qml
+-qrcFiles
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_macOS-Debug/.rcc/qmake_sandbox.qrc
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_macOS-Debug/.rcc/appsandbox_raw_qml_0.qrc

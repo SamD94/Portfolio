@@ -1,0 +1,169 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-120555ecbce18bd191fd.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "sandbox",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-fbcf4ba0003cbf6231bf.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-8a55c3e87de89d4de5a5.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-dce2b54449551374aaf9.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-e61965310b405f8104cd.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsandbox::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsandbox-Debug-7d9908c36524448b4ab9.json",
+					"name" : "appsandbox",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsandbox_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsandbox_autogen-Debug-ee431613f718d65f8e5f.json",
+					"name" : "appsandbox_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsandbox_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsandbox_autogen_timestamp_deps-Debug-6164eef613cd9137e85d.json",
+					"name" : "appsandbox_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsandbox_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsandbox_qmlimportscan-Debug-5b30640bbc6179435250.json",
+					"name" : "appsandbox_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsandbox_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsandbox_qmllint-Debug-356a76918c8d21de5295.json",
+					"name" : "appsandbox_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsandbox_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsandbox_qmllint_json-Debug-eebba72e46608dd29fb3.json",
+					"name" : "appsandbox_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsandbox_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsandbox_qmllint_module-Debug-be486c93845bf1884567.json",
+					"name" : "appsandbox_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsandbox_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsandbox_qmltyperegistration-Debug-68287bae296c6e69e213.json",
+					"name" : "appsandbox_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appsandbox_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appsandbox_tooling-Debug-558183ce1ccac3e51843.json",
+					"name" : "appsandbox_tooling",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_macOS-Debug",
+		"source" : "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/sandbox"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

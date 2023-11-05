@@ -1,0 +1,383 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Вердж3Д для Майи: Анимация — Софт Эйт Софт</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Узнайте, как создавать анимацию и управлять ею в Вердж3Д для Майи. Объяснение типов анимации: объектная, скелетная, blend shapes и процедурная.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/maya/Animation.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Вердж3Д для Майи: Анимация — Софт Эйт Софт">
+            <meta property="og:description" content="Узнайте, как создавать анимацию и управлять ею в Вердж3Д для Майи. Объяснение типов анимации: объектная, скелетная, blend shapes и процедурная.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/maya/Animation.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Вердж3Д для Майи: Анимация — Софт Эйт Софт">
+            <meta name="twitter:description" content="Узнайте, как создавать анимацию и управлять ею в Вердж3Д для Майи. Объяснение типов анимации: объектная, скелетная, blend shapes и процедурная.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-maya/insert-keyframe.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-maya/skeletal-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-maya/blend-shape-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-animation-animate-param.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-maya/global-animation-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-maya/object-animation-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-maya/frame-rate.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-animation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство&nbsp;«Вердж3Д»</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_Менеджер_приложений">Менеджер приложений</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Пазлы">Пазлы</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Спецификация">Спецификация</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_проекта">Структура проекта</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Установка_обновлений">Установка обновлений</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_Вопрос-ответ">Вопрос-ответ</a></li></ul></div><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_темы_Методы_оптимизации">Методы оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_темы_Компрессия_ассетов">Компрессия ассетов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html" id="Основные_темы_Текстурная_компрессия">Текстурная компрессия</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_темы_Интерфейс_на_основе_ХТМЛ">Интерфейс на основе ХТМЛ</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_темы_Рендеринг_текста">Рендеринг текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_темы_Вирт./доп._реальность">Вирт./доп. реальность</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_темы_Руководство_по_физике">Руководство по физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_темы_Персонализация_приложений">Персонализация приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_темы_«ВордПресс»-плагин">«ВордПресс»-плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_темы_Использование_«ЯваСкрипт»">Использование «ЯваСкрипт»</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_темы_Создание_десктопных_приложений">Создание десктопных приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_темы_Создание_мобильных_приложений">Создание мобильных приложений</a></li><li><a href="manual/ru/introduction/Creating-SCORM-Courses.html" id="Основные_темы_Создание_обучающих_приложений">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_темы_Поиск_проблем_с_производительностью">Поиск проблем с производительностью</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_темы_Исправление_неполадок">Исправление неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_темы_Тестирование_в_мобильных_браузерах">Тестирование в мобильных браузерах</a></li></ul></div><div><h2>Блендер</h2><ul id="Блендер"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Блендер_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Блендер_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Блендер_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Блендер_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/blender/Camera.html" id="Блендер_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Блендер_Обзор_шейдерных_нод">Обзор шейдерных нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Блендер_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Блендер_Ключи_формы_(морфинг)">Ключи формы (морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Блендер_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Блендер_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Блендер_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Блендер_Ограничители">Ограничители</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Блендер_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>3дс Макс</h2><ul id="3дс_Макс"><li><a href="manual/ru/max/Beginners-Guide.html" id="3дс_Макс_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="3дс_Макс_Установка">Установка</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="3дс_Макс_Настройка_вьюпорта">Настройка вьюпорта</a></li><li><a href="manual/ru/max/Material-System.html" id="3дс_Макс_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="3дс_Макс_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/max/Camera.html" id="3дс_Макс_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="3дс_Макс_Материалы_и_текстуры">Материалы и текстуры</a></li><li><a href="manual/ru/max/Animation.html" id="3дс_Макс_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="3дс_Макс_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="3дс_Макс_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="3дс_Макс_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="3дс_Макс_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="3дс_Макс_Анимационные_ограничители">Анимационные ограничители</a></li><li><a href="manual/ru/max/Material-Library.html" id="3дс_Макс_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Майя</h2><ul id="Майя"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Майя_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Майя_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Майя_Материалы_и_текстурные_ноды">Материалы и текстурные ноды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Майя_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/maya/Camera.html" id="Майя_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Майя_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Майя_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Майя_Бленд_шейпы_(морфинг)">Бленд шейпы (морфинг)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Майя_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Майя_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Майя_Ограничители">Ограничители</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Майя_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Пазлы</h2><ul id="Пазлы"><li><a href="manual/ru/puzzles/Initialization.html" id="Пазлы_Инициализация">Инициализация</a></li><li><a href="manual/ru/puzzles/Events.html" id="Пазлы_События">События</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Пазлы_Селекторы">Селекторы</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Пазлы_Объекты">Объекты</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Пазлы_Материалы">Материалы</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Пазлы_Анимация_и_ограничители">Анимация и ограничители</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Пазлы_Камера_и_свет">Камера и свет</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Пазлы_Сцены">Сцены</a></li><li><a href="manual/ru/puzzles/Time.html" id="Пазлы_Время">Время</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Пазлы_ХТМЛ">ХТМЛ</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Пазлы_ВР/ДР">ВР/ДР</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Пазлы_Аудио/видео">Аудио/видео</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Пазлы_Физика">Физика</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Пазлы_Постпроцессинг">Постпроцессинг</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Пазлы_Логические_операции">Логические операции</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Пазлы_Циклы">Циклы</a></li><li><a href="manual/ru/puzzles/Text.html" id="Пазлы_Текст">Текст</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Пазлы_Числа">Числа</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Пазлы_Списки">Списки</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Пазлы_Словари">Словари</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Пазлы_Переменные">Переменные</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Пазлы_Процедуры">Процедуры</a></li><li><a href="manual/ru/puzzles/System.html" id="Пазлы_Системные">Системные</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Пазлы_Продвинутые">Продвинутые</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Пазлы_Электронная_коммерция">Электронная коммерция</a></li><li><a href="manual/ru/puzzles/SCORM.html" id="Пазлы_Электронное_обучение">Электронное обучение</a></li><li><a href="manual/ru/puzzles/Library.html" id="Пазлы_Библиотеки">Библиотеки</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Пазлы_Плагины">Плагины</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="manual/ru/programmers_guide/Terms.html" id="Прочее_Словарь_терминов">Словарь терминов</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Анимация / Майя</h1>
+
+    <p>
+      Эта страница содержит информацию о типах анимации «Майи», которые можно использовать с «Вердж3Д», а также о поддерживаемых вариантах воспроизведения и средствах интерактивного управления анимацией.
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/maya/Animation.html#setting_up_maya">Настройки в «Майе»</a><ul><li><a href="manual/ru/maya/Animation.html#Whole_Object_Animation">Объектная анимация</a></li><li><a href="manual/ru/maya/Animation.html#Skeletal_Animation">Скелетная анимация</a></li><li><a href="manual/ru/maya/Animation.html#Blend_Shape_Animation">Морфинг</a></li><li><a href="manual/ru/maya/Animation.html#Material_Animation">Анимация материалов</a></li><li><a href="manual/ru/maya/Animation.html#Procedural_Animation">Процедурная анимация</a></li></ul></li><li><a href="manual/ru/maya/Animation.html#Playback_Options">Параметры воспроизведения</a><ul><li><a href="manual/ru/maya/Animation.html#Verge3D_Global_Settings">Глобальные настройки анимации «Вердж3Д»</a></li><li><a href="manual/ru/maya/Animation.html#Verge3D_Per_Object_Settings">Настройки анимации в «Вердж3Д» для каждого Объекта</a></li><li><a href="manual/ru/maya/Animation.html#Frame_Rate">Частота кадров</a></li></ul></li><li><a href="manual/ru/maya/Animation.html#Animation_Control_with_Puzzles">Управление анимацией с помощью пазлов</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/maya/Animation.html#setting_up_maya" id="setting_up_maya" class="permalink">#</a></p>
+
+    <h2>Настройки в «Майе»</h2>
+
+
+    <p><a href="manual/ru/maya/Animation.html#Whole_Object_Animation" id="Whole_Object_Animation" class="permalink">#</a></p>
+
+    <h3>Объектная анимация</h3>
+
+    <p>
+      Ключевые кадры анимации можно добавить стандартным способом в «Майе», используя команду меню <strong>Key</strong> → <strong>Set Key</strong> в режиме Animation или нажав <strong>S</strong> на клавиатуре.
+    </p>
+
+    <img src="files/animation-maya/insert-keyframe.jpg" style="max-width: 419px">
+
+    <p>
+      Для лучшей производительности мы рекомендуем устанавливать ключи отдельно, только для каналов, которые должны быть анимированы, например:
+    </p>
+
+    <ul>
+      <li><strong>Translate</strong>: меню <strong>Key</strong> → <strong>Set Key on Translate</strong> или горячие клавиши <strong>Shift-W</strong>.</li>
+      <li><strong>Rotate</strong>: меню <strong>Key</strong> → <strong>Set Key on Rotate</strong> или горячие клавиши <strong>Shift-E</strong>.</li>
+      <li><strong>Scale</strong>: меню <strong>Key</strong> → <strong>Set Key on Scale</strong> или горячие клавиши <strong>Shift-R</strong>.</li>
+    </ul>
+
+    <p><a href="manual/ru/maya/Animation.html#Skeletal_Animation" id="Skeletal_Animation" class="permalink">#</a></p>
+
+    <h3>Скелетная анимация</h3>
+
+    <p>
+      Объект может быть анимирован в «Вердж3Д» с помощью костей «Майи». «Вердж3Д» поддерживает максимум 4 веса на одну кость (взаимодействовать с костью будут только 4 веса с самым большим значением влияния, остальные будут проигнорированы).
+    </p>
+
+    <img src="files/animation-maya/skeletal-animation.jpg" style="max-width: 592px">
+
+    <p>
+      Кости можно анимировать напрямую, устанавливая ключи трансформации или используя вспомогательные контроллеры, такие как IK-ручки/эффекторы. Чтобы анимировать кости косвенно, включите свойства <strong>Skeleton Root</strong> и <strong>Custom Frame Range</strong> на их общем родительском объекте и установите соответствующие значения <strong>From</strong>/<strong>To</strong> в качестве значений кадров. Более подробную информацию смотрите <a href="manual/ru/maya/Animation.html#Verge3D_Per_Object_Settings">ниже</a>.
+    </p>
+
+    <p><a href="manual/ru/maya/Animation.html#Blend_Shape_Animation" id="Blend_Shape_Animation" class="permalink">#</a></p>
+
+    <h3>Морфинг</h3>
+
+    <p>
+      Вы можете добавить <a href="manual/ru/maya/Blend-Shapes.html">blend shapes</a> к объекту стандартным способом в «Майе», а затем анимировать их веса с помощью ключевых кадров.
+    </p>
+
+    <img src="files/animation-maya/blend-shape-animation.jpg" style="max-width: 681px">
+
+
+    <p><a href="manual/ru/maya/Animation.html#Material_Animation" id="Material_Animation" class="permalink">#</a></p>
+
+    <h3>Анимация материалов</h3>
+
+    <p>
+      Чтобы использовать анимацию материала с ключевыми кадрами, просто установите ключи на любом параметре материала.
+    </p>
+
+    <p><a href="manual/ru/maya/Animation.html#Procedural_Animation" id="Procedural_Animation" class="permalink">#</a></p>
+
+    <h3>Процедурная анимация</h3>
+
+    <p>
+      Вместо того чтобы воспроизводить анимацию, заранее созданную в «Майе», вы можете использовать пазлы или «ЯваСкрипт» для изменения координат или некоторых других параметров связанных со временем. В частности, пазл <a href="manual/ru/puzzles/Animation.html#animate_param">animate param</a> (основанный на библиотеке Tween.js) является удобным способом создания собственной анимации на лету.
+    </p>
+
+    <img src="files/puzzles/puzzles-animation-animate-param.jpg">
+
+
+    <p><a href="manual/ru/maya/Animation.html#Playback_Options" id="Playback_Options" class="permalink">#</a></p>
+
+    <h2>Параметры воспроизведения</h2>
+
+    <p><a href="manual/ru/maya/Animation.html#Verge3D_Global_Settings" id="Verge3D_Global_Settings" class="permalink">#</a></p>
+
+    <h3>Глобальные настройки анимации «Вердж3Д»</h3>
+
+    <p>
+      С помощью <strong>Animation</strong>, раздела <strong>Verge3D Export Settings</strong> вы можете назначить глобальные параметры анимации, которые будут влиять на все анимируемые объекты в вашей сцене.
+    </p>
+
+    <img src="files/animation-maya/global-animation-settings.jpg" style="max-width: 411px">
+
+    <dl>
+      <dt>
+        Export Animations
+      </dt>
+      <dd>
+        экспортировать анимацию сцены для использования в «Вердж3Д».
+      </dd>
+      <dt>
+        Export Within Playback Range
+      </dt>
+      <dd>
+        по умолчанию экспортер «Вердж3Д» учитывает диапазоны ключевых кадров анимации каждого объекта. Включение этого параметра заставит экспортер учитывать глобальный диапазон воспроизведения.
+      </dd>
+      <dt>
+        Keyframes Start with 0
+      </dt>
+      <dd>
+        сделать так, чтобы экспортированные ключевые кадры анимации всегда начинались с нулевого кадра.
+      </dd>
+    </dl>
+
+    <p><a href="manual/ru/maya/Animation.html#Verge3D_Per_Object_Settings" id="Verge3D_Per_Object_Settings" class="permalink">#</a></p>
+
+    <h3>Настройки анимации в «Вердж3Д» для каждого Объекта</h3>
+
+    <p>
+      Каждому объекту в 3дс Макс назначаются настройки «Вердж3Д», включая настройки для воспроизведения анимации.
+    </p>
+
+    <img src="files/animation-maya/object-animation-settings.jpg" style="max-width: 443px">
+
+    <p>
+      Animation settings:
+    </p>
+
+    <dl>
+      <dt>
+        Auto Start
+      </dt>
+      <dd>
+        начнется ли анимация этого объекта после загрузки сцены.
+      </dd>
+      <dt>
+        Loop Mode
+      </dt>
+      <dd>
+        режим воспроизведения: <strong>Repeat</strong> - воспроизводится с начала до конца и повторяется, <strong>Once</strong> - воспроизводится один раз и останавливается, <strong>Ping Pong</strong> - воспроизводится с начала до конца, а затем наоборот.
+      </dd>
+      <dt>
+        Repeat Infinitely
+      </dt>
+      <dd>
+        будет ли анимация этого объекта воспроизводиться заново. Действует только для режимов <strong>Repeat</strong> и <strong>Ping Pong</strong>.
+      </dd>
+      <dt>
+        Repeat Count
+      </dt>
+      <dd>
+        сколько раз будет воспроизводиться анимация. Действует только для режимов <strong>Repeat</strong> и <strong>Ping Pong</strong>, если отключена функция <strong>Repeat Infinitely</strong>.
+      </dd>
+      <dt>
+        Offset
+      </dt>
+      <dd>
+        сколько кадров будет пропущено перед началом анимации.
+      </dd>
+      <dt>
+        Custom Frame Range
+      </dt>
+      <dd>
+        включить и указать значения <strong>From</strong>/<strong>To</strong>, чтобы переопределить диапазоны ключевых кадров объекта или глобальную временную шкалу анимации. Активация этого свойства заставит объект быть анимированным, даже если у него нет ключевых кадров. Это полезно для запекания косвенной анимации, такой как IK-handles/effectors, влияющие на движения костей.
+      </dd>
+      <dt>
+        Skeleton Root
+      </dt>
+      <dd>
+        считать объект корнем скелета, например, сделать так, чтобы все дочерние кости наследовали параметры анимации от этого объекта.
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/maya/Animation.html#Frame_Rate" id="Frame_Rate" class="permalink">#</a></p>
+
+    <h3>Частота кадров</h3>
+
+    <p>
+      Значение частоты кадров (по умолчанию - 24 fps) влияющее на скорость воспроизведения, можно изменить с помощью панели Параметры воспроизведения, расположенной возле переключения диапазона.
+    </p>
+
+    <img src="files/animation-maya/frame-rate.jpg" style="max-width: 383px">
+
+
+    <p><a href="manual/ru/maya/Animation.html#Animation_Control_with_Puzzles" id="Animation_Control_with_Puzzles" class="permalink">#</a></p>
+
+    <h2>Управление анимацией с помощью пазлов</h2>
+
+    <p>
+      Вы можете использовать <strong>animation puzzles</strong> для воспроизведения предварительно созданной анимации (для получения более подробной информации пройдите по <a href="manual/ru/puzzles/Animation.html">ссылке</a>).
+    </p>
+
+    <img src="files/puzzles/puzzles-animation.jpg">
+
+    <p>
+      Анимация также может быть реализована с использованием других блоков пазлов — смотрите пазлы <a href="manual/ru/puzzles/Camera.html">для камеры</a> и <a href="manual/ru/puzzles/Time.html">времени</a>.
+    </p>
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/ru/форумы/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

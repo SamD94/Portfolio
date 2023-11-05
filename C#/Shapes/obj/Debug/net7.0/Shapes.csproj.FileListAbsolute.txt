@@ -1,0 +1,15 @@
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/obj/Debug/net7.0/Shapes.csproj.AssemblyReference.cache
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/obj/Debug/net7.0/Shapes.GeneratedMSBuildEditorConfig.editorconfig
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/obj/Debug/net7.0/Shapes.AssemblyInfoInputs.cache
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/obj/Debug/net7.0/Shapes.AssemblyInfo.cs
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/obj/Debug/net7.0/Shapes.csproj.CoreCompileInputs.cache
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/bin/Debug/net7.0/Shapes
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/bin/Debug/net7.0/Shapes.deps.json
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/bin/Debug/net7.0/Shapes.runtimeconfig.json
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/bin/Debug/net7.0/Shapes.dll
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/bin/Debug/net7.0/Shapes.pdb
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/obj/Debug/net7.0/Shapes.dll
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/obj/Debug/net7.0/refint/Shapes.dll
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/obj/Debug/net7.0/Shapes.pdb
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/obj/Debug/net7.0/Shapes.genruntimeconfig.cache
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/C#/Shapes/obj/Debug/net7.0/ref/Shapes.dll

@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/sandbox">
+    <file alias="qmldir">/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/quick/sandbox/build-sandbox-Qt_6_5_0_for_iOS/sandbox/qmldir</file>
+  </qresource>
+</RCC>
+

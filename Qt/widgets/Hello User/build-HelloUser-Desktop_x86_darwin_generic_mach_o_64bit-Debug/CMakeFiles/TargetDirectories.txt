@@ -1,0 +1,9 @@
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/HelloUser.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/edit_cache.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/rebuild_cache.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/list_install_components.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/install.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/install/local.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/install/strip.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/HelloUser_autogen_timestamp_deps.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Employment/Portfolio/Qt/widgets/build-HelloUser-Desktop_x86_darwin_generic_mach_o_64bit-Debug/CMakeFiles/HelloUser_autogen.dir

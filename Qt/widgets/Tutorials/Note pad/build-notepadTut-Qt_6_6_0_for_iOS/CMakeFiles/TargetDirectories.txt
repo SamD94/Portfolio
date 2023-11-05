@@ -1,0 +1,5 @@
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/install.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/notepadTut_autogen.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/ALL_BUILD.dir
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/ZERO_CHECK.dir

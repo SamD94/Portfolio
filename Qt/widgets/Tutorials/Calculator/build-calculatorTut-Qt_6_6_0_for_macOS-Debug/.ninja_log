@@ -1,0 +1,15 @@
+# ninja log v5
+4138	5217	1685778437310559055	calculatorTut.app/Contents/MacOS/calculatorTut	de2aeb8df57ac399
+129	4137	1685778436225731051	CMakeFiles/calculatorTut.dir/calculator.cpp.o	b825888dd51bf48e
+557	8596	1685778409117060380	CMakeFiles/calculatorTut.dir/main.cpp.o	9aa23c73d0b5c0bf
+557	8586	1685778409114271556	CMakeFiles/calculatorTut.dir/calculatorTut_autogen/mocs_compilation.cpp.o	4535b0b7c9922dac
+16	123	1685778432227733275	calculatorTut_autogen/timestamp	cf8221572969573a
+16	123	1685778432227733275	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Calculator/build-calculatorTut-Qt_6_6_0_for_macOS-Debug/calculatorTut_autogen/mocs_compilation.cpp	cf8221572969573a
+16	123	1685778432227733275	calculatorTut_autogen/mocs_compilation.cpp	cf8221572969573a
+16	123	1685778432227733275	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Calculator/build-calculatorTut-Qt_6_6_0_for_macOS-Debug/calculatorTut_autogen/timestamp	cf8221572969573a
+17	118	1685778500038742925	calculatorTut_autogen/timestamp	cf8221572969573a
+17	118	1685778500038742925	calculatorTut_autogen/mocs_compilation.cpp	cf8221572969573a
+17	118	1685778500038742925	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Calculator/build-calculatorTut-Qt_6_6_0_for_macOS-Debug/calculatorTut_autogen/timestamp	cf8221572969573a
+17	118	1685778500038742925	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Calculator/build-calculatorTut-Qt_6_6_0_for_macOS-Debug/calculatorTut_autogen/mocs_compilation.cpp	cf8221572969573a
+124	3622	1685778503530154629	CMakeFiles/calculatorTut.dir/calculator.cpp.o	b825888dd51bf48e
+3623	4027	1685778503938833843	calculatorTut.app/Contents/MacOS/calculatorTut	de2aeb8df57ac399

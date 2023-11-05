@@ -1,0 +1,599 @@
+<!DOCTYPE html><html lang="ru"><head>
+                    <title>Textures — Руководство по Вердж3Д — Софт Эйт Софт</title>
+                    <meta name="description" content="Узнайте как использовать Textures в интерактивных 3Д-веб-приложениях сделанных на Вердж3Д">
+                
+    <meta charset="utf-8">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/api/ru/constants/Textures.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Textures — Руководство по Вердж3Д — Софт Эйт Софт">
+            <meta property="og:description" content="Узнайте как использовать Textures в интерактивных 3Д-веб-приложениях сделанных на Вердж3Д">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/api/ru/constants/Textures.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Textures — Руководство по Вердж3Д — Софт Эйт Софт">
+            <meta name="twitter:description" content="Узнайте как использовать Textures в интерактивных 3Д-веб-приложениях сделанных на Вердж3Д">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        </head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="api/ru/index.html">Руководство разработчика</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/programmers_guide/Programming-basics.html" id="Основные_темы_Основы_программирования">Основы программирования</a></li><li><a href="manual/ru/programmers_guide/Integration-with-Reactjs-Vuejs.html" id="Основные_темы_Интеграция_с_React.js/Vue.js">Интеграция с React.js/Vue.js</a></li><li><a href="manual/ru/programmers_guide/Developer-Kit.html" id="Основные_темы_Комплект_разработчика">Комплект разработчика</a></li><li><a href="manual/ru/programmers_guide/Wordpress-Advanced-Guide.html" id="Основные_темы_Расширенное_руководство_«ВордПресс»">Расширенное руководство «ВордПресс»</a></li><li><a href="manual/ru/programmers_guide/Matrix-transformations.html" id="Основные_темы_Матричные_преобразования">Матричные преобразования</a></li><li><a href="manual/ru/programmers_guide/Animation-system.html" id="Основные_темы_Система_анимации">Система анимации</a></li><li><a href="manual/ru/programmers_guide/Drawing-lines.html" id="Основные_темы_Рендеринг_линий">Рендеринг линий</a></li><li><a href="manual/ru/programmers_guide/How-to-update-things.html" id="Основные_темы_Как_обновлять_объекты">Как обновлять объекты</a></li><li><a href="manual/ru/programmers_guide/How-to-obtain-Verge3D-sources.html" id="Основные_темы_Как_получить_исходники">Как получить исходники</a></li></ul></div><div><h2>Анимация</h2><ul id="Анимация"><li><a href="api/ru/animation/AnimationAction.html" id="Анимация_AnimationAction">AnimationAction</a></li><li><a href="api/ru/animation/AnimationClip.html" id="Анимация_AnimationClip">AnimationClip</a></li><li><a href="api/ru/animation/AnimationMixer.html" id="Анимация_AnimationMixer">AnimationMixer</a></li><li><a href="api/ru/animation/AnimationObjectGroup.html" id="Анимация_AnimationObjectGroup">AnimationObjectGroup</a></li><li><a href="api/ru/animation/AnimationUtils.html" id="Анимация_AnimationUtils">AnimationUtils</a></li><li><a href="api/ru/animation/KeyframeTrack.html" id="Анимация_KeyframeTrack">KeyframeTrack</a></li><li><a href="api/ru/animation/PropertyBinding.html" id="Анимация_PropertyBinding">PropertyBinding</a></li><li><a href="api/ru/animation/PropertyMixer.html" id="Анимация_PropertyMixer">PropertyMixer</a></li></ul></div><div><h2>Анимация / Треки</h2><ul id="Анимация_/_Треки"><li><a href="api/ru/animation/tracks/BooleanKeyframeTrack.html" id="Анимация_/_Треки_BooleanKeyframeTrack">BooleanKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/ColorKeyframeTrack.html" id="Анимация_/_Треки_ColorKeyframeTrack">ColorKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/NumberKeyframeTrack.html" id="Анимация_/_Треки_NumberKeyframeTrack">NumberKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/QuaternionKeyframeTrack.html" id="Анимация_/_Треки_QuaternionKeyframeTrack">QuaternionKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/StringKeyframeTrack.html" id="Анимация_/_Треки_StringKeyframeTrack">StringKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/VectorKeyframeTrack.html" id="Анимация_/_Треки_VectorKeyframeTrack">VectorKeyframeTrack</a></li></ul></div><div><h2>Приложение</h2><ul id="Приложение"><li><a href="api/ru/extras/App.html" id="Приложение_App">App</a></li><li><a href="api/ru/extras/AppUtils.html" id="Приложение_AppUtils">AppUtils</a></li></ul></div><div><h2>Аудио</h2><ul id="Аудио"><li><a href="api/ru/audio/Audio.html" id="Аудио_Audio">Audio</a></li><li><a href="api/ru/audio/AudioAnalyser.html" id="Аудио_AudioAnalyser">AudioAnalyser</a></li><li><a href="api/ru/audio/AudioContext.html" id="Аудио_AudioContext">AudioContext</a></li><li><a href="api/ru/audio/AudioListener.html" id="Аудио_AudioListener">AudioListener</a></li><li><a href="api/ru/audio/PositionalAudio.html" id="Аудио_PositionalAudio">PositionalAudio</a></li></ul></div><div><h2>Камеры</h2><ul id="Камеры"><li><a href="api/ru/cameras/ArrayCamera.html" id="Камеры_ArrayCamera">ArrayCamera</a></li><li><a href="api/ru/cameras/Camera.html" id="Камеры_Camera">Camera</a></li><li><a href="api/ru/cameras/CubeCamera.html" id="Камеры_CubeCamera">CubeCamera</a></li><li><a href="api/ru/cameras/OrthographicCamera.html" id="Камеры_OrthographicCamera">OrthographicCamera</a></li><li><a href="api/ru/cameras/PerspectiveCamera.html" id="Камеры_PerspectiveCamera">PerspectiveCamera</a></li><li><a href="api/ru/cameras/StereoCamera.html" id="Камеры_StereoCamera">StereoCamera</a></li></ul></div><div><h2>Константы</h2><ul id="Константы"><li><a href="api/ru/constants/Animation.html" id="Константы_Animation">Animation</a></li><li><a href="api/ru/constants/Controls.html" id="Константы_Controls">Controls</a></li><li><a href="api/ru/constants/Core.html" id="Константы_Core">Core</a></li><li><a href="api/ru/constants/CustomBlendingEquations.html" id="Константы_CustomBlendingEquation">CustomBlendingEquation</a></li><li><a href="api/ru/constants/Lights.html" id="Константы_Lights">Lights</a></li><li><a href="api/ru/constants/Materials.html" id="Константы_Materials">Materials</a></li><li><a href="api/ru/constants/Renderer.html" id="Константы_Renderer">Renderer</a></li><li><a href="api/ru/constants/Textures.html" id="Константы_Textures">Textures</a></li></ul></div><div><h2>Ограничители</h2><ul id="Ограничители"><li><a href="api/ru/constraints/ChildOfConstraint.html" id="Ограничители_ChildOfConstraint">ChildOfConstraint</a></li><li><a href="api/ru/constraints/Constraint.html" id="Ограничители_Constraint">Constraint</a></li><li><a href="api/ru/constraints/CopyLocationConstraint.html" id="Ограничители_CopyLocationConstraint">CopyLocationConstraint</a></li><li><a href="api/ru/constraints/CopyRotationConstraint.html" id="Ограничители_CopyRotationConstraint">CopyRotationConstraint</a></li><li><a href="api/ru/constraints/CopyScaleConstraint.html" id="Ограничители_CopyScaleConstraint">CopyScaleConstraint</a></li><li><a href="api/ru/constraints/FloorConstraint.html" id="Ограничители_FloorConstraint">FloorConstraint</a></li><li><a href="api/ru/constraints/LimitLocationConstraint.html" id="Ограничители_LimitLocationConstraint">LimitLocationConstraint</a></li><li><a href="api/ru/constraints/LimitRotationConstraint.html" id="Ограничители_LimitRotationConstraint">LimitRotationConstraint</a></li><li><a href="api/ru/constraints/LimitScaleConstraint.html" id="Ограничители_LimitScaleConstraint">LimitScaleConstraint</a></li><li><a href="api/ru/constraints/LockedTrackConstraint.html" id="Ограничители_LockedTrackConstraint">LockedTrackConstraint</a></li><li><a href="api/ru/constraints/TargetConstraint.html" id="Ограничители_TargetConstraint">TargetConstraint</a></li><li><a href="api/ru/constraints/TrackToConstraint.html" id="Ограничители_TrackToConstraint">TrackToConstraint</a></li></ul></div><div><h2>Контролы</h2><ul id="Контролы"><li><a href="api/ru/controls/KeyListener.html" id="Контролы_KeyListener">KeyListener</a></li><li><a href="api/ru/controls/OrbitControls.html" id="Контролы_OrbitControls">OrbitControls</a></li></ul></div><div><h2>Ядро</h2><ul id="Ядро"><li><a href="api/ru/core/BufferAttribute.html" id="Ядро_BufferAttribute">BufferAttribute</a></li><li><a href="api/ru/core/BufferGeometry.html" id="Ядро_BufferGeometry">BufferGeometry</a></li><li><a href="api/ru/core/Clock.html" id="Ядро_Clock">Clock</a></li><li><a href="api/ru/core/Detector.html" id="Ядро_Detector">Detector</a></li><li><a href="api/ru/core/EventDispatcher.html" id="Ядро_EventDispatcher">EventDispatcher</a></li><li><a href="api/ru/core/Geometry.html" id="Ядро_Geometry">Geometry</a></li><li><a href="api/ru/core/InstancedBufferAttribute.html" id="Ядро_InstancedBufferAttribute">InstancedBufferAttribute</a></li><li><a href="api/ru/core/InstancedBufferGeometry.html" id="Ядро_InstancedBufferGeometry">InstancedBufferGeometry</a></li><li><a href="api/ru/core/InstancedInterleavedBuffer.html" id="Ядро_InstancedInterleavedBuffer">InstancedInterleavedBuffer</a></li><li><a href="api/ru/core/InterleavedBuffer.html" id="Ядро_InterleavedBuffer">InterleavedBuffer</a></li><li><a href="api/ru/core/InterleavedBufferAttribute.html" id="Ядро_InterleavedBufferAttribute">InterleavedBufferAttribute</a></li><li><a href="api/ru/core/Layers.html" id="Ядро_Layers">Layers</a></li><li><a href="api/ru/core/Object3D.html" id="Ядро_Object3D">Object3D</a></li><li><a href="api/ru/core/Raycaster.html" id="Ядро_Raycaster">Raycaster</a></li><li><a href="api/ru/core/Uniform.html" id="Ядро_Uniform">Uniform</a></li></ul></div><div><h2>Ядро / BufferAttributes</h2><ul id="Ядро_/_BufferAttributes"><li><a href="api/ru/core/bufferAttributeTypes/BufferAttributeTypes.html" id="Ядро_/_BufferAttributes_BufferAttribute_Types">BufferAttribute Types</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="api/ru/extras/Earcut.html" id="Прочее_Earcut">Earcut</a></li><li><a href="api/ru/extras/ImageUtils.html" id="Прочее_ImageUtils">ImageUtils</a></li><li><a href="api/ru/extras/PMREMGenerator.html" id="Прочее_PMREMGenerator">PMREMGenerator</a></li><li><a href="api/ru/extras/Preloader.html" id="Прочее_Preloader">Preloader</a></li><li><a href="api/ru/extras/PuzzlesLoader.html" id="Прочее_PuzzlesLoader">PuzzlesLoader</a></li><li><a href="api/ru/extras/SceneUtils.html" id="Прочее_SceneUtils">SceneUtils</a></li><li><a href="api/ru/extras/ShapeUtils.html" id="Прочее_ShapeUtils">ShapeUtils</a></li><li><a href="api/ru/extras/SimplePreloader.html" id="Прочее_SimplePreloader">SimplePreloader</a></li></ul></div><div><h2>Прочее / Ядро</h2><ul id="Прочее_/_Ядро"><li><a href="api/ru/extras/core/Curve.html" id="Прочее_/_Ядро_Curve">Curve</a></li><li><a href="api/ru/extras/core/CurvePath.html" id="Прочее_/_Ядро_CurvePath">CurvePath</a></li><li><a href="api/ru/extras/core/Font.html" id="Прочее_/_Ядро_Font">Font</a></li><li><a href="api/ru/extras/core/Interpolations.html" id="Прочее_/_Ядро_Interpolations">Interpolations</a></li><li><a href="api/ru/extras/core/Path.html" id="Прочее_/_Ядро_Path">Path</a></li><li><a href="api/ru/extras/core/Shape.html" id="Прочее_/_Ядро_Shape">Shape</a></li><li><a href="api/ru/extras/core/ShapePath.html" id="Прочее_/_Ядро_ShapePath">ShapePath</a></li></ul></div><div><h2>Прочее / Кривые</h2><ul id="Прочее_/_Кривые"><li><a href="api/ru/extras/curves/ArcCurve.html" id="Прочее_/_Кривые_ArcCurve">ArcCurve</a></li><li><a href="api/ru/extras/curves/CatmullRomCurve3.html" id="Прочее_/_Кривые_CatmullRomCurve3">CatmullRomCurve3</a></li><li><a href="api/ru/extras/curves/CubicBezierCurve.html" id="Прочее_/_Кривые_CubicBezierCurve">CubicBezierCurve</a></li><li><a href="api/ru/extras/curves/CubicBezierCurve3.html" id="Прочее_/_Кривые_CubicBezierCurve3">CubicBezierCurve3</a></li><li><a href="api/ru/extras/curves/EllipseCurve.html" id="Прочее_/_Кривые_EllipseCurve">EllipseCurve</a></li><li><a href="api/ru/extras/curves/LineCurve.html" id="Прочее_/_Кривые_LineCurve">LineCurve</a></li><li><a href="api/ru/extras/curves/LineCurve3.html" id="Прочее_/_Кривые_LineCurve3">LineCurve3</a></li><li><a href="api/ru/extras/curves/QuadraticBezierCurve.html" id="Прочее_/_Кривые_QuadraticBezierCurve">QuadraticBezierCurve</a></li><li><a href="api/ru/extras/curves/QuadraticBezierCurve3.html" id="Прочее_/_Кривые_QuadraticBezierCurve3">QuadraticBezierCurve3</a></li><li><a href="api/ru/extras/curves/SplineCurve.html" id="Прочее_/_Кривые_SplineCurve">SplineCurve</a></li></ul></div><div><h2>Прочее / Объекты</h2><ul id="Прочее_/_Объекты"><li><a href="api/ru/extras/objects/LineHTML.html" id="Прочее_/_Объекты_LineHTML">LineHTML</a></li><li><a href="api/ru/extras/objects/MeshLine.html" id="Прочее_/_Объекты_MeshLine">MeshLine</a></li><li><a href="api/ru/extras/objects/MeshLineIndexed.html" id="Прочее_/_Объекты_MeshLineIndexed">MeshLineIndexed</a></li><li><a href="api/ru/extras/objects/MeshLineMaterial.html" id="Прочее_/_Объекты_MeshLineMaterial">MeshLineMaterial</a></li></ul></div><div><h2>Геометрия</h2><ul id="Геометрия"><li><a href="api/ru/geometries/BoxBufferGeometry.html" id="Геометрия_BoxBufferGeometry">BoxBufferGeometry</a></li><li><a href="api/ru/geometries/BoxGeometry.html" id="Геометрия_BoxGeometry">BoxGeometry</a></li><li><a href="api/ru/geometries/CircleBufferGeometry.html" id="Геометрия_CircleBufferGeometry">CircleBufferGeometry</a></li><li><a href="api/ru/geometries/CircleGeometry.html" id="Геометрия_CircleGeometry">CircleGeometry</a></li><li><a href="api/ru/geometries/ConeBufferGeometry.html" id="Геометрия_ConeBufferGeometry">ConeBufferGeometry</a></li><li><a href="api/ru/geometries/ConeGeometry.html" id="Геометрия_ConeGeometry">ConeGeometry</a></li><li><a href="api/ru/geometries/CylinderBufferGeometry.html" id="Геометрия_CylinderBufferGeometry">CylinderBufferGeometry</a></li><li><a href="api/ru/geometries/CylinderGeometry.html" id="Геометрия_CylinderGeometry">CylinderGeometry</a></li><li><a href="api/ru/geometries/DodecahedronBufferGeometry.html" id="Геометрия_DodecahedronBufferGeometry">DodecahedronBufferGeometry</a></li><li><a href="api/ru/geometries/DodecahedronGeometry.html" id="Геометрия_DodecahedronGeometry">DodecahedronGeometry</a></li><li><a href="api/ru/geometries/EdgesGeometry.html" id="Геометрия_EdgesGeometry">EdgesGeometry</a></li><li><a href="api/ru/geometries/ExtrudeBufferGeometry.html" id="Геометрия_ExtrudeBufferGeometry">ExtrudeBufferGeometry</a></li><li><a href="api/ru/geometries/ExtrudeGeometry.html" id="Геометрия_ExtrudeGeometry">ExtrudeGeometry</a></li><li><a href="api/ru/geometries/IcosahedronBufferGeometry.html" id="Геометрия_IcosahedronBufferGeometry">IcosahedronBufferGeometry</a></li><li><a href="api/ru/geometries/IcosahedronGeometry.html" id="Геометрия_IcosahedronGeometry">IcosahedronGeometry</a></li><li><a href="api/ru/geometries/LatheBufferGeometry.html" id="Геометрия_LatheBufferGeometry">LatheBufferGeometry</a></li><li><a href="api/ru/geometries/LatheGeometry.html" id="Геометрия_LatheGeometry">LatheGeometry</a></li><li><a href="api/ru/geometries/OctahedronBufferGeometry.html" id="Геометрия_OctahedronBufferGeometry">OctahedronBufferGeometry</a></li><li><a href="api/ru/geometries/OctahedronGeometry.html" id="Геометрия_OctahedronGeometry">OctahedronGeometry</a></li><li><a href="api/ru/geometries/ParametricBufferGeometry.html" id="Геометрия_ParametricBufferGeometry">ParametricBufferGeometry</a></li><li><a href="api/ru/geometries/ParametricGeometry.html" id="Геометрия_ParametricGeometry">ParametricGeometry</a></li><li><a href="api/ru/geometries/PlaneBufferGeometry.html" id="Геометрия_PlaneBufferGeometry">PlaneBufferGeometry</a></li><li><a href="api/ru/geometries/PlaneGeometry.html" id="Геометрия_PlaneGeometry">PlaneGeometry</a></li><li><a href="api/ru/geometries/PolyhedronBufferGeometry.html" id="Геометрия_PolyhedronBufferGeometry">PolyhedronBufferGeometry</a></li><li><a href="api/ru/geometries/PolyhedronGeometry.html" id="Геометрия_PolyhedronGeometry">PolyhedronGeometry</a></li><li><a href="api/ru/geometries/RingBufferGeometry.html" id="Геометрия_RingBufferGeometry">RingBufferGeometry</a></li><li><a href="api/ru/geometries/RingGeometry.html" id="Геометрия_RingGeometry">RingGeometry</a></li><li><a href="api/ru/geometries/ShapeBufferGeometry.html" id="Геометрия_ShapeBufferGeometry">ShapeBufferGeometry</a></li><li><a href="api/ru/geometries/ShapeGeometry.html" id="Геометрия_ShapeGeometry">ShapeGeometry</a></li><li><a href="api/ru/geometries/SphereBufferGeometry.html" id="Геометрия_SphereBufferGeometry">SphereBufferGeometry</a></li><li><a href="api/ru/geometries/SphereGeometry.html" id="Геометрия_SphereGeometry">SphereGeometry</a></li><li><a href="api/ru/geometries/TetrahedronBufferGeometry.html" id="Геометрия_TetrahedronBufferGeometry">TetrahedronBufferGeometry</a></li><li><a href="api/ru/geometries/TetrahedronGeometry.html" id="Геометрия_TetrahedronGeometry">TetrahedronGeometry</a></li><li><a href="api/ru/geometries/TextBufferGeometry.html" id="Геометрия_TextBufferGeometry">TextBufferGeometry</a></li><li><a href="api/ru/geometries/TextGeometry.html" id="Геометрия_TextGeometry">TextGeometry</a></li><li><a href="api/ru/geometries/TorusBufferGeometry.html" id="Геометрия_TorusBufferGeometry">TorusBufferGeometry</a></li><li><a href="api/ru/geometries/TorusGeometry.html" id="Геометрия_TorusGeometry">TorusGeometry</a></li><li><a href="api/ru/geometries/TorusKnotBufferGeometry.html" id="Геометрия_TorusKnotBufferGeometry">TorusKnotBufferGeometry</a></li><li><a href="api/ru/geometries/TorusKnotGeometry.html" id="Геометрия_TorusKnotGeometry">TorusKnotGeometry</a></li><li><a href="api/ru/geometries/TubeBufferGeometry.html" id="Геометрия_TubeBufferGeometry">TubeBufferGeometry</a></li><li><a href="api/ru/geometries/TubeGeometry.html" id="Геометрия_TubeGeometry">TubeGeometry</a></li><li><a href="api/ru/geometries/WireframeGeometry.html" id="Геометрия_WireframeGeometry">WireframeGeometry</a></li></ul></div><div><h2>Объекты-помощники</h2><ul id="Объекты-помощники"><li><a href="api/ru/helpers/ArrowHelper.html" id="Объекты-помощники_ArrowHelper">ArrowHelper</a></li><li><a href="api/ru/helpers/AxesHelper.html" id="Объекты-помощники_AxesHelper">AxesHelper</a></li><li><a href="api/ru/helpers/BoxHelper.html" id="Объекты-помощники_BoxHelper">BoxHelper</a></li><li><a href="api/ru/helpers/Box3Helper.html" id="Объекты-помощники_Box3Helper">Box3Helper</a></li><li><a href="api/ru/helpers/CameraHelper.html" id="Объекты-помощники_CameraHelper">CameraHelper</a></li><li><a href="api/ru/helpers/DirectionalLightHelper.html" id="Объекты-помощники_DirectionalLightHelper">DirectionalLightHelper</a></li><li><a href="api/ru/helpers/GridHelper.html" id="Объекты-помощники_GridHelper">GridHelper</a></li><li><a href="api/ru/helpers/PolarGridHelper.html" id="Объекты-помощники_PolarGridHelper">PolarGridHelper</a></li><li><a href="api/ru/helpers/HemisphereLightHelper.html" id="Объекты-помощники_HemisphereLightHelper">HemisphereLightHelper</a></li><li><a href="api/ru/helpers/PlaneHelper.html" id="Объекты-помощники_PlaneHelper">PlaneHelper</a></li><li><a href="api/ru/helpers/PointLightHelper.html" id="Объекты-помощники_PointLightHelper">PointLightHelper</a></li><li><a href="api/ru/helpers/SkeletonHelper.html" id="Объекты-помощники_SkeletonHelper">SkeletonHelper</a></li><li><a href="api/ru/helpers/SpotLightHelper.html" id="Объекты-помощники_SpotLightHelper">SpotLightHelper</a></li></ul></div><div><h2>Источники света</h2><ul id="Источники_света"><li><a href="api/ru/lights/AmbientLight.html" id="Источники_света_AmbientLight">AmbientLight</a></li><li><a href="api/ru/lights/CubeReflectionProbe.html" id="Источники_света_CubeReflectionProbe">CubeReflectionProbe</a></li><li><a href="api/ru/lights/DirectionalLight.html" id="Источники_света_DirectionalLight">DirectionalLight</a></li><li><a href="api/ru/lights/HemisphereLight.html" id="Источники_света_HemisphereLight">HemisphereLight</a></li><li><a href="api/ru/lights/Light.html" id="Источники_света_Light">Light</a></li><li><a href="api/ru/lights/PointLight.html" id="Источники_света_PointLight">PointLight</a></li><li><a href="api/ru/lights/RectAreaLight.html" id="Источники_света_RectAreaLight">RectAreaLight</a></li><li><a href="api/ru/lights/SpotLight.html" id="Источники_света_SpotLight">SpotLight</a></li></ul></div><div><h2>Тени</h2><ul id="Тени"><li><a href="api/ru/lights/shadows/DirectionalLightShadow.html" id="Тени_DirectionalLightShadow">DirectionalLightShadow</a></li><li><a href="api/ru/lights/shadows/LightShadow.html" id="Тени_LightShadow">LightShadow</a></li><li><a href="api/ru/lights/shadows/PointLightShadow.html" id="Тени_PointLightShadow">PointLightShadow</a></li><li><a href="api/ru/lights/shadows/SpotLightShadow.html" id="Тени_SpotLightShadow">SpotLightShadow</a></li></ul></div><div><h2>Загрузчики</h2><ul id="Загрузчики"><li><a href="api/ru/loaders/AudioLoader.html" id="Загрузчики_AudioLoader">AudioLoader</a></li><li><a href="api/ru/loaders/Cache.html" id="Загрузчики_Cache">Cache</a></li><li><a href="api/ru/loaders/CompressedTextureLoader.html" id="Загрузчики_CompressedTextureLoader">CompressedTextureLoader</a></li><li><a href="api/ru/loaders/CubeTextureLoader.html" id="Загрузчики_CubeTextureLoader">CubeTextureLoader</a></li><li><a href="api/ru/loaders/DataTextureLoader.html" id="Загрузчики_DataTextureLoader">DataTextureLoader</a></li><li><a href="api/ru/loaders/FileLoader.html" id="Загрузчики_FileLoader">FileLoader</a></li><li><a href="api/ru/loaders/FontLoader.html" id="Загрузчики_FontLoader">FontLoader</a></li><li><a href="api/ru/loaders/ImageBitmapLoader.html" id="Загрузчики_ImageBitmapLoader">ImageBitmapLoader</a></li><li><a href="api/ru/loaders/ImageLoader.html" id="Загрузчики_ImageLoader">ImageLoader</a></li><li><a href="api/ru/loaders/GLTFLoader.html" id="Загрузчики_GLTFLoader">GLTFLoader</a></li><li><a href="api/ru/loaders/Loader.html" id="Загрузчики_Loader">Loader</a></li><li><a href="api/ru/loaders/LoaderUtils.html" id="Загрузчики_LoaderUtils">LoaderUtils</a></li><li><a href="api/ru/loaders/TextureLoader.html" id="Загрузчики_TextureLoader">TextureLoader</a></li></ul></div><div><h2>Менеджеры загрузки</h2><ul id="Менеджеры_загрузки"><li><a href="api/ru/loaders/managers/DefaultLoadingManager.html" id="Менеджеры_загрузки_DefaultLoadingManager">DefaultLoadingManager</a></li><li><a href="api/ru/loaders/managers/LoadingManager.html" id="Менеджеры_загрузки_LoadingManager">LoadingManager</a></li></ul></div><div><h2>Материалы</h2><ul id="Материалы"><li><a href="api/ru/materials/LineBasicMaterial.html" id="Материалы_LineBasicMaterial">LineBasicMaterial</a></li><li><a href="api/ru/materials/LineDashedMaterial.html" id="Материалы_LineDashedMaterial">LineDashedMaterial</a></li><li><a href="api/ru/materials/Material.html" id="Материалы_Material">Material</a></li><li><a href="api/ru/materials/MaterialUtils.html" id="Материалы_MaterialUtils">MaterialUtils</a></li><li><a href="api/ru/materials/MeshBasicMaterial.html" id="Материалы_MeshBasicMaterial">MeshBasicMaterial</a></li><li><a href="api/ru/materials/MeshDepthMaterial.html" id="Материалы_MeshDepthMaterial">MeshDepthMaterial</a></li><li><a href="api/ru/materials/MeshDistanceMaterial.html" id="Материалы_MeshDistanceMaterial">MeshDistanceMaterial</a></li><li><a href="api/ru/materials/MeshLambertMaterial.html" id="Материалы_MeshLambertMaterial">MeshLambertMaterial</a></li><li><a href="api/ru/materials/MeshMatcapMaterial.html" id="Материалы_MeshMatcapMaterial">MeshMatcapMaterial</a></li><li><a href="api/ru/materials/MeshNodeMaterial.html" id="Материалы_MeshNodeMaterial">MeshNodeMaterial</a></li><li><a href="api/ru/materials/MeshNormalMaterial.html" id="Материалы_MeshNormalMaterial">MeshNormalMaterial</a></li><li><a href="api/ru/materials/MeshPhongMaterial.html" id="Материалы_MeshPhongMaterial">MeshPhongMaterial</a></li><li><a href="api/ru/materials/MeshPhysicalMaterial.html" id="Материалы_MeshPhysicalMaterial">MeshPhysicalMaterial</a></li><li><a href="api/ru/materials/MeshStandardMaterial.html" id="Материалы_MeshStandardMaterial">MeshStandardMaterial</a></li><li><a href="api/ru/materials/MeshToonMaterial.html" id="Материалы_MeshToonMaterial">MeshToonMaterial</a></li><li><a href="api/ru/materials/PointsMaterial.html" id="Материалы_PointsMaterial">PointsMaterial</a></li><li><a href="api/ru/materials/RawShaderMaterial.html" id="Материалы_RawShaderMaterial">RawShaderMaterial</a></li><li><a href="api/ru/materials/ShaderMaterial.html" id="Материалы_ShaderMaterial">ShaderMaterial</a></li><li><a href="api/ru/materials/ShadowMaterial.html" id="Материалы_ShadowMaterial">ShadowMaterial</a></li><li><a href="api/ru/materials/SpriteMaterial.html" id="Материалы_SpriteMaterial">SpriteMaterial</a></li></ul></div><div><h2>Математика</h2><ul id="Математика"><li><a href="api/ru/math/Box2.html" id="Математика_Box2">Box2</a></li><li><a href="api/ru/math/Box3.html" id="Математика_Box3">Box3</a></li><li><a href="api/ru/math/Color.html" id="Математика_Color">Color</a></li><li><a href="api/ru/math/Cylindrical.html" id="Математика_Cylindrical">Cylindrical</a></li><li><a href="api/ru/math/Euler.html" id="Математика_Euler">Euler</a></li><li><a href="api/ru/math/Frustum.html" id="Математика_Frustum">Frustum</a></li><li><a href="api/ru/math/Interpolant.html" id="Математика_Interpolant">Interpolant</a></li><li><a href="api/ru/math/Line3.html" id="Математика_Line3">Line3</a></li><li><a href="api/ru/math/MathUtils.html" id="Математика_MathUtils">MathUtils</a></li><li><a href="api/ru/math/Matrix3.html" id="Математика_Matrix3">Matrix3</a></li><li><a href="api/ru/math/Matrix4.html" id="Математика_Matrix4">Matrix4</a></li><li><a href="api/ru/math/Plane.html" id="Математика_Plane">Plane</a></li><li><a href="api/ru/math/Quaternion.html" id="Математика_Quaternion">Quaternion</a></li><li><a href="api/ru/math/Ray.html" id="Математика_Ray">Ray</a></li><li><a href="api/ru/math/Sphere.html" id="Математика_Sphere">Sphere</a></li><li><a href="api/ru/math/Spherical.html" id="Математика_Spherical">Spherical</a></li><li><a href="api/ru/math/Triangle.html" id="Математика_Triangle">Triangle</a></li><li><a href="api/ru/math/Vector2.html" id="Математика_Vector2">Vector2</a></li><li><a href="api/ru/math/Vector3.html" id="Математика_Vector3">Vector3</a></li><li><a href="api/ru/math/Vector4.html" id="Математика_Vector4">Vector4</a></li></ul></div><div><h2>Математика / Интерполянты</h2><ul id="Математика_/_Интерполянты"><li><a href="api/ru/math/interpolants/CubicInterpolant.html" id="Математика_/_Интерполянты_CubicInterpolant">CubicInterpolant</a></li><li><a href="api/ru/math/interpolants/DiscreteInterpolant.html" id="Математика_/_Интерполянты_DiscreteInterpolant">DiscreteInterpolant</a></li><li><a href="api/ru/math/interpolants/LinearInterpolant.html" id="Математика_/_Интерполянты_LinearInterpolant">LinearInterpolant</a></li><li><a href="api/ru/math/interpolants/QuaternionLinearInterpolant.html" id="Математика_/_Интерполянты_QuaternionLinearInterpolant">QuaternionLinearInterpolant</a></li></ul></div><div><h2>Объекты</h2><ul id="Объекты"><li><a href="api/ru/objects/Annotation.html" id="Объекты_Annotation">Annotation</a></li><li><a href="api/ru/objects/AnnotationControl.html" id="Объекты_AnnotationControl">AnnotationControl</a></li><li><a href="api/ru/objects/Bone.html" id="Объекты_Bone">Bone</a></li><li><a href="api/ru/objects/Group.html" id="Объекты_Group">Group</a></li><li><a href="api/ru/objects/InstancedMesh.html" id="Объекты_InstancedMesh">InstancedMesh</a></li><li><a href="api/ru/objects/Line.html" id="Объекты_Line">Line</a></li><li><a href="api/ru/objects/LineLoop.html" id="Объекты_LineLoop">LineLoop</a></li><li><a href="api/ru/objects/LineSegments.html" id="Объекты_LineSegments">LineSegments</a></li><li><a href="api/ru/objects/LOD.html" id="Объекты_LOD">LOD</a></li><li><a href="api/ru/objects/Mesh.html" id="Объекты_Mesh">Mesh</a></li><li><a href="api/ru/objects/Points.html" id="Объекты_Points">Points</a></li><li><a href="api/ru/objects/Skeleton.html" id="Объекты_Skeleton">Skeleton</a></li><li><a href="api/ru/objects/SkinnedMesh.html" id="Объекты_SkinnedMesh">SkinnedMesh</a></li><li><a href="api/ru/objects/Sprite.html" id="Объекты_Sprite">Sprite</a></li></ul></div><div><h2>Рендеринг</h2><ul id="Рендеринг"><li><a href="api/ru/renderers/RenderUtils.html" id="Рендеринг_RenderUtils">RenderUtils</a></li><li><a href="api/ru/renderers/WebGLCubeRenderTarget.html" id="Рендеринг_WebGLCubeRenderTarget">WebGLCubeRenderTarget</a></li><li><a href="api/ru/renderers/WebGLMultisampleRenderTarget.html" id="Рендеринг_WebGLMultisampleRenderTarget">WebGLMultisampleRenderTarget</a></li><li><a href="api/ru/renderers/WebGLRenderer.html" id="Рендеринг_WebGLRenderer">WebGLRenderer</a></li><li><a href="api/ru/renderers/WebGLRenderTarget.html" id="Рендеринг_WebGLRenderTarget">WebGLRenderTarget</a></li></ul></div><div><h2>Шейдеры</h2><ul id="Шейдеры"><li><a href="api/ru/renderers/shaders/ShaderChunk.html" id="Шейдеры_ShaderChunk">ShaderChunk</a></li><li><a href="api/ru/renderers/shaders/ShaderLib.html" id="Шейдеры_ShaderLib">ShaderLib</a></li><li><a href="api/ru/renderers/shaders/UniformsLib.html" id="Шейдеры_UniformsLib">UniformsLib</a></li><li><a href="api/ru/renderers/shaders/UniformsUtils.html" id="Шейдеры_UniformsUtils">UniformsUtils</a></li></ul></div><div><h2>Сцены</h2><ul id="Сцены"><li><a href="api/ru/scenes/Fog.html" id="Сцены_Fog">Fog</a></li><li><a href="api/ru/scenes/FogExp2.html" id="Сцены_FogExp2">FogExp2</a></li><li><a href="api/ru/scenes/Scene.html" id="Сцены_Scene">Scene</a></li><li><a href="api/ru/scenes/SceneBackground.html" id="Сцены_SceneBackground">SceneBackground</a></li></ul></div><div><h2>Текстуры</h2><ul id="Текстуры"><li><a href="api/ru/textures/CanvasTexture.html" id="Текстуры_CanvasTexture">CanvasTexture</a></li><li><a href="api/ru/textures/CompressedTexture.html" id="Текстуры_CompressedTexture">CompressedTexture</a></li><li><a href="api/ru/textures/CubeTexture.html" id="Текстуры_CubeTexture">CubeTexture</a></li><li><a href="api/ru/textures/DataTexture.html" id="Текстуры_DataTexture">DataTexture</a></li><li><a href="api/ru/textures/DataTexture3D.html" id="Текстуры_DataTexture3D">DataTexture3D</a></li><li><a href="api/ru/textures/DepthTexture.html" id="Текстуры_DepthTexture">DepthTexture</a></li><li><a href="api/ru/textures/Texture.html" id="Текстуры_Texture">Texture</a></li><li><a href="api/ru/textures/VideoTexture.html" id="Текстуры_VideoTexture">VideoTexture</a></li></ul></div></div>
+        </nav>
+    <h1>Константы Текстур</h1>
+
+    <h2>Режимы Маппинга</h2>
+    <code>
+    v3d.UVMapping
+    v3d.CubeReflectionMapping
+    v3d.CubeRefractionMapping
+    v3d.EquirectangularReflectionMapping
+    v3d.EquirectangularRefractionMapping
+    v3d.CubeUVReflectionMapping
+    v3d.CubeUVRefractionMapping
+    </code>
+
+    <p>
+      Они определяют режим отображения текстуры. <br>
+      <a href="javascript:;">UVMapping</a> - это режим по умолчанию, при котором текстура отображается с использованием UV-координат объекта.<br><br>
+
+      Остальные определяют типы маппинга окруженающей среды.<br><br>
+
+    <a href="javascript:;">CubeReflectionMapping</a> и <a href="javascript:;">CubeRefractionMapping</a> предназначены для использования с <a href="api/ru/textures/CubeTexture.html">CubeTexture</a>, которая состоит из шести текстур, по одной для каждой грани куба. <a href="javascript:;">CubeReflectionMapping</a> - это значение по умолчанию для <a href="api/ru/textures/CubeTexture.html">CubeTexture</a>. <br><br>
+
+    <a href="javascript:;">EquirectangularReflectionMapping</a> и <a href="javascript:;">EquirectangularRefractionMapping</a> предназначены для использования с равноугольной картой окружения. Также называемая картой широты, равноугольная текстура представляет собой 360-градусный вид вдоль горизонтальной центральной линии и 180-градусный вид вдоль вертикальной оси, причем верхний и нижний края изображения соответствуют северному и южному полюсам отображаемой сферы.<br><br>
+
+    Смотрите пример <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_materials_envmaps"  target="_blank">materials / envmaps</a>.
+  </p>
+
+
+    <h2>Режимы Обертывания</h2>
+    <code>
+    v3d.RepeatWrapping
+    v3d.ClampToEdgeWrapping
+    v3d.MirroredRepeatWrapping
+    </code>
+    <p>
+      Они определяют свойства текстуры <a href="api/ru/textures/Texture.html#wrapS">wrapS</a> и <a href="api/ru/textures/Texture.html#wrapT">wrapT</a>, которые определяют горизонтальное и вертикальное обертывание текстуры.<br><br>
+
+      При использовании <a href="javascript:;">RepeatWrapping</a> текстура будет просто повторяться до бесконечности.<br><br>
+
+    <a href="javascript:;">ClampToEdgeWrapping</a> по умолчанию.
+    Последний пиксель текстуры растягивается до края сетки.<br><br>
+
+    При использовании <a href="javascript:;">MirroredRepeatWrapping</a> текстура будет повторяться до бесконечности, зеркально отражаясь при каждом повторении.
+    </p>
+
+    <h2>Magnification Filters (Фильтры Увеличения)</h2>
+    <code>
+    v3d.NearestFilter
+    v3d.LinearFilter
+    </code>
+
+    <p>
+      Для использования со свойством <a href="api/ru/textures/Texture.html#magFilter">magFilter</a> текстуры, они определяют функцию увеличения текстуры, которая будет использоваться, когда пиксель, на который накладывается текстура, имеет площадь меньше или равную одному элементу текстуры (текселу).<br><br>
+
+      <a href="javascript:;">NearestFilter</a> возвращает значение элемента текстуры, который является ближайшим (по расстоянию Манхэттена) к указанным координатам текстуры.<br><br>
+
+      <a href="javascript:;">LinearFilter</a> используется по умолчанию и возвращает средневзвешенное значение четырех элементов текстуры, которые ближе всего к указанным координатам текстуры, и может включать элементы, обернутые или повторенные из других частей текстуры, в зависимости от значений <a href="api/ru/textures/Texture.html#wrapS">wrapS</a> и <a href="api/ru/textures/Texture.html#wrapT">wrapT</a>, а также от точного отображения.
+    </p>
+
+    <h2>Minification Filters (Фильтры Уменьшения)</h2>
+    <code>
+    v3d.NearestFilter
+    v3d.NearestMipmapNearestFilter
+    v3d.NearestMipmapLinearFilter
+    v3d.LinearFilter
+    v3d.LinearMipmapNearestFilter
+    v3d.LinearMipmapLinearFilter
+    </code>
+
+    <p>
+      Для использования со свойством <a href="api/ru/textures/Texture.html#minFilter">minFilter</a> текстуры, они определяют функцию минимизации текстуры, которая используется всякий раз, когда пиксель, на который наносится текстура, отображается на область, превышающую один элемент текстуры (тексель).<br><br>
+
+      В дополнение к <a href="javascript:;">NearestFilter</a> и <a href="javascript:;">LinearFilter</a> для минификации можно использовать следующие четыре функции:<br><br>
+
+      <a href="javascript:;">NearestMipmapNearestFilter</a> выбирает мипмапу, наиболее точно соответствующую размеру текстурируемого пикселя, и использует критерий <a href="javascript:;">NearestFilter</a> (ближайший к центру пикселя тексель) для получения значения текстуры.<br><br>
+
+      <a href="javascript:;">NearestMipmapLinearFilter</a> выбирает два отображения, которые наиболее точно соответствуют размеру текстурируемого пикселя, и использует критерий <a href="javascript:;">NearestFilter</a> для получения значения текстуры из каждого отображения. Окончательное значение текстуры является средневзвешенным значением этих двух значений.<br><br>
+
+      <a href="javascript:;">LinearMipmapNearestFilter</a> выбирает мипмапу, наиболее точно соответствующую размеру текстурируемого пикселя, и использует критерий <a href="javascript:;">LinearFilter</a> (средневзвешенное значение четырех текселей, наиболее близких к центру пикселя) для получения значения текстуры.<br><br>
+
+      <a href="javascript:;">LinearMipmapLinearFilter</a> используется по умолчанию и выбирает два отображения, которые наиболее точно соответствуют размеру текстурируемого пикселя, и использует критерий <a href="javascript:;">LinearFilter</a> для получения значения текстуры из каждого отображения. Окончательное значение текстуры является средневзвешенным значением этих двух значений.<br><br>
+
+      Смотрите пример <a href="https://cdn.soft8soft.com/demo/examples/index.html#webgl_materials_texture_filters"  target="_blank">materials / texture / filters</a>.
+    </p>
+
+    <h2>Types</h2>
+    <code>
+    v3d.UnsignedByteType
+    v3d.ByteType
+    v3d.ShortType
+    v3d.UnsignedShortType
+    v3d.IntType
+    v3d.UnsignedIntType
+    v3d.FloatType
+    v3d.HalfFloatType
+    v3d.UnsignedShort4444Type
+    v3d.UnsignedShort5551Type
+    v3d.UnsignedShort565Type
+    v3d.UnsignedInt248Type
+    </code>
+    <p>
+      Используется со свойством <a href="api/ru/textures/Texture.html#type">type</a> текстуры, которое должно соответствовать правильному формату. Подробности см. ниже.<br><br>
+
+    <a href="javascript:;">UnsignedByteType</a> по умолчанию.
+    </p>
+
+    <h2>Formats</h2>
+    <code>
+    v3d.AlphaFormat
+    v3d.RedFormat
+    v3d.RedIntegerFormat
+    v3d.RGFormat
+    v3d.RGIntegerFormat
+    v3d.RGBFormat
+    v3d.RGBIntegerFormat
+    v3d.RGBAFormat
+    v3d.RGBAIntegerFormat
+    v3d.LuminanceFormat
+    v3d.LuminanceAlphaFormat
+    v3d.RGBEFormat
+    v3d.DepthFormat
+    v3d.DepthStencilFormat
+    </code>
+    <p>
+      Для использования со свойством <a href="api/ru/textures/Texture.html#format">format</a> текстуры, они определяют, как элементы двухмерной текстуры, или <strong>texels</strong>(тексели), считываются шейдерами.<br><br>
+
+    <a href="javascript:;">AlphaFormat</a> отбрасывает красный, зеленый и синий компоненты и считывает только альфа-компонент.<br><br>
+
+    <a href="javascript:;">RedFormat</a> отбрасывает зеленый и синий компоненты и считывает только красный компонент.<br><br>
+
+    <a href="javascript:;">RedIntegerFormat</a> отбрасывает зеленый и синий компоненты и считывает только красный компонент.
+    Тексели считываются как целые числа, а не с плавающей точкой.
+    (может использоваться только с рендерингом WebGL 2).
+    <br><br>
+
+    <a href="javascript:;">RGFormat</a> отбрасывает альфа- и синие компоненты и считывает красную и зеленую компоненты.
+    (может использоваться только с рендерингом WebGL 2).
+    <br><br>
+
+    <a href="javascript:;">RGIntegerFormat</a> отбрасывает альфа- и синие компоненты и считывает красную и зеленую компоненты.
+    Тексели считываются как целые числа, а не с плавающей точкой.
+    (может использоваться только с рендерингом WebGL 2).
+    <br><br>
+
+    <a href="javascript:;">RGBFormat</a> отбрасывает альфа-компоненты и считывает красные, зеленые и синие компоненты.<br><br>
+
+    <a href="javascript:;">RGBIntegerFormat</a> отбрасывает альфа-компоненты и считывает красные, зеленые и синие компоненты.
+    (может использоваться только с рендерингом WebGL 2).
+    <br><br>
+
+    <a href="javascript:;">RGBAFormat</a> используется по умолчанию и считывает красный, зеленый, синий и альфа-компоненты.<br><br>
+
+    <a href="javascript:;">RGBAIntegerFormat</a> используется по умолчанию и считывает красный, зеленый, синий и альфа-компоненты.
+    Тексели считываются как целые числа, а не с плавающей точкой.
+    (может использоваться только с рендерингом WebGL 2).
+    <br><br>
+
+    <a href="javascript:;">LuminanceFormat</a> считывает каждый элемент как один компонент яркости.
+    Затем это значение преобразуется в плавающую точку, ограничивается в диапазоне [0,1], а затем собирается в RGBA-элемент, помещая значение яркости в красный, зеленый и синий каналы и присоединяя 1.0 к альфа-каналу.<br><br>
+
+    <a href="javascript:;">LuminanceAlphaFormat</a> считывает каждый элемент как двойное значение яркости/альфа-канала. Происходит тот же процесс, что и для <a href="javascript:;">LuminanceFormat</a>, за исключением того, что альфа-канал может иметь значения, отличные от <strong>1.0</strong>.<br><br>
+
+    <a href="javascript:;">RGBEFormat</a> идентичен <a href="javascript:;">RGBAFormat</a>.<br><br>
+
+    <a href="javascript:;">DepthFormat</a> считывает каждый элемент как одно значение глубины, преобразует его в значение с плавающей точкой и зажимает в диапазон [0,1].
+    Это значение по умолчанию для <a href="api/ru/textures/DepthTexture.html">DepthTexture</a>.<br><br>
+
+    <a href="javascript:;">DepthStencilFormat</a> каждый элемент представляет собой пару значений глубины и стенсиля.
+    Компонент глубины пары интерпретируется как в <a href="javascript:;">DepthFormat</a>. Компонент стенсиля интерпретируется на основе внутреннего формата "глубина + стенсиль".
+    <br><br>
+
+    Обратите внимание, что текстура должна иметь правильное значение <a href="api/ru/textures/Texture.html#type">type</a>, как описано выше.
+    Ознакомьтес с <a href="https://developer.mozilla.org/en/docs/Web/API/WebGLRenderingContext/texImage2D"  target="_blank">WebGLRenderingContext.texImage2D</a> для деталей.
+    </p>
+
+    <h2>DDS / ST3C Форматы Сжатия Текстур</h2>
+    <code>
+    v3d.RGB_S3TC_DXT1_Format
+    v3d.RGBA_S3TC_DXT1_Format
+    v3d.RGBA_S3TC_DXT3_Format
+    v3d.RGBA_S3TC_DXT5_Format
+    </code>
+    <p>
+      Для использования со свойством <a href="api/ru/textures/CompressedTexture.html">CompressedTexture</a> <a href="api/ru/textures/Texture.html#format">format</a> свойства <a href="api/ru/textures/Texture.html#format">format</a> требуют поддержки для
+    <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_s3tc/"  target="_blank">WEBGL_compressed_texture_s3tc</a>
+    расширение. <br><br>
+
+    Через это расширение доступны четыре <a href="https://en.wikipedia.org/wiki/S3_Texture_Compression"  target="_blank">S3TC</a> формата. К ним относятся:<br>
+    <a href="javascript:;">RGB_S3TC_DXT1_Format</a>: Сжатое в DXT1 изображение в формате RGB.<br>
+    <a href="javascript:;">RGBA_S3TC_DXT1_Format</a>: DXT1-сжатое изображение в формате RGB с простым включением/выключением альфа-значения.<br>
+    <a href="javascript:;">RGBA_S3TC_DXT3_Format</a>: DXT3-сжатое изображение в формате RGBA-изображения. По сравнению с 32-битной RGBA-текстурой оно обеспечивает сжатие 4:1.<br>
+    <a href="javascript:;">RGBA_S3TC_DXT5_Format</a>: DXT5-сжатое изображение в формате RGBA. Оно также обеспечивает сжатие 4:1, но отличается от сжатия DXT3 тем, как выполняется альфа-сжатие.<br>
+    </p>
+
+    <h2>PVRTC Формат Сжатия Текстур</h2>
+    <code>
+    v3d.RGB_PVRTC_4BPPV1_Format
+    v3d.RGB_PVRTC_2BPPV1_Format
+    v3d.RGBA_PVRTC_4BPPV1_Format
+    v3d.RGBA_PVRTC_2BPPV1_Format
+    </code>
+    <p>
+      Для использования свойства <a href="api/ru/textures/CompressedTexture.html">CompressedTexture</a> <a href="api/ru/textures/Texture.html#format">format</a> для <a href="api/ru/textures/Texture.html#format">format</a> требуется поддержка<a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_pvrtc/"  target="_blank">WEBGL_compressed_texture_pvrtc</a>
+      расширения. <br>
+      PVRTC обычно доступен только на мобильных устройствах с чипсетами PowerVR, а это в основном устройства Apple.<br><br>
+
+      Через это расширение доступны четыре <a href="https://en.wikipedia.org/wiki/PVRTC"  target="_blank">PVRTC</a> формата. К ним относятся:<br>
+    <a href="javascript:;">RGB_PVRTC_4BPPV1_Format</a>: Сжатие RGB в 4-битном режиме. Один блок на каждые 4×4 пикселя.<br>
+    <a href="javascript:;">RGB_PVRTC_2BPPV1_Format</a>: Сжатие RGB в 2-битном режиме. Один блок на каждые 8×4 пикселя.<br>
+    <a href="javascript:;">RGBA_PVRTC_4BPPV1_Format</a>: Сжатие RGBA в 4-битном режиме. Один блок на каждые 4×4 пикселя.<br>
+    <a href="javascript:;">RGBA_PVRTC_2BPPV1_Format</a>: Сжатие RGBA в 2-битном режиме. Один блок на каждые 8×4 пикселя.<br>
+    </p>
+
+    <h2>ETC Формат Сжатия Текстур</h2>
+    <code>
+    v3d.RGB_ETC1_Format
+    v3d.RGB_ETC2_Format
+    v3d.RGBA_ETC2_EAC_Format
+    </code>
+    <p>
+      Для использования со свойством <a href="api/ru/textures/CompressedTexture.html">CompressedTexture</a> <a href="api/ru/textures/Texture.html#format">format</a> свойства <a href="api/ru/textures/Texture.html#format">format</a> требуют поддержки для <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc1/"  target="_blank">WEBGL_compressed_texture_etc1</a>
+    (ETC1) или <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_etc/"  target="_blank">WEBGL_compressed_texture_etc</a>
+    (ETC2) расширения. <br><br>
+    </p>
+
+    <h2>ASTC Формат Сжатия Текстур</h2>
+    <code>
+    v3d.RGBA_ASTC_4x4_Format
+    v3d.RGBA_ASTC_5x4_Format
+    v3d.RGBA_ASTC_5x5_Format
+    v3d.RGBA_ASTC_6x5_Format
+    v3d.RGBA_ASTC_6x6_Format
+    v3d.RGBA_ASTC_8x5_Format
+    v3d.RGBA_ASTC_8x6_Format
+    v3d.RGBA_ASTC_8x8_Format
+    v3d.RGBA_ASTC_10x5_Format
+    v3d.RGBA_ASTC_10x6_Format
+    v3d.RGBA_ASTC_10x8_Format
+    v3d.RGBA_ASTC_10x10_Format
+    v3d.RGBA_ASTC_12x10_Format
+    v3d.RGBA_ASTC_12x12_Format
+    v3d.SRGB8_ALPHA8_ASTC_4x4_Format
+    v3d.SRGB8_ALPHA8_ASTC_5x4_Format
+    v3d.SRGB8_ALPHA8_ASTC_5x5_Format
+    v3d.SRGB8_ALPHA8_ASTC_6x5_Format
+    v3d.SRGB8_ALPHA8_ASTC_6x6_Format
+    v3d.SRGB8_ALPHA8_ASTC_8x5_Format
+    v3d.SRGB8_ALPHA8_ASTC_8x6_Format
+    v3d.SRGB8_ALPHA8_ASTC_8x8_Format
+    v3d.SRGB8_ALPHA8_ASTC_10x5_Format
+    v3d.SRGB8_ALPHA8_ASTC_10x6_Format
+    v3d.SRGB8_ALPHA8_ASTC_10x8_Format
+    v3d.SRGB8_ALPHA8_ASTC_10x10_Format
+    v3d.SRGB8_ALPHA8_ASTC_12x10_Format
+    v3d.SRGB8_ALPHA8_ASTC_12x12_Format
+    </code>
+    <p>
+      Для использования со свойством <a href="api/ru/textures/CompressedTexture.html">CompressedTexture</a> <a href="api/ru/textures/Texture.html#format">format</a>, требуется поддержка <a href="https://www.khronos.org/registry/webgl/extensions/WEBGL_compressed_texture_astc/"  target="_blank">WEBGL_compressed_texture_astc</a> разрешения. <br><br>
+    </p>
+
+    <h2>Внутренние Форматы</h2>
+    <code>
+    'ALPHA'
+    'RGB'
+    'RGBA'
+    'LUMINANCE'
+    'LUMINANCE_ALPHA'
+    'RED_INTEGER'
+    'R8'
+    'R8_SNORM'
+    'R8I'
+    'R8UI'
+    'R16I'
+    'R16UI'
+    'R16F'
+    'R32I'
+    'R32UI'
+    'R32F'
+    'RG8'
+    'RG8_SNORM'
+    'RG8I'
+    'RG8UI'
+    'RG16I'
+    'RG16UI'
+    'RG16F'
+    'RG32I'
+    'RG32UI'
+    'RG32F'
+    'RGB565'
+    'RGB8'
+    'RGB8_SNORM'
+    'RGB8I'
+    'RGB8UI'
+    'RGB16I'
+    'RGB16UI'
+    'RGB16F'
+    'RGB32I'
+    'RGB32UI'
+    'RGB32F'
+    'RGB9_E5'
+    'SRGB8'
+    'R11F_G11F_B10F'
+    'RGBA4'
+    'RGBA8'
+    'RGBA8_SNORM'
+    'RGBA8I'
+    'RGBA8UI'
+    'RGBA16I'
+    'RGBA16UI'
+    'RGBA16F'
+    'RGBA32I'
+    'RGBA32UI'
+    'RGBA32F'
+    'RGB5_A1'
+    'RGB10_A2'
+    'RGB10_A2UI'
+    'SRGB8_ALPHA8'
+    'DEPTH_COMPONENT16'
+    'DEPTH_COMPONENT24'
+    'DEPTH_COMPONENT32F'
+    'DEPTH24_STENCIL8'
+    'DEPTH32F_STENCIL8'
+    </code>
+
+    <p>
+
+      Внимание: изменение внутреннего формата текстуры будет влиять на текстуру только при использовании контекста рендеринга WebGL 2.<br><br>
+
+      Для использования со свойством <a href="api/ru/textures/Texture.html#internalFormat">internalFormat</a> текстуры, они определяют, как элементы текстуры, или <strong>тексели</strong>, хранятся на GPU.<br><br>
+
+    <a href="javascript:;">R8</a> хранит красный компонент в 8 битах.<br><br>
+
+    <a href="javascript:;">R8_SNORM</a> хранит красный компонент в 8 битах. Компонент хранится в нормализованном виде. <br><br>
+
+    <a href="javascript:;">R8I</a>  хранит красный компонент в 8 битах. Компонент хранится как целое число. <br><br>
+
+    <a href="javascript:;">R8UI</a>  хранит красный компонент в 8 битах. Компонент хранится как целое число без знака. <br><br>
+
+    <a href="javascript:;">R16I</a> хранит красный компонент в 16 битах. Компонент хранится как целое число. <br><br>
+
+    <a href="javascript:;">R16UI</a> хранит красный компонент в 16 битах. Компонент хранится как целое число без знака. <br><br>
+
+    <a href="javascript:;">R16F</a> хранит красный компонент в 16 битах. Компонент хранится в формате с плавающей точкой. <br><br>
+
+    <a href="javascript:;">R32I</a> хранит красный компонент в 32 битах. Компонент хранится как целое число. <br><br>
+
+    <a href="javascript:;">R32UI</a> хранит красный компонент в 32 битах. Компонент хранится как целое число без знака. <br><br>
+
+    <a href="javascript:;">R32F</a> хранит красный компонент в 32 битах. Компонент хранится в формате с плавающей точкой.<br><br>
+
+    <a href="javascript:;">RG8</a>хранит красный компонент в 32 битах.<br><br>
+
+    <a href="javascript:;">RG8_SNORM</a> хранит красный и зеленый компоненты по 8 бит каждый.
+    Каждый компонент хранится в нормализованном виде.
+    <br><br>
+
+    <a href="javascript:;">RG8I</a> хранит красный и зеленый компоненты по 8 бит каждый.
+    Каждый компонент хранится как целое число.
+    <br><br>
+
+    <a href="javascript:;">RG8UI</a> хранит красный и зеленый компоненты по 8 бит каждый.
+    Каждый компонент хранится как целое число без знака.
+    <br><br>
+
+    <a href="javascript:;">RG16I</a> хранит красный и зеленый компоненты по 16 бит каждый.
+    Каждый компонент хранится как целое число.
+    <br><br>
+
+    <a href="javascript:;">RG16UI</a> хранит красный и зеленый компоненты по 16 бит каждый.
+    Каждый компонент хранится как целое число без знака.
+    <br><br>
+
+    <a href="javascript:;">RG16F</a> хранит красный и зеленый компоненты по 16 бит каждый.
+    Каждый компонент хранится в формате с плавающей точкой.
+    <br><br>
+
+    <a href="javascript:;">RG32I</a> хранит красный и зеленый компоненты по 32 бита каждый.
+    Каждый компонент хранится как целое число.
+    <br><br>
+
+    <a href="javascript:;">RG32UI</a> хранит красный и зеленый компоненты в 32 битах.
+    Каждый компонент хранится как целое число без знака.
+    <br><br>
+
+    <a href="javascript:;">RG32F</a> хранит красный и зеленый компоненты в 32 битах.
+    Каждый компонент хранится в формате с плавающей точкой.
+    <br><br>
+
+    <a href="javascript:;">RGB8</a> хранит красный, зеленый и синий компоненты по 8 бит каждый.
+
+    <a href="javascript:;">RGB8_SNORM</a> хранит красный, зеленый и синий компоненты по 8 бит каждый.
+    Каждый компонент хранится в нормализованном виде.
+    <br><br>
+
+    <a href="javascript:;">RGB8I</a> хранит красный, зеленый и синий компоненты по 8 бит каждый.
+    Каждый компонент хранится как целое число.
+    <br><br>
+
+    <a href="javascript:;">RGB8UI</a> хранит красный, зеленый и синий компоненты по 8 бит каждый.
+    Каждый компонент хранится как целое число без знака.
+    <br><br>
+
+    <a href="javascript:;">RGB16I</a> хранит красный, зеленый и синий компоненты по 16 бит каждый.
+    Каждый компонент хранится как целое число.
+    <br><br>
+
+    <a href="javascript:;">RGB16UI</a> хранит красный, зеленый и синий компоненты по 16 бит каждый.
+    Каждый компонент хранится как целое число без знака.
+    <br><br>
+
+    <a href="javascript:;">RGB16F</a> хранит красный, зеленый и синий компоненты по 16 бит каждый.
+    Каждый компонент хранится в формате с плавающей точкой
+    <br><br>
+
+    <a href="javascript:;">RGB32I</a> хранит красный, зеленый и синий компоненты по 32 бита каждый.
+    Каждый компонент хранится как целое число.
+    <br><br>
+
+    <a href="javascript:;">RGB32UI</a> хранит красный, зеленый и синий компоненты по 32 бита каждый.
+    Каждый компонент хранится как целое число без знака.
+    <br><br>
+
+    <a href="javascript:;">RGB32F</a> хранит красный, зеленый и синий компоненты по 32 бита каждый.
+    Каждый компонент хранится в формате с плавающей точкой
+    <br><br>
+
+    <a href="javascript:;">R11F_G11F_B10F</a> хранит красный, зеленый и синий компоненты соответственно в 11 битах, 11 битах и 10 битах.
+    Каждый компонент хранится в формате с плавающей точкой.
+    <br><br>
+
+    <a href="javascript:;">RGB565</a> хранит красный, зеленый и синий компоненты соответственно в 5 битах, 6 битах и 5 битах.<br><br>
+
+    <a href="javascript:;">RGB9_E5</a> хранит красный, зеленый и синий компоненты по 9 бит каждый.<br><br>
+
+    <a href="javascript:;">RGBA8</a>хранит красный, зеленый, синий и альфа-компоненты по 8 бит каждый.<br><br>
+
+    <a href="javascript:;">RGBA8_SNORM</a> хранит красный, зеленый, синий и альфа компоненты в 8 битах.
+    Every component is stored as normalized.
+    <br><br>
+
+    <a href="javascript:;">RGBA8I</a> хранит красный, зеленый, синий и альфа-компоненты по 8 бит каждый.
+    Каждый компонент хранится как целое число.
+    <br><br>
+
+    <a href="javascript:;">RGBA8UI</a> хранит красный, зеленый, синий и альфа компоненты в 8 битах.
+    Каждый компонент хранится как целое число без знака.
+    <br><br>
+
+    <a href="javascript:;">RGBA16I</a> хранит красный, зеленый, синий и альфа компоненты в 16 битах.
+    Каждый компонент хранится как целое число.
+    <br><br>
+
+    <a href="javascript:;">RGBA16UI</a> хранит красный, зеленый, синий и альфа компоненты в 16 битах.
+    Каждый компонент хранится как целое число без знака.
+    <br><br>
+
+    <a href="javascript:;">RGBA16F</a> хранит красный, зеленый, синий и альфа компоненты в 16 битах.
+    Каждый компонент хранится в формате с плавающей точкой.
+    <br><br>
+
+    <a href="javascript:;">RGBA32I</a> хранит красный, зеленый, синий и альфа компоненты в 32 битах.
+    Каждый компонент хранится как целое число.
+    <br><br>
+
+    <a href="javascript:;">RGBA32UI</a> хранит красный, зеленый, синий и альфа компоненты в 32 битах.
+    Каждый компонент хранится как целое число без знака.
+    <br><br>
+
+    <a href="javascript:;">RGBA32F</a> хранит красный, зеленый, синий и альфа компоненты в 32 битах.
+    Каждый компонент хранится в формате с плавающей точкой.
+    <br><br>
+
+    <a href="javascript:;">RGB5_A1</a> хранит красный, зеленый, синий и альфа компоненты соответственно в 5 битах, 5 битах, 5 битах и 1 бите.<br><br>
+
+    <a href="javascript:;">RGB10_A2</a> хранит красный, зеленый, синий и альфа компоненты соответственно в 10 битах, 10 битах, 10 битах и 2 битах.<br><br>
+
+    <a href="javascript:;">RGB10_A2UI</a> хранит красный, зеленый, синий и альфа компоненты соответственно в 10 битах, 10 битах, 10 битах и 2 битах.
+
+    Каждый компонент хранится как целое число без знака.
+    <br><br>
+
+    <a href="javascript:;">SRGB8</a>хранит красный, зеленый и синюий компоненты по 8 бит.<br><br>
+
+    <a href="javascript:;">SRGB8_ALPHA8</a> хранит красный, зеленый, синий и альфа-компоненты по 8 бит каждый.<br><br>
+
+    <a href="javascript:;">DEPTH_COMPONENT16</a> хранит компонент глубины в 16 битах.<br><br>
+
+    <a href="javascript:;">DEPTH_COMPONENT24</a> хранит компонент глубины в 24 битах.<br><br>
+
+    <a href="javascript:;">DEPTH_COMPONENT32F</a> хранит компонент глубины в 32 битах. Компонент хранится в формате с плавающей точкой.<br><br>
+
+    <a href="javascript:;">DEPTH24_STENCIL8</a> хранит компоненты глубины и стенсиля соответственно в 24 битах и 8 битах.
+    Компонент стенсиля хранится как целое число без знака.
+    <br><br>
+
+    <a href="javascript:;">DEPTH32F_STENCIL8</a> хранит компоненты глубины и стенсиля соответственно в 32 битах и 8 битах.
+    Компонент глубины хранится как плавающая точка, а компонент стенсиля - как целое число без знака.
+    <br><br>
+
+    Обратите внимание, что текстура должна иметь правильный набор <a href="api/ru/textures/Texture.html#type">type</a>, а также правильный формат <a href="api/ru/textures/Texture.html#format">format</a>.
+
+    Смотрите <a href="https://developer.mozilla.org/en/docs/Web/API/WebGLRenderingContext/texImage2D"  target="_blank">WebGLRenderingContext.texImage2D</a>, и
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext/texImage3D"  target="_blank">WebGL2RenderingContext.texImage3D</a>,
+    для получения дополнительной информации о возможных комбинациях <a href="api/ru/textures/Texture.html#format">format</a>, <a href="api/ru/textures/Texture.html#internalFormat">internalFormat</a>,
+    и <a href="api/ru/textures/Texture.html#type">type</a>.<br><br>
+
+    Для получения более подробной информации о внутренних форматах вы также можете обратиться непосредственно к разделу <a href="https://www.khronos.org/registry/webgl/specs/latest/2.0/"  target="_blank">WebGL2 Specification</a> и к <a href="https://www.khronos.org/registry/OpenGL/specs/es/3.0/es_spec_3.0.pdf"  target="_blank">OpenGL ES 3.0 Specification</a>.
+    </p>
+
+    <h2>Encoding</h2>
+    <code>
+    v3d.LinearEncoding
+    v3d.sRGBEncoding
+    v3d.GammaEncoding
+    v3d.RGBEEncoding
+    v3d.LogLuvEncoding
+    v3d.RGBM7Encoding
+    v3d.RGBM16Encoding
+    v3d.RGBDEncoding
+    v3d.BasicDepthPacking
+    v3d.RGBADepthPacking
+    </code>
+    <p>
+      Для использования со свойством <a href="api/ru/textures/Texture.html#encoding">encoding</a> текстуры.<br><br>
+
+      Если тип кодировки изменен после того, как текстура уже использовалась материалом, необходимо установить <a href="api/ru/materials/Material.html#needsUpdate">Material.needsUpdate</a> в <strong>true</strong>, чтобы материал перекомпилировался.<br><br>
+
+    <a href="javascript:;">LinearEncoding</a> по умолчанию.
+    Значения, отличные от этого, действительны только для карты материала, envMap и emissiveMap.
+    </p>
+
+    <h2>Исходный файл</h2><p>О том как получить исходный код этого модуля читайте <a href="manual/ru/programmers_guide/How-to-obtain-Verge3D-sources.html">тут</a>.</p>
+  
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

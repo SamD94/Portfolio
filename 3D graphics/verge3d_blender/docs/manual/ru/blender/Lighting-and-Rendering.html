@@ -1,0 +1,1278 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Вердж3Д для Блендера: Освещение и рендеринг — Софт Эйт Софт</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Как настроить освещение окружения, свет и свойства рендеринга в Вердж3Д для Блендера.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/blender/Lighting-and-Rendering.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Вердж3Д для Блендера: Освещение и рендеринг — Софт Эйт Софт">
+            <meta property="og:description" content="Как настроить освещение окружения, свет и свойства рендеринга в Вердж3Д для Блендера.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/blender/Lighting-and-Rendering.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Вердж3Д для Блендера: Освещение и рендеринг — Софт Эйт Софт">
+            <meta name="twitter:description" content="Как настроить освещение окружения, свет и свойства рендеринга в Вердж3Д для Блендера.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/world-nodes.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/light-properties-point.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/light-properties-sun.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/light-properties-spot.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/light-properties-area.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/light-probe-reflection-cubemap.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/light-probe-reflection-plane-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/light-probe-reflection-plane.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/world-nodes-advanced.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/ambient-occlusion-properties.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/rendering-properties-shadow.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/rendering-properties-indirect.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/rendering-properties-color-management.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/rendering-properties-global.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/ambient-occlusion-properties.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/outline-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/outline-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/rendering-properties.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/clear-parent-inverse.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/hidpi-compositing.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/visibility-breakpoints.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/material-settings-panel.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/material-verge3d-panel.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/line-rendering-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/line-rendering-properties.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/clipping-plane-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/clipping-plane-new.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/clipping-plane-properties.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство&nbsp;«Вердж3Д»</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_Менеджер_приложений">Менеджер приложений</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Пазлы">Пазлы</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Спецификация">Спецификация</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_проекта">Структура проекта</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Установка_обновлений">Установка обновлений</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_Вопрос-ответ">Вопрос-ответ</a></li></ul></div><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_темы_Методы_оптимизации">Методы оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_темы_Компрессия_ассетов">Компрессия ассетов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html" id="Основные_темы_Текстурная_компрессия">Текстурная компрессия</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_темы_Интерфейс_на_основе_ХТМЛ">Интерфейс на основе ХТМЛ</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_темы_Рендеринг_текста">Рендеринг текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_темы_Вирт./доп._реальность">Вирт./доп. реальность</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_темы_Руководство_по_физике">Руководство по физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_темы_Персонализация_приложений">Персонализация приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_темы_«ВордПресс»-плагин">«ВордПресс»-плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_темы_Использование_«ЯваСкрипт»">Использование «ЯваСкрипт»</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_темы_Создание_десктопных_приложений">Создание десктопных приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_темы_Создание_мобильных_приложений">Создание мобильных приложений</a></li><li><a href="manual/ru/introduction/Creating-SCORM-Courses.html" id="Основные_темы_Создание_обучающих_приложений">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_темы_Поиск_проблем_с_производительностью">Поиск проблем с производительностью</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_темы_Исправление_неполадок">Исправление неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_темы_Тестирование_в_мобильных_браузерах">Тестирование в мобильных браузерах</a></li></ul></div><div><h2>Блендер</h2><ul id="Блендер"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Блендер_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Блендер_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Блендер_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Блендер_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/blender/Camera.html" id="Блендер_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Блендер_Обзор_шейдерных_нод">Обзор шейдерных нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Блендер_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Блендер_Ключи_формы_(морфинг)">Ключи формы (морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Блендер_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Блендер_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Блендер_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Блендер_Ограничители">Ограничители</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Блендер_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>3дс Макс</h2><ul id="3дс_Макс"><li><a href="manual/ru/max/Beginners-Guide.html" id="3дс_Макс_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="3дс_Макс_Установка">Установка</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="3дс_Макс_Настройка_вьюпорта">Настройка вьюпорта</a></li><li><a href="manual/ru/max/Material-System.html" id="3дс_Макс_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="3дс_Макс_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/max/Camera.html" id="3дс_Макс_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="3дс_Макс_Материалы_и_текстуры">Материалы и текстуры</a></li><li><a href="manual/ru/max/Animation.html" id="3дс_Макс_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="3дс_Макс_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="3дс_Макс_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="3дс_Макс_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="3дс_Макс_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="3дс_Макс_Анимационные_ограничители">Анимационные ограничители</a></li><li><a href="manual/ru/max/Material-Library.html" id="3дс_Макс_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Майя</h2><ul id="Майя"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Майя_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Майя_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Майя_Материалы_и_текстурные_ноды">Материалы и текстурные ноды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Майя_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/maya/Camera.html" id="Майя_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Майя_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Майя_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Майя_Бленд_шейпы_(морфинг)">Бленд шейпы (морфинг)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Майя_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Майя_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Майя_Ограничители">Ограничители</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Майя_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Пазлы</h2><ul id="Пазлы"><li><a href="manual/ru/puzzles/Initialization.html" id="Пазлы_Инициализация">Инициализация</a></li><li><a href="manual/ru/puzzles/Events.html" id="Пазлы_События">События</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Пазлы_Селекторы">Селекторы</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Пазлы_Объекты">Объекты</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Пазлы_Материалы">Материалы</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Пазлы_Анимация_и_ограничители">Анимация и ограничители</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Пазлы_Камера_и_свет">Камера и свет</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Пазлы_Сцены">Сцены</a></li><li><a href="manual/ru/puzzles/Time.html" id="Пазлы_Время">Время</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Пазлы_ХТМЛ">ХТМЛ</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Пазлы_ВР/ДР">ВР/ДР</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Пазлы_Аудио/видео">Аудио/видео</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Пазлы_Физика">Физика</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Пазлы_Постпроцессинг">Постпроцессинг</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Пазлы_Логические_операции">Логические операции</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Пазлы_Циклы">Циклы</a></li><li><a href="manual/ru/puzzles/Text.html" id="Пазлы_Текст">Текст</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Пазлы_Числа">Числа</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Пазлы_Списки">Списки</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Пазлы_Словари">Словари</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Пазлы_Переменные">Переменные</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Пазлы_Процедуры">Процедуры</a></li><li><a href="manual/ru/puzzles/System.html" id="Пазлы_Системные">Системные</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Пазлы_Продвинутые">Продвинутые</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Пазлы_Электронная_коммерция">Электронная коммерция</a></li><li><a href="manual/ru/puzzles/SCORM.html" id="Пазлы_Электронное_обучение">Электронное обучение</a></li><li><a href="manual/ru/puzzles/Library.html" id="Пазлы_Библиотеки">Библиотеки</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Пазлы_Плагины">Плагины</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="manual/ru/programmers_guide/Terms.html" id="Прочее_Словарь_терминов">Словарь терминов</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Освещение и рендеринг / Блендер</h1>
+
+    <p>
+      Данная страница содержит информацию об освещении, рендеринге и свойствах фона, которые могут быть использованы в «Вердж3Д для Блендера».
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/blender/Lighting-and-Rendering.html#renderers">Рендереры</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#environment_lighting">Освещение от окружающей среды</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#lights">Источники освещения</a><ul><li><a href="manual/ru/blender/Lighting-and-Rendering.html#point_lights">Точечный источник</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#sun_lights">Солнце</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#spot_lights">Прожектор</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#area_lights">Источник-область</a></li></ul></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#light_probes">Зонды освещения в виде отражающих кубических текстур</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#reflection_plane_light_probes">Зонды освещения в виде планарных отражений</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#background">Фон сцены</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties">Глобальные настройки рендеринга</a><ul><li><a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties_ao">Панель Ambient Occlusion</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties_shadows">Панель Shadows</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties_indirect">Панель Indirect Lighting</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties_color_management">Панель Color Management</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties_verge3d">Панель Verge3D Settings</a></li></ul></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#ambient_occlusion">Эмбиент окклюжн</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#outline_rendering">Визуализация контура</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#per_object_rendering_properties">Настройки рендеринга объектов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#hidpi_rendering">Рендеринг с высокой плотностью пикселей («ретина»)</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#visibility_breakpoints">Контрольные точки видимости</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#material_rendering_properties">Настройки рендеринга материалов</a><ul><li><a href="manual/ru/blender/Lighting-and-Rendering.html#material_settings_panel">Панель Settings</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#material_verge3d_panel">Панель Verge3D Settings</a></li></ul></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#line_rendering">Рендеринг линий</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html#clipping_planes">Секущие плоскости</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#renderers" id="renderers" class="permalink">#</a></p>
+
+    <h2>Рендереры</h2>
+
+    <p>
+      «Вердж3Д» воспроизводит блендеровский рендерер «Иви» (в «Блендере» носит название Eevee) настолько точно, насколько это возможно. Он поддерживает физически-корректный шейдинг, лампы, тени и освещение на основе изображений.
+    </p>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#environment_lighting" id="environment_lighting" class="permalink">#</a></p>
+
+    <h2>Освещение от окружающей среды</h2>
+
+    <p>
+      Освещение от окружающей среды — важная составляющая графического пайплайна «Вердж3Д». Вы можете осветить всю сцену только картой окружения, без использования каких-либо иных источников освещения. Смотрите демо-приложение <a href="http://localhost:8668/store?req=status#scooter" target="_blank" rel="nofollow" title="Открыть «Скутер» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Скутер»</a>, реализующее данный подход.
+    </p>
+
+    <iframe class="video-480p" src="https://rutube.ru/play/embed/cb4ee780bc34a720e8b3ea549009074d" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <p>
+      Стандартные шаблоны приложений (с кубиком) уже предоставляют необходимую ХДР-текстуру (с расширением .hdr) для освещения. Вы можете заменить эту текстуру своей или настроить материал окружения с нуля. Вот так может выглядеть самый простой вариант шейдера окружения (назначается на мире), который используют одну и ту же текстуру для освещения и фона:
+    </p>
+
+    <img src="files/lighting-blender/world-nodes.jpg" alt="Базовый шейдер мира в Блендере" style="max-width: 852px">
+
+    <p class="note">
+      При использовании ХДР-текстур убедитесь, что настройка <strong>Color Space</strong> установлена в режим <strong>Linear</strong>.
+    </p>
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#lights" id="lights" class="permalink">#</a></p>
+
+    <h2>Источники освещения</h2>
+
+    <p>
+      В ряде случаев, освещения на основе изображения может быть недостаточно. В частности, если вы хотите иметь некий реальный источник света (например торшер), вам требуются динамические тени, либо нужно перемещать источник в пространстве (как в случае с автомобильными фарами).
+    </p>
+
+    <p>
+      «Вердж3Д» поддерживает следующие типы ламп:
+    </p>
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#point_lights" id="point_lights" class="permalink">#</a></p>
+
+    <h3>Точечный источник</h3>
+
+    <img src="files/lighting-blender/light-properties-point.jpg" alt="Параметры точечных источников в Блендере" style="max-width: 320px">
+
+    <p>Параметры <strong>Color</strong> и <strong>Power</strong> поддерживаются в «Вердж3Д». Свойство <strong>Power</strong> может быть проанимировано.</p>
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#sun_lights" id="sun_lights" class="permalink">#</a></p>
+
+    <h3>Солнце</h3>
+
+    <img src="files/lighting-blender/light-properties-sun.jpg" alt="Параметры солнечных источников в Блендере" style="max-width: 325px">
+
+    <p>Параметры <strong>Color</strong> и <strong>Strength</strong> поддерживаются в «Вердж3Д». Свойство <strong>Strength</strong> может быть проанимировано.</p>
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#spot_lights" id="spot_lights" class="permalink">#</a></p>
+
+    <h3>Прожектор</h3>
+
+    <img src="files/lighting-blender/light-properties-spot.jpg" alt="Параметры прожекторов в Блендере" style="max-width: 325px">
+
+    <p>Параметры <strong>Color</strong>, <strong>Power</strong>, <strong>Spot Shape</strong>: <strong>Size</strong> и <strong>Blend</strong> поддерживаются в «Вердж3Д». Параметр <strong>Power</strong> может быть проанимирован.</p>
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#area_lights" id="area_lights" class="permalink">#</a></p>
+
+    <h3>Источник-область</h3>
+
+    <img src="files/lighting-blender/light-properties-area.jpg" alt="Параметры источников-областей в Блендере" style="max-width: 325px">
+
+    <p>Поддерживаются параметры <strong>Color</strong>, <strong>Power</strong>, а также <strong>Size</strong> для квадратных и <strong>Size X</strong>/<strong>Size Y</strong> для прямоугольных источников. Источники в форме диска и эллипса не поддерживаются. Параметр <strong>Power</strong> может быть проанимирован.</p>
+
+    <p>
+      В дополнение к вышеназванным свойствам, вы можете настраивать тени на ваших источниках. Для получения дополнительной информации пройдите по <a href="manual/ru/blender/Shadows.html">ссылке</a>.
+    </p>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#light_probes" id="light_probes" class="permalink">#</a></p>
+
+    <h2>Зонды освещения в виде отражающих кубических текстур</h2>
+
+    <p>
+      Световые зонды — это объекты, предназначенные для добавления местного непрямого освещения, путем генерации локальной кубической карты отражений. Данный тип световых зондов добавляет в сцену непрямое спекулярное освещение.
+    </p>
+
+    <iframe class="video-480p" src="https://rutube.ru/embed/f2a748a5174b8df0ccc90225eb42cccf/" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <p>
+      Поддерживаются следующие свойства кубических зондов:
+    </p>
+
+    <img src="files/lighting-blender/light-probe-reflection-cubemap.png" style="max-width: 453px">
+
+    <dl>
+      <dt>Probe</dt>
+      <dd>
+        Основные настройки:
+
+        <dl>
+          <dt>Type (тип)</dt>
+          <dd>
+            Тип объема влияния: <strong>Sphere</strong> или <strong>Box</strong>. Только объекты, расположенные внутри этого объема, подвергаются воздействию освещения зонда.
+          </dd>
+
+          <dt>Radius/Size (Радиус/Размер)</dt>
+          <dd>
+            Управляет размером объема влияния. Можно также изменить масштабирование объекта и сделать форму объема влияния неоднородной.
+          </dd>
+
+          <dt>Intensity (Интенсивность)</dt>
+          <dd>
+            Интенсивность косвенного освещения. Учтите, что любое значение, отличное от 1,0 не является физически корректным.
+          </dd>
+
+          <dt>Clipping Start (Начальное Отсечение Расстояния)</dt>
+          <dd>
+            Расстояние до отсечения. Объекты, расположенные ближе, чем это значение, не будут отображаться в кубической карте отражения.
+          </dd>
+
+          <dt>Clipping End (Конечное Отсечение Расстояния)</dt>
+          <dd>
+            Дальнее расстояние отсечения. Объекты, расположенные дальше этого значения, не будут
+            отображаться в кубической карте отражения.
+          </dd>
+        </dl>
+      </dd>
+
+      <dt>Visibility</dt>
+      <dd>
+        Настройки видимости объекта:
+
+        <dl>
+          <dt>Visibility Collection (видимость коллекции)</dt>
+          <dd>
+            Ограничить объекты, которые должны появиться на кубической карте отражения, до объектов указанной коллекции. Если не указано, используются все объекты сцены.
+          </dd>
+
+          <dt>Invert Visibility Collection</dt>
+          <dd>
+            Инвертировать выбор объектов видимых для данного зонда, если в диалоговом окне <strong>Visibility Collection</strong> уже указана коллекция.
+          </dd>
+        </dl>
+      </dd>
+
+      <dt>Custom Parallax</dt>
+      <dd>
+        Включить кастомные настройки для коррекции параллакса. Эта группа настроек определяет объем параллакса, который используется для проецирования освещения захваченного датчиком. Если функция <strong>Custom Parallax</strong> не включена, параллаксный эффект рассчитывается на основе <strong>Type</strong> и объема влияния <strong>Radius/Size</strong>.
+        <dl>
+          <dt>Type (Тип)</dt>
+          <dd>
+            Тип параллаксного объема: <strong>Sphere</strong> или <strong>Box</strong>.
+          </dd>
+
+          <dt>Radius/Size (Радиус/Размер)</dt>
+          <dd>
+            Размер параллаксного объема.
+          </dd>
+        </dl>
+      </dd>
+
+      <dt>Custom Influence</dt>
+      <dd>
+        Настройки влияния светового зонда, позволяющие назначить коллекцию объектов, которая будет находиться под влиянием соответствующего зонда. При указании параметра <strong>Influence Collection</strong>, настройки <strong>Type</strong> и <strong>Radius/Distance</strong> будут проигнорированы.
+
+        <dl>
+          <dt>Influence Collection</dt>
+          <dd>
+            Коллекция объектов, на которую будет оказывать влиние зонд.
+          </dd>
+
+          <dt>Invert Influence Collection</dt>
+          <dd>
+            Инвертировать объекты, указанные в коллекции <strong>Influence Collection</strong>.
+          </dd>
+        </dl>
+      </dd>
+    </dl>
+
+    <p>
+      Для того чтобы увидеть во вьюпорте «Блендера» результаты использования объектов <strong>Reflection Cubemap</strong>, вам необходимо запечь их кубические текстуры с помощью кнопок <strong>Bake Cubemap Only</strong> или <strong>Bake Indirect Lighting</strong>, расположенных в панели <strong>Indirect Lighting</strong>, во вкладке <strong>Render Properties</strong>.<br><br>
+
+      Также свойство <a href="manual/ru/blender/Lighting-and-Rendering.html#cubemap_size">Cubemap Size</a>
+      влияет на размер кубической текстуры используемой объектами <strong>Reflection Cubemap</strong>.<br><br>
+
+      Настройка <a href="manual/ru/blender/Lighting-and-Rendering.html#ibl_environment_mode">IBL Env. Mode</a>
+      также влияет на кубические карты, создаваемые объектами <strong>Reflection Cubemap</strong>.
+    </p>
+
+    <p>
+      Из-за особенностей реализации существуют различия между тем, как световые зонды <strong>Reflection Cubemap</strong> ведут себя в «Блендере» и в «Вердж3Д»:
+      </p><ul>
+        <li>
+          «Блендер» поддерживает несколько световых зондов на объект, в то время как «Вердж3Д» только один. Поэтому объекты в «Вердж3Д» используют одну кубическую карту либо из объекта <strong>Reflection Cubemap</strong>, либо из мирового окружения. Функция <strong>Falloff</strong> не поддерживается.
+        </li>
+
+        <li>
+          В отличие от «Вердж3Д», «Блендер» не использует Backface Culling для объектов по умолчанию. Поэтому блендеровские объекты, расположенные в зоне влияния зонда могут появиться на кубической карте отражения как черные пятна из-за отрисовки задних граней, если параметры <strong>Clipping Start</strong>/<strong>Clipping End</strong> не настроены должным образом. В «Вердж3Д» такого не происходит.
+        </li>
+
+        <li>
+          При рендеринге (запекании) объектов в кубическую текстуру светового зонда, «Блендер» учитывает только диффузную составляющую материала объекта, а «Вердж3Д» рендерит их не иначе, чем они визуализируются на основной сцене. Вот почему, например, полностью металлические объекты в «Блендере» отображаются черными, а в «Вердж3Д» они по-прежнему отражают окружающую среду.
+        </li>
+
+        <li>
+          Чтобы свойство <strong>Visibility Collection</strong> работало в «Блендере», необходимо, чтобы указанная коллекция также была связана со сценой. В «Вердж3Д» это не требуется, достаточно просто назначить коллекцию.
+        </li>
+      </ul>
+    <p></p>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#reflection_plane_light_probes" id="reflection_plane_light_probes" class="permalink">#</a></p>
+
+    <h2>Зонды освещения в виде планарных отражений</h2>
+
+    <p>
+      Зонды планарных отражений —&nbsp;удобный способ добавить непрямые зеркальные отражения на плоские объекты, в частности, на зеркала, пол, стены и т.д.
+    </p>
+
+    <figure style="max-width: 776px">
+      <img src="files/lighting-blender/light-probe-reflection-plane-example.jpg" alt="Демо загрузить-выгрузить">
+      <figcaption>Планарные отражения в демо-приложении <a href="http://localhost:8668/store?req=status#load_unload" target="_blank" rel="nofollow" title="Открыть «Загружаем-выгружаем» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Загружаем-выгружаем»</a>.</figcaption>
+    </figure>
+
+    <p class="demoNote">Смотрите пример в магазине ассетов — <a href="http://localhost:8668/store?req=status#light_probe" target="_blank" rel="nofollow" title="Открыть «Зонды освещения» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Зонды освещения»</a>.</p>
+
+    <p>
+      Поддерживаются следующие свойства планарных зондов:
+    </p>
+
+    <img src="files/lighting-blender/light-probe-reflection-plane.jpg" alt="Свойства планарных зондов в Блендере" style="max-width: 368px">
+
+    <dl>
+      <dt>Distance</dt>
+      <dd>
+        Дистанция влияния зонда.
+      </dd>
+      <dt>Falloff</dt>
+      <dd>
+        Интенсивность спада влияния.
+      </dd>
+      <dt>Clipping Offset</dt>
+      <dd>
+        Ближняя плоскость отсечения для объектов, отображаемых в данном планарном зонде.
+      </dd>
+      <dt>Visibility Collection</dt>
+      <dd>
+        Коллекция объектов видимых данным зондом.
+      </dd>
+    </dl>
+
+    <p class="note">
+      Планарные зонды могут существенно ухудшить производительность ваших приложений, поскольку для их работы требуется <strong>N+1</strong> вызовов отрисовки. Чтобы ускорить рендеринг, всегда ограничивайте количество объектов с помощью коллекции <strong>Visibility Collection</strong>.
+    </p>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#background" id="background" class="permalink">#</a></p>
+
+    <h2>Фон сцены</h2>
+
+    <p>
+      По умолчанию «Блендер» и «Вердж3Д» рендерят одно и то же изображение для освещения фона и окружения. Чтобы отрисовать их отдельно, используйте расширенную настройку материала мира, основанную на использовании выхода <strong>Is Camera Ray</strong> ноды <a href="manual/ru/blender/Shader-Nodes-Reference.html#Light_Path">Light Path</a>. Например, чтобы установить цвет фона сплошным серым и продолжать использовать карту ХДР для освещения:
+    </p>
+
+    <img src="files/lighting-blender/world-nodes-advanced.jpg" alt="Сложный материал мира Блендера" style="max-width: 886px">
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties" id="global_rendering_properties" class="permalink">#</a></p>
+
+    <h2>Глобальные настройки рендеринга</h2>
+
+    <p>Свойства глобального рендеринга доступны на панели <strong>Render Properties</strong> в «Блендере».</p>
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties_ao" id="global_rendering_properties_ao" class="permalink">#</a></p>
+
+    <h3>Панель Ambient Occlusion</h3>
+
+    <img src="files/lighting-blender/ambient-occlusion-properties.jpg" alt="Настройки эффекта эмбиент окклюжн в Блендере" style="max-width: 323px">
+
+    <p>Большинство этих настроек поддерживаются в «Вердж3Д». Смотрите полный список <a href="manual/ru/blender/Lighting-and-Rendering.html#ambient_occlusion">ниже</a>.</p>
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties_shadows" id="global_rendering_properties_shadows" class="permalink">#</a></p>
+
+    <h3>Панель Shadows</h3>
+
+    <img src="files/lighting-blender/rendering-properties-shadow.jpg" alt="Настойки теней в Блендере" style="max-width: 327px">
+
+    <p>Смотрите подробное описание этих настроек в разделе <a href="manual/ru/blender/Shadows.html#global_settings">Тени</a>.</p>
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties_indirect" id="global_rendering_properties_indirect" class="permalink">#</a></p>
+
+    <h3>Панель Indirect Lighting</h3>
+
+    <img src="files/lighting-blender/rendering-properties-indirect.jpg" alt="Настройки непрямого освещения в Блендере" style="max-width: 320px">
+
+    <dl>
+      <dt id="cubemap_size">Cubemap Size</dt>
+      <dd>
+        Размер текстуры, используемой для освещения окружающей среды:
+        <dl>
+          <dt>64, 128</dt>
+          <dd>Не используйте, <strong>256</strong> является минимальным разрешением поддерживаемым в «Вердж3Д».</dd>
+
+          <dt>256</dt>
+          <dd>Оптимальное качество при низком потреблении памяти (рекомендовано).</dd>
+
+          <dt>512</dt>
+          <dd>Лучшее качество при умеренном потреблении памяти и снижении производительности. Используйте его для рендеринга отражений высокого качества, например, для рендеринга ювелирных изделий.</dd>
+
+          <dt>1024</dt>
+          <dd>Наилучшее качество при высоком потреблении памяти и низкой производительности (как правило, не рекомендуется).</dd>
+
+          <dt>2048, 4096</dt>
+          <dd>Не использовать, <strong>1024</strong> это максимальное значение, поддерживаемое в «Вердж3Д».</dd>
+        </dl>
+      </dd>
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties_color_management" id="global_rendering_properties_color_management" class="permalink">#</a></p>
+
+    <h3>Панель Color Management</h3>
+
+    <img src="files/lighting-blender/rendering-properties-color-management.jpg" alt="Настройки цветокоррекции в Блендере" style="max-width: 327px">
+
+    <dl>
+      <dt>View Transform</dt>
+      <dd>Дополнительная цветокоррекция, применяемая к рендерам «Вердж3Д»:
+
+        <dl>
+          <dt>Standard</dt>
+          <dd>Без дополнительной цветокоррекции. Переключитесь на этот метод, если вам не нужна цветокоррекция, так как он работает немного быстрее чем <strong>Filmic</strong>.</dd>
+
+          <dt>Filmic</dt>
+          <dd>Метод по умолчанию в «Блендере».</dd>
+
+          <dt>Filmic Log, Raw, False Color</dt>
+          <dd>Не поддерживаются в «Вердж3Д», вместо них будет использоваться <strong>Standard</strong>.</dd>
+
+        </dl>
+      </dd>
+    </dl>
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#global_rendering_properties_verge3d" id="global_rendering_properties_verge3d" class="permalink">#</a></p>
+
+    <h3>Панель Verge3D Settings</h3>
+
+    <p>В дополнении к стандартным блендеровским панелям, «Вердж3Д» поддерживает следующие настройки:</p>
+
+    <img src="files/lighting-blender/rendering-properties-global.jpg" alt="Настройки Вердж3Д в Блендере" style="max-width: 365px">
+
+    <dl>
+      <dt>Copyright</dt>
+      <dd>Назначьте информацию об авторском праве в этом поле, чтобы обозначить, что экспортированные модели принадлежат именно вам.</dd>
+
+      <dt>Export Constraints</dt>
+      <dd>Экспортировать блендеровские ограничители. Подробная информация об ограничителях и их настройках, поддерживаемых в «Вердж3Д», представлена <a href="manual/ru/blender/Object-Constraints.html">здесь</a>.</dd>
+
+      <dt>Export Custom Props</dt>
+      <dd>Экспортировать кастомные свойства. Читайте документацию на <a href="manual/ru/puzzles/Objects.html#get_custom_props">соответствующий пазл</a>, чтобы узнать как работать с этой функцией.</dd>
+
+      <dt>Bake Modifiers</dt>
+      <dd>По умолчанию «Вердж3Д» не поддерживает блендеровские модификаторы, однако включение данной опции позволяет запекать их в геометрию непосредственно перед экспортом.</dd>
+
+      <dt>Bake Text</dt>
+      <dd>Экспортировать объекты текста как есть или запекать в геометрию (меши). Читайте подробнее об этих режимах <a href="manual/ru/introduction/Text-Rendering.html">в разделе про текст</a>.</dd>
+
+      <dt>LZMA Compression</dt>
+      <dd>Включить ЛЗМА-компрессию для экспортированных файлов. Читайте подробности об использовании этой функции <a href="manual/ru/introduction/Asset-compression.html">здесь</a>.</dd>
+
+      <dt>Compress Textures</dt>
+      <dd>Экспортировать текстуры с <a href="manual/ru/introduction/Texture-Compression.html">компрессией</a>.</dd>
+
+      <dt>Optimize Mesh Attrs</dt>
+      <dd>Удалять неиспользуемые атрибуты геометрии (напрмер тангенты) из экспортируемых мешей.</dd>
+
+      <dt>Anti-Aliasing</dt>
+      <dd>
+        Выберите, какой алгоритм сглаживания (анти-алиасинга) использовать для сцены:
+        <dl>
+          <dt>Auto</dt>
+          <dd>Использовать системный метод по умолчанию.</dd>
+
+          <dt>MSAA 4x</dt>
+          <dd>Использовать мультисемплинг с 4-мя семплами, если такая настройка поддерживается оборудованием.</dd>
+
+          <dt>MSAA 8x</dt>
+          <dd>Использовать мультисемплинг 8-ю семплами, если такая настройка поддерживается оборудованием.</dd>
+
+          <dt>MSAA 16x</dt>
+          <dd>Использовать мультисемплинг с 16-ю семплами, если такая настройка поддерживается оборудованием.</dd>
+
+          <dt>FXAA</dt>
+          <dd>Использовать БААА (быстрый аппроксимирующий анти-алиасинг). Включите этот алгоритм в случае проблем <a href="manual/ru/introduction/Hardware-Related-Issues.html#aa_issues">с алиасингом процедурных текстур</a>.</dd>
+
+          <dt>None</dt>
+          <dd>Отключить сглаживание.</dd>
+        </dl>
+      </dd>
+
+      <dt>Use HDR Rendering</dt>
+      <dd>Включить рендеринг с высоким динамическим диапазоном (ХДР).</dd>
+
+      <dt>Order-Indep. Transparency</dt>
+      <dd>
+        Включить метод порядок-независимой прозрачности (OIT). Избавляет от большинства артефактов при рендеринге обьектов с прозрачностью. Подробнее об этом <a href="manual/ru/blender/Transparency.html#oit_rendering">здесь</a>.
+      </dd>
+
+      <dt id="ibl_environment_mode">IBL Env. Mode</dt>
+      <dd>
+        <dl>
+          <dt>PMREM (slow)</dt>
+          <dd>Высокое качество (значение по умолчанию).</dd>
+
+          <dt>Light Probe + Cubemap (medium)</dt>
+          <dd>Снижение качества зеркальных отражений на основе изображений, лучшая производительность.</dd>
+
+          <dt>Light Probe (fast)</dt>
+          <dd>Отключение зеркальных отражений на основе изображений, высочайшая производительность.</dd>
+        </dl>
+      </dd>
+
+      <dt>Animation</dt>
+      <dd>Глобальные настройки анимации. Читайте о них <a href="manual/ru/blender/Animation.html">здесь</a>.</dd>
+
+      <dt>Shadows</dt>
+      <dd>Настройки теней. Смотрите подробности в <a href="manual/ru/blender/Shadows.html#global_settings">соответствующем разделе</a>.</dd>
+
+      <dt>Outline Effect</dt>
+      <dd>Читайте <a href="manual/ru/blender/Lighting-and-Rendering.html#outline_rendering">ниже</a>.</dd>
+
+      <dt>Export Collections</dt>
+      <dd>Коллекции объектов, которые окажутся в экспортированном ГЛТФ-файле.</dd>
+    </dl>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#ambient_occlusion" id="ambient_occlusion" class="permalink">#</a></p>
+
+    <h2>Эмбиент окклюжн</h2>
+
+    <p>
+      Эмбиент окклюжн (англ. ambient occlusion) — техника улучшающая реалистичность рендеринга посредством дополнительного затенения от непрямых источников. Степень этого затенения определяется тем, насколько видима рисуемая часть объекта, если смотреть не из камеры, а со стороны источников освещения.
+    </p>
+
+    <p>
+      Поскольку в «Блендере» используется особый алгоритм расчёта эффекта эмбиент окклюжн, называемый GTAO (Ground Truth Ambient Occlusion)
+      (см. <a href="https://docs.blender.org/manual/ru/latest/render/eevee/render_settings/ambient_occlusion.html">подробности</a>)
+      движок «Вердж3Д» воспроизводит тот же самый алгоритм.
+    </p>
+
+    <p>
+      Мы поддерживаем следующие настройки секции
+      <strong>Ambient Occlusion</strong>, расположенной на панели <strong>Render Properties</strong>:
+    </p>
+
+    <img src="files/lighting-blender/ambient-occlusion-properties.jpg" alt="Опции эмбиент окклюжн Блендера" style="max-width: 323px">
+
+    <dl>
+      <dt>Ambient Occlusion</dt>
+      <dd>
+        Включить/выключить эмбиент окклюжн.
+      </dd>
+      <dt>Distance</dt>
+      <dd>
+        Радиус (в блендеровских единицах измерения) в пределах которого будет производиться расчёт эффекта. Большие значения делают эффект более заметным, но уменьшают производительность, соответственно меньшие значения делают эффект менее заметным.
+      </dd>
+      <dt>Factor</dt>
+      <dd>
+        Интенсивность эффекта эмбиент окклюжн.
+      </dd>
+      <dt>Trace Precision</dt>
+      <dd>
+        Более высокие значения увеличивают точность эффекта за счёт снижения производительности. Меньшие значения уменьшают качество, но увеличивают производительность.
+      </dd>
+      <dt>Bent Normals</dt>
+      <dd>
+        Использовать модифицированные («изогнутые», от англ. bent) нормали для семплирования карты окружения, вместо оригинальных. Направление модифицированных нормалей задаётся в сторону наименьшего затененения, что улучшает качество эффекта, но уменьшает производительность.
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#outline_rendering" id="outline_rendering" class="permalink">#</a></p>
+
+    <h2>Визуализация контура</h2>
+
+    <p>
+      Контурный рендеринг — распространенная техника нефотореалистичного рендеринга, которая может значительно улучшить визуальное восприятие вашей сцены. Этот эффект можно использовать в различных приложениях, таких как электронное обучение, игры, архитектурная визуализация и техническое рисование.
+    </p>
+
+    <figure style="max-width: 819px">
+      <img src="files/lighting-blender/outline-example.jpg">
+      <figcaption>Визуализация контура используется для выделения частей сложного объекта в демо-приложении «Промышленный робот».</figcaption>
+    </figure>
+
+    <p>
+      Чтобы использовать визуализацию контура (и дополнительное свечение) в «Вердж3Д»-приложении, сначала включите эффект на панели <strong>Render Properties</strong> в «Блендере»:
+    </p>
+
+    <img src="files/lighting-blender/outline-settings.jpg" style="max-width: 367px">
+
+    <p>
+      а затем используйте пазл <a href="manual/ru/puzzles/Objects.html#outline">outline</a>, чтобы применить его к объекту (объектам).
+    </p>
+
+    <p class="note">
+      Контурный рендеринг не работает с виртуальной и дополненной реальностью. Используйте другие методы выделения объектов, например анимацию или изменение цвета материала.
+    </p>
+
+    <p>Настроить контур можно с помощью следующих свойств:</p>
+
+    <dl>
+      <dt>Edge Strength</dt>
+      <dd>Фактор силы контура.<p></p>
+
+      </dd><dt>Edge Glow</dt>
+      <dd>Интенсивность дополнительного свечения (отрисовывается за пределами основного края контура).<p></p>
+
+      </dd><dt>Edge Thickness</dt>
+      <dd>Коэффициент толщины края контура.<p></p>
+
+      </dd><dt>Pulse Period</dt>
+      <dd>Период импульса в секундах. Укажите, чтобы сделать эффект анимированным.<p></p>
+
+      </dd><dt>Visible Edge Color</dt>
+      <dd>Цвет видимого контура.<p></p>
+
+      </dd><dt>Hidden Edge Color</dt>
+      <dd>Цвет края контура, отображаемого за другими объектами сцены.<p></p>
+
+      </dd><dt>Render Hidden Edge</dt>
+      <dd>Включить/выключить отрисовку края контура за другими объектами сцены.<p></p>
+    </dd></dl>
+
+    <p class="note">Хотя есть возможность визуализировать светящиеся объекты, в большинстве случаев контурный рендеринг используется для улучшения повышения чёткости сцены. Если вам нужно свечение от ламп или других ярких объектов, подумайте об использовании постобработки <a href="manual/ru/puzzles/Postprocessing.html#bloom">bloom</a> вместо этого.</p>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#per_object_rendering_properties" id="per_object_rendering_properties" class="permalink">#</a></p>
+
+    <h2>Настройки рендеринга объектов</h2>
+
+    <p>
+      «Вердж3Д» поддерживает следующие дополнительные свойства рендеринга для геометрических объектов:
+    </p>
+
+    <img src="files/lighting-blender/rendering-properties.jpg" alt="Настройки рендеринга объектов в Блендере" style="max-width: 335px">
+
+    <dl>
+      <dt>Render Order</dt>
+      <dd>
+        Изменяет порядок рендеринга для конкретного объекта. Чем меньше индекс, тем раньше будет отрисован объект. В большинстве случаев это значение необходимо подстроить при использовании прозрачности типа <strong>blend</strong> для устранения артефактов прозрачности.
+      </dd>
+
+      <dt>Frustum Culling</dt>
+      <dd>
+        Включает/выключает оптимизацию фрустум каллинга. Снимите этот флажок, если у вас есть объект со скиннингом, который может выходить за пределы экранного пространства, чтобы предотвратить его пропадание.
+      </dd>
+
+      <dt>Receive Shadows</dt>
+      <dd>
+        Отрисовывать или не отрисовывать тени на данном объекте. Более подробную информацию смотрите <a href="manual/ru/blender/Shadows.html#per_object_material_settings">здесь</a>
+      </dd>
+
+      <dt>HiDPI Compositing</dt>
+      <dd>
+        Включить/выключить пасс рендеринга с высокой плотностью пикселей. Смотрите <a href="manual/ru/blender/Lighting-and-Rendering.html#hidpi_rendering">ниже</a> для получения дополнительной информации.
+      </dd>
+
+      <dt>Fix Ortho Zoom</dt>
+      <dd>
+        Применять обратное увеличение к объектам, которые рендерятся с использованием ортографической камеры. Данная коррекция используется для того, чтобы сделать объекты, дочерние к такой камере, неподвижными и имеющими неизменяемые размеры.
+
+        <div class="note">
+          <p>Если активация этой настройки не помогает, очистите матрицу Parent Inverse:</p>
+          <img src="files/lighting-blender/clear-parent-inverse.jpg" alt="Очистка parent inverse матрицы в Блендере" style="max-width: 266px">
+        </div>
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#hidpi_rendering" id="hidpi_rendering" class="permalink">#</a></p>
+
+    <h2>Рендеринг с высокой плотностью пикселей («ретина»)</h2>
+
+    <p>
+      На сегодняшний день экраны большинства мобильных устройств и многих десктопов имеют высокую плотность пикселей (так называемые «ретина»-дисплеи). Рендеринг на этих экранах в полном разрешении может значительно улучшить качество изображения, однако это может значительно ухудшить ситуацию с производительностью.
+    </p>
+
+    <p>
+      Есть 2 способа улучшить качество ВПП-рендеринга, но так чтобы производительность не уменьшалась слишком сильно:
+    </p>
+
+    <ul>
+      <li>Увеличить разрешение не так сильно, например выставив фактор масштабирования в 1.5. Смотрите <a href="manual/ru/puzzles/System.html#set_screen_scale">здесь</a> чтобы узнать подробнее об этой технике.</li>
+      <li>Использовать высокое разрешение только там, где это наиболее актуально, например чтобы улучшить качество текста и интерфейсных элементов.</li>
+    </ul>
+
+    <p>
+      Второй способ активируется с помощью настройки <strong>HiDPI Compositing</strong> расположенной на панели <strong>Object Properties</strong>:
+    </p>
+
+    <img src="files/lighting-blender/hidpi-compositing.jpg" alt="Настройки рендеринга в высоком разрешении в Блендере" style="max-width: 408px">
+
+    <p class="demoNote">Смотрите пример в магазине ассетов — <a href="http://localhost:8668/store?req=status#ring" target="_blank" rel="nofollow" title="Открыть «Кольцо» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Кольцо»</a>.</p>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#visibility_breakpoints" id="visibility_breakpoints" class="permalink">#</a></p>
+
+    <h2>Контрольные точки видимости</h2>
+
+    <p>
+      Контрольные точки видимости (<em>Visibility Breakpoints</em> в «Блендере») позволяют скрывать/показывать объекты в зависимости от ширины/высоты 3Д-вьюпорта и его ориентации. Чаще всего эта функция требуется, чтобы адаптировать сцену для различных экранов. Например вы можете создать два объекта для вертикальной и горизонтальной компоновки экрана и показывать лишь один из них.
+    </p>
+
+    <p>
+      Контрольные точки могут быть назначены и для камер. В таком случае движок переключит активную камеру на альтернативную, если параметры её контрольных точек окажутся подходящими (в противном случае переключения не произойдет).
+    </p>
+
+    <p class="note">
+      Используйте блендеровскую функцию <a href="https://docs.blender.org/manual/ru/latest/scene_layout/object/editing/duplicate_linked.html" target="_blank">Duplicate Linked</a> чтобы расшаривать геометрию между альтернативными объектами (например для вертикальной и горизонтальной компоновки сцены). Таким образом вы сэкономите память ГПУ и уменьшите время загрузки сцены.
+    </p>
+
+    <p>
+      Контрольные точки видимости настраиваются на панели <strong>Object Properties</strong>:
+    </p>
+
+    <img src="files/lighting-blender/visibility-breakpoints.jpg" alt="Контрольные точки видимости Вердж3Д" style="max-width: 410px">
+
+    <dl>
+      <dt>Min Width</dt>
+      <dd>
+        Минимальная ширина канваса при которой объект остаётся видимым.
+      </dd>
+      <dt>Max Width</dt>
+      <dd>
+        Максимальная ширина канваса при которой объект остаётся видимым.
+      </dd>
+      <dt>Min Height</dt>
+      <dd>
+        Минимальная высота канваса при которой объект остаётся видимым.
+      </dd>
+      <dt>Max Height</dt>
+      <dd>
+        Максимальная высота канваса при которой объект остаётся видимым.
+      </dd>
+      <dt>Orientation</dt>
+      <dd>
+        Ориентация экрана при которой объект остаётся видимым.
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#material_rendering_properties" id="material_rendering_properties" class="permalink">#</a></p>
+
+    <h2>Настройки рендеринга материалов</h2>
+
+    <p>
+      Ниже приведён список общих настроек материалов, поддерживаемых в «Вердж3Д». Описание настроек поддерживаемых шейдерных нод приведено в <a href="manual/ru/blender/Shader-Nodes-Reference.html">другом разделе</a>.
+    </p>
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#material_settings_panel" id="material_settings_panel" class="permalink">#</a></p>
+
+    <h3>Панель Settings</h3>
+
+    <img src="files/lighting-blender/material-settings-panel.jpg" alt="Настройки материалов в Блендере" style="max-width: 338px">
+
+    <dl>
+      <dt>Blend Mode</dt>
+      <dd>
+        Режим прозрачности. Дополнительная информация находится <a href="manual/ru/blender/Transparency.html">здесь</a>.
+      </dd>
+      <dt>Shadow Mode</dt>
+      <dd>
+        Режим прозрачности для теней. В «Вердж3Д» поддерживаются режимы <strong>Opaque</strong> и <strong>None</strong>.
+      </dd>
+      <dt>Clip Threshold</dt>
+      <dd>
+        Граница отсечения для материалов <strong>Alpha Clip</strong>.
+      </dd>
+      <dt>Pass Index</dt>
+      <dd>
+        Индекс пасса материала. В «Вердж3Д» это значение подаётся в ноду <a href="manual/ru/blender/Shader-Nodes-Reference.html#object_info">Object Info</a>.
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#material_verge3d_panel" id="material_verge3d_panel" class="permalink">#</a></p>
+
+    <h3>Панель Verge3D Settings</h3>
+
+    <img src="files/lighting-blender/material-verge3d-panel.jpg" alt="Вердж3Д-специфичные настройки матералов в Блендере" style="max-width: 336px">
+
+    <dl>
+      <dt>Render Side</dt>
+      <dd>
+        Являясь классическим реалтаймовым рендером, «Вердж3Д» использует отбраковку задних граней для увеличения производительности. Соответственно, лишь передние грани рендерятся по умолчанию. Данное поведение можно изменить используя настройку <strong>Render Side</strong>.
+      </dd>
+      <dt>Depth Write</dt>
+      <dd>
+        Отключение записи в буфер глубины можно использовать для реализации <a href="manual/ru/blender/Transparency.html#alpha_add">аддитивной прозрачности</a>.
+      </dd>
+      <dt>Depth Test</dt>
+      <dd>
+        Отключите тестирование по глубине и увеличьте параметр <a href="manual/ru/blender/Lighting-and-Rendering.html#per_object_rendering_properties">Rendering Order</a> чтобы отрендерить плоские объекты (декалли и спрайты) поверх другой геометрии.
+      </dd>
+      <dt>Dithering</dt>
+      <dd>
+        Включить дитеринг. Дитеринг используется для уменьшения <a href="manual/ru/introduction/Hardware-Related-Issues.html#banding_artifacts">артефактов-полос</a>, появляющихся при использовании тёмных сцен и градиентов.
+      </dd>
+      <dt>glTF 2.0 compatible</dt>
+      <dd>
+        Сделать материал ГЛТФ-совместимым. Смотрите <a href="manual/ru/blender/GLTF-Materials.html">раздел про ГЛТФ-материалы</a> чтобы узнать подробности.
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#line_rendering" id="line_rendering" class="permalink">#</a></p>
+
+    <h2>Рендеринг линий</h2>
+
+    <p>
+      С помощью этой функции вы можете рендерить блендеровские объекты с помощью линий. Чаще всего эта функция используется для рендеринга кривых, которые не обладают собственной геометрией, однако также может использоваться для рендеринга скелета мешей и поверхностей.
+    </p>
+
+    <figure>
+      <img src="files/lighting-blender/line-rendering-example.jpg" alt="Рендеринг скелета геометрического объекта">
+      <figcaption>Рендеринг скелета геометрического объекта.</figcaption>
+    </figure>
+
+    <p>
+      Рендеринг линий включается на панели <strong>Verge3D Settings</strong>, которая в свою очередь расположена на панели <strong>Object Data Properties</strong>:
+    </p>
+
+    <img src="files/lighting-blender/line-rendering-properties.jpg" alt="Настройки рендеринга линий" style="max-width: 325px">
+
+    <p>
+      Тут также настройки цвета и толщины линий. В «Вердж3Д» линии рендерятся с помощью эмиссивного шейдера (без освещения).
+    </p>
+
+    <p class="demoNote">Смотрите пример в магазине ассетов — <a href="http://localhost:8668/store?req=status#lines" target="_blank" rel="nofollow" title="Открыть «Линии» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Линии»</a>.</p>
+
+
+    <p><a href="manual/ru/blender/Lighting-and-Rendering.html#clipping_planes" id="clipping_planes" class="permalink">#</a></p>
+
+    <h2>Секущие плоскости</h2>
+
+    <p>
+      Секущие плоскости (они же плоскости сечений) — это способ, используемый для отображения внутреннего устройства сложных объектов, таких как здания, автомобили, приборы, гаджеты, машины и т.д.
+    </p>
+
+    <img src="files/lighting-blender/clipping-plane-example.jpg">
+
+    <p>
+      Чтобы добавить новую плоскость сечения, используйте пункт меню <strong>Clipping Plane</strong> из меню <strong>Add Object</strong> в  Блендер:
+    </p>
+
+    <img src="files/lighting-blender/clipping-plane-new.jpg">
+
+    <p>
+      Объекты в вашей сцене будут обрезаны в отрицательном направлении <strong>Z</strong> объекта плоскости сечения.
+    </p>
+
+    <p>
+      Плоскости сечения обладают следующими свойствами:
+    </p>
+
+    <img src="files/lighting-blender/clipping-plane-properties.jpg" style="max-width: 382px">
+
+    <dl>
+      <dt>Affected Objects</dt>
+      <dd>
+        Коллекция объектов, с которыми будет взаимодействовать секущая плоскость. Если коллекция не назначена, все объекты сцены будут обрезаны.
+      </dd>
+      <dt>Negated</dt>
+      <dd>
+        Поменять местами обрезанную и необрезанную стороны.
+      </dd>
+      <dt>Clip Shadows</dt>
+      <dd>
+        Обрезать тени, отбрасываемые обрезанными объектами.
+      </dd>
+      <dt>Union Planes</dt>
+      <dd>
+        Постройте объединение из всех плоскостей сечения, воздействуя на объект, а не на их пересечение.
+      </dd>
+      <dt>Filled Cross-Section</dt>
+      <dd>
+        Заполните отверстие образованное секущей плоскостью в затронутых объектах.
+      </dd>
+      <dt>Color</dt>
+      <dd>
+        Цвет и прозрачность поперечного сечения.
+      </dd>
+      <dt>Render Side</dt>
+      <dd>
+        Сторона геометрии плоскости отсечения. Укажите <strong>Double-sided</strong> чтобы рендерить сложную геометрию с вырезами.
+      </dd>
+      <dt>Plane Size</dt>
+      <dd>
+        Размер плоскости сечения. Увеличьте это значение, если вы используете сцену большего размера.
+      </dd>
+    </dl>
+
+    <p class="demoNote">Смотрите пример в магазине ассетов — <a href="http://localhost:8668/store?req=status#clipping_planes" target="_blank" rel="nofollow" title="Открыть «Мясорубка» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Мясорубка»</a>.</p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/ru/форумы/" target="_blank">форуме</a>!</p>
+
+
+  </dl></article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

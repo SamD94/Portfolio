@@ -1,0 +1,395 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Verge3D for Blender: Working with Camera — Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Find out how to create and control Blender cameras to be used with Verge3D.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/blender/Camera.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D for Blender: Working with Camera — Soft8Soft">
+            <meta property="og:description" content="Find out how to create and control Blender cameras to be used with Verge3D.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_en.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/blender/Camera.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D for Blender: Working with Camera — Soft8Soft">
+            <meta name="twitter:description" content="Find out how to create and control Blender cameras to be used with Verge3D.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_en.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/active-camera.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/camera-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/orbit-camera-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/firstperson-camera-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/firstperson-hide-render.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/firstperson-camera-setup.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/fit-to-camera-edge-properties.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/clear-parent-inverse.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/Texture-Compression.html" id="General_Topics_Texture_Compression">Texture Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Creating-SCORM-Courses.html" id="General_Topics_Creating_SCORM_Courses">Creating SCORM Courses</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/en/puzzles/SCORM.html" id="Puzzles_Reference_E-Learning/SCORM">E-Learning/SCORM</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Working with Camera / Blender</h1>
+
+    <p>
+      This page contains the information on how to setup Blender's cameras to be used with Verge3D.
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/blender/Camera.html#setting_up_in_blender">Setting Up in Blender</a></li><li><a href="manual/en/blender/Camera.html#camera_settings">Camera Settings</a><ul><li><a href="manual/en/blender/Camera.html#orbit_camera_settings">Orbit Camera Settings</a></li><li><a href="manual/en/blender/Camera.html#firstperson_camera_settings">First-Person Camera Settings</a></li></ul></li><li><a href="manual/en/blender/Camera.html#fit_to_camera_edge">Fit to Camera Edge</a></li><li><a href="manual/en/blender/Camera.html#camera_control_with_puzzles">Camera Control with Puzzles</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/en/blender/Camera.html#setting_up_in_blender" id="setting_up_in_blender" class="permalink">#</a></p>
+
+    <h2>Setting Up in Blender</h2>
+
+    <p>Simply add the camera to the scene and assign it as <em>active</em> in the <strong>Scene Properties</strong>:</p>
+
+    <img src="files/camera-blender/active-camera.jpg" alt="Setting active camera in Blender" style="max-width: 309px">
+
+    <p>This camera will be used to render your scene by default, though you can add more cameras and switch between them in runtime using the <a href="manual/en/puzzles/Camera.html#set_active_camera">set active camera</a> puzzle.</p>
+
+    <p>Verge3D supports the following camera types:</p>
+
+    <ul>
+      <li><strong>Perspective</strong></li>
+      <li><strong>Orthographic</strong></li>
+    </ul>
+
+    <p><a href="manual/en/blender/Camera.html#camera_settings" id="camera_settings" class="permalink">#</a></p>
+
+    <h2>Camera Settings</h2>
+
+    <p>Verge3D supports the following camera settings:</p>
+
+    <img src="files/camera-blender/camera-settings.jpg" alt="Camera settings in Blender" style="max-width: 627px">
+
+    <dl>
+      <dt>Type</dt>
+      <dd>Camera type, either <strong>Perspective</strong> or <strong>Orthographic</strong>.</dd>
+
+      <dt>Clip Start / Clip End</dt>
+      <dd>Camera visibility range (aka clipping distance). To eliminate <a href="manual/en/introduction/Hardware-Related-Issues.html#z_fighting">z-fighting artifacts</a> set <strong>Clip Start</strong> value as high as possible and <strong>Clip End</strong> value as low as possible.</dd>
+
+      <dt>Sensor Fit</dt>
+      <dd>
+        How the viewport will react to changing its dimensions (or device orientation). This setting has somewhat different meaning in Verge3D.
+        <dl>
+          <dt>Auto</dt>
+          <dd>Use <strong>Vertical</strong> viewport fit for landscape and <strong>Horizontal</strong> fit for portrait orientation of the viewport. This mode is good for scenes with equal horizontal and vertical dimensions, as it prevents objects from being cut by the camera.</dd>
+          <dt>Horizontal</dt>
+          <dd>Fit horizontal field of view. This mode is good for <em>wide</em> scenes. By fixing horizontal field of view you will be ensured that your object will fit into the camera in both landscape (desktops/laptops) and portrait (phones) modes.</dd>
+          <dt>Vertical</dt>
+          <dd>Fit vertical field of view. Contrary to <strong>Horizontal</strong>, this mode is good for <em>tall</em> scenes.</dd>
+        </dl>
+      </dd>
+
+      <dt>Controls</dt>
+      <dd>
+        Specify what type of controls will be assigned to the camera in Verge3D:
+
+        <ul>
+          <li><strong>Orbit</strong> — targeted (aka pivoted, orbited) camera view. See <a href="manual/en/blender/Camera.html#orbit_camera_settings">below</a>.</li>
+          <li><strong>Flying</strong> — free-flight view.</li>
+          <li><strong>First-Person</strong> — first-person view with familiar character controls (WASD).</li>
+          <li><strong>Disable</strong> — disable any controls. Specify if you're going to move your camera with animations, Puzzles, or JavaScript.</li>
+        </ul>
+      </dd>
+
+      <dt>Allow Panning</dt>
+      <dd>Enable/disable camera panning.</dd>
+
+      <dt>Rotation Speed</dt>
+      <dd>Camera rotation speed factor.</dd>
+
+      <dt>Movement Speed</dt>
+      <dd>Camera movement speed factor.</dd>
+    </dl>
+
+
+    <p><a href="manual/en/blender/Camera.html#orbit_camera_settings" id="orbit_camera_settings" class="permalink">#</a></p>
+
+    <h3>Orbit Camera Settings</h3>
+
+    <p>
+      Use <strong>Target Object/Point</strong> subpanel to adjust the settings for the orbit camera.
+    </p>
+
+    <img src="files/camera-blender/orbit-camera-settings.jpg" alt="Orbit camera settings in Blender" style="max-width: 325px">
+
+    <dl>
+      <dt>Manual</dt>
+      <dd>You can manually set the XYZ coordinates of the pivot point (aka target) using these numerical fields. For your convenience you can use the <strong>From Cursor</strong> button to copy the current coordinates of Blender's 3D cursor.</dd>
+
+      <dt>From Object</dt>
+      <dd>Camera pivot object. If assigned, Verge3D uses coordinates of that object as camera pivot point. Please note, that this assignment happens just upon export, thus any movements of the pivot object (e.g. because of animation) in Verge3D won't affect the camera.</dd>
+
+      <dt>Update View</dt>
+      <dd>If you happen to move the camera, use this button to restore the camera's pivot point.</dd>
+
+      <dt>Min Dist, Max Dist</dt>
+      <dd>
+        <p>
+          Distance limits for the perspective camera. In Verge3D realm, "zooming" for the perspective orbit camera means "moving forward/backwards", thus distance limits assigned to such a camera indirectly affect the min/max limits of zooming.
+        </p>
+        <p class="note">
+          If you need to perform zooming by changing the camera field-of-view (FOV), while keeping the camera in place, use the <a href="manual/en/puzzles/Camera.html#set_camera_param">set camera param</a> puzzle.
+        </p>
+      </dd>
+
+      <dt>Min Zoom, Max Zoom</dt>
+      <dd>Zoom limits for the orthographic camera. In Verge3D realm, "zooming" for the orthographic orbit camera means "making camera volume larger/smaller". The camera itself don't move.</dd>
+
+      <dt>Vertical Rotation Limits: Min Angle, Max Angle</dt>
+      <dd>These values limit the vertical (up-down) camera rotation.</dd>
+
+      <dt>Horizontal Rotation Limits: Min Angle, Max Angle</dt>
+      <dd>These values limit the horizontal (left-right) camera rotation.</dd>
+    </dl>
+
+
+    <p><a href="manual/en/blender/Camera.html#firstperson_camera_settings" id="firstperson_camera_settings" class="permalink">#</a></p>
+
+    <h3>First-Person Camera Settings</h3>
+
+    <p>The following settings allow you to setup first-person camera controls without using Puzzles or JavaScript.</p>
+
+    <img src="files/camera-blender/firstperson-camera-settings.jpg" alt="Firstperson camera settings in Blender" style="max-width: 323px">
+
+    <dl>
+      <dt>Collision Material</dt>
+      <dd>
+        <p>
+          Collision material which will be used to control the zone the camera can move within. Basically, the zone above this material is walkable, while everything outside is forbidden for movement. If you don't specify this value, the camera will operate in free-flight mode — <strong>Flying</strong>.
+        </p>
+        <p>
+          If you don't want the collision object to be visible to the user, just hide it in Blender (use the render switcher with camera icon on it).
+        </p>
+        <img src="files/camera-blender/firstperson-hide-render.jpg" alt="Hide firstperson collision object in Blender" style="max-width: 325px">
+      </dd>
+
+      <dt>Gaze Level</dt>
+      <dd>First-person camera "gaze" (or "head"/"eyes") level.</dd>
+
+      <dt>Story Height</dt>
+      <dd>Maximum height of the story. Specify if you need multiple floors in your scene, such as two-level cottage or large shopping mall.</dd>
+
+      <dt>Enable PointerLock</dt>
+      <dd>Enable the pointer lock feature to capture the mouse pointer upon app start. The user should click somewhere on the screen to lock up the cursor and move in 3D space without the need to click/drag with the mouse buttons.</dd>
+    </dl>
+
+    <p>
+      Check out this basic example. The user moves on the following map where white field (<strong>AllowedZone</strong>) is allowed and red means the area is forbidden. You can design some walls above the red area if you wish, or stairs to the second floor, considering the next floor would be higher than 3 meters. Distance from the floor to the character eyes is 1.75 meters.
+    </p>
+
+    <img src="files/camera-blender/firstperson-camera-setup.jpg" alt="Setting up firstperson camera in Blender">
+
+    <p>
+      In this example we also use the pointer-lock feature to make navigation easier for the user.
+    </p>
+
+    <p>
+      See also a more advanced real estate experience which is called <a href="http://localhost:8668/store?req=status#firstperson_camera" target="_blank" rel="nofollow" title="Open Firstperson Camera in Verge3D Asset Store (requires App Manager running)">Firstperson Camera</a>.
+    </p>
+
+    <p><a href="manual/en/blender/Camera.html#fit_to_camera_edge" id="fit_to_camera_edge" class="permalink">#</a></p>
+
+    <h2>Fit to Camera Edge</h2>
+
+    <p>
+      <em>Fit to Camera Edge</em> is a technique to draw screen-space UI elements based on Blender models. This approach to UI design is more “native” to the 3D artist than using HTML/CSS, and does not require external tools. But there is more in it: since the UI elements are genuine 3D objects, you can apply shaders, lighting, animation, morphing – you name it – making them truly interactive and seamlessly integrated into the scene.
+    </p>
+
+    <p>
+      When you parent some object to the camera, the following settings appear on the <strong>Object Properties</strong> panel:
+    </p>
+
+    <img src="files/camera-blender/fit-to-camera-edge-properties.jpg" alt="Fit to Camera Edge properties" style="max-width: 325px">
+
+    <dl>
+      <dt>Horizontal</dt>
+      <dd>
+        Horizontal canvas edge to fit object to. <strong>None</strong> — no horizontal fit, <strong>Left</strong> — fit to left edge, <strong>Right</strong> — fit to right edge, <strong>Stretch</strong> — scale object horizontally to fit on the screen.
+      </dd>
+      <dt>Vertical</dt>
+      <dd>
+        Vertical canvas edge to fit object to. <strong>None</strong> — no vertical fit, <strong>Top</strong> — fit to top edge, <strong>Bottom</strong> — fit to bottom edge, <strong>Stretch</strong> — scale object vertically to fit on the screen.
+      </dd>
+      <dt>Shape</dt>
+      <dd>
+        Canvas fit shape. <strong>Box</strong> — use object's bounding box, <strong>Sphere</strong> — use object's bounding, <strong>Point</strong> — ignore object boundings and use its center to fit the object on the screen.
+      </dd>
+      <dt>Fit Offset</dt>
+      <dd>
+        Additional offset used to fit object on the screen. Effectively, this value extends object bounding (box or sphere) by the specified absolute value.
+      </dd>
+    </dl>
+
+    <div class="note">
+      <p>To fix possible issues with camera fit, clear the object's Parent Inverse matrix:</p>
+      <img src="files/lighting-blender/clear-parent-inverse.jpg" alt="Clear parent inverse matrix in Blender" style="max-width: 266px">
+    </div>
+
+
+
+    <p><a href="manual/en/blender/Camera.html#camera_control_with_puzzles" id="camera_control_with_puzzles" class="permalink">#</a></p>
+
+    <h2>Camera Control with Puzzles</h2>
+
+    <p>
+      You can use <a href="manual/en/puzzles/Camera.html">camera puzzles</a> to control your camera in real time.
+    </p>
+
+    <h2>Got Questions?</h2>
+
+    <p>Feel free to ask on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on July 24, 2023</div></footer></body></html>

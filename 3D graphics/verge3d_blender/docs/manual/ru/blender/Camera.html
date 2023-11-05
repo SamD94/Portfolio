@@ -1,0 +1,395 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Вердж3Д для Блендера: Работа с Камерой — Софт Эйт Софт</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Узнайте, как создавать и управлять камерами Блендера для использования в Вердж3Д.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/blender/Camera.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Вердж3Д для Блендера: Работа с Камерой — Софт Эйт Софт">
+            <meta property="og:description" content="Узнайте, как создавать и управлять камерами Блендера для использования в Вердж3Д.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/blender/Camera.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Вердж3Д для Блендера: Работа с Камерой — Софт Эйт Софт">
+            <meta name="twitter:description" content="Узнайте, как создавать и управлять камерами Блендера для использования в Вердж3Д.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/active-camera.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/camera-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/orbit-camera-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/firstperson-camera-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/firstperson-hide-render.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/firstperson-camera-setup.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/camera-blender/fit-to-camera-edge-properties.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/clear-parent-inverse.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство&nbsp;«Вердж3Д»</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_Менеджер_приложений">Менеджер приложений</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Пазлы">Пазлы</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Спецификация">Спецификация</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_проекта">Структура проекта</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Установка_обновлений">Установка обновлений</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_Вопрос-ответ">Вопрос-ответ</a></li></ul></div><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_темы_Методы_оптимизации">Методы оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_темы_Компрессия_ассетов">Компрессия ассетов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html" id="Основные_темы_Текстурная_компрессия">Текстурная компрессия</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_темы_Интерфейс_на_основе_ХТМЛ">Интерфейс на основе ХТМЛ</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_темы_Рендеринг_текста">Рендеринг текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_темы_Вирт./доп._реальность">Вирт./доп. реальность</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_темы_Руководство_по_физике">Руководство по физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_темы_Персонализация_приложений">Персонализация приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_темы_«ВордПресс»-плагин">«ВордПресс»-плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_темы_Использование_«ЯваСкрипт»">Использование «ЯваСкрипт»</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_темы_Создание_десктопных_приложений">Создание десктопных приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_темы_Создание_мобильных_приложений">Создание мобильных приложений</a></li><li><a href="manual/ru/introduction/Creating-SCORM-Courses.html" id="Основные_темы_Создание_обучающих_приложений">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_темы_Поиск_проблем_с_производительностью">Поиск проблем с производительностью</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_темы_Исправление_неполадок">Исправление неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_темы_Тестирование_в_мобильных_браузерах">Тестирование в мобильных браузерах</a></li></ul></div><div><h2>Блендер</h2><ul id="Блендер"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Блендер_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Блендер_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Блендер_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Блендер_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/blender/Camera.html" id="Блендер_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Блендер_Обзор_шейдерных_нод">Обзор шейдерных нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Блендер_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Блендер_Ключи_формы_(морфинг)">Ключи формы (морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Блендер_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Блендер_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Блендер_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Блендер_Ограничители">Ограничители</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Блендер_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>3дс Макс</h2><ul id="3дс_Макс"><li><a href="manual/ru/max/Beginners-Guide.html" id="3дс_Макс_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="3дс_Макс_Установка">Установка</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="3дс_Макс_Настройка_вьюпорта">Настройка вьюпорта</a></li><li><a href="manual/ru/max/Material-System.html" id="3дс_Макс_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="3дс_Макс_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/max/Camera.html" id="3дс_Макс_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="3дс_Макс_Материалы_и_текстуры">Материалы и текстуры</a></li><li><a href="manual/ru/max/Animation.html" id="3дс_Макс_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="3дс_Макс_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="3дс_Макс_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="3дс_Макс_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="3дс_Макс_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="3дс_Макс_Анимационные_ограничители">Анимационные ограничители</a></li><li><a href="manual/ru/max/Material-Library.html" id="3дс_Макс_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Майя</h2><ul id="Майя"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Майя_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Майя_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Майя_Материалы_и_текстурные_ноды">Материалы и текстурные ноды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Майя_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/maya/Camera.html" id="Майя_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Майя_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Майя_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Майя_Бленд_шейпы_(морфинг)">Бленд шейпы (морфинг)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Майя_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Майя_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Майя_Ограничители">Ограничители</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Майя_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Пазлы</h2><ul id="Пазлы"><li><a href="manual/ru/puzzles/Initialization.html" id="Пазлы_Инициализация">Инициализация</a></li><li><a href="manual/ru/puzzles/Events.html" id="Пазлы_События">События</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Пазлы_Селекторы">Селекторы</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Пазлы_Объекты">Объекты</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Пазлы_Материалы">Материалы</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Пазлы_Анимация_и_ограничители">Анимация и ограничители</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Пазлы_Камера_и_свет">Камера и свет</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Пазлы_Сцены">Сцены</a></li><li><a href="manual/ru/puzzles/Time.html" id="Пазлы_Время">Время</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Пазлы_ХТМЛ">ХТМЛ</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Пазлы_ВР/ДР">ВР/ДР</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Пазлы_Аудио/видео">Аудио/видео</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Пазлы_Физика">Физика</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Пазлы_Постпроцессинг">Постпроцессинг</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Пазлы_Логические_операции">Логические операции</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Пазлы_Циклы">Циклы</a></li><li><a href="manual/ru/puzzles/Text.html" id="Пазлы_Текст">Текст</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Пазлы_Числа">Числа</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Пазлы_Списки">Списки</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Пазлы_Словари">Словари</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Пазлы_Переменные">Переменные</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Пазлы_Процедуры">Процедуры</a></li><li><a href="manual/ru/puzzles/System.html" id="Пазлы_Системные">Системные</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Пазлы_Продвинутые">Продвинутые</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Пазлы_Электронная_коммерция">Электронная коммерция</a></li><li><a href="manual/ru/puzzles/SCORM.html" id="Пазлы_Электронное_обучение">Электронное обучение</a></li><li><a href="manual/ru/puzzles/Library.html" id="Пазлы_Библиотеки">Библиотеки</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Пазлы_Плагины">Плагины</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="manual/ru/programmers_guide/Terms.html" id="Прочее_Словарь_терминов">Словарь терминов</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Работа с камерой / Блендер</h1>
+
+    <p>
+      Эта страница содержит информацию о том, как настроить камеры в «Блендере» для их использования в «Вердж3Д».
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/blender/Camera.html#setting_up_in_blender">Настройка в «Блендере»</a></li><li><a href="manual/ru/blender/Camera.html#camera_settings">Настройки камеры</a><ul><li><a href="manual/ru/blender/Camera.html#orbit_camera_settings">Настройки камеры типа Orbit</a></li><li><a href="manual/ru/blender/Camera.html#firstperson_camera_settings">Настройки камеры типа First-Person</a></li></ul></li><li><a href="manual/ru/blender/Camera.html#fit_to_camera_edge">Подгонка под края камеры</a></li><li><a href="manual/ru/blender/Camera.html#camera_control_with_puzzles">Управление камерой с помощью пазлов</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/blender/Camera.html#setting_up_in_blender" id="setting_up_in_blender" class="permalink">#</a></p>
+
+    <h2>Настройка в «Блендере»</h2>
+
+    <p>Просто добавьте камеру в сцену и назначьте ее <em>активной</em> в <strong>Scene Properties</strong>:</p>
+
+    <img src="files/camera-blender/active-camera.jpg" alt="Установка активной камеры в Блендере" style="max-width: 309px">
+
+    <p>Эта камера будет использоваться для рендера вашей сцены по умолчанию. Вы также можете добавить несколько камер и переключаться между ними используя пазл <a href="manual/ru/puzzles/Camera.html#set_active_camera">set active camera</a>.</p>
+
+    <p>«Вердж3Д» поддерживает следующие типы камер:</p>
+
+    <ul>
+      <li>Перспективная (Perspective в «Блендере»)</li>
+      <li>Ортографическая (Orthographic в «Блендере»)</li>
+    </ul>
+
+    <p><a href="manual/ru/blender/Camera.html#camera_settings" id="camera_settings" class="permalink">#</a></p>
+
+    <h2>Настройки камеры</h2>
+
+    <p>«Вердж3Д» поддерживает следующие настройки камеры:</p>
+
+    <img src="files/camera-blender/camera-settings.jpg" alt="Настройки камер в Блендере" style="max-width: 627px">
+
+    <dl>
+      <dt>Type</dt>
+      <dd>Тип камеры, <strong>Perspective</strong> или <strong>Orthographic</strong>.</dd>
+
+      <dt>Clip Start / Clip End</dt>
+      <dd>Диапазон видимости камеры.</dd>
+
+      <dt>Sensor Fit</dt>
+      <dd>
+        Режим подгонки сенсора —&nbsp;как вьюпорт будет реагировать на изменения размеров (или ориентации устройства).
+        <dl>
+          <dt>Auto</dt>
+          <dd>Использовать тип <strong>Vertical</strong> для панорамной ориентации и <strong>Horizontal</strong> для портретной ориентации экрана. Этот режим рекомендован к использованию для равных по высоте и ширине сцен, предотвращая выход объектов за границы экрана.</dd>
+          <dt>Horizontal</dt>
+          <dd>Горизонтальный тип подгонки сенсора. Этот режим рекомендован для <em>широких</em> сцен. Поскольку в этом режиме фиксируется горизонтальное поле зрения, широкая сцена не будет отсекаться ни в панорамной (десктопы/ноутбуки) ни в портретной (телефоны) ориентации.</dd>
+          <dt>Vertical</dt>
+          <dd>Вертикальный тип подгонки сенсора. В противоположность <strong>Horizontal</strong>, этот тип используется для <em>высоких</em> сцен.</dd>
+        </dl>
+      </dd>
+
+      <dt>Controls</dt>
+      <dd>
+        Указывает какой тип управления будет применён к камере в «Вердж3Д»:
+
+        <ul>
+          <li><strong>Orbit</strong> — таргетированный тип управления (подобен орбитальному движению спутников вокруг планеты). Читайте подробности <a href="manual/ru/blender/Camera.html#orbit_camera_settings">ниже</a></li>
+          <li><strong>Flying</strong> — свободный полет камеры.</li>
+          <li><strong>First-Person</strong> — вид от первого лица с соответствующим управлением (ЦФЫВ).</li>
+          <li><strong>Disable</strong> — отключает управление. Указывается, если камера будет перемещаться с помощью анимации, пазлов или «ЯваСкрипт».</li>
+        </ul>
+      </dd>
+
+      <dt>Allow Panning</dt>
+      <dd>Включает/отключает панорамирование.</dd>
+
+      <dt>Rotation Speed</dt>
+      <dd>Коэффициент скорости вращения камеры.</dd>
+
+      <dt>Movement Speed</dt>
+      <dd>Коэффициент скорости перемещения камеры.</dd>
+    </dl>
+
+
+    <p><a href="manual/ru/blender/Camera.html#orbit_camera_settings" id="orbit_camera_settings" class="permalink">#</a></p>
+
+    <h3>Настройки камеры типа Orbit</h3>
+
+    <p>
+      Используйте панель <strong>Target Object/Point</strong> чтобы указать настройки орбитальной камеры.
+    </p>
+
+    <img src="files/camera-blender/orbit-camera-settings.jpg" alt="Настройки орбитальной камеры в Блендере" style="max-width: 325px">
+
+    <dl>
+      <dt>Manual</dt>
+      <dd>Вы можете указать XYZ-координаты центра вращения (они же являются координатами цели) камеры вручную с помощью указанных числовых полей. Чтобы упростить назначение координат, имеется кнопка <strong>From Cursor</strong>, позволяющая вставить текущие координаты блендеровского 3Д-курсора.</dd>
+
+      <dt>From Object</dt>
+      <dd>Объект-цель. При указании объекта в этом поле, «Вердж3Д» будет использовать его координаты как центр вращения. Следует иметь в виду, что такое назначение происходит 1 раз при экспорте, то есть, если объект-цель будет двигаться в процессе работы приложения, это никак не скажется на направлении и положении камеры в пространстве.</dd>
+
+      <dt>Update View</dt>
+      <dd>Если вы перемещали камеру в «Блендере», воспользуйтесь этой кнопкой, чтобы направить камеру на центр вращения.</dd>
+
+      <dt>Min Dist, Max Dist</dt>
+      <dd>
+        <p>
+          Ограничения дистанции для <em>перспективной камеры</em>. В терминах «Вердж3Д», «увеличение-уменьшение» («зум») перспективной орбитальной камеры означает движение «вперёд-назад», поэтому указание ограничений дистанции также влияет на увеличение/уменьшение камеры.
+        </p>
+        <p class="note">
+          Если вам требуется осуществлять «зум» посредством изменения поля зрения, так чтобы камера оставалась на месте, используйте пазл <a href="manual/ru/puzzles/Camera.html#set_camera_param">set camera param</a>.
+        </p>
+      </dd>
+
+      <dt>Min Zoom, Max Zoom</dt>
+      <dd>«Зум» ортографической камеры. В терминах «Вердж3Д», «зум» ортографической орбитальной камеры обозначает «сделать объём камеры больше-меньше». Сама камера при этом не перемещается.</dd>
+
+      <dt>Vertical Rotation Limits: Min Angle, Max Angle</dt>
+      <dd>Вертикальные (вверх-вниз) лимиты поворота камеры.</dd>
+
+      <dt>Horizontal Rotation Limits: Min Angle, Max Angle</dt>
+      <dd>Горизонтальные (влево-вправо) лимиты поворота камеры.</dd>
+    </dl>
+
+
+    <p><a href="manual/ru/blender/Camera.html#firstperson_camera_settings" id="firstperson_camera_settings" class="permalink">#</a></p>
+
+    <h3>Настройки камеры типа First-Person</h3>
+
+    <p>Следующие настройки позволяют настроить камеру от первого лица (шутер от первого лица, ШПЛ).</p>
+
+    <img src="files/camera-blender/firstperson-camera-settings.jpg" alt="Настройки камеры от первого лица в Блендере" style="max-width: 323px">
+
+    <dl>
+      <dt>Collision Material</dt>
+      <dd>
+        <p>
+          Материал коллизий, ограничивающий перемещение камеры. Зона над этим материалом доступна для перемещения, всё остальное пространство (включая места где нет геометрии) не доступно для перемещения. Если материал коллизий не указан, камера будет вести себя аналогично режиму <strong>Flying</strong>.
+        </p>
+        <p>
+          Если вам не нужно показывать материал коллизий, просто скройте его в «Блендере» (иконка с фотоаппаратом).
+        </p>
+        <img src="files/camera-blender/firstperson-hide-render.jpg" alt="Сокрытие объекта-колллизий в Блендере" style="max-width: 325px">
+      </dd>
+
+      <dt>Gaze Level</dt>
+      <dd>Уровень головы/глаз.</dd>
+
+      <dt>Story Height</dt>
+      <dd>Максимальный размер этажа. Указывается если требуется иметь несколько этажей на сцене, например для визуализации многоуровневого коттеджа или торгового центра.</dd>
+
+      <dt>Enable PointerLock</dt>
+      <dd>Включить функцию захвата указателя мыши (происходит при старте приложения). Функция работает следующим образом: при старте приложения пользователь кликает на любом месте экрана, далее происходит захват указателя и активируется режим управления камерой по движению мыши.</dd>
+    </dl>
+
+    <p>
+      Рассмотрим следующий пример. В данной сцене мы разрешаем пользователю перемещаться по белому полю (<strong>AllowedZone</strong>), в то время как красная область недоступна. Вы можете добавить стены над красной областью, а также предусмотреть лестницы на второй этаж, при условии, что он будет выше чем 3 метра. Дистанция от пола до глаз составляет 1,75 метра.
+    </p>
+
+    <img src="files/camera-blender/firstperson-camera-setup.jpg" alt="Пример настройки камеры от первого лица в Блендере">
+
+    <p>
+      В данном примере мы также включили функцию захвата указателя мыши.
+    </p>
+
+    <p>
+      Смотрите другой пример с визуализацией объекта недвижимости, а именно земельного участка с домом — <a href="http://localhost:8668/store?req=status#firstperson_camera" target="_blank" rel="nofollow" title="Открыть «ШПЛ-камера» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«ШПЛ-камера»</a>.
+    </p>
+
+
+    <p><a href="manual/ru/blender/Camera.html#fit_to_camera_edge" id="fit_to_camera_edge" class="permalink">#</a></p>
+
+    <h2>Подгонка под края камеры</h2>
+
+    <p>
+      Подгонка под края камеры (называется <em>Fit to Camera Edge</em> в «Блендере») — функция «Вердж3Д» по отображению интерфейсных элементов, основанных на блендеровских объектах. Для 3Д-художников данный подход к созданию интерфейса пользователя будет более удобным, чем использование веб-вёрстки, основанной на ХТМЛ/ЦСС. Кроме того, в таком случае не потребуется использовать сторонние программы для веб-дизайна, применяя лишь знакомые техники, поддерживаемые в 3Д-редакторе: редактор шейдеров, освещение, анимация, морфинг и др. По сути данный подход предполагает использование «Блендера» как основного и единственного инструмента для создания всего веб-контента.
+    </p>
+
+    <p>
+      Данная функция активируется, когда вы делаете любой объект дочерним к камере. После чего в вашем распоряжении оказываются следующие настройки на панели <strong>Object Properties</strong>:
+    </p>
+
+    <img src="files/camera-blender/fit-to-camera-edge-properties.jpg" alt="Настройки подгонки под края камеры" style="max-width: 325px">
+
+    <dl>
+      <dt>Horizontal</dt>
+      <dd>
+        Горизонтальный край камеры для подгонки объекта. <strong>None</strong> — нет подгонки, <strong>Left</strong> — подгонка к левому краю, <strong>Right</strong> — подгонка к правому краю, <strong>Stretch</strong> — растянуть объект слева-направо на всю ширину.
+      </dd>
+      <dt>Vertical</dt>
+      <dd>
+        Вертикальный край камеры для подгонки объекта. <strong>None</strong> — нет подгонки, <strong>Top</strong> — подгонка к верхнему краю, <strong>Bottom</strong> — подгонка к нижнему краю, <strong>Stretch</strong> — растянуть объект сверху-вниз на всю высоту.
+      </dd>
+      <dt>Shape</dt>
+      <dd>
+        Форма объекта для подгонки. <strong>Box</strong> — использовать охватывающий прямоугольный параллелепипед («коробку»), <strong>Sphere</strong> — использовать охватывающую сферу, <strong>Point</strong> — считать что объект не имеет размеров и использовать его центр для подгонки.
+      </dd>
+      <dt>Fit Offset</dt>
+      <dd>
+        Дополнительное смещение, используемое для подгонки. По сути это смещение увеличивает размер объекта для подгонки (коробки или сферы) на указанное значение.
+      </dd>
+    </dl>
+
+    <div class="note">
+      <p>Чтобы функция подгонки работала правильно, всегда зачищайте матрицу Parent Inverse:</p>
+      <img src="files/lighting-blender/clear-parent-inverse.jpg" alt="Очистка матрицы parent inverse в Блендере" style="max-width: 266px">
+    </div>
+
+
+    <p><a href="manual/ru/blender/Camera.html#camera_control_with_puzzles" id="camera_control_with_puzzles" class="permalink">#</a></p>
+
+    <h2>Управление камерой с помощью пазлов</h2>
+
+    <p>
+      Используйте пазлы <a href="manual/ru/puzzles/Camera.html">камеры</a>, чтобы управлять камерой в реальном времени.
+    </p>
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задайте их на нашем <a href="https://www.soft8soft.com/ru/форумы/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

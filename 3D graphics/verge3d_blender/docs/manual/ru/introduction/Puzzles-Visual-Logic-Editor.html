@@ -1,0 +1,888 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Пазлы Вердж3Д — Софт Эйт Софт</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Визуальный редактор логики Вердж3Д – это мощный инструмент для разработки полнофункциональных веб-приложений любой сложности без написания кода.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+    <style>
+      table, td {
+        border: 1px solid #2194CE;
+        border-collapse: collapse;
+        padding: 10px;
+        text-align: left;
+        min-width: 180px;
+        vertical-align: top;
+      }
+      table {
+        margin-bottom: 20px;
+      }
+      ul {
+        margin: 0px 0px;
+        padding-left: 20px;
+      }
+    </style>
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Puzzles-Visual-Logic-Editor.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Пазлы Вердж3Д — Софт Эйт Софт">
+            <meta property="og:description" content="Визуальный редактор логики Вердж3Д – это мощный инструмент для разработки полнофункциональных веб-приложений любой сложности без написания кода.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Puzzles-Visual-Logic-Editor.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Пазлы Вердж3Д — Софт Эйт Софт">
+            <meta name="twitter:description" content="Визуальный редактор логики Вердж3Д – это мощный инструмент для разработки полнофункциональных веб-приложений любой сложности без написания кода.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-dark.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-run-puzzles-from-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-run-puzzles-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/layout.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/layout-resize-viewport.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/layout-reset-viewport.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/controls-refresh-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/controls-run.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/controls-save.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/controls-save-error.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/tabs-create.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/tabs-delete.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/tabs-rename.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-duplicate.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-add-comment.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-remove-comment.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-inline-inputs-external-inputs.gif",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-collapse-expand.gif",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-disable-enable.gif",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-delete.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-help-toolbox.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-help.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-undo-redo.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-straighten.gif",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-collapse-expand-all.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-right-click-menu-delete-all.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/layout-reset-viewport.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles-editor/puzzles-editor-backup.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство&nbsp;«Вердж3Д»</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_Менеджер_приложений">Менеджер приложений</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Пазлы">Пазлы</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Спецификация">Спецификация</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_проекта">Структура проекта</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Установка_обновлений">Установка обновлений</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_Вопрос-ответ">Вопрос-ответ</a></li></ul></div><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_темы_Методы_оптимизации">Методы оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_темы_Компрессия_ассетов">Компрессия ассетов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html" id="Основные_темы_Текстурная_компрессия">Текстурная компрессия</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_темы_Интерфейс_на_основе_ХТМЛ">Интерфейс на основе ХТМЛ</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_темы_Рендеринг_текста">Рендеринг текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_темы_Вирт./доп._реальность">Вирт./доп. реальность</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_темы_Руководство_по_физике">Руководство по физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_темы_Персонализация_приложений">Персонализация приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_темы_«ВордПресс»-плагин">«ВордПресс»-плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_темы_Использование_«ЯваСкрипт»">Использование «ЯваСкрипт»</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_темы_Создание_десктопных_приложений">Создание десктопных приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_темы_Создание_мобильных_приложений">Создание мобильных приложений</a></li><li><a href="manual/ru/introduction/Creating-SCORM-Courses.html" id="Основные_темы_Создание_обучающих_приложений">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_темы_Поиск_проблем_с_производительностью">Поиск проблем с производительностью</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_темы_Исправление_неполадок">Исправление неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_темы_Тестирование_в_мобильных_браузерах">Тестирование в мобильных браузерах</a></li></ul></div><div><h2>Блендер</h2><ul id="Блендер"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Блендер_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Блендер_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Блендер_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Блендер_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/blender/Camera.html" id="Блендер_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Блендер_Обзор_шейдерных_нод">Обзор шейдерных нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Блендер_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Блендер_Ключи_формы_(морфинг)">Ключи формы (морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Блендер_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Блендер_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Блендер_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Блендер_Ограничители">Ограничители</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Блендер_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>3дс Макс</h2><ul id="3дс_Макс"><li><a href="manual/ru/max/Beginners-Guide.html" id="3дс_Макс_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="3дс_Макс_Установка">Установка</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="3дс_Макс_Настройка_вьюпорта">Настройка вьюпорта</a></li><li><a href="manual/ru/max/Material-System.html" id="3дс_Макс_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="3дс_Макс_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/max/Camera.html" id="3дс_Макс_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="3дс_Макс_Материалы_и_текстуры">Материалы и текстуры</a></li><li><a href="manual/ru/max/Animation.html" id="3дс_Макс_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="3дс_Макс_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="3дс_Макс_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="3дс_Макс_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="3дс_Макс_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="3дс_Макс_Анимационные_ограничители">Анимационные ограничители</a></li><li><a href="manual/ru/max/Material-Library.html" id="3дс_Макс_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Майя</h2><ul id="Майя"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Майя_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Майя_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Майя_Материалы_и_текстурные_ноды">Материалы и текстурные ноды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Майя_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/maya/Camera.html" id="Майя_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Майя_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Майя_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Майя_Бленд_шейпы_(морфинг)">Бленд шейпы (морфинг)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Майя_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Майя_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Майя_Ограничители">Ограничители</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Майя_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Пазлы</h2><ul id="Пазлы"><li><a href="manual/ru/puzzles/Initialization.html" id="Пазлы_Инициализация">Инициализация</a></li><li><a href="manual/ru/puzzles/Events.html" id="Пазлы_События">События</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Пазлы_Селекторы">Селекторы</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Пазлы_Объекты">Объекты</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Пазлы_Материалы">Материалы</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Пазлы_Анимация_и_ограничители">Анимация и ограничители</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Пазлы_Камера_и_свет">Камера и свет</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Пазлы_Сцены">Сцены</a></li><li><a href="manual/ru/puzzles/Time.html" id="Пазлы_Время">Время</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Пазлы_ХТМЛ">ХТМЛ</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Пазлы_ВР/ДР">ВР/ДР</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Пазлы_Аудио/видео">Аудио/видео</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Пазлы_Физика">Физика</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Пазлы_Постпроцессинг">Постпроцессинг</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Пазлы_Логические_операции">Логические операции</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Пазлы_Циклы">Циклы</a></li><li><a href="manual/ru/puzzles/Text.html" id="Пазлы_Текст">Текст</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Пазлы_Числа">Числа</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Пазлы_Списки">Списки</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Пазлы_Словари">Словари</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Пазлы_Переменные">Переменные</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Пазлы_Процедуры">Процедуры</a></li><li><a href="manual/ru/puzzles/System.html" id="Пазлы_Системные">Системные</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Пазлы_Продвинутые">Продвинутые</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Пазлы_Электронная_коммерция">Электронная коммерция</a></li><li><a href="manual/ru/puzzles/SCORM.html" id="Пазлы_Электронное_обучение">Электронное обучение</a></li><li><a href="manual/ru/puzzles/Library.html" id="Пазлы_Библиотеки">Библиотеки</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Пазлы_Плагины">Плагины</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="manual/ru/programmers_guide/Terms.html" id="Прочее_Словарь_терминов">Словарь терминов</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Пазлы — визуальный редактор логики</h1>
+
+    <p>
+      Пазлы «Вердж3Д» — простой и одновременно мощный инструмент для создания сценариев поведения. С помощью пазлов вы можете сделать свой 3Д-контент интерактивным с реакцией на действия пользователя.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-dark.jpg">
+
+    <p>
+      Если вы не программист (дизайнер, маркетолог, инженер, преподаватель, итд) – этот инструмент значительно расширит ваши возможности. Даже если вы опытный 3Д или веб-программист, то наверняка найдете его полезным как в прототипировании, так и в основной разработке.
+    </p>
+
+
+    <h2>Содержание</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Running_Editor">Запуск редактора логики</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#User_Interface">Пользовательский интерфейс</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Controls">Управление</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Tabs">Вкладки</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Right_Click_Menu_Over_Puzzle">Контекстное меню пазлов</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Right_Click_Menu_Over_Workspace">Контекстное меню рабочего пространства</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Backup">Резервное копирование</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Plugins">Плагины</a></li></ul><!-- /TOC -->
+
+
+
+    <p><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Running_Editor" id="Running_Editor" class="permalink">#</a></p>
+
+    <h2>Запуск редактора логики</h2>
+
+    <p>
+      Для начала работы с пазлами, нажмите эту кнопку на главной странице:
+    </p>
+
+    <img src="files/app-manager/app-manager-run-puzzles-from-main.jpg" style="max-width: 800px">
+
+    <p>
+    ... или же аналогичную на правой панели страницы приложения.
+    </p>
+
+    <img src="files/app-manager/app-manager-run-puzzles-from-app-page.jpg">
+
+
+
+    <p><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#User_Interface" id="User_Interface" class="permalink">#</a></p>
+
+    <h2>Пользовательский интерфейс</h2>
+
+
+
+    <h3>Расположение рабочих областей</h3>
+
+    <p>
+      На панели инструментов слева располагаются пазлы сгруппированные по назначению. Основная часть (воркспейс) — это рабочее пространство для создания логических конструкций. Также в окне присутствует область предпросмотра 3Д-сцены (вьюпорт), которую вы можете перетаскивать, масштабировать, скрывать, ставить на паузу и отслеживать производительность.
+    </p>
+
+    <img src="files/puzzles-editor/layout.jpg">
+
+    <p>
+      Кнопки <a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Controls">управления</a> редактором расположены на нижней панели. Вверху отображаются вкладки (по умолчанию называются  <i>init</i> и <i>main</i>).
+    </p>
+
+    <p>
+      Настройки областей (вкладки, расположение и размеры окна предпросмотра) сохраняются индивидуально для каждого проекта, что позволяет восстанавливать рабочее пространство при запуске в любом браузере.
+    </p>
+
+
+
+    <h3>Изменение размеров области предпросмотра и сброс настроек</h3>
+
+    <p>
+      Чтобы изменить размер, перемещайте угол или границу окна.
+    </p>
+
+    <img src="files/puzzles-editor/layout-resize-viewport.jpg" style="max-width: 474px">
+
+    <p>
+      Вы можете сбросить расположение и размер окна предпросмотра, выбрав пункт <strong>Reset Viewport Dimensions</strong> в констекстном меню, которое открывается щелчком правой кнопки мыши в любом пустом месте рабочего экрана.
+    </p>
+
+    <img src="files/puzzles-editor/layout-reset-viewport.jpg" style="max-width: 303px">
+
+
+
+    <h3>Обновление редактора</h3>
+
+    <p>
+      Для обновления страницы и перезапуска приложения, работающего в окне предпросмотра, используйте стандартные возможности браузера.
+    </p>
+
+    <img src="files/puzzles-editor/controls-refresh-page.jpg" style="max-width: 466px">
+
+    <p>
+      Все несохраненные изменения будут удалены, а переменные и свойства объектов сцены сбросятся к начальным значениям.
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Controls" id="Controls" class="permalink">#</a></p>
+
+    <h2>Управление</h2>
+
+
+
+    <h3>Запуск</h3>
+
+    <p>
+      Щелкните по этой кнопке, чтобы запустить пазлы. Система обработает пазлы во всех вкладках редактора, создаст необходимый код «ЯваСкрипт» и запустит приложение в браузере.
+    </p>
+
+    <img src="files/puzzles-editor/controls-run.jpg">
+
+    <p>
+      В большинстве случаев, вы можете несколько раз нажимать кнопку запуска, чтобы применить изменения в редакторе. Тем не менее, в некоторых случаях, стоит обновить страницу браузера, чтобы выполнить чистый запуск со сбросом всех значений по умолчанию. Не забудьте перед этим сохранить свои изменения!
+    </p>
+
+
+
+    <h3>Сохранение</h3>
+
+    <p>
+      Эта кнопка сохраняет ваши пазлы. Аналогично функции запуска, будет генерироваться код «ЯваСкрипт» из имеющихся пазлов (все вкладки редактора) и сохраняться в папке приложения в виде файлов <strong>visual_logic.xml</strong> and <strong>visual_logic.js</strong>. При этом перезапуска вашего приложения не произойдет.
+    </p>
+
+    <img src="files/puzzles-editor/controls-save.jpg">
+
+    <p>
+      Функция сохранения требует, чтобы локальный сервер разработки был запущен. Сервер запускается автоматически с первым экземпляром Блендер, 3дс Макс или Майя, но если он по какой-то причине не работает, при попытке сохранить пазлы будет отображаться ошибка подключения:
+    </p>
+
+    <img src="files/puzzles-editor/controls-save-error.jpg" style="max-width: 961px">
+
+    <p>
+      В этом случае, вам понадобится запустить Блендер, 3дс Макс или Майя. Если эти программы уже работают, то запустите еще раз Менеджер Приложений.
+    </p>
+
+    <p>
+      Смотрите также <a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Backup">резервное копирование</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Tabs" id="Tabs" class="permalink">#</a></p>
+
+    <h2>Вкладки</h2>
+
+    <p>
+      Для удобства работы, вы можете размещать свои пазлы в различных вкладках. Чтобы создать новую вкладку, нажмите кнопку «плюс» на верхней панели и введите название в текстовом поле.
+    </p>
+
+    <img src="files/puzzles-editor/tabs-create.jpg" style="max-width: 600px">
+
+    <p>
+      Теперь вы можете добавлять пазлы для новой вкладки. Чтобы переместить некоторые пазлы с другой вкладки, используйте горячие клавиши для вырезания и вставки <strong>Ctrl-X</strong> / <strong>Ctrl-V</strong>. Все вкладки имеют одно и то же пространство имен, поэтому вы можете определить функции или переменные на одной вкладке, а использовать их в другой.
+    </p>
+
+    <p>
+      Чтобы удалить вкладку, нажмите кнопку с крестиком рядом с ее названием. Используйте эту операцию с осторожностью, поскольку ее нельзя отменить (можно восстановить вручную из из резервной копии). <strong>Все пазлы с удаленной вкладки будут уничтожены!</strong>
+    </p>
+
+    <img src="files/puzzles-editor/tabs-delete.jpg" style="max-width: 700px">
+
+    <p>
+      В версии 3.0 нет специального элемента управления для переименования вкладок. Однако вы можете легко переименовать её, отредактировав файл * visual_logic.xml * в папке вашего приложения.
+    </p>
+
+    <img src="files/puzzles-editor/tabs-rename.jpg" style="max-width: 386px">
+
+    <p>
+      Обновите окно браузера, чтобы применить выполненное переименование вкладки.
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Right_Click_Menu_Over_Puzzle" id="Right_Click_Menu_Over_Puzzle" class="permalink">#</a></p>
+
+    <h2>Контекстное меню пазлов</h2>
+
+    <p>
+      Контекстное меню можно вызвать, щелкнув правой кнопкой мыши по пазлу (на панели инструментов или уже размещенного) или по пустой рабочей области. Меню предоставляет доступ к множеству очень полезных операторов.
+    </p>
+
+
+
+    <h3>Duplicate</h3>
+
+    <p>
+      Создает копию группы пазлов. Также вы можете использовать сочетания клавиш для копирования и вставки <strong>Ctrl-C</strong> / <strong>Ctrl-V</strong>.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-duplicate.jpg" style="max-width: 496px">
+
+
+
+    <h3>Add Comment / Remove Comment</h3>
+
+    <p>
+      Добавляет комментарий к пазлу. Комментарий представлен в виде кнопки со знаком вопроса, при нажатии на которую открывается окно комментария. Комментарий можно постоянно сохранять как в открытом, так и в закрытом состоянии.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-add-comment.jpg">
+
+    <p>
+      Комментарий можно удалить, выбрав <strong>Remove Comment</strong> в контекстном меню.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-remove-comment.jpg" style="max-width: 430px">
+
+
+
+    <h3>Inline Inputs / External Inputs</h3>
+
+    <p>
+      По умолчанию форма ввода пазла может быть компактной или расширенной. Эта опция меню переключает режим отображения. Разница носит чисто косметический характер, но иногда сжатый формат вводных данных пазлов может сделать их более удобными и компактными.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-inline-inputs-external-inputs.gif" style="max-width: 800px">
+
+
+
+    <h3>Collapse / Expand</h3>
+
+    <p>
+      Группу пазлов можно свернуть, чтобы сделать ее более компактной.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-collapse-expand.gif">
+
+
+
+    <h3>Disable / Enable</h3>
+
+    <p>
+      Используйте этот параметр меню, чтобы исключить группу пазлов из выполнения.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-disable-enable.gif" style="max-width: 830px">
+
+
+
+    <h3>Delete</h3>
+
+    <p>
+      Удаляет группу пазлов. Как вариант, используйте клавишу <strong>Del</strong>.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-delete.jpg" style="max-width: 736px">
+
+
+
+    <h3>Save to Library</h3>
+
+    <p>
+      Сохраняет группу пазлов в <a href="manual/ru/puzzles/Library.html"> библиотеке </a> для последующего использования.
+    </p>
+
+
+
+    <h3 id="right_click_menu_help">Help</h3>
+
+    <p>
+      Открывает страницу справки из справочника по пазлам. Справка доступна для пазлов на панели инструментов...
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-help-toolbox.jpg" style="max-width: 600px">
+
+    <p>
+    ...и для пазлов в рабочем пространстве:
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-help.jpg" style="max-width: 600px">
+
+    <p>
+      Вы также можете получить доступ к справочнику с помощью левой панели данного руководства, либо с помощью таблицы ниже:
+    </p>
+
+    <table style="width:100%">
+      <tbody><tr>
+        <td>
+        <ul>
+          <li><a href="manual/ru/puzzles/Initialization.html">Initialization</a></li>
+          <li><a href="manual/ru/puzzles/Events.html">Events</a></li>
+          <li><a href="manual/ru/puzzles/Selectors.html">Selectors</a></li>
+          <li><a href="manual/ru/puzzles/Objects.html">Objects</a></li>
+          <li><a href="manual/ru/puzzles/Materials.html">Materials</a></li>
+          <li><a href="manual/ru/puzzles/Animation.html">Animation/Constraints</a></li>
+        </ul>
+        </td>
+        <td>
+        <ul>
+          <li><a href="manual/ru/puzzles/Camera.html">Camera/Lights</a></li>
+          <li><a href="manual/ru/puzzles/Scenes.html">Scenes</a></li>
+          <li><a href="manual/ru/puzzles/Time.html">Time</a></li>
+          <li><a href="manual/ru/puzzles/HTML.html">HTML</a></li>
+          <li><a href="manual/ru/puzzles/AR_VR.html">AR/VR</a></li>
+          <li><a href="manual/ru/puzzles/Sound.html">Audio/Video</a></li>
+        </ul>
+        </td>
+        <td>
+        <ul>
+          <li><a href="manual/ru/puzzles/Physics.html">Physics</a></li>
+          <li><a href="manual/ru/puzzles/Postprocessing.html">Post-processing</a></li>
+          <li><a href="manual/ru/puzzles/Logic.html">Logic</a></li>
+          <li><a href="manual/ru/puzzles/Text.html">Text</a></li>
+          <li><a href="manual/ru/puzzles/Loops.html">Loops</a></li>
+          <li><a href="manual/ru/puzzles/Numbers.html">Numbers</a></li>
+        </ul>
+        </td>
+        <td>
+        <ul>
+          <li><a href="manual/ru/puzzles/Lists.html">Lists</a></li>
+          <li><a href="manual/ru/puzzles/Dictionaries.html">Dictionaries</a></li>
+          <li><a href="manual/ru/puzzles/Variables.html">Variables</a></li>
+          <li><a href="manual/ru/puzzles/Procedures.html">Procedures</a></li>
+          <li><a href="manual/ru/puzzles/System.html">System</a></li>
+          <li><a href="manual/ru/puzzles/Advanced.html">Advanced</a></li>
+        </ul>
+        </td>
+        <td>
+        <ul>
+          <li><a href="manual/ru/puzzles/ECommerce.html">E-Commerce</a></li>
+          <li><a href="manual/ru/puzzles/SCORM.html">E-Learning/SCORM</a></li>
+          <li><a href="manual/ru/puzzles/Library.html">Library</a></li>
+          <li><a href="manual/ru/puzzles/Plugins.html">Plugins</a></li>
+        </ul>
+        </td>
+      </tr>
+    </tbody></table>
+
+
+    <p><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Right_Click_Menu_Over_Workspace" id="Right_Click_Menu_Over_Workspace" class="permalink">#</a></p>
+
+    <h2>Контекстное меню рабочего пространства</h2>
+
+
+    <h3>Undo / Redo</h3>
+
+    <p>
+      Отменяет или повторяет последнее выполненное действие. Вы также можете использовать сочетания клавиш <strong>Ctrl-Z</strong> / <strong>Ctrl-Shift-Z</strong>.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-undo-redo.jpg" style="max-width: 405px">
+
+
+
+    <h3>Straighten Up</h3>
+
+    <p>
+      Выстраивает все пазлы на вкладке в одну колонку.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-straighten.gif" style="max-width: 874px">
+
+
+
+    <h3>Collapse / Expand</h3>
+
+    <p>
+      Работает аналогично варианту с одной группой, но влияет на все пазлы текущей вкладки.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-collapse-expand-all.jpg" style="max-width: 405px">
+
+
+
+    <h3>Delete</h3>
+
+    <p>
+      Работает аналогично варианту с одной группой, но удаляет все пазлы текущей вкладки.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-right-click-menu-delete-all.jpg" style="max-width: 405px">
+
+
+
+    <h3>Reset Viewport Dimensions</h3>
+
+    <p>
+      Сбрасывает положение и размеры окна предпросмотра так, чтобы лучше соответствовать разрешению экрана.
+    </p>
+
+    <img src="files/puzzles-editor/layout-reset-viewport.jpg" style="max-width: 303px">
+
+
+
+    <p><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Backup" id="Backup" class="permalink">#</a></p>
+
+    <h2>Резервное копирование</h2>
+
+    <p>
+      Каждый раз, когда вы нажимаете кнопку <strong>Сохранить</strong>, ранее сохраненный файл <strong>visual_logic.xml</strong> копируется в папку с именем <strong>v3d_app_data / puzzles_backup</strong> с отметкой времени, добавляемой к имени файла.
+    </p>
+
+    <img src="files/puzzles-editor/puzzles-editor-backup.jpg" style="max-width: 682px">
+
+    <p>
+      Это позволяет вам восстановить любую из ранее сохраненных версий ваших пазлов, когда появится необходимость. Просто скопируйте файл обратно в корень папки приложения и удалите отметку времени из его имени. Ваши пазлы будут обновлены после обновления редактора.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#Plugins" id="Plugins" class="permalink">#</a></p>
+
+    <h2>Плагины</h2>
+
+    <p>
+      Редактор пазлов поддерживает плагины, являющиеся основным средством расширения его возможностей с помощью новых блоков. В составе дистрибутива «Вердж3Д» вы найдете два плагина для <a href="manual/ru/puzzles/ECommerce.html">электронной коммерции</a> и <a href="manual/ru/puzzles/SCORM.html">электронного обучения</a>, однако вам не составит особого труда установить плагины от сторонних разработчиков, либо написать свои собственные. Читайте подробнее о создании плагинов <a href="manual/ru/puzzles/Plugins.html">в соответствующем разделе</a>.
+    </p>
+
+    <p>
+      Также мы поддерживаем актуальный список <a href="https://www.soft8soft.com/wiki/index.php/List_of_Verge3D_Plugins" target="_blank">плагинов созданных сообществом</a> (англ.).
+    </p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задавайте их на нашем <a href="https://www.soft8soft.com/ru/форумы/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

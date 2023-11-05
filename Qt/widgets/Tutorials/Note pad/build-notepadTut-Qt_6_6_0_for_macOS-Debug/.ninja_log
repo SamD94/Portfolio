@@ -1,0 +1,88 @@
+# ninja log v5
+0	784	1684907358486569657	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+0	784	1684907358486569657	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+0	784	1684907358486569657	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+0	784	1684907358486569657	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+784	4479	1684907362197354439	CMakeFiles/notepadTut.dir/notepadTut_autogen/mocs_compilation.cpp.o	4fbc43bece30e87a
+784	4540	1684907362260835363	CMakeFiles/notepadTut.dir/main.cpp.o	719210473cd889c5
+785	4897	1684907362616099803	CMakeFiles/notepadTut.dir/mainwindow.cpp.o	449066150631dd35
+4898	5378	1684907363102603559	notepadTut.app/Contents/MacOS/notepadTut	e6a757e06b17af29
+18	720	1684908675884717000	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+18	720	1684908675884717000	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+18	720	1684908675884717000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+18	720	1684908675884717000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+12	78	1684908755815388429	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+12	78	1684908755815388429	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+12	78	1684908755815388429	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+12	78	1684908755815388429	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+17	898	1684908777962911000	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+17	898	1684908777962911000	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+17	898	1684908777962911000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+17	898	1684908777962911000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+898	5702	1684908782786592273	CMakeFiles/notepadTut.dir/main.cpp.o	719210473cd889c5
+899	5739	1684908782821187993	CMakeFiles/notepadTut.dir/notepadTut_autogen/mocs_compilation.cpp.o	4fbc43bece30e87a
+901	5913	1684908783000998966	CMakeFiles/notepadTut.dir/mainwindow.cpp.o	449066150631dd35
+5913	6347	1684908783440885632	notepadTut.app/Contents/MacOS/notepadTut	e6a757e06b17af29
+13	95	1684908832867150093	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+13	95	1684908832867150093	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+13	95	1684908832867150093	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+13	95	1684908832867150093	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+99	2490	1684908835252699184	CMakeFiles/notepadTut.dir/mainwindow.cpp.o	449066150631dd35
+2491	2784	1684908835549153257	notepadTut.app/Contents/MacOS/notepadTut	e6a757e06b17af29
+23	722	1684910616298331000	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+23	722	1684910616298331000	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+23	722	1684910616298331000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+23	722	1684910616298331000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+724	4844	1684910620436966945	CMakeFiles/notepadTut.dir/notepadTut_autogen/mocs_compilation.cpp.o	4fbc43bece30e87a
+722	4951	1684910620545454007	CMakeFiles/notepadTut.dir/main.cpp.o	719210473cd889c5
+18	865	1685060889533051000	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+18	865	1685060889533051000	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+18	865	1685060889533051000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+18	865	1685060889533051000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+866	4342	1685060893026430855	CMakeFiles/notepadTut.dir/notepadTut_autogen/mocs_compilation.cpp.o	4fbc43bece30e87a
+866	4345	1685060893025283643	CMakeFiles/notepadTut.dir/main.cpp.o	719210473cd889c5
+12	578	1685061864486872000	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+12	578	1685061864486872000	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+12	578	1685061864486872000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+12	578	1685061864486872000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+579	3669	1685061867588252674	CMakeFiles/notepadTut.dir/notepadTut_autogen/mocs_compilation.cpp.o	4fbc43bece30e87a
+579	3681	1685061867600134766	CMakeFiles/notepadTut.dir/main.cpp.o	719210473cd889c5
+10	68	1685061934969128152	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+10	68	1685061934969128152	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+10	68	1685061934969128152	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+10	68	1685061934969128152	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+71	2231	1685061937122937391	CMakeFiles/notepadTut.dir/mainwindow.cpp.o	449066150631dd35
+14	568	1685062383039317000	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+14	568	1685062383039317000	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+14	568	1685062383039317000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+14	568	1685062383039317000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+569	3571	1685062386048585500	CMakeFiles/notepadTut.dir/notepadTut_autogen/mocs_compilation.cpp.o	4fbc43bece30e87a
+569	3579	1685062386055705045	CMakeFiles/notepadTut.dir/main.cpp.o	719210473cd889c5
+569	3797	1685062386277705373	CMakeFiles/notepadTut.dir/mainwindow.cpp.o	449066150631dd35
+3797	4088	1685062386574547741	notepadTut.app/Contents/MacOS/notepadTut	e6a757e06b17af29
+12	716	1685083671131002000	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+12	716	1685083671131002000	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+12	716	1685083671131002000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+12	716	1685083671131002000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+717	5147	1685083675578983504	CMakeFiles/notepadTut.dir/notepadTut_autogen/mocs_compilation.cpp.o	4fbc43bece30e87a
+718	5230	1685083675663408577	CMakeFiles/notepadTut.dir/main.cpp.o	719210473cd889c5
+717	5531	1685083675963018513	CMakeFiles/notepadTut.dir/mainwindow.cpp.o	449066150631dd35
+5531	6248	1685083676686353882	notepadTut.app/Contents/MacOS/notepadTut	e6a757e06b17af29
+48	134	1685083890762706605	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+48	134	1685083890762706605	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+48	134	1685083890762706605	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+48	134	1685083890762706605	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+138	2407	1685083893019277801	CMakeFiles/notepadTut.dir/mainwindow.cpp.o	449066150631dd35
+2407	2711	1685083893333392907	notepadTut.app/Contents/MacOS/notepadTut	e6a757e06b17af29
+19	103	1685083929584530690	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+19	103	1685083929584530690	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+19	103	1685083929584530690	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+19	103	1685083929584530690	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+107	2463	1685083931934872730	CMakeFiles/notepadTut.dir/mainwindow.cpp.o	449066150631dd35
+2463	2756	1685083932228121861	notepadTut.app/Contents/MacOS/notepadTut	e6a757e06b17af29
+24	123	1685084177076803586	notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+24	123	1685084177076803586	notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+24	123	1685084177076803586	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/timestamp	d62017b4dbe2dfcf
+24	123	1685084177076803586	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_macOS-Debug/notepadTut_autogen/mocs_compilation.cpp	d62017b4dbe2dfcf
+128	2669	1685084179613462198	CMakeFiles/notepadTut.dir/mainwindow.cpp.o	449066150631dd35
+2673	3162	1685084180107963870	notepadTut.app/Contents/MacOS/notepadTut	e6a757e06b17af29

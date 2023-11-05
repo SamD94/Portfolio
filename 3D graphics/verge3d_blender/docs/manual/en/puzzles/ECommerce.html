@@ -1,0 +1,494 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>E-Commerce Plugin Reference — Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Puzzles from this plugin are used for implementing WooCommerce product 3D views and configurators, as well as for creating standalone order/inquiry forms.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/puzzles/ECommerce.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="E-Commerce Plugin Reference — Soft8Soft">
+            <meta property="og:description" content="Puzzles from this plugin are used for implementing WooCommerce product 3D views and configurators, as well as for creating standalone order/inquiry forms.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_en.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/puzzles/ECommerce.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="E-Commerce Plugin Reference — Soft8Soft">
+            <meta name="twitter:description" content="Puzzles from this plugin are used for implementing WooCommerce product 3D views and configurators, as well as for creating standalone order/inquiry forms.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_en.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ecommerce.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ecommerce-paypal-create-order.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ecommerce-connect-to-woocommerce.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ecommerce-product-info.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ecommerce-product-attribute.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ecommerce-product-component.webp",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ecommerce-place-order.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ecommerce-place-order-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ecommerce-place-order-adv.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ecommerce-place-order-adv-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/puzzles/puzzles-ecommerce-order-item.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/Texture-Compression.html" id="General_Topics_Texture_Compression">Texture Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Creating-SCORM-Courses.html" id="General_Topics_Creating_SCORM_Courses">Creating SCORM Courses</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/en/puzzles/SCORM.html" id="Puzzles_Reference_E-Learning/SCORM">E-Learning/SCORM</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>E-Commerce Plugin</h1>
+
+    <p>
+      This stock <a href="manual/en/puzzles/Plugins.html">plugin</a> includes puzzles that can be used for implementing various e-commerce applications. It supports basic PayPal payments, WooCommerce 3D product views and configurators, as well as advanced ordering puzzles which work with WordPress-based e-commerce solution shipped with Verge3D.
+    </p>
+
+    <img src="files/puzzles/puzzles-ecommerce.jpg" alt="E-commerce visual programming blocks">
+
+
+    <h2>Contents</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/puzzles/ECommerce.html#paypal_puzzles">Paypal Puzzle</a><ul><li><a href="manual/en/puzzles/ECommerce.html#paypal_create_order">paypal create order</a></li></ul></li><li><a href="manual/en/puzzles/ECommerce.html#woocommerce_puzzles">WooCommerce Puzzles</a><ul><li><a href="manual/en/puzzles/ECommerce.html#woo_connect">connect to WooCommerce</a></li><li><a href="manual/en/puzzles/ECommerce.html#woo_product_info">product info</a></li><li><a href="manual/en/puzzles/ECommerce.html#woo_product_attribute">product attribute</a></li><li><a href="manual/en/puzzles/ECommerce.html#woo_product_component">product component</a></li></ul></li><li><a href="manual/en/puzzles/ECommerce.html#wordpress_order_form_puzzles">WordPress Order Form Puzzles</a><ul><li><a href="manual/en/puzzles/ECommerce.html#place_order">place order</a></li><li><a href="manual/en/puzzles/ECommerce.html#place_order_adv">place order +</a></li><li><a href="manual/en/puzzles/ECommerce.html#order_item">order item (sku, qty)</a></li></ul></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/en/puzzles/ECommerce.html#paypal_puzzles" id="paypal_puzzles" class="permalink">#</a></p>
+
+    <h2>Paypal Puzzle</h2>
+
+
+    <p><a href="manual/en/puzzles/ECommerce.html#paypal_create_order" id="paypal_create_order" class="permalink">#</a></p>
+
+    <h3>paypal create order</h3>
+
+    <p>
+      Place PayPal order. This puzzle is the simplest e-commerce solution possible because it does not require any server-side configuration. To use it you only need verified PayPal business account.
+    </p>
+
+    <img src="files/puzzles/puzzles-ecommerce-paypal-create-order.jpg" alt="Visual programming block to create PayPal orders">
+
+    <dl>
+      <dt>client ID</dt>
+      <dd>PayPal business account client ID. Use the <a href="https://developer.paypal.com/developer/applications/" target="_blank">following page</a> to obtain it. For testing purposes there are Sandbox credentials, while for real selling you need to perform <a href="https://developer.paypal.com/api/rest/production/" target="_blank">additional steps</a> to receive Live credentials.</dd>
+      <dt>title</dt>
+      <dd>Product title.</dd>
+      <dt>item price</dt>
+      <dd>Product item price.</dd>
+      <dt>currency</dt>
+      <dd>Currency.</dd>
+      <dt>quantity</dt>
+      <dd>Amount of product.</dd>
+      <dt>on success do</dt>
+      <dd>Puzzles in this slot are executed upon successful transaction.</dd>
+      <dt>on error do</dt>
+      <dd>Puzzles in this slot are executed upon errors (insufficient funds or so).</dd>
+    </dl>
+
+
+    <p><a href="manual/en/puzzles/ECommerce.html#woocommerce_puzzles" id="woocommerce_puzzles" class="permalink">#</a></p>
+
+    <h2>WooCommerce Puzzles</h2>
+
+
+    <p><a href="manual/en/puzzles/ECommerce.html#woo_connect" id="woo_connect" class="permalink">#</a></p>
+
+    <h3>connect to WooCommerce</h3>
+
+    <p>Connect to WooCommerce system to start receiving product information.</p>
+
+    <img src="files/puzzles/puzzles-ecommerce-connect-to-woocommerce.jpg" alt="Using WooCommerce with visual logic blocks">
+
+    <p class="demoNote">For usage example, check out the following demo from the Asset Store: <a href="http://localhost:8668/store?req=status#drink_shop" target="_blank" rel="nofollow" title="Open Drink Shop in Verge3D Asset Store (requires App Manager running)">Drink Shop</a>.</p>
+
+    <p>See <a href="https://www.soft8soft.com/making-3d-product-configurator-for-woocommerce/" target="_blank">this tutorial</a> for more details.</p>
+
+
+    <p><a href="manual/en/puzzles/ECommerce.html#woo_product_info" id="woo_product_info" class="permalink">#</a></p>
+
+    <h3>product info</h3>
+
+    <p>
+      Returns a <a href="manual/en/puzzles/Dictionaries.html">dictionary</a> with product information retrieved by the <a href="manual/en/puzzles/ECommerce.html#woo_connect">connect to WooCommerce</a> puzzle:
+    </p>
+
+
+    <img src="files/puzzles/puzzles-ecommerce-product-info.jpg" alt="Getting product info by using visual programming">
+
+    <p>
+     The dictionary contains the following fields:
+    </p>
+
+    <dl>
+      <dt>price</dt>
+      <dd>Price for the product option selected by the customer, e.g. 12.</dd>
+
+      <dt>quantity</dt>
+      <dd>Quantity of the product items selected by the customer, e.g. 2.</dd>
+
+      <dt>sku</dt>
+      <dd>Stock keeping unit for the product option selected by the customer.</dd>
+
+      <dt>name</dt>
+      <dd>The name of the product as it will be seen in the shop cart, e.g. "Spinner - Yellow, Large".</dd>
+
+      <dt>attributes</dt>
+      <dd>A dictionary with attribute names/values pairs for the product option selected by the customer, e.g. {color: "Yellow", size: "Large"}.</dd>
+
+      <dt>weight</dt>
+      <dd>Physical product weight for the product option selected by the customer.</dd>
+
+      <dt>length, width, height</dt>
+      <dd>Physical product dimensions for the product option selected by the customer.</dd>
+
+      <dt>type</dt>
+      <dd>Product type as specified in WooCommerce admin panel, one of the following: "variable", "simple", "group", "external", or "composite".</dd>
+
+      <dt>children</dt>
+      <dd>Only available for "group" products. Returns list with information on the per-subproduct basis.</dd>
+
+      <dt>components</dt>
+      <dd>Only available for "composite" products. Returns list with information on the per-component basis. For simplicity you can use the <a href="manual/en/puzzles/ECommerce.html#woo_product_component">product component</a> puzzle to obtain this info.</dd>
+
+      <dt>status</dt>
+      <dd>Server response: "ok" or "error".</dd>
+    </dl>
+
+
+
+    <p><a href="manual/en/puzzles/ECommerce.html#woo_product_attribute" id="woo_product_attribute" class="permalink">#</a></p>
+
+    <h3>product attribute</h3>
+
+    <p>
+      Returns the value for an attribute of the product option selected by the customer, e.g. "Yellow" for attribute "Color".
+    </p>
+
+    <img src="files/puzzles/puzzles-ecommerce-product-attribute.jpg" alt="Visual programming block for getting product attributes">
+
+    <p>
+      Most frequently, this puzzle used to obtain the currently selected variation of a "variable" product. The name of the argument passed is matched in a case-insentitive manner, e.g. "Color", "color", or "COLOR" represent the same attribute.
+    </p>
+
+    <p>
+      See <a href="https://www.soft8soft.com/making-3d-product-configurator-for-woocommerce/" target="_blank">this tutorial</a> for more details.
+    </p>
+
+
+    <p><a href="manual/en/puzzles/ECommerce.html#woo_product_component" id="woo_product_component" class="permalink">#</a></p>
+
+    <h3>product component</h3>
+
+    <p>
+      Returns a value from a product component provided by the <a href="https://woocommerce.com/products/composite-products/" target="_blank">WooCommerce Composite Products</a> extension.
+    </p>
+
+    <img src="files/puzzles/puzzles-ecommerce-product-component.webp" alt="Visual programming block for getting WooCommerce composite product components">
+
+    <p>
+      For your convenience, you can specify either component name (title) (e.g. "Drawer Top") or a component ID (e.g. "1685435951") as the first parameter.
+    </p>
+
+    <p>
+      You can retrieve one of the following values from the component:
+    </p>
+
+    <dl>
+      <dt>product name</dt>
+      <dd>Name of the product selected in the component. Equal to "" (empty string) if no product selected.</dd>
+      <dt>sku</dt>
+      <dd>SKU of the product selected in the component. Equal to "" (empty string) if no product selected, or if you have no SKU assigned for the product.</dd>
+      <dt>quantity</dt>
+      <dd>Product quantity.</dd>
+      <dt>type</dt>
+      <dd>Product type: "simple", "variable", or "none" if no product was selected.</dd>
+      <dt>weight</dt>
+      <dd>Product weight. Equal to 0 (zero) if no weight was specified for the product.</dd>
+      <dt>width</dt>
+      <dd>Product width. Equal to 0 (zero) if no width was specified for the product.</dd>
+      <dt>height</dt>
+      <dd>Product height. Equal to 0 (zero) if no height was specified for the product.</dd>
+      <dt>length</dt>
+      <dd>Product length. Equal to 0 (zero) if no length was specified for the product.</dd>
+      <dt>attributes</dt>
+      <dd>Dictionary with attributes assigned on the selected product. In most cases, this value is used to obtain attributes for the currently selected variation of the "variable" products.</dd>
+      <dt>component title</dt>
+      <dd>Component name (title), e.g "Drawer Top". Not to be confused with the product name.</dd>
+      <dt>component id</dt>
+      <dd>Component ID, e.g "1685435951".</dd>
+    </dl>
+
+
+    <p><a href="manual/en/puzzles/ECommerce.html#wordpress_order_form_puzzles" id="wordpress_order_form_puzzles" class="permalink">#</a></p>
+
+    <h2>WordPress Order Form Puzzles</h2>
+
+
+    <p><a href="manual/en/puzzles/ECommerce.html#place_order" id="place_order" class="permalink">#</a></p>
+
+    <h3>place order</h3>
+
+    <p>
+      Composes and submits an order form to a specified URL. By default the order form is submitted to the <a href="https://sandbox.soft8soft.com/order-form/" target="_blank">sandbox ordering page</a>.
+    </p>
+
+    <img src="files/puzzles/puzzles-ecommerce-place-order.jpg" alt="Placing e-commerce order with visual programming block">
+
+    <p class="demoNote">For usage example, check out the following demo from the Asset Store: <a href="http://localhost:8668/store?req=status#ring" target="_blank" rel="nofollow" title="Open Ring in Verge3D Asset Store (requires App Manager running)">Ring</a>.</p>
+
+    <p>
+      Verge3D comes with a free WordPress plug-in that is able to handle requests submitted by this puzzle. Upon receiving such a request, this WordPress plug-in renders a page with an extended form supplemented with contact info, comments fields, and optional screenshot. Filled out form is finally submitted by the customer and a new order is created in WordPress admin interface.
+    </p>
+
+    <dl>
+      <dt>send to</dt>
+      <dd>The URL of the order form provided by the WordPress plugin. Please refer to the <a href="manual/en/introduction/Wordpress-Plugin.html#receiving_orders_with_order_form">following guide</a> for setup information.</dd>
+      <dt>content</dt>
+      <dd>Order contents in human-readable form.</dd>
+      <dt>item price</dt>
+      <dd>Product item price.</dd>
+      <dt>quantity</dt>
+      <dd>Amount of product.</dd>
+      <dt>make screenshot</dt>
+      <dd>Make application screenshot and attach it to the order. Be sure to enable screenshots in the <a href="manual/en/puzzles/Initialization.html#configure_application" target="_parent">configure application</a> puzzle otherwise the screenshot may be rendered in black.</dd>
+    </dl>
+
+    <img src="files/puzzles/puzzles-ecommerce-place-order-example.jpg" alt="Example of visual scripting blocks used for placing e-commerce orders">
+
+    <p class="note">
+      It's up to you (or sales manager) to verify correctness of the order content and price. Though very unlikely, a hacker may malform content submitted by this puzzle and try to purchase a product for lesser price. To prevent it, you need to verify your orders by using the <a href="manual/en/puzzles/ECommerce.html#place_order_adv">place order +</a> puzzle which rely on product info assigned on the server.
+    </p>
+
+
+    <p><a href="manual/en/puzzles/ECommerce.html#place_order_adv" id="place_order_adv" class="permalink">#</a></p>
+
+    <h3>place order +</h3>
+
+    <p>
+      Composes and submits an order form to a specified URL. This puzzle works similar to <a href="manual/en/puzzles/ECommerce.html#place_order">place order</a>, but has more features, greater security, and allows for customizations.
+    </p>
+
+    <img src="files/puzzles/puzzles-ecommerce-place-order-adv.jpg" alt="Visual programming block to place advanced orders">
+
+    <p class="demoNote">For usage example, check out the following demo from the Asset Store: <a href="http://localhost:8668/store?req=status#recliner" target="_blank" rel="nofollow" title="Open Recliner in Verge3D Asset Store (requires App Manager running)">Recliner</a>.</p>
+
+    <dl>
+      <dt>send to</dt>
+      <dd>The URL of the order form provided by the WordPress plugin. Please refer to the <a href="manual/en/introduction/Wordpress-Plugin.html#receiving_orders_with_order_form">following guide</a> for setup information.</dd>
+      <dt>item(s)</dt>
+      <dd>Order item or a list of order items. See <a href="manual/en/puzzles/ECommerce.html#order_item">below</a> for more info.</dd>
+      <dt>attachment(s)</dt>
+      <dd>Order attachment or a list of order attachments. Attachment is a <a href="manual/en/puzzles/HTML.html#data_uri">Data URI link</a> which represents a screenshot, image, sound, video, PDF, text, or a glTF model.</dd>
+    </dl>
+
+    <p>
+      Example usage:
+    </p>
+
+    <img src="files/puzzles/puzzles-ecommerce-place-order-adv-example.jpg" alt="Set of visual programming blocks for placing e-commerce orders">
+
+
+    <p><a href="manual/en/puzzles/ECommerce.html#order_item" id="order_item" class="permalink">#</a></p>
+
+    <h3>order item (sku, qty)</h3>
+
+    <p>
+      Order item to be used in the <a href="manual/en/puzzles/ECommerce.html#place_order_adv">place order +</a> puzzle.
+    </p>
+
+    <img src="files/puzzles/puzzles-ecommerce-order-item.jpg" alt="Order item visual programming block">
+
+    <dl>
+      <dt>sku</dt>
+      <dd>The SKU (stock keeping unit) of the product registered by WordPress plugin. Please refer to the <a href="manual/en/introduction/Wordpress-Plugin.html#managing_products">following guide</a> to find out how setup products.</dd>
+      <dt>quantity</dt>
+      <dd>Amount of product.</dd>
+    </dl>
+
+
+    <h2>Having Troubles with Puzzles?</h2>
+
+    <p>Seek help on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on July 24, 2023</div></footer></body></html>

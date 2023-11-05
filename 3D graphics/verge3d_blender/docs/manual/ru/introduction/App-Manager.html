@@ -1,0 +1,1180 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Менеджер приложений Вердж3Д — Софт Эйт Софт</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Об использовании менеджера приложений для создания, разработки и распространения Вердж3Д-приложений">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/App-Manager.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Менеджер приложений Вердж3Д — Софт Эйт Софт">
+            <meta property="og:description" content="Об использовании менеджера приложений для создания, разработки и распространения Вердж3Д-приложений">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/App-Manager.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Менеджер приложений Вердж3Д — Софт Эйт Софт">
+            <meta name="twitter:description" content="Об использовании менеджера приложений для создания, разработки и распространения Вердж3Д-приложений">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginner_guide/app-manager-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginner_guide/app-manager-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-maya/app-manager-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-desktop-icon.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-first-start.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-list-files.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-list-files-expand.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-search.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-list-app-link.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-asset-store.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-asset-store-icon.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-create.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-create-options.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-created.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-run-puzzles-from-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-run-puzzles-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-open-folder-from-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-open-folder-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-from-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-cancel.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-complete.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-qrcode.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-upload-archive-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-update-from-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-update-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/creating-desktop-apps/app-manager-create-native-app.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/creating-scorm-courses/app-manager-create-scorm-course.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-delete-from-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-delete-from-app-page.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-templates-explanation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-templates.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-templates-manage.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-templates-choose-created.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-open-network.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-network-directory.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-settings-panel.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство&nbsp;«Вердж3Д»</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_Менеджер_приложений">Менеджер приложений</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Пазлы">Пазлы</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Спецификация">Спецификация</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_проекта">Структура проекта</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Установка_обновлений">Установка обновлений</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_Вопрос-ответ">Вопрос-ответ</a></li></ul></div><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_темы_Методы_оптимизации">Методы оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_темы_Компрессия_ассетов">Компрессия ассетов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html" id="Основные_темы_Текстурная_компрессия">Текстурная компрессия</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_темы_Интерфейс_на_основе_ХТМЛ">Интерфейс на основе ХТМЛ</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_темы_Рендеринг_текста">Рендеринг текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_темы_Вирт./доп._реальность">Вирт./доп. реальность</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_темы_Руководство_по_физике">Руководство по физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_темы_Персонализация_приложений">Персонализация приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_темы_«ВордПресс»-плагин">«ВордПресс»-плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_темы_Использование_«ЯваСкрипт»">Использование «ЯваСкрипт»</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_темы_Создание_десктопных_приложений">Создание десктопных приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_темы_Создание_мобильных_приложений">Создание мобильных приложений</a></li><li><a href="manual/ru/introduction/Creating-SCORM-Courses.html" id="Основные_темы_Создание_обучающих_приложений">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_темы_Поиск_проблем_с_производительностью">Поиск проблем с производительностью</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_темы_Исправление_неполадок">Исправление неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_темы_Тестирование_в_мобильных_браузерах">Тестирование в мобильных браузерах</a></li></ul></div><div><h2>Блендер</h2><ul id="Блендер"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Блендер_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Блендер_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Блендер_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Блендер_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/blender/Camera.html" id="Блендер_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Блендер_Обзор_шейдерных_нод">Обзор шейдерных нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Блендер_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Блендер_Ключи_формы_(морфинг)">Ключи формы (морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Блендер_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Блендер_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Блендер_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Блендер_Ограничители">Ограничители</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Блендер_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>3дс Макс</h2><ul id="3дс_Макс"><li><a href="manual/ru/max/Beginners-Guide.html" id="3дс_Макс_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="3дс_Макс_Установка">Установка</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="3дс_Макс_Настройка_вьюпорта">Настройка вьюпорта</a></li><li><a href="manual/ru/max/Material-System.html" id="3дс_Макс_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="3дс_Макс_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/max/Camera.html" id="3дс_Макс_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="3дс_Макс_Материалы_и_текстуры">Материалы и текстуры</a></li><li><a href="manual/ru/max/Animation.html" id="3дс_Макс_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="3дс_Макс_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="3дс_Макс_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="3дс_Макс_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="3дс_Макс_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="3дс_Макс_Анимационные_ограничители">Анимационные ограничители</a></li><li><a href="manual/ru/max/Material-Library.html" id="3дс_Макс_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Майя</h2><ul id="Майя"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Майя_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Майя_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Майя_Материалы_и_текстурные_ноды">Материалы и текстурные ноды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Майя_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/maya/Camera.html" id="Майя_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Майя_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Майя_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Майя_Бленд_шейпы_(морфинг)">Бленд шейпы (морфинг)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Майя_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Майя_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Майя_Ограничители">Ограничители</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Майя_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Пазлы</h2><ul id="Пазлы"><li><a href="manual/ru/puzzles/Initialization.html" id="Пазлы_Инициализация">Инициализация</a></li><li><a href="manual/ru/puzzles/Events.html" id="Пазлы_События">События</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Пазлы_Селекторы">Селекторы</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Пазлы_Объекты">Объекты</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Пазлы_Материалы">Материалы</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Пазлы_Анимация_и_ограничители">Анимация и ограничители</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Пазлы_Камера_и_свет">Камера и свет</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Пазлы_Сцены">Сцены</a></li><li><a href="manual/ru/puzzles/Time.html" id="Пазлы_Время">Время</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Пазлы_ХТМЛ">ХТМЛ</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Пазлы_ВР/ДР">ВР/ДР</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Пазлы_Аудио/видео">Аудио/видео</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Пазлы_Физика">Физика</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Пазлы_Постпроцессинг">Постпроцессинг</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Пазлы_Логические_операции">Логические операции</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Пазлы_Циклы">Циклы</a></li><li><a href="manual/ru/puzzles/Text.html" id="Пазлы_Текст">Текст</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Пазлы_Числа">Числа</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Пазлы_Списки">Списки</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Пазлы_Словари">Словари</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Пазлы_Переменные">Переменные</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Пазлы_Процедуры">Процедуры</a></li><li><a href="manual/ru/puzzles/System.html" id="Пазлы_Системные">Системные</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Пазлы_Продвинутые">Продвинутые</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Пазлы_Электронная_коммерция">Электронная коммерция</a></li><li><a href="manual/ru/puzzles/SCORM.html" id="Пазлы_Электронное_обучение">Электронное обучение</a></li><li><a href="manual/ru/puzzles/Library.html" id="Пазлы_Библиотеки">Библиотеки</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Пазлы_Плагины">Плагины</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="manual/ru/programmers_guide/Terms.html" id="Прочее_Словарь_терминов">Словарь терминов</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Менеджер приложений «Вердж3Д»</h1>
+
+    <p>Менеджер приложений предназначен для создания и выполнения различных операций с приложениями «Вердж3Д».</p>
+
+
+    <h2>Содержание</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/App-Manager.html#Running_App_Manager">Запуск менеджера приложений</a><ul><li><a href="manual/ru/introduction/App-Manager.html#From_Blender_Max_Maya">Вариант 1. Прямой доступ из «Блендера», «3дс Макса» или «Майи»</a></li><li><a href="manual/ru/introduction/App-Manager.html#Using_Desktop_Application">Вариант 2. Использование десктопного приложения</a></li><li><a href="manual/ru/introduction/App-Manager.html#From_Command_Line">Вариант 3. Запуск из командной строки</a></li></ul></li><li><a href="manual/ru/introduction/App-Manager.html#first_start">Первый запуск</a></li><li><a href="manual/ru/introduction/App-Manager.html#Exploring_Applications">Страница приложений</a><ul><li><a href="manual/ru/introduction/App-Manager.html#List_Main_Page">Список на главной странице</a></li><li><a href="manual/ru/introduction/App-Manager.html#Application_Page">Страница приложения</a></li><li><a href="manual/ru/introduction/App-Manager.html#asset_store">Магазин ассетов</a></li></ul></li><li><a href="manual/ru/introduction/App-Manager.html#Creating_Applications">Создание приложения</a></li><li><a href="manual/ru/introduction/App-Manager.html#Operations">Функции</a><ul><li><a href="manual/ru/introduction/App-Manager.html#Edit_Puzzles">Редактор пазлов</a></li><li><a href="manual/ru/introduction/App-Manager.html#Open_Folder">Открытие папки</a></li><li><a href="manual/ru/introduction/App-Manager.html#Publish">Публикация</a></li><li><a href="manual/ru/introduction/App-Manager.html#Upload_Archive">Загрузка архива</a></li><li><a href="manual/ru/introduction/App-Manager.html#Update">Обновление</a></li><li><a href="manual/ru/introduction/App-Manager.html#create_desktop_mobile_apps">Создание десктопных/мобильных приложений</a></li><li><a href="manual/ru/introduction/App-Manager.html#create_e_learning_apps">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/App-Manager.html#Move_to_Trash">Удаление в корзину</a></li></ul></li><li><a href="manual/ru/introduction/App-Manager.html#Templates">Шаблоны</a><ul><li><a href="manual/ru/introduction/App-Manager.html#Whats_a_Template">Что такое шаблон</a></li><li><a href="manual/ru/introduction/App-Manager.html#Creating_Templates">Создание шаблонов</a></li></ul></li><li><a href="manual/ru/introduction/App-Manager.html#managing_network_directory">Управление удалённой директорией «Вердж3Д Нетворк»</a></li><li><a href="manual/ru/introduction/App-Manager.html#App_Manager_Settings">Настройки менеджера приложений</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Running_App_Manager" id="Running_App_Manager" class="permalink">#</a></p>
+
+    <h2>Запуск менеджера приложений</h2>
+
+    <p>
+      Менеджер приложений — это классический сайт, отображаемый локальным веб-сервером, наподобие панели настроек вайфай-роутера.
+    </p>
+
+    <img src="files/app-manager/app-manager-main.jpg">
+
+    <p>
+      Доступ осуществляется по адресу <a href="http://localhost:8668/" target="_blank">localhost:8668</a>. Вы можете переходить со страницу на страницу, обновлять их или добавлять в закладки. Сам сервер запускается несколькими способами (см. ниже).
+    </p>
+
+    <p><a href="manual/ru/introduction/App-Manager.html#From_Blender_Max_Maya" id="From_Blender_Max_Maya" class="permalink">#</a></p>
+
+    <h3>Вариант 1. Прямой доступ из «Блендера», «3дс Макса» или «Майи»</h3>
+
+    <p>При старте вашего 3Д-редактора происходит автоматический запуск локального веб-сервера, если, конечно, установлен плагин «Вердж3Д». Щелкните по кнопке App Manager в «Блендере» или выберите соответствующий пункт меню для других редакторов. Это действие откроет менеджер приложений в веб-браузере по умолчанию.</p>
+
+    <img src="files/beginner_guide/app-manager-blender.jpg" style="max-width: 951px">
+    <img src="files/beginner_guide/app-manager-max.jpg" style="max-width: 951px">
+    <img src="files/beginners-guide-maya/app-manager-maya.jpg">
+
+    <p>
+      В случае неработоспособности веб-сервера (такое может случится, например, если вы закроете первый запущенный экземпляр 3Д-редактора) данная функция его перезагрузит.
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Using_Desktop_Application" id="Using_Desktop_Application" class="permalink">#</a></p>
+
+    <h3>Вариант 2. Использование десктопного приложения</h3>
+
+    <p>Локальный веб-сервер можно запустить без «Блендера», «3дс Макса» или «Майи». Просто щелкните значок на рабочем столе, созданный установщиком «Вердж3Д» (работает только в ОС «Виндоус»). Страница менеджера приложений откроется в веб-браузере.</p>
+
+    <img src="files/app-manager/app-manager-desktop-icon.jpg">
+
+    <p>
+      Если веб-сервер уже запущен (например из 3Д-редактора), данное приложение просто откроет менеджер приложений в браузере.
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#From_Command_Line" id="From_Command_Line" class="permalink">#</a></p>
+
+    <h3>Вариант 3. Запуск из командной строки</h3>
+
+    <p>
+      Установите интерпретатор языка программирования «Питон» версии 3, например из <a href="https://www.microsoft.com/en-us/p/python-38/9mssztt1n39l" target="_blank">«Майкрософт Стор»</a>. Затем запустите интерпретатор командной строки и введите:
+    </p>
+
+    <code>
+    cd verge3d
+    </code>
+
+    <p>
+      (укажите корректный путь к директории, где установлен «Вердж3Д»). Для «Блендер»-версии введите:
+    </p>
+
+    <code>
+    python manager\server.py BLENDER
+    </code>
+
+    <p>
+    для «3дс Макса»:
+    </p>
+
+    <code>
+    python manager\server.py MAX
+    </code>
+
+    <p>
+    для «Майи»:
+    </p>
+
+    <code>
+    python manager\server.py MAYA
+    </code>
+
+    <p>
+      Откройте веб-браузер и перейдите по адресу <a href="http://localhost:8668/" target="_blank">localhost:8668</a>. Пользователи «МакОС» или «Линукс» могут использовать те же команды, заменяя обратный слэш (\) прямым (/).
+    </p>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#first_start" id="first_start" class="permalink">#</a></p>
+
+    <h2>Первый запуск</h2>
+
+    <p>Если «Вердж3Д» был установлен впервые или был обновлён на новую версию, при первом запуске менеджера приложений вы увидите экран приветствия:</p>
+
+    <img src="files/app-manager/app-manager-first-start.jpg" alt="Стартовый экран менеджера приложений" style="max-width: 600px">
+
+    <p>
+      На этом экране вам будет предложено выбрать директорию, в которой будут храниться ваши проекты. По умолчанию все приложения сохраняются в папке <strong>Документы</strong>. Также на экране приветствия вы можете выбрать светлую (Light) или тёмную (Dark) тему оформления.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Exploring_Applications" id="Exploring_Applications" class="permalink">#</a></p>
+
+    <h2>Страница приложений</h2>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#List_Main_Page" id="List_Main_Page" class="permalink">#</a></p>
+
+    <h3>Список на главной странице</h3>
+
+    <p>
+      После запуска или обновления главной страницы, менеджер приложений сканирует директорию приложений и отображает все найденные проекты в виде списка.
+    </p>
+
+    <p>
+      Для каждого приложения из списка менеджер приложений показывает все ХТМЛ (.html) и ГЛТФ (.gltf/.glb) файлы, а также проекты 3Д-редакторов. Эти файлы можно просмотреть, щелкнув по нужной иконке.
+    </p>
+
+    <img src="files/app-manager/app-manager-list-files.jpg" style="max-width: 800px">
+
+    <p>
+      Если приложение содержит большое количество файлов, то они скрываются для удобства просмотра. Щелкните по иконке треугольника, рядом с названием приложения, и вы получите полный доступ.
+    </p>
+
+    <img src="files/app-manager/app-manager-list-files-expand.jpg" style="max-width: 800px">
+
+    <p>
+      Используйте строку поиска для фильтрации приложений.
+    </p>
+
+    <img src="files/app-manager/app-manager-search.jpg" style="max-width: 800px">
+
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Application_Page" id="Application_Page" class="permalink">#</a></p>
+
+    <h3>Страница приложения</h3>
+
+    <p>
+      Кликните по названию приложения, чтобы перейти на его страницу.
+    </p>
+
+    <img src="files/app-manager/app-manager-list-app-link.jpg" style="max-width: 800px">
+
+    <p>
+      Здесь перечислены все файлы, которые доступны для запуска. Вы также можете фильтровать приложения, используя строку поиска.
+    </p>
+
+    <img src="files/app-manager/app-manager-app-page.jpg">
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#asset_store" id="asset_store" class="permalink">#</a></p>
+
+    <h3>Магазин ассетов</h3>
+
+    <p>
+      Магазин ассетов включает в себя десятки позиций: демо-приложения, уроки и библиотеки материалов. Вы можете использовать эти материалы для обучения, либо непосредственно заимствовать контент для своих собственных приложений.
+    </p>
+
+    <img src="files/app-manager/app-manager-asset-store.jpg" alt="Содержимое магазина ассетов">
+
+    <p>
+      Магазин ассетов доступен по кнопке <strong>Корзина</strong>:
+    </p>
+
+    <img src="files/app-manager/app-manager-asset-store-icon.jpg" alt="Иконка для запуска магазина ассетов">
+
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Creating_Applications" id="Creating_Applications" class="permalink">#</a></p>
+
+    <h2>Создание приложения</h2>
+
+    <p>
+      Новое приложение создается с помощью кнопки на левой панели.
+    </p>
+
+    <img src="files/app-manager/app-manager-create.jpg" style="max-width: 569px">
+
+    <p>
+      Введите имя для нового приложения и выберите шаблон. По умолчанию предлагается 4 варианта: стандартный светлый или темный, с пустой сценой, а также приложение для «ЯваСкрипт»-программистов. Шаблоны приложений могут быть <a href="manual/ru/introduction/App-Manager.html#Templates">добавлены самостоятельно</a> в настройках.
+    </p>
+
+    <img src="files/app-manager/app-manager-create-options.jpg" style="max-width: 522px">
+
+    <p>
+      Вы также можете добавить (или отключить) дополнительные модули: конвертер шрифтов (<strong>Font Converter</strong>), модуль декомпрессии текстур (<strong>Texture Decompressor</strong>) и физический движок (<strong>Physics</strong>).
+    </p>
+
+    <p>
+      После создания приложения вам будет показан диалог со ссылкой в менеджере проектов (вы также можете просто закрыть это окно).
+    </p>
+
+    <img src="files/app-manager/app-manager-created.jpg" style="max-width: 800px">
+
+    <p>
+      Созданное приложение появится в общем списке.
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Operations" id="Operations" class="permalink">#</a></p>
+
+    <h2>Функции</h2>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Edit_Puzzles" id="Edit_Puzzles" class="permalink">#</a></p>
+
+    <h3>Редактор пазлов</h3>
+
+    <p>
+      Вы можете начать работу с пазлами, нажав соответствующую кнопку на этой панели в главном окне:
+    </p>
+
+    <img src="files/app-manager/app-manager-run-puzzles-from-main.jpg" style="max-width: 800px">
+
+    <p>
+      ...или на панели справа в окне приложения:
+    </p>
+
+    <img src="files/app-manager/app-manager-run-puzzles-from-app-page.jpg">
+
+    <p>
+      Информацию по работе с пазлами ищите <a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html">здесь</a>.
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Open_Folder" id="Open_Folder" class="permalink">#</a></p>
+
+    <h3>Открытие папки</h3>
+
+    <p>
+      Для открытии папки приложения, щелкните по этой кнопке:
+    </p>
+
+    <img src="files/app-manager/app-manager-open-folder-from-main.jpg" style="max-width: 800px">
+
+    <p>
+    ... или же используйте ее дубликат на панели справа в окне приложения.
+    </p>
+
+    <img src="files/app-manager/app-manager-open-folder-from-app-page.jpg">
+
+    <p>
+      Эта операция вызовет файловый менеджер, который установлен в системе по умолчанию (для «Виндоус» — классический проводник).
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Publish" id="Publish" class="permalink">#</a></p>
+
+    <h3>Публикация</h3>
+
+    <p>
+      Вы можете опубликовать приложение, щелкнув по соответствующей кнопке в главном окне:
+    </p>
+
+    <img src="files/app-manager/app-manager-publish-from-main.jpg" style="max-width: 800px">
+
+    <p>
+    ...или по ее аналогу на правой панели в окне приложения.
+    </p>
+
+    <img src="files/app-manager/app-manager-publish-from-app-page.jpg">
+
+    <p>
+      Начнется загрузка приложения в «Вердж3Д Нетворк». Это позволит получить к нему доступ онлайн (действие может быть отменено).
+    </p>
+
+    <img src="files/app-manager/app-manager-publish-cancel.jpg" style="max-width: 300px">
+
+    <p class="note">
+      Если загрузка файлов прекратилась с выводом сообщения «The difference between your local system time and the server time is too large», то установите корректное время на своем компьютере и попробуйте снова.
+    </p>
+
+    <p>
+      После завершения загрузки будет показано окно с прямой ссылкой на приложение, а также код для встраивания в уже имеющиеся страницы.
+    </p>
+
+    <img src="files/app-manager/app-manager-publish-complete.jpg" style="max-width: 642px">
+
+    <p>
+      Вы также можете использовать кнопки социальных сетей и генератор «КуЭр»-кода.
+    </p>
+
+    <img src="files/app-manager/app-manager-publish-qrcode.jpg">
+
+    <p>
+      Загруженные файлы можно просмотреть или удалить на странице <strong>Network Directory</strong>.
+    </p>
+
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Upload_Archive" id="Upload_Archive" class="permalink">#</a></p>
+
+    <h3>Загрузка архива</h3>
+
+    <p>
+      Вы можете загрузить приложение в виде ЗИП-архива, используя кнопку на правой панели на странице приложения:
+    </p>
+
+    <img src="files/app-manager/app-manager-upload-archive-from-app-page.jpg">
+
+    <p>
+      Программа сожмет ваши файлы и загрузит архив в «Вердж3Д Нетворк» (операция может быть отменена). Используйте эту возможность для передачи контента вашим коллегам, клиентам или другим разработчикам «Вердж3Д».
+    </p>
+
+    <p class="note">
+      Если загрузка файлов прекратилась с выводом сообщения «The difference between your local system time and the server time is too large», то установите корректное время на своем компьютере и попробуйте снова.
+    </p>
+
+    <p>
+      После завершения загрузки откроется окно со ссылкой на ЗИП-архив.
+    </p>
+
+    <p>
+      Загруженные файлы также могут быть просмотрены и удалены в окне «Вердж3Д Нетворк».
+    </p>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Update" id="Update" class="permalink">#</a></p>
+
+    <h3>Обновление</h3>
+
+    <p>
+      Если приложение использует старую версию «Вердж3Д», то станет доступна специальная кнопка для обновления:
+    </p>
+
+    <img src="files/app-manager/app-manager-update-from-main.jpg" style="max-width: 800px">
+
+    <p>
+      Аналогичная кнопка также появится на странице приложения:
+    </p>
+
+    <img src="files/app-manager/app-manager-update-from-app-page.jpg">
+
+    <p>
+      Больше информации по обновлению вы найдете <a href="manual/ru/introduction/Updating.html">здесь</a>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#create_desktop_mobile_apps" id="create_desktop_mobile_apps" class="permalink">#</a></p>
+
+    <h3>Создание десктопных/мобильных приложений</h3>
+
+    <p>
+      Менеджер приложений включает в себя инструмент для конвертации «Вердж3Д»-проектов в десктопные и мобильные приложения. Для запуска конвертера нажмите на кнопку с соответствующим значком на правой панели экране приложения:
+    </p>
+
+    <img src="files/creating-desktop-apps/app-manager-create-native-app.jpg">
+
+    <p>
+      Читайте подробности в разделах документации, посвящённым созданию: <a href="manual/ru/introduction/Creating-Desktop-Apps.html">десктопных</a> и <a href="manual/ru/introduction/Creating-Mobile-Apps.html">мобильных</a> приложений.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#create_e_learning_apps" id="create_e_learning_apps" class="permalink">#</a></p>
+
+    <h3>Создание обучающих приложений</h3>
+
+    <p>
+      С помощью «Вердж3Д» вы можете упаковывать ваши 3Д-приложения в обучающие пакеты, совместимые со стандартом СКОРМ версии 1.2. Используйте кнопку с соответствующим значком, расположенную на правой панели окна приложения:
+    </p>
+
+    <img src="files/creating-scorm-courses/app-manager-create-scorm-course.jpg" alt="Кнопка для создания СКОРМ-курсов в Вердж3Д">
+
+    <p>
+      Чтобы освоить эту функцию, ознакомьтесь с разделом <a href="manual/ru/introduction/Creating-SCORM-Courses.html">про создание обучающих приложений</a>.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Move_to_Trash" id="Move_to_Trash" class="permalink">#</a></p>
+
+    <h3>Удаление в корзину</h3>
+
+    <p>
+      Вы можете удалить приложение, кликнув по этой кнопке на главной странице:
+    </p>
+
+    <img src="files/app-manager/app-manager-delete-from-main.jpg" style="max-width: 800px">
+
+    <p>
+    ... или по аналогичной на странице приложения:
+    </p>
+
+    <img src="files/app-manager/app-manager-delete-from-app-page.jpg">
+
+    <p>
+      Приложение будет удалено в корзину с возможностью ее восстановления.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Templates" id="Templates" class="permalink">#</a></p>
+
+    <h2>Шаблоны</h2>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Whats_a_Template" id="Whats_a_Template" class="permalink">#</a></p>
+
+    <h3>Что такое шаблон</h3>
+
+    <p>
+      В менеджере приложений вы можете выбрать шаблон, на основе которого будет создано новое приложение. По умолчанию поддерживаются 4 шаблона: "Standard Light", "Standard Dark", "Blank Scene" и "Code-Based".
+    </p>
+
+    <img src="files/app-manager/app-manager-templates-explanation.jpg" style="max-width: 522px">
+
+    <p>
+      Исходники этих шаблонов находятся в папке templates, например для «Блендера» это будет "verge3d_blender\manager\templates". Вы можете модифицировать встроенные шаблоны либо создать свои собственные.
+    </p>
+
+    <p class="note">
+    В папке шаблонов имеется скрытый шаблон "Embeddable". Он используется для создания
+    <a href="manual/ru/programmers_guide/Integration-with-Reactjs-Vuejs.html">React.js и Vue.js</a>-приложений.
+    </p>
+
+    <p>
+      Существует несколько способов модификации и создания шаблонов приложений. Вы можете поменять вёрстку приложений отредактировав ХТМЛ/ЦСС файлы, встроить новый «ЯваСкрипт»-код или библиотеку, заменить интерфейс или прелоадер или создать логику на пазлах, которая будет включаться во все новые приложения.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#Creating_Templates" id="Creating_Templates" class="permalink">#</a></p>
+
+    <h3>Создание шаблонов</h3>
+
+    <p>
+      Для того чтобы создать новый шаблон, нажмите кнопку <strong>Settings</strong> на левой панели, затем выберите вкладку <strong>Templates</strong>:
+    </p>
+
+    <img src="files/app-manager/app-manager-templates.jpg" style="max-width: 600px">
+
+    <p>
+      На появившейся панели нажмите <strong>+</strong> и выберите имя нового шаблона (например "My Template"), затем нажмите <strong>Apply</strong>:
+    </p>
+
+    <img src="files/app-manager/app-manager-templates-manage.jpg" style="max-width: 702px">
+
+    <p>
+      В результате при создании нового приложения вы сможете выбрать добавленный шаблон из списка:
+    </p>
+
+    <img src="files/app-manager/app-manager-templates-choose-created.jpg" style="max-width: 522px">
+
+    <p>
+      По умолчанию шаблон будет создавать пустое приложение, поскольку в нём отсутствуют файлы. Самый простой способ создания рабочего шаблона — взять за основу существующий (например "Standard Dark") и переименовать его назвав именем нового шаблона (то есть "My Template").
+    </p>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#managing_network_directory" id="managing_network_directory" class="permalink">#</a></p>
+
+    <h2>Управление удалённой директорией «Вердж3Д Нетворк»</h2>
+
+    <p>
+      Кликнув на кнопке с облаком на левой панели вы получите доступ к удалённой директории «Вердж3Д Нетворк»:
+    </p>
+
+    <img src="files/app-manager/app-manager-open-network.jpg">
+
+    <p>
+      В ней находится список файлов, директорий и архивов, загруженных в «Вердж3Д Нетворк» ранее:
+    </p>
+
+    <img src="files/app-manager/app-manager-network-directory.jpg">
+
+    <p>
+      Также на этой странице вы можете узнать размер загруженных файлов и дату загрузки (используется местное время). Для директорий, дата/время соответствует <em>наиболее поздней</em> загрузке дочернего элемента (файла или другой директории).
+    </p>
+
+    <p class="note">
+      Первая строчка ("/") показывает важную информацию: общее количество загруженных данных и время последней загрузки.
+    </p>
+
+    <p>
+      С помощью галочек вы можете выбрать элементы, над которыми будет производиться действие кнопки в правой части:
+    </p>
+
+    <ol>
+      <li>Загрузка проектов или индивидуальных файлов обратно в локальную директорию проектов.</li>
+      <li>Удаление файлов из «Вердж3Д Нетворк».</li>
+    </ol>
+
+
+    <p><a href="manual/ru/introduction/App-Manager.html#App_Manager_Settings" id="App_Manager_Settings" class="permalink">#</a></p>
+
+    <h2>Настройки менеджера приложений</h2>
+
+    <p>
+      Кликнув на кнопке с шестернёй на левой панели вы откроете диалог настроек менеджера приложений:
+    </p>
+
+    <img src="files/app-manager/app-manager-settings.jpg" style="max-width: 751px">
+
+    <p>
+      Сами настройки выглядят так:
+    </p>
+
+    <img src="files/app-manager/app-manager-settings-panel.png" style="max-width: 615px">
+
+    <h3>Вкладка General</h3>
+
+    <dl>
+      <dt>Applications Folder</dt>
+      <dd>Абсолютный путь (например C:\Users\Alex\my_verge) к директории проектов.</dd>
+
+      <dt>Notify about Verge3D updates</dt>
+      <dd>Показывать уведомление о выходе новых версий «Вердж3Д» (активировано по умолчанию).</dd>
+
+      <dt>Upload app sources (models, puzzles, backups)</dt>
+      <dd>По умолчанию (галочка снята) функция <a href="manual/ru/introduction/App-Manager.html#Publish">публикации</a> не загружает исходные файлы, которые не требуются для запуска приложения. Сюда входят: .blend, .max, .ma/.mb, visual_logic.xml, а также содержимое папки v3d_app_data. Если галочка установлена, исходные файлы также будут загружаться (может пригодиться для обмена данными с заказчиками и коллегами).</dd>
+
+      <dt>Enable external server interface</dt>
+      <dd>Использовать адрес компьютера в локальной сети вместо <a href="http://localhost:8668" target="_blank">localhost:8668</a>. Смотрите здесь чтобы узнать как определяется этот адрес <a href="https://www.groovypost.com/howto/find-windows-10-device-ip-address/" target="_blank">«Виндоус» 10/11</a>, <a href="https://www.groovypost.com/howto/microsoft/windows-7/find-your-local-ip-address-windows-7-cmd/" target="_blank">«Виндоус» 7</a>, <a href="https://www.wikihow.com/Find-Your-IP-Address-on-a-Mac" target="_blank">«МакОС»</a>, <a href="https://www.linuxtrainingacademy.com/determine-public-ip-address-command-line-curl/" target="_blank">«Линукс»</a>. После установки вы сможете запускать менеджер приложений из локальной сети, например с помощью адреса: <a href="http://192.168.1.15:8668" target="_blank">192.168.1.15:8668</a></dd>
+
+      <dt>Verge3D Network cache age (minutes)</dt>
+      <dd>Период обновления кеша «Вердж3Д Нетворк (в минутах). Установите в 0 (убирает кеш) чтобы обновлять данные мгновенно (полезно если вы находитесь в процессе разработки и отладки приложения).</dd>
+    </dl>
+
+    <h3>Вкладка UI</h3>
+
+    <dl>
+      <dt>Select Theme</dt>
+      <dd>Переключить тему менеджера приложений и редактора пазлов: светлая или тёмная.</dd>
+    </dl>
+
+    <h3>Вкладка Templates</h3>
+    <p>Смотрите <a href="manual/ru/introduction/App-Manager.html#Creating_Templates">выше</a>.</p>
+
+    <h3>Вкладка Puzzles</h3>
+
+    <dl>
+      <dt>Enable Performance Mode</dt>
+      <dd>
+        <p>
+          Экспериментальная функция: включить серию оптимизаций скроллинга и зума редактора пазлов. Поведение зависит от используемого браузера, в частности браузеры основанные на «Хромиуме» («Гугл Хром», «Майкрософт Эдж», «Брейв», итд...) получат максимальные оптимизации, тогда как «Файрфокс» и «Сафари» минимальные. Включение данной опции рекомендуется, если вы разрабатываете большие проекты с огромным числом пазлов.
+        </p>
+      </dd>
+    </dl>
+
+
+    <h2>Все еще есть вопросы?</h2>
+
+    <p>Задавайте их на нашем <a href="https://www.soft8soft.com/ru/форумы/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

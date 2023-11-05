@@ -1,0 +1,668 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Вердж3Д для Блендера: Руководство для начинающих — Софт Эйт Софт</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Начните работу с Вердж3Д и узнайте, как создавать трехмерные веб-приложения с нуля. В этом руководстве рассматриваются основы работы в менеджере приложений, настройка и использование Блендера для создания интерактивного ВебГЛ-контента, использование редактора пазлов для добавления интерактивности без программирования, а также публикация приложений в сети Вердж3Д Нетворк.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/blender/Beginners-Guide.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Вердж3Д для Блендера: Руководство для начинающих — Софт Эйт Софт">
+            <meta property="og:description" content="Начните работу с Вердж3Д и узнайте, как создавать трехмерные веб-приложения с нуля. В этом руководстве рассматриваются основы работы в менеджере приложений, настройка и использование Блендера для создания интерактивного ВебГЛ-контента, использование редактора пазлов для добавления интерактивности без программирования, а также публикация приложений в сети Вердж3Д Нетворк.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/blender/Beginners-Guide.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Вердж3Д для Блендера: Руководство для начинающих — Софт Эйт Софт">
+            <meta name="twitter:description" content="Начните работу с Вердж3Д и узнайте, как создавать трехмерные веб-приложения с нуля. В этом руководстве рассматриваются основы работы в менеджере приложений, настройка и использование Блендера для создания интерактивного ВебГЛ-контента, использование редактора пазлов для добавления интерактивности без программирования, а также публикация приложений в сети Вердж3Д Нетворк.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginner_guide/sneak-peek-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-main.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginner_guide/app-manager-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-create.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-create-options.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-app-buttons-run.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-app-running.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-app-buttons-open-source-file.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginner_guide/export-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginner_guide/export-name-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/blender-verge3d-ui-online-manual.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-app-buttons-puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/puzzles-editor.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-toolbox.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/puzzles-when-clicked.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/puzzles-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-run.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginner_guide/puzzles-save.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-app-buttons-network.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/app-manager/app-manager-publish-complete.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/license-key-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-license-activation.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/beginners-guide-blender/app-manager-license-activated.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство&nbsp;«Вердж3Д»</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_Менеджер_приложений">Менеджер приложений</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Пазлы">Пазлы</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Спецификация">Спецификация</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_проекта">Структура проекта</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Установка_обновлений">Установка обновлений</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_Вопрос-ответ">Вопрос-ответ</a></li></ul></div><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_темы_Методы_оптимизации">Методы оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_темы_Компрессия_ассетов">Компрессия ассетов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html" id="Основные_темы_Текстурная_компрессия">Текстурная компрессия</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_темы_Интерфейс_на_основе_ХТМЛ">Интерфейс на основе ХТМЛ</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_темы_Рендеринг_текста">Рендеринг текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_темы_Вирт./доп._реальность">Вирт./доп. реальность</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_темы_Руководство_по_физике">Руководство по физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_темы_Персонализация_приложений">Персонализация приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_темы_«ВордПресс»-плагин">«ВордПресс»-плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_темы_Использование_«ЯваСкрипт»">Использование «ЯваСкрипт»</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_темы_Создание_десктопных_приложений">Создание десктопных приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_темы_Создание_мобильных_приложений">Создание мобильных приложений</a></li><li><a href="manual/ru/introduction/Creating-SCORM-Courses.html" id="Основные_темы_Создание_обучающих_приложений">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_темы_Поиск_проблем_с_производительностью">Поиск проблем с производительностью</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_темы_Исправление_неполадок">Исправление неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_темы_Тестирование_в_мобильных_браузерах">Тестирование в мобильных браузерах</a></li></ul></div><div><h2>Блендер</h2><ul id="Блендер"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Блендер_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Блендер_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Блендер_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Блендер_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/blender/Camera.html" id="Блендер_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Блендер_Обзор_шейдерных_нод">Обзор шейдерных нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Блендер_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Блендер_Ключи_формы_(морфинг)">Ключи формы (морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Блендер_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Блендер_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Блендер_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Блендер_Ограничители">Ограничители</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Блендер_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>3дс Макс</h2><ul id="3дс_Макс"><li><a href="manual/ru/max/Beginners-Guide.html" id="3дс_Макс_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="3дс_Макс_Установка">Установка</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="3дс_Макс_Настройка_вьюпорта">Настройка вьюпорта</a></li><li><a href="manual/ru/max/Material-System.html" id="3дс_Макс_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="3дс_Макс_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/max/Camera.html" id="3дс_Макс_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="3дс_Макс_Материалы_и_текстуры">Материалы и текстуры</a></li><li><a href="manual/ru/max/Animation.html" id="3дс_Макс_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="3дс_Макс_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="3дс_Макс_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="3дс_Макс_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="3дс_Макс_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="3дс_Макс_Анимационные_ограничители">Анимационные ограничители</a></li><li><a href="manual/ru/max/Material-Library.html" id="3дс_Макс_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Майя</h2><ul id="Майя"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Майя_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Майя_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Майя_Материалы_и_текстурные_ноды">Материалы и текстурные ноды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Майя_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/maya/Camera.html" id="Майя_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Майя_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Майя_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Майя_Бленд_шейпы_(морфинг)">Бленд шейпы (морфинг)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Майя_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Майя_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Майя_Ограничители">Ограничители</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Майя_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Пазлы</h2><ul id="Пазлы"><li><a href="manual/ru/puzzles/Initialization.html" id="Пазлы_Инициализация">Инициализация</a></li><li><a href="manual/ru/puzzles/Events.html" id="Пазлы_События">События</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Пазлы_Селекторы">Селекторы</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Пазлы_Объекты">Объекты</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Пазлы_Материалы">Материалы</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Пазлы_Анимация_и_ограничители">Анимация и ограничители</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Пазлы_Камера_и_свет">Камера и свет</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Пазлы_Сцены">Сцены</a></li><li><a href="manual/ru/puzzles/Time.html" id="Пазлы_Время">Время</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Пазлы_ХТМЛ">ХТМЛ</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Пазлы_ВР/ДР">ВР/ДР</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Пазлы_Аудио/видео">Аудио/видео</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Пазлы_Физика">Физика</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Пазлы_Постпроцессинг">Постпроцессинг</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Пазлы_Логические_операции">Логические операции</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Пазлы_Циклы">Циклы</a></li><li><a href="manual/ru/puzzles/Text.html" id="Пазлы_Текст">Текст</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Пазлы_Числа">Числа</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Пазлы_Списки">Списки</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Пазлы_Словари">Словари</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Пазлы_Переменные">Переменные</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Пазлы_Процедуры">Процедуры</a></li><li><a href="manual/ru/puzzles/System.html" id="Пазлы_Системные">Системные</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Пазлы_Продвинутые">Продвинутые</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Пазлы_Электронная_коммерция">Электронная коммерция</a></li><li><a href="manual/ru/puzzles/SCORM.html" id="Пазлы_Электронное_обучение">Электронное обучение</a></li><li><a href="manual/ru/puzzles/Library.html" id="Пазлы_Библиотеки">Библиотеки</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Пазлы_Плагины">Плагины</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="manual/ru/programmers_guide/Terms.html" id="Прочее_Словарь_терминов">Словарь терминов</a></li></ul></div></div>
+        </nav><article>
+    <h1>Руководство для начинающих / Блендер</h1>
+
+    <p>
+      «Вердж3Д для Блендера» — это универсальное программное обеспечение, которое можно использовать по-разному. В данном разделе описан один из вариантов построения рабочего процесса, который мы рекомендуем начинающим пользователям. Для успешной работы в «Вердж3Д» вам потребуются лишь базовые навыки использования программы трёхмерного моделирования «Блендер».
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/blender/Beginners-Guide.html#Installation">Установка</a></li><li><a href="manual/ru/blender/Beginners-Guide.html#Sneak_Peek">Кнопка предпросмотра</a></li><li><a href="manual/ru/blender/Beginners-Guide.html#App_Manager">Менеджер приложений</a></li><li><a href="manual/ru/blender/Beginners-Guide.html#Running_Your_App">Запуск приложения</a></li><li><a href="manual/ru/blender/Beginners-Guide.html#Export">Экспорт</a></li><li><a href="manual/ru/blender/Beginners-Guide.html#Puzzles">Пазлы</a></li><li><a href="manual/ru/blender/Beginners-Guide.html#Publishing">Публикация</a></li><li><a href="manual/ru/blender/Beginners-Guide.html#License_Key">Активация лицензии</a></li><li><a href="manual/ru/blender/Beginners-Guide.html#whats_next">Что дальше?</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/blender/Beginners-Guide.html#Installation" id="Installation" class="permalink">#</a></p>
+
+    <h2>Установка</h2>
+
+    <p>
+      Подробная информация об установке программы находится <a href="manual/ru/blender/Installation.html">в соответствующем разделе</a>.
+    </p>
+
+
+    <p><a href="manual/ru/blender/Beginners-Guide.html#Sneak_Peek" id="Sneak_Peek" class="permalink">#</a></p>
+
+    <h2>Кнопка предпросмотра</h2>
+
+    <p>
+      Чтобы убедиться, что «Вердж3Д» установлен правильно, просмотрите любую 3Д-модель в веб-браузере с помощью кнопки <strong>Sneak Peek</strong>. Эта функция выполнит экспорт во временную папку и запустит штатный веб-браузер с соответствующей визуализацией.
+    </p>
+
+    <img src="files/beginner_guide/sneak-peek-blender.jpg" alt="Кнопка Sneak Peek в Блендере" style="max-width: 951px">
+
+    <p>
+      Вы можете использовать <strong>Sneak Peek</strong> для быстрого предпросмотра сцены на любом этапе работы над проектом.
+    </p>
+
+
+    <p><a href="manual/ru/blender/Beginners-Guide.html#App_Manager" id="App_Manager" class="permalink">#</a></p>
+
+    <h2>Менеджер приложений</h2>
+
+    <p>
+      И хотя вы можете начинать работу над графикой в самом «Блендере», создав соответствующий «Вердж3Д»-проект позже, мы настоятельно рекомендуем вам использовать менеджер приложений. Таким образом вы убедитесь, что ваши файлы правильно организованы и хранятся в одной папке, что важно для поддержания целостности проекта. Это особенно актуально, если вы планируете передавать проект третьим лицам.
+    </p>
+
+    <p>
+      Еще одним преимуществом использования менеджера приложений является то, что у вас всегда будет работающее веб-приложение, которое вы cможете запускать/перезагружать в браузере без необходимости предварительного открытия файлов сцены.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-main.jpg" alt="Главный экран менеджера приложений">
+
+    <p>
+      Менеджер приложений открывается в веб-браузере при нажатии кнопки <strong>App Manager</strong>. Будет запущен системный браузер по умолчанию (вы можете изменить его в настройках вашей операционной системы). Подойдет любой современный браузер, но мы рекомендуем последнюю версию <a href="https://www.google.com/intl/ru/chrome/" target="_blank">«Гугл Хрома»</a>, поскольку он является быстрым, совместимым со стандартами и предлагающим удобные инструменты для веб-разработки.
+    </p>
+
+    <img src="files/beginner_guide/app-manager-blender.jpg" alt="Кнопка запуска менеджера проектов в Блендере" style="max-width: 951px">
+
+    <p>
+      Вы можете создать новый проект, используя кнопку на левой панели.
+    </p>
+
+    <img src="files/app-manager/app-manager-create.jpg" alt="Кнопка создания нового проекта" style="max-width: 569px">
+
+    <p>
+      Введите название проекта (или просто оставьте <i>my_awesome_app</i>) и нажмите <strong>Create App</strong>. Пока не освоитесь, не меняйте другие параметры создаваемого приложения.
+    </p>
+
+    <img src="files/app-manager/app-manager-create-options.jpg" alt="Параметры нового приложения" style="max-width: 522px">
+
+    <p>
+      Как только новое приложение будет создано, оно автоматически появится в списке доступных приложений.
+    </p>
+
+
+    <p><a href="manual/ru/blender/Beginners-Guide.html#Running_Your_App" id="Running_Your_App" class="permalink">#</a></p>
+
+    <h2>Запуск приложения</h2>
+
+    <p>
+      Вы можете запустить приложение щелкнув по синему или зелёному значку с логотипом «Вердж3Д». Синий значок запускает приложение в его полном виде со сценарием пазлов и программным кодом (если они есть). Зеленый значок открывает только экспортированную сцену.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-app-buttons-run.jpg" alt="Кнопки для запуска приложения" style="max-width: 800px">
+
+    <p>
+      После загрузки новое приложение отображает стандартный кубик. Вы можете вращать сцену, удерживая нажатой левую кнопку мыши и изменять масштаб с помощью колесика мыши.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-app-running.jpg" alt="Запуск приложения в браузере" style="max-width: 985px">
+
+    <p class="note">
+      Если вместо куба отображается что-то вроде «This site can’t be reached», это означает, что сервер менеджера проектов не работает, вероятно, из-за того, что вы случайно закрыли первый запущенный экземпляр вашего 3Д-редактора и сервер разработки вместе с ним. В этом случае вам следует запустить «Блендер» или, если программа уже запущена, снова запустить менеджер проектов.
+    </p>
+
+    <p class="note">
+      Хотя это случается очень редко, может отображаться другое предупреждение: «Ouch! Your graphics card does not support WebGL.». Это может произойти, если вы используете устаревший или неподдерживаемый браузер, либо ваша видеокарта и/или драйверы занесены браузером в черный список. Попробуйте установить последнюю версию «Гугл Хрома», обновить операционную систему, загрузить последние версии драйверов либо просто возьмите другой компьютер.
+    </p>
+
+
+
+    <p><a href="manual/ru/blender/Beginners-Guide.html#Export" id="Export" class="permalink">#</a></p>
+
+    <h2>Экспорт</h2>
+
+    <p>
+      Щелкнув по иконке <strong>B</strong>, вы можете открыть основной <strong>.blend</strong>-файл вашего приложения.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-app-buttons-open-source-file.jpg" alt="Кнопка для запуска blend-файла" style="max-width: 800px">
+
+    <p>
+      Файл сцены можно открыть и привычным образом, через меню <strong>File</strong> → <strong>Open</strong> в «Блендере», либо просто дважды щелкнув по соответствующему значку в папке приложения. Вариант с <strong>File</strong> → <strong>Open</strong> может быть более эффективным, поскольку он не запускает новый экземпляр «Блендера».
+    </p>
+
+    <p class="note">
+      Важно понимать, что браузерное приложение загружает только файлы, экспортированные в формате ГЛТФ (.gltf), а не исходные файлы блендеровских сцен. Поэтому каждый раз, когда вы меняете что-то в исходном файле, вы должны делать экспорт, в противном случае вы не увидите изменений в запущенном приложении.
+    </p>
+
+    <p>
+      Экспорт сцены осуществляется с помощью меню <strong>File</strong> → <strong>Export</strong>. В будущем для этой операции стоит назначить горячую клавишу, так как она будет выполняться довольно часто.
+    </p>
+
+    <img src="files/beginner_guide/export-blender.jpg" alt="Экспорт в ГЛТФ в Блендере" style="max-width: 951px">
+
+    <p>
+      Экспортируйте сцену в корень папки приложения в формате ГЛТФ (.gltf).
+    </p>
+
+    <img src="files/beginner_guide/export-name-blender.jpg" alt="Выбор имени файла для экспорта в ГЛТФ" style="max-width: 951px">
+
+    <p>
+      Чтобы проверить, что всё работает как надо, добавьте несколько кубиков или объектов «Сюзанна» в сцену, снова экспортируйте в ГЛТФ и запустите приложение, щелкнув на синюю иконку с логотипом «Вердж3Д» в менеджере приложений.
+    </p>
+
+    <p class="note">
+      Процесс можно ускорить, если всегда держать приложение запущенным в какой-нибудь вкладке браузера.
+      После переэкспорта просто нажмите клавишу F5, чтобы вкладка перезагрузилась.
+      А чтобы быстро переключаться между «Блендером» и браузером, используйте сочетание клавиш "Alt+Tab" ("Command+Tab" на Маке).
+    </p>
+
+    <p>
+      Все параметры и кнопки «Вердж3Д для Блендера» снабжены встроенной справкой, доступной по правой кнопке мыши или горячей клавише F1.
+    </p>
+
+    <img src="files/beginners-guide-blender/blender-verge3d-ui-online-manual.jpg" alt="Справка по Вердж3Д в Блендере" style="max-width: 394px">
+
+
+    <p><a href="manual/ru/blender/Beginners-Guide.html#Puzzles" id="Puzzles" class="permalink">#</a></p>
+
+    <h2>Пазлы</h2>
+
+    <p>
+      До сих пор мы использовали «Вердж3Д» в качестве веб-экспортера, позволяющего просматривать блендеровские сцены в браузере. С помощью <em>пазлов</em>, инструмента визуального программирования «Вердж3Д», вы можете добавлять сценарии поведения, так чтобы ваша сцена стала полноценным интерактивным веб-приложением.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-app-buttons-puzzles.jpg" alt="Кнопка запуска редактора пазлов" style="max-width: 800px">
+
+    <p>
+      Нажмите серо-зелёную кнопку с характерным значком в менеджере приложений. Она запустит нужное приложение внутри редактора пазлов.
+    </p>
+
+    <img src="files/beginners-guide-blender/puzzles-editor.jpg" alt="Редактор блоков визуального программирования">
+
+    <p>
+      Слева расположена панель инструментов с категориями ("Events", "Selectors", "Objects" и т.д.). Категории открываются щелчком мыши, отображая те пазлы, которые вы можете перетащить в рабочую область. Соединяя <a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html">различные пазлы</a> между собой, вы можете определять поведение 3Д-объектов в ответ на те или иные действия пользователя.
+    </p>
+
+    <p>
+      Чтобы узнать что делает тот или иной пазл, наведите курсор мыши, либо вызовите <a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html#right_click_menu_help">соответствующую справку</a>, доступную по правому клику мыши.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-toolbox.jpg" alt="Панель инструментов редактора пазлов">
+
+    <p>
+      Попробуем сделать что-то осмысленное с нашей сценой. Для этого перетащите пазл <strong>when clicked</strong> из категории <strong>Events</strong> и выберите нужный объект в светло-зелёном списке.
+    </p>
+
+    <img src="files/beginners-guide-blender/puzzles-when-clicked.jpg" alt="Добавление пазла when clicked из панели инструментов">
+
+    <p>
+      Данный пазл ждёт когда пользователь кликнет на выбранном объекте и вызывает пазлы находящиеся внутри слота <strong>do</strong> (на данный момент там пусто).
+    </p>
+
+    <p>
+      Теперь возьмите пазл <strong>hide</strong> из категории <strong>Objects</strong> и вставьте его в этот пустой слот. Выберите в списке тот же самый объект — Cube.
+    </p>
+
+    <img src="files/beginners-guide-blender/puzzles-example.jpg" alt="Работа пазлов when clicked и hide">
+
+    <p>
+      Логика работы этих двух пазлов простая — когда пользователь кликает по трёхмерному объекту, он должен исчезать. Нажмите кнопку <strong>Run</strong>, чтобы запустить получившуюся программу и проверьте её работу, для чего щелкните по кубу.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-run.jpg" alt="Кнопка для запуска пазлов">
+
+    <p>
+      Чтобы свежесозданный сценарий сохранился в приложении, обязательно сохраните его.
+    </p>
+
+    <img src="files/beginner_guide/puzzles-save.jpg" alt="Кнопка сохранения пазлов">
+
+    <p>
+      Закончив с пазлами, вы можете запустить само приложение, используя синюю иконку в менеджере проектов. Примите наши поздравления, вы только что стали 3Д-программистом!
+    </p>
+
+    <p>
+      Также посмотрите наше <a href="https://rutube.ru/video/44fe174fab8607083029afdee8e9dcf0/" target="_blank">видео</a>, где мы объясняем работу с пазлами на другом примере.
+    </p>
+
+
+    <p><a href="manual/ru/blender/Beginners-Guide.html#Publishing" id="Publishing" class="permalink">#</a></p>
+
+    <h2>Публикация</h2>
+
+
+    <h3>На собственном сайте...</h3>
+
+    <p>
+      Основное преимущество «Вердж3Д» — то что он создаёт обычные веб-приложения, имеющие потенциальную целевую аудиторию в миллионы (если не миллиарды) пользователей. Если у вас уже есть веб-сайт, задача развёртывания таких приложений упрощается — просто загрузите папку с приложением на свой сервер (например, с использованием протокола ФТП). После этого вы можете разместить ссылку на ХТМЛ-файл приложения где-нибудь на сайте либо встроить его с помощью ХТМЛ-элемента <strong>iframe</strong>:
+    </p>
+
+    <code>
+      &lt;iframe width="1024" height="640" src="https://www.example.com/my_awesome_app/my_awesome_app.html"&gt;&lt;/iframe&gt;
+    </code>
+
+    <h3>С использованием «ВордПресс»...</h3>
+
+    <p>
+      Задача ещё более упрощается, если вы используете систему управления контентом «ВордПресс». Установите наш бесплатный <a href="manual/ru/introduction/Wordpress-Plugin.html">плагин</a>, служащий для загрузки и встраивания «Вердж3Д»-приложений.
+    </p>
+
+    <h3>При помощи «Вердж3Д Нетворк»...</h3>
+
+    <p>
+      Что, если у вас нет сайта и вы не хотите становиться веб-местером? Ничего страшного, нажав одну кнопку в менеджере приложений, вы сможете загрузить программу в <a href="https://www.soft8soft.com/ru/verge3d-network/" target="_blank">«Вердж3Д Нетворк»</a>, облачное хранилище и систему доставки контента, предоставляемые компанией «Софт Эйт Софт».
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-app-buttons-network.jpg" alt="Кнопка для загрузки приложения в Вердж3Д Нетворк" style="max-width: 800px">
+
+    <p>
+      После завершения загрузки высветится окно со ссылкой, которой можно поделиться любым удобным способом (в блоге, социальных сетях, комментариях, электронной почте и т.д.). Там же сгенерируется ХТМЛ-код для встраивания приложения на сторонние веб-сайты, подобно тому как это делается для видеороликов с сайта ЮТуб.
+    </p>
+
+    <img src="files/app-manager/app-manager-publish-complete.jpg" alt="Распространение веб-приложения" style="max-width: 642px">
+
+    <p>
+      Также посмотрите это <a href="https://rutube.ru/video/e433e114d1e28f525e5ba2f8e1668a2b/" target="_blank">видео</a> о публикации приложений с использованием «Вердж3Д Нетворк».
+    </p>
+
+
+    <p><a href="manual/ru/blender/Beginners-Guide.html#License_Key" id="License_Key" class="permalink">#</a></p>
+
+    <h2>Активация лицензии</h2>
+
+    <p>
+      Вы можете тестировать ознакомительную версию «Вердж3Д» сколько угодно. Тем не менее, для создания реальных приложений (как коммерческих так и некоммерческих) вам потребуется <a href="https://www.soft8soft.com/ru/%d0%bb%d0%b8%d1%86%d0%b5%d0%bd%d0%b7%d0%b8%d1%80%d0%be%d0%b2%d0%b0%d0%bd%d0%b8%d0%b5/" target="_blank">приобрести лицензию</a>. После подтверждения оплаты мы вышлем лицензионный ключ вам на почту (не пытайтесь ввести ключ из примера ниже, он не заработает).
+    </p>
+
+    <img src="files/beginners-guide-blender/license-key-example.jpg" alt="Письмо с лицензионным ключом Вердж3Д" style="max-width: 900px">
+
+    <img src="files/beginners-guide-blender/app-manager-license-activation.jpg" alt="Активация лицензии Вердж3Д">
+
+    <p>
+      Лицензионный ключ активирует ваш экземпляр «Вердж3Д» и удалит водяной знак с имеющихся и новых приложений.
+    </p>
+
+    <img src="files/beginners-guide-blender/app-manager-license-activated.jpg" alt="Статус лицензии Вердж3Д" style="max-width: 504px">
+
+
+    <p><a href="manual/ru/blender/Beginners-Guide.html#whats_next" id="whats_next" class="permalink">#</a></p>
+
+    <h2>Что дальше?</h2>
+
+    <p>
+      Перейдите к разделу <a href="manual/ru/introduction/Workflow.html">рабочий процесс</a>, чтобы получить более подробное представление о рабочем процессе, основанном на использовании ПО «Вердж3Д».
+    </p>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задавайте их на нашем <a href="https://www.soft8soft.com/ru/форумы/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

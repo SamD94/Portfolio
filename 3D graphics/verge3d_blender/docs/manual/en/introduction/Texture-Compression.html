@@ -1,0 +1,325 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Verge3D Texture Compression — Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Verge3D supports textures compressed with the KTX2/BasisU compression algorithm. Find out how to enable this feature in your apps.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/introduction/Texture-Compression.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D Texture Compression — Soft8Soft">
+            <meta property="og:description" content="Verge3D supports textures compressed with the KTX2/BasisU compression algorithm. Find out how to enable this feature in your apps.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_en.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/introduction/Texture-Compression.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D Texture Compression — Soft8Soft">
+            <meta name="twitter:description" content="Verge3D supports textures compressed with the KTX2/BasisU compression algorithm. Find out how to enable this feature in your apps.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_en.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/ktx-comparison.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/enable-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/enable-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/enable-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/console-check.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/tweak-blender.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/tweak-max.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/texture-compression/tweak-maya.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/Texture-Compression.html" id="General_Topics_Texture_Compression">Texture Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Creating-SCORM-Courses.html" id="General_Topics_Creating_SCORM_Courses">Creating SCORM Courses</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/en/puzzles/SCORM.html" id="Puzzles_Reference_E-Learning/SCORM">E-Learning/SCORM</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Texture Compression</h1>
+
+    <p>
+      In Verge3D, textures may be compressed using the highly effective KTX2/BasisU compression algorithm, thus significantly reducing GPU memory consumption and improving rendering speed.
+    </p>
+
+    <figure style="max-width: 900px">
+      <img src="files/texture-compression/ktx-comparison.jpg" alt="Comparing JPG/PNG with UASTC and ETC1">
+      <figcaption>Size comparison for a sample lamp model, image courtesy of Khronos® Group.</figcaption>
+    </figure>
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/introduction/Texture-Compression.html#enabling_texture_compression">Enabling Texture Compression</a></li><li><a href="manual/en/introduction/Texture-Compression.html#checking_your_files">Checking Your Files</a></li><li><a href="manual/en/introduction/Texture-Compression.html#tweaking_compression">Tweaking Compression</a></li><li><a href="manual/en/introduction/Texture-Compression.html#compressing_hdr_textures">Special Case - HDR textures</a></li><li><a href="manual/en/introduction/Texture-Compression.html#limitations">Limitations</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/en/introduction/Texture-Compression.html#enabling_texture_compression" id="enabling_texture_compression" class="permalink">#</a></p>
+
+    <h2>Enabling Texture Compression</h2>
+
+    <p>
+      To enable texture compression automatically upon export, you can simply turn on the corresponding option in the export settings.
+    </p>
+
+    <div class="v3d-tabs" style="null"><input type="radio" name="0.5261285621738572" checked="" class="v3d-tab-input" id="0.5261285621738572-0"><label class="v3d-tab-label" for="0.5261285621738572-0">Blender</label><div class="v3d-tab-content">
+        <img src="files/texture-compression/enable-blender.jpg" alt="Enable texture compression in Blender" style="max-width: 320px">
+      </div><input type="radio" name="0.5261285621738572" class="v3d-tab-input" id="0.5261285621738572-1"><label class="v3d-tab-label" for="0.5261285621738572-1">3ds Max</label><div class="v3d-tab-content">
+        <img src="files/texture-compression/enable-max.jpg" alt="Enable texture compression in 3ds Max" style="max-width: 272px">
+      </div><input type="radio" name="0.5261285621738572" class="v3d-tab-input" id="0.5261285621738572-2"><label class="v3d-tab-label" for="0.5261285621738572-2">Maya</label><div class="v3d-tab-content">
+        <img src="files/texture-compression/enable-maya.jpg" alt="Enable texture compression in Maya" style="max-width: 434px">
+      </div></div>
+
+
+    <p><a href="manual/en/introduction/Texture-Compression.html#checking_your_files" id="checking_your_files" class="permalink">#</a></p>
+
+    <h2>Checking Your Files</h2>
+
+    <p>
+      To ensure that your app now actually loads compressed texture, run your app (either from App Manager or from a website where it is deployed). Open the <a href="manual/en/introduction/FAQ.html#browser_console">browser console</a> and switch to the <strong>Network</strong> tab.
+    </p>
+
+    <img src="files/texture-compression/console-check.jpg" alt="Check texture compressing in Chrome console">
+
+    <p>
+      Reload your app so that the console starts displaying files from the beginning. Find the texture files in the list - if everything is ok, they should end with <strong>.ktx2</strong>.
+    </p>
+
+    <p>
+      Alternatively, you can check whether the compressed textures are enabled by using the <a href="manual/en/introduction/Performance-Bottlenecks.html#performance_profile">performance profile</a> feature.
+    </p>
+
+
+    <p><a href="manual/en/introduction/Texture-Compression.html#tweaking_compression" id="tweaking_compression" class="permalink">#</a></p>
+
+    <h2>Tweaking Compression</h2>
+
+    <p>
+      There is an option available for each texture to tweak the compression algorithm:
+    </p>
+
+    <div class="v3d-tabs" style="null"><input type="radio" name="0.6456521311505783" checked="" class="v3d-tab-input" id="0.6456521311505783-0"><label class="v3d-tab-label" for="0.6456521311505783-0">Blender</label><div class="v3d-tab-content">
+        <img src="files/texture-compression/tweak-blender.jpg" alt="Tweaking texture compressing in Blender" style="max-width: 440px">
+      </div><input type="radio" name="0.6456521311505783" class="v3d-tab-input" id="0.6456521311505783-1"><label class="v3d-tab-label" for="0.6456521311505783-1">3ds Max</label><div class="v3d-tab-content">
+        <img src="files/texture-compression/tweak-max.jpg" alt="Tweaking texture compression in 3ds Max" style="max-width: 343px">
+      </div><input type="radio" name="0.6456521311505783" class="v3d-tab-input" id="0.6456521311505783-2"><label class="v3d-tab-label" for="0.6456521311505783-2">Maya</label><div class="v3d-tab-content">
+        <img src="files/texture-compression/tweak-maya.jpg" alt="Tweaking texture compression in Maya" style="max-width: 437px">
+      </div></div>
+
+    <dl>
+      <dt>Auto</dt>
+      <dd>Choose best algorithm automatically. Corresponds to using UASTC in the current implementation.</dd>
+      <dt>UASTC</dt>
+      <dd>modern method which offers best quality. It is good for everything including normal maps, ORM textures, etc.</dd>
+      <dt>ETC1S</dt>
+      <dd>offers best compression and generates smallest files. However, it may cripple textures so you might use it only for non-contrast images (such as grass, wood, bricks, etc).</dd>
+      <dt>Disable</dt>
+      <dd>disable texture compression.</dd>
+    </dl>
+
+
+    <p><a href="manual/en/introduction/Texture-Compression.html#compressing_hdr_textures" id="compressing_hdr_textures" class="permalink">#</a></p>
+
+    <h2>Special Case - HDR textures</h2>
+
+    <p>
+      Besides genuine texture compression, all HDR images are compressed with lossless LZMA (i.e. same method used for glTF files). This makes the HDR files 4x-6x times smaller, although they still occupy the same amount of video memory. This feature is turned off when you set the texture compression setting to <strong>Disabled</strong>.
+    </p>
+
+
+    <p><a href="manual/en/introduction/Texture-Compression.html#limitations" id="limitations" class="permalink">#</a></p>
+
+    <h2>Limitations</h2>
+
+    <p>
+      In general, it's save to enable texture compression for all of your scenes, however you should be aware of some limitations and drawbacks introduced by this feature.
+    </p>
+
+    <h3>Compressing requires more data to load over network</h3>
+
+    <p>
+      As stated in the beginning of this section, texture compression significantly reduces GPU memory consumed by your apps. However, it is not always true for data transferred over network. When using <strong>UASTC</strong> compression algorithm (or <strong>Auto</strong>), the textures can get bigger in some cases. If network bandwidth is a priority, disable texture compression altogether or use the more efficient <strong>ETC1S</strong> algorithm.
+    </p>
+
+    <p>
+      Starting from Verge3D 4.2, we implemented a countermeasure to limit the size of compressed textures. Should the resulting image get more than 3x times larger than the original image, the exporter keeps the original uncompressed image intact.
+    </p>
+
+    <h3>Slower export</h3>
+
+    <p>
+      Compression requires more time to compress your data during export. To save time, you can only enable it at final stages of development.
+    </p>
+
+    <h3>Supported only for JPEG and PNG textures</h3>
+
+    <p>
+      Only JPEG/PNG textures can be converted to KTX2. Textures in other formats (WebP, BMP, etc) are left uncompressed.
+    </p>
+
+    <h3>Not supported for non-power-of-two (NPOT) textures</h3>
+
+    <p>
+      If the exporter detects that you try to compress NPOT textures (which we don't recommend using in your apps anyway), it will fallback to regular non-compressed data and prints a warning in the console of your modelling tool.
+    </p>
+
+    <h3>Not supported for PNG textures with embedded ICC profile</h3>
+
+    <p>
+      PNG images with embedded color profile chunks (ICC aka iCCP) are not supported by the texture compressor. As such, to process such images we strip ICC data entirely before passing them to the compressor. In case of non-standard color profiles (non-sRGB) this might result in somewhat distorted colors.
+    </p>
+
+    <p>
+      If stripping ICC data is not desirable, disable texture compression for the said images or apply color profile using some image editing software (Photoshop, GIMP).
+    </p>
+
+    <h3>Not compatible with AR mode on iOS devices</h3>
+
+    <p>
+      Disable compression if you need to convert your models to USDZ to be shown in AR Quick Look mode on Apple devices. Alternatively, use two separate scenes for AR and non-AR modes or generate USDZ assets statically, e.g by using your modelling suite or model converter. See <a href="manual/en/introduction/AR-VR-development.html#creating_ar_apps_usdz">here</a> for more info.
+    </p>
+
+
+    <h2>Got Questions?</h2>
+
+    <p>Feel free to ask on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on July 24, 2023</div></footer></body></html>

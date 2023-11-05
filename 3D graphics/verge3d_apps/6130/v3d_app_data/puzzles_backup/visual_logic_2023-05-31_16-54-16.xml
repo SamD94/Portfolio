@@ -1,0 +1,403 @@
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <tab name="Init" type="InitTab" active="false" scrollx="20" scrolly="0" scale="0.9"></tab>
+  <tab name="New Tab" type="CommonTab" active="true" scrollx="265.48351003809853" scrolly="-481.7433211889134" scale="0.7447604979250421">
+    <block xmlns="https://developers.google.com/blockly/xml" type="setTimer" id="ZIR|--7O=7zLwJ7,sKYO" x="50" y="130">
+      <value name="ID">
+        <shadow type="text" id="@Xn#Th^CGZ!!L2f..Y9w">
+          <field name="TEXT">autoRotate</field>
+        </shadow>
+      </value>
+      <value name="VALUE">
+        <shadow type="math_number" id="$|%}:`z^`TQJ%QdKb#f1">
+          <field name="NUM">5</field>
+        </shadow>
+      </value>
+      <value name="REPEAT">
+        <shadow type="math_number" id="582j4WjiD{hK;O9qjb{z">
+          <field name="NUM">Infinity</field>
+        </shadow>
+      </value>
+      <statement name="DO">
+        <block type="autoRotateCamera" id="cD/Fr(c4q[?_Fu(BSKGo">
+          <field name="ON_OFF">ON</field>
+          <value name="SPEED">
+            <shadow type="math_number" id="UZAwD]T]l#nOFG)HD]=8">
+              <field name="NUM">-2</field>
+            </shadow>
+          </value>
+        </block>
+      </statement>
+      <next>
+        <block type="whenClicked" id="g0Z@L]:bl9HAz~ph_0eM" inline="false">
+          <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+          <field name="X_RAY">FALSE</field>
+          <field name="DOUBLE_CLICK">FALSE</field>
+          <field name="LEFT_BUTTON">TRUE</field>
+          <field name="MIDDLE_BUTTON">TRUE</field>
+          <field name="RIGHT_BUTTON">TRUE</field>
+          <value name="VALUE">
+            <shadow type="objectList" id="Phfcf,mx-L_-c7y)t|2]">
+              <field name="FIELDNAME">&lt;none&gt;</field>
+            </shadow>
+            <block type="allObjectList" id="1KT=@c2mfajU,e|I*$|d"></block>
+          </value>
+          <statement name="DO">
+            <block type="autoRotateCamera" id="+]Df|Owff,Bk?BfEL@zJ">
+              <field name="ON_OFF">OFF</field>
+              <value name="SPEED">
+                <shadow type="math_number" id="o)8,;lrPpcCQpT^zbi2b">
+                  <field name="NUM">0</field>
+                </shadow>
+              </value>
+              <next>
+                <block type="setTimer" id="cKf03DRPXZS-!8Z8S5t+">
+                  <value name="ID">
+                    <shadow type="text" id="Ae64QwI]B{NT7U@.}p(l">
+                      <field name="TEXT">autoRotate</field>
+                    </shadow>
+                  </value>
+                  <value name="VALUE">
+                    <shadow type="math_number" id="bHU}s?JC-SvrfizJRtC:">
+                      <field name="NUM">5</field>
+                    </shadow>
+                  </value>
+                  <value name="REPEAT">
+                    <shadow type="math_number" id="]Cws:^B)axPX~4=0Dd*%">
+                      <field name="NUM">Infinity</field>
+                    </shadow>
+                  </value>
+                  <statement name="DO">
+                    <block type="autoRotateCamera" id="{*R3al]u/Gy~@%nW*yum">
+                      <field name="ON_OFF">ON</field>
+                      <value name="SPEED">
+                        <shadow type="math_number" id=":{@|38!lrsXL5S+G.+_w">
+                          <field name="NUM">-2</field>
+                        </shadow>
+                      </value>
+                    </block>
+                  </statement>
+                </block>
+              </next>
+            </block>
+          </statement>
+          <next>
+            <block type="whenClicked" id="rP@aa#TRvyS5r=jdVUg6" inline="false">
+              <mutation xmlns="http://www.w3.org/1999/xhtml" adveventoptions="false" enableifmissed="false"></mutation>
+              <field name="X_RAY">FALSE</field>
+              <field name="DOUBLE_CLICK">FALSE</field>
+              <field name="LEFT_BUTTON">TRUE</field>
+              <field name="MIDDLE_BUTTON">TRUE</field>
+              <field name="RIGHT_BUTTON">TRUE</field>
+              <value name="VALUE">
+                <shadow type="objectList" id="|9?3,}H6,x8S)r_1wKzi">
+                  <field name="FIELDNAME">&lt;none&gt;</field>
+                </shadow>
+                <block type="groupList" id="%3P0eY,Q_8bfZ5OYw%x/">
+                  <field name="FIELDNAME">Collection</field>
+                </block>
+              </value>
+              <statement name="DO">
+                <block type="pauseAnimation" id="e!ylYYq/$A7x;+a0_zRv">
+                  <value name="VALUE">
+                    <shadow type="animationList" id="k2uu*BrOxvS%dM~3Jyf4">
+                      <field name="FIELDNAME">Battery</field>
+                    </shadow>
+                  </value>
+                  <next>
+                    <block type="pauseAnimation" id="Q3Q[%?Aq,s=UpwJA!za;">
+                      <value name="VALUE">
+                        <shadow type="animationList" id="vce5tXit;Ot*X}x7v}pW">
+                          <field name="FIELDNAME">Battery bridle</field>
+                        </shadow>
+                      </value>
+                      <next>
+                        <block type="pauseAnimation" id="qzB9ACo}b);mA#y=cjGo">
+                          <value name="VALUE">
+                            <shadow type="animationList" id="6hP+hN!#eKh:HM|q0P0F">
+                              <field name="FIELDNAME">Battery holder</field>
+                            </shadow>
+                          </value>
+                          <next>
+                            <block type="pauseAnimation" id="L~}Oq(]N5bBPJ$@ikSg3">
+                              <value name="VALUE">
+                                <shadow type="animationList" id="$d@Jd.+dOO*+e=zKnJVz">
+                                  <field name="FIELDNAME">Bridle screw</field>
+                                </shadow>
+                              </value>
+                              <next>
+                                <block type="pauseAnimation" id="gC:)OB+g%m8;g.D_)$sI">
+                                  <value name="VALUE">
+                                    <shadow type="animationList" id="u4l!}8y(OZ6^?|{nS7Ik">
+                                      <field name="FIELDNAME">Bridle screw.001</field>
+                                    </shadow>
+                                  </value>
+                                  <next>
+                                    <block type="pauseAnimation" id="Max3mG:=3KkLuJG0IQ*c">
+                                      <value name="VALUE">
+                                        <shadow type="animationList" id="GiR2$!dRv%RG)],;spuF">
+                                          <field name="FIELDNAME">Bridle screw.002</field>
+                                        </shadow>
+                                      </value>
+                                      <next>
+                                        <block type="pauseAnimation" id="Y1|a.?uS(Xn)uU@%rPpG">
+                                          <value name="VALUE">
+                                            <shadow type="animationList" id="NRkVKR,x#SyeicZi.8LV">
+                                              <field name="FIELDNAME">Bridle screw.003</field>
+                                            </shadow>
+                                          </value>
+                                          <next>
+                                            <block type="pauseAnimation" id=")I9fartkG,z:xj?J{;]w">
+                                              <value name="VALUE">
+                                                <shadow type="animationList" id="SjVSRe2y5m}woCub}H%d">
+                                                  <field name="FIELDNAME">Cannon pinion assembly</field>
+                                                </shadow>
+                                              </value>
+                                              <next>
+                                                <block type="pauseAnimation" id="6Zzt3Z1oH*7hM7-gcRxb">
+                                                  <value name="VALUE">
+                                                    <shadow type="animationList" id="=@8[-JY;q[y$RW|0DH5w">
+                                                      <field name="FIELDNAME">Center bridge assembly</field>
+                                                    </shadow>
+                                                  </value>
+                                                  <next>
+                                                    <block type="pauseAnimation" id="g)w_zZ(-hUKYbbQM,Q_,">
+                                                      <value name="VALUE">
+                                                        <shadow type="animationList" id="8gfD(.D@4E@gH;OmVYGA">
+                                                          <field name="FIELDNAME">Center second stop lever</field>
+                                                        </shadow>
+                                                      </value>
+                                                      <next>
+                                                        <block type="pauseAnimation" id="Q{cp,^gY$*gp)Iq^(fPW">
+                                                          <value name="VALUE">
+                                                            <shadow type="animationList" id="8#kPL#z/#sUjhzB?K7zC">
+                                                              <field name="FIELDNAME">Clutch assembly</field>
+                                                            </shadow>
+                                                          </value>
+                                                          <next>
+                                                            <block type="pauseAnimation" id="5t(^]JHec@z2fJQ~zBKf">
+                                                              <value name="VALUE">
+                                                                <shadow type="animationList" id="i]C;ru(0gCkvLMf{Dc;,">
+                                                                  <field name="FIELDNAME">Clutch screw</field>
+                                                                </shadow>
+                                                              </value>
+                                                              <next>
+                                                                <block type="pauseAnimation" id="hunu$8~oAih_6uc;[x)z">
+                                                                  <value name="VALUE">
+                                                                    <shadow type="animationList" id="bj$eZF:NZ[qV+|*bFkr8">
+                                                                      <field name="FIELDNAME">Coil assembly</field>
+                                                                    </shadow>
+                                                                  </value>
+                                                                  <next>
+                                                                    <block type="pauseAnimation" id="S?Q^sYW1UVy7Z2fOIb2Q">
+                                                                      <value name="VALUE">
+                                                                        <shadow type="animationList" id="WCCr`}Zkbvb$pff3#AhQ">
+                                                                          <field name="FIELDNAME">Coil guard</field>
+                                                                        </shadow>
+                                                                      </value>
+                                                                      <next>
+                                                                        <block type="pauseAnimation" id="R#/cT_^Ovwonog`7XSu}">
+                                                                          <value name="VALUE">
+                                                                            <shadow type="animationList" id="4+Aq-je4fnJ2ASaf$P_Q">
+                                                                              <field name="FIELDNAME">CSSL screw</field>
+                                                                            </shadow>
+                                                                          </value>
+                                                                          <next>
+                                                                            <block type="pauseAnimation" id="{P[H`[)rwOb{;qcjA!7Q">
+                                                                              <value name="VALUE">
+                                                                                <shadow type="animationList" id="NVXMb$1XA(t*LSdU%(|C">
+                                                                                  <field name="FIELDNAME">ECB assembly</field>
+                                                                                </shadow>
+                                                                              </value>
+                                                                              <next>
+                                                                                <block type="pauseAnimation" id="9PQX+.Xw!j6BSin%+5((">
+                                                                                  <value name="VALUE">
+                                                                                    <shadow type="animationList" id="/XjUJ?pjT{ii@bESsu?r">
+                                                                                      <field name="FIELDNAME">EM screw</field>
+                                                                                    </shadow>
+                                                                                  </value>
+                                                                                  <next>
+                                                                                    <block type="pauseAnimation" id="78a^e#TAS_PM.u@,m$G;">
+                                                                                      <value name="VALUE">
+                                                                                        <shadow type="animationList" id="9-Wo_V8SDH|kYj700,bY">
+                                                                                          <field name="FIELDNAME">EM screw001</field>
+                                                                                        </shadow>
+                                                                                      </value>
+                                                                                      <next>
+                                                                                        <block type="pauseAnimation" id="3OQz8n*Z],T-x*sEqPYT">
+                                                                                          <value name="VALUE">
+                                                                                            <shadow type="animationList" id="-oETZq*1FZmR|awFmbV8">
+                                                                                              <field name="FIELDNAME">Empty</field>
+                                                                                            </shadow>
+                                                                                          </value>
+                                                                                          <next>
+                                                                                            <block type="pauseAnimation" id="()G}e2ZMri=t?99[l$4i">
+                                                                                              <value name="VALUE">
+                                                                                                <shadow type="animationList" id=",f]%s0cW4#w~0Wlq!AL=">
+                                                                                                  <field name="FIELDNAME">Hour wheel</field>
+                                                                                                </shadow>
+                                                                                              </value>
+                                                                                              <next>
+                                                                                                <block type="pauseAnimation" id="gFTyT~.;t8N@G#;EQ)gM">
+                                                                                                  <value name="VALUE">
+                                                                                                    <shadow type="animationList" id="s+h)W`f]kZC2fu0q?vN3">
+                                                                                                      <field name="FIELDNAME">Int. wheel assembly</field>
+                                                                                                    </shadow>
+                                                                                                  </value>
+                                                                                                  <next>
+                                                                                                    <block type="pauseAnimation" id="H)aRd!*{x_vgSr{F#V67">
+                                                                                                      <value name="VALUE">
+                                                                                                        <shadow type="animationList" id="JFmb.1tQX?yY.zi{/T(W">
+                                                                                                          <field name="FIELDNAME">Metal block assy.</field>
+                                                                                                        </shadow>
+                                                                                                      </value>
+                                                                                                      <next>
+                                                                                                        <block type="pauseAnimation" id="EBUwIH^=[|i,hw],$7)[">
+                                                                                                          <value name="VALUE">
+                                                                                                            <shadow type="animationList" id="l#Gjb6-u~6MdI8wAG%,V">
+                                                                                                              <field name="FIELDNAME">Minute wheel assembly</field>
+                                                                                                            </shadow>
+                                                                                                          </value>
+                                                                                                          <next>
+                                                                                                            <block type="pauseAnimation" id="fF(YOW.f-8EFSC[5Td($">
+                                                                                                              <value name="VALUE">
+                                                                                                                <shadow type="animationList" id="5lHW`[f@hVn^wIT5hjsX">
+                                                                                                                  <field name="FIELDNAME">Rotor assembly</field>
+                                                                                                                </shadow>
+                                                                                                              </value>
+                                                                                                              <next>
+                                                                                                                <block type="pauseAnimation" id="T$1$FGeaHd3Z8VsZb2fx">
+                                                                                                                  <value name="VALUE">
+                                                                                                                    <shadow type="animationList" id="RoAkwZCcYzTM0^)[wevC">
+                                                                                                                      <field name="FIELDNAME">Second wheel assembly</field>
+                                                                                                                    </shadow>
+                                                                                                                  </value>
+                                                                                                                  <next>
+                                                                                                                    <block type="pauseAnimation" id="Ms(WDngzmL?~,!v[a2VO">
+                                                                                                                      <value name="VALUE">
+                                                                                                                        <shadow type="animationList" id="?rj3gk?-%Id?{g]BRto=">
+                                                                                                                          <field name="FIELDNAME">Stator</field>
+                                                                                                                        </shadow>
+                                                                                                                      </value>
+                                                                                                                      <next>
+                                                                                                                        <block type="pauseAnimation" id="3Q@R3Vu*xR|za@}I{dn3">
+                                                                                                                          <value name="VALUE">
+                                                                                                                            <shadow type="animationList" id="jN9]kW8GulBC#_~0u^fT">
+                                                                                                                              <field name="FIELDNAME">Stem</field>
+                                                                                                                            </shadow>
+                                                                                                                          </value>
+                                                                                                                          <next>
+                                                                                                                            <block type="pauseAnimation" id="BzEpv}Oi;m(_GmA!re~a">
+                                                                                                                              <value name="VALUE">
+                                                                                                                                <shadow type="animationList" id="=0@1,#ozLqTnf.4(Z5}J">
+                                                                                                                                  <field name="FIELDNAME">Stem crown wheel</field>
+                                                                                                                                </shadow>
+                                                                                                                              </value>
+                                                                                                                              <next>
+                                                                                                                                <block type="pauseAnimation" id="ZfH=Rc4k$#be5NL@Y593">
+                                                                                                                                  <value name="VALUE">
+                                                                                                                                    <shadow type="animationList" id="2EV59C3x=Z3B~fYJMKSI">
+                                                                                                                                      <field name="FIELDNAME">Stem locking lever</field>
+                                                                                                                                    </shadow>
+                                                                                                                                  </value>
+                                                                                                                                  <next>
+                                                                                                                                    <block type="pauseAnimation" id="F-+{5q$MhPq2D3FFo^5D">
+                                                                                                                                      <value name="VALUE">
+                                                                                                                                        <shadow type="animationList" id="(;NZ)UbJB2K7wFe]StFw">
+                                                                                                                                          <field name="FIELDNAME">Stem locking pegs</field>
+                                                                                                                                        </shadow>
+                                                                                                                                      </value>
+                                                                                                                                      <next>
+                                                                                                                                        <block type="pauseAnimation" id="9gX1r|p_9w1U4LbFqXUr">
+                                                                                                                                          <value name="VALUE">
+                                                                                                                                            <shadow type="animationList" id="!j?=G0TJ)u~L=l$MDvAe">
+                                                                                                                                              <field name="FIELDNAME">Third wheel assembly</field>
+                                                                                                                                            </shadow>
+                                                                                                                                          </value>
+                                                                                                                                          <next>
+                                                                                                                                            <block type="pauseAnimation" id=":Po|kP2i[-rlmEu?A.VX">
+                                                                                                                                              <value name="VALUE">
+                                                                                                                                                <shadow type="animationList" id="#$Nf}dQ8dnRA=.[w1jr5">
+                                                                                                                                                  <field name="FIELDNAME">Train Wheel Bridge Assembly</field>
+                                                                                                                                                </shadow>
+                                                                                                                                              </value>
+                                                                                                                                              <next>
+                                                                                                                                                <block type="pauseAnimation" id="?_TDVY7`?sZ$Xh7Boq,g">
+                                                                                                                                                  <value name="VALUE">
+                                                                                                                                                    <shadow type="animationList" id="Ndit8_Cb~Krt$m;vJyj;">
+                                                                                                                                                      <field name="FIELDNAME">TWB banking</field>
+                                                                                                                                                    </shadow>
+                                                                                                                                                  </value>
+                                                                                                                                                </block>
+                                                                                                                                              </next>
+                                                                                                                                            </block>
+                                                                                                                                          </next>
+                                                                                                                                        </block>
+                                                                                                                                      </next>
+                                                                                                                                    </block>
+                                                                                                                                  </next>
+                                                                                                                                </block>
+                                                                                                                              </next>
+                                                                                                                            </block>
+                                                                                                                          </next>
+                                                                                                                        </block>
+                                                                                                                      </next>
+                                                                                                                    </block>
+                                                                                                                  </next>
+                                                                                                                </block>
+                                                                                                              </next>
+                                                                                                            </block>
+                                                                                                          </next>
+                                                                                                        </block>
+                                                                                                      </next>
+                                                                                                    </block>
+                                                                                                  </next>
+                                                                                                </block>
+                                                                                              </next>
+                                                                                            </block>
+                                                                                          </next>
+                                                                                        </block>
+                                                                                      </next>
+                                                                                    </block>
+                                                                                  </next>
+                                                                                </block>
+                                                                              </next>
+                                                                            </block>
+                                                                          </next>
+                                                                        </block>
+                                                                      </next>
+                                                                    </block>
+                                                                  </next>
+                                                                </block>
+                                                              </next>
+                                                            </block>
+                                                          </next>
+                                                        </block>
+                                                      </next>
+                                                    </block>
+                                                  </next>
+                                                </block>
+                                              </next>
+                                            </block>
+                                          </next>
+                                        </block>
+                                      </next>
+                                    </block>
+                                  </next>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </statement>
+            </block>
+          </next>
+        </block>
+      </next>
+    </block>
+  </tab>
+  <editorsettings viewport-x="846" viewport-y="37" viewport-w="576" viewport-h="369" viewport-hidden="false" toolbox-library-mode="false" toolbox-minimized-mode="false"></editorsettings>
+</xml>

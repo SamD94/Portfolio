@@ -1,0 +1,1595 @@
+{
+	"artifacts" : 
+	[
+		{
+			"path" : "Release${EFFECTIVE_PLATFORM_NAME}/notepadTut.app/notepadTut"
+		}
+	],
+	"backtrace" : 4,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_executable",
+			"_qt_internal_create_executable",
+			"qt6_add_executable",
+			"qt_add_executable",
+			"install",
+			"target_link_libraries",
+			"set_target_properties",
+			"include",
+			"find_package",
+			"find_dependency",
+			"_qt_internal_find_qt_dependencies",
+			"__qt_internal_include_plugin_packages",
+			"__qt_internal_apply_plugin_imports_finalizer_mode",
+			"_qt_internal_finalize_executable",
+			"qt6_finalize_target",
+			"qt_finalize_executable",
+			"qt_find_package_system_or_bundled",
+			"_qt_internal_find_third_party_dependencies",
+			"target_sources",
+			"_qt_internal_handle_ios_launch_screen",
+			"_qt_internal_finalize_ios_app"
+		],
+		"files" : 
+		[
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"CMakeLists.txt",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
+			"/Applications/Qt/Tools/CMake/CMake.app/Contents/share/cmake-3.24/Modules/CMakeFindDependencyMacro.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Charts/Qt6ChartsDependencies.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Charts/Qt6ChartsConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlDependencies.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6ChartsQml/Qt6ChartsQmlConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Dependencies.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Qml/QmlPlugins/Qt6qtchartsqml2Config.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Qml/Qt6QmlPlugins.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Qml/Qt6QmlConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6VirtualKeyboard/Qt6VirtualKeyboardDependencies.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6VirtualKeyboard/Qt6VirtualKeyboardConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginDependencies.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QVirtualKeyboardPluginConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/QtPublicPluginHelpers.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6GuiPlugins.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/Qt6Config.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6GuiTargets.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QIOSIntegrationPluginTargets.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QIOSIntegrationPluginConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6OpenGL/Qt6OpenGLTargets.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6OpenGL/Qt6OpenGLConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QIOSIntegrationPluginDependencies.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/QtFindWrapHelper.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/FindWrapJpeg.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QJpegPluginDependencies.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Pdf/Qt6PdfTargets.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Pdf/Qt6PdfConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QPdfPluginDependencies.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QPdfPluginConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Network/Qt6NetworkVersionlessTargets.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Network/Qt6NetworkConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Pdf/Qt6PdfDependencies.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Network/Qt6NetworkTargets.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QSvgIconPluginConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QMacHeifPluginTargets.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6QMacHeifPluginConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Core/Qt6CoreTargets.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Core/Qt6CoreConfig.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/FindWrapPCRE2.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Core/Qt6CoreDependencies.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/FindGLESv2.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/FindWrapHarfbuzz.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/FindWrapFreetype.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/FindWrapPNG.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/FindWrapSystemZLIB.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/FindWrapZLIB.cmake",
+			"/Applications/Qt/6.6.0/ios/lib/cmake/Qt6/QtPublicAppleHelpers.cmake"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 1
+			},
+			{
+				"command" : 3,
+				"file" : 1,
+				"line" : 23,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 770,
+				"parent" : 1
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 557,
+				"parent" : 2
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 596,
+				"parent" : 3
+			},
+			{
+				"command" : 4,
+				"file" : 1,
+				"line" : 55,
+				"parent" : 0
+			},
+			{
+				"command" : 5,
+				"file" : 0,
+				"line" : 558,
+				"parent" : 2
+			},
+			{
+				"command" : 8,
+				"file" : 1,
+				"line" : 13,
+				"parent" : 0
+			},
+			{
+				"file" : 22,
+				"parent" : 7
+			},
+			{
+				"command" : 8,
+				"file" : 22,
+				"line" : 157,
+				"parent" : 8
+			},
+			{
+				"file" : 3,
+				"parent" : 9
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 40,
+				"parent" : 10
+			},
+			{
+				"file" : 21,
+				"parent" : 11
+			},
+			{
+				"command" : 10,
+				"file" : 21,
+				"line" : 39,
+				"parent" : 12
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 111,
+				"parent" : 13
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 14
+			},
+			{
+				"file" : 20,
+				"parent" : 15
+			},
+			{
+				"command" : 7,
+				"file" : 20,
+				"line" : 125,
+				"parent" : 16
+			},
+			{
+				"file" : 19,
+				"parent" : 17
+			},
+			{
+				"command" : 11,
+				"file" : 19,
+				"line" : 5,
+				"parent" : 18
+			},
+			{
+				"command" : 7,
+				"file" : 18,
+				"line" : 518,
+				"parent" : 19
+			},
+			{
+				"file" : 17,
+				"parent" : 20
+			},
+			{
+				"command" : 7,
+				"file" : 17,
+				"line" : 48,
+				"parent" : 21
+			},
+			{
+				"file" : 16,
+				"parent" : 22
+			},
+			{
+				"command" : 10,
+				"file" : 16,
+				"line" : 15,
+				"parent" : 23
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 111,
+				"parent" : 24
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 25
+			},
+			{
+				"file" : 15,
+				"parent" : 26
+			},
+			{
+				"command" : 7,
+				"file" : 15,
+				"line" : 40,
+				"parent" : 27
+			},
+			{
+				"file" : 14,
+				"parent" : 28
+			},
+			{
+				"command" : 10,
+				"file" : 14,
+				"line" : 39,
+				"parent" : 29
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 111,
+				"parent" : 30
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 31
+			},
+			{
+				"file" : 13,
+				"parent" : 32
+			},
+			{
+				"command" : 7,
+				"file" : 13,
+				"line" : 126,
+				"parent" : 33
+			},
+			{
+				"file" : 12,
+				"parent" : 34
+			},
+			{
+				"command" : 7,
+				"file" : 12,
+				"line" : 18,
+				"parent" : 35
+			},
+			{
+				"file" : 11,
+				"parent" : 36
+			},
+			{
+				"command" : 7,
+				"file" : 11,
+				"line" : 48,
+				"parent" : 37
+			},
+			{
+				"file" : 10,
+				"parent" : 38
+			},
+			{
+				"command" : 10,
+				"file" : 10,
+				"line" : 15,
+				"parent" : 39
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 111,
+				"parent" : 40
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 41
+			},
+			{
+				"file" : 9,
+				"parent" : 42
+			},
+			{
+				"command" : 7,
+				"file" : 9,
+				"line" : 40,
+				"parent" : 43
+			},
+			{
+				"file" : 8,
+				"parent" : 44
+			},
+			{
+				"command" : 10,
+				"file" : 8,
+				"line" : 39,
+				"parent" : 45
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 111,
+				"parent" : 46
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 47
+			},
+			{
+				"file" : 7,
+				"parent" : 48
+			},
+			{
+				"command" : 7,
+				"file" : 7,
+				"line" : 40,
+				"parent" : 49
+			},
+			{
+				"file" : 6,
+				"parent" : 50
+			},
+			{
+				"command" : 10,
+				"file" : 6,
+				"line" : 39,
+				"parent" : 51
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 111,
+				"parent" : 52
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 53
+			},
+			{
+				"file" : 3,
+				"parent" : 54
+			},
+			{
+				"command" : 7,
+				"file" : 3,
+				"line" : 52,
+				"parent" : 55
+			},
+			{
+				"file" : 2,
+				"parent" : 56
+			},
+			{
+				"command" : 6,
+				"file" : 2,
+				"line" : 61,
+				"parent" : 57
+			},
+			{
+				"command" : 7,
+				"file" : 20,
+				"line" : 52,
+				"parent" : 16
+			},
+			{
+				"file" : 23,
+				"parent" : 59
+			},
+			{
+				"command" : 6,
+				"file" : 23,
+				"line" : 61,
+				"parent" : 60
+			},
+			{
+				"command" : 5,
+				"file" : 1,
+				"line" : 45,
+				"parent" : 0
+			},
+			{
+				"command" : 15,
+				"file" : 1,
+				"line" : 62,
+				"parent" : 0
+			},
+			{
+				"command" : 14,
+				"file" : 0,
+				"line" : 778,
+				"parent" : 63
+			},
+			{
+				"command" : 13,
+				"file" : 0,
+				"line" : 738,
+				"parent" : 64
+			},
+			{
+				"command" : 12,
+				"file" : 0,
+				"line" : 666,
+				"parent" : 65
+			},
+			{
+				"command" : 5,
+				"file" : 18,
+				"line" : 486,
+				"parent" : 66
+			},
+			{
+				"command" : 7,
+				"file" : 18,
+				"line" : 518,
+				"parent" : 19
+			},
+			{
+				"file" : 25,
+				"parent" : 68
+			},
+			{
+				"command" : 7,
+				"file" : 25,
+				"line" : 51,
+				"parent" : 69
+			},
+			{
+				"file" : 24,
+				"parent" : 70
+			},
+			{
+				"command" : 6,
+				"file" : 24,
+				"line" : 61,
+				"parent" : 71
+			},
+			{
+				"command" : 7,
+				"file" : 25,
+				"line" : 48,
+				"parent" : 69
+			},
+			{
+				"file" : 28,
+				"parent" : 73
+			},
+			{
+				"command" : 10,
+				"file" : 28,
+				"line" : 15,
+				"parent" : 74
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 111,
+				"parent" : 75
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 76
+			},
+			{
+				"file" : 27,
+				"parent" : 77
+			},
+			{
+				"command" : 7,
+				"file" : 27,
+				"line" : 52,
+				"parent" : 78
+			},
+			{
+				"file" : 26,
+				"parent" : 79
+			},
+			{
+				"command" : 6,
+				"file" : 26,
+				"line" : 83,
+				"parent" : 80
+			},
+			{
+				"command" : 7,
+				"file" : 18,
+				"line" : 518,
+				"parent" : 19
+			},
+			{
+				"file" : 32,
+				"parent" : 82
+			},
+			{
+				"command" : 7,
+				"file" : 32,
+				"line" : 48,
+				"parent" : 83
+			},
+			{
+				"file" : 31,
+				"parent" : 84
+			},
+			{
+				"command" : 17,
+				"file" : 31,
+				"line" : 5,
+				"parent" : 85
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 36,
+				"parent" : 86
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 87
+			},
+			{
+				"file" : 30,
+				"parent" : 88
+			},
+			{
+				"command" : 16,
+				"file" : 30,
+				"line" : 6,
+				"parent" : 89
+			},
+			{
+				"command" : 5,
+				"file" : 29,
+				"line" : 76,
+				"parent" : 90
+			},
+			{
+				"command" : 7,
+				"file" : 18,
+				"line" : 518,
+				"parent" : 19
+			},
+			{
+				"file" : 36,
+				"parent" : 92
+			},
+			{
+				"command" : 7,
+				"file" : 36,
+				"line" : 48,
+				"parent" : 93
+			},
+			{
+				"file" : 35,
+				"parent" : 94
+			},
+			{
+				"command" : 10,
+				"file" : 35,
+				"line" : 15,
+				"parent" : 95
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 111,
+				"parent" : 96
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 97
+			},
+			{
+				"file" : 34,
+				"parent" : 98
+			},
+			{
+				"command" : 7,
+				"file" : 34,
+				"line" : 52,
+				"parent" : 99
+			},
+			{
+				"file" : 33,
+				"parent" : 100
+			},
+			{
+				"command" : 6,
+				"file" : 33,
+				"line" : 90,
+				"parent" : 101
+			},
+			{
+				"command" : 7,
+				"file" : 34,
+				"line" : 40,
+				"parent" : 99
+			},
+			{
+				"file" : 39,
+				"parent" : 103
+			},
+			{
+				"command" : 10,
+				"file" : 39,
+				"line" : 39,
+				"parent" : 104
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 111,
+				"parent" : 105
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 106
+			},
+			{
+				"file" : 38,
+				"parent" : 107
+			},
+			{
+				"command" : 7,
+				"file" : 38,
+				"line" : 57,
+				"parent" : 108
+			},
+			{
+				"file" : 37,
+				"parent" : 109
+			},
+			{
+				"command" : 6,
+				"file" : 37,
+				"line" : 61,
+				"parent" : 110
+			},
+			{
+				"command" : 7,
+				"file" : 38,
+				"line" : 52,
+				"parent" : 108
+			},
+			{
+				"file" : 40,
+				"parent" : 112
+			},
+			{
+				"command" : 6,
+				"file" : 40,
+				"line" : 61,
+				"parent" : 113
+			},
+			{
+				"command" : 7,
+				"file" : 18,
+				"line" : 518,
+				"parent" : 19
+			},
+			{
+				"file" : 42,
+				"parent" : 115
+			},
+			{
+				"command" : 7,
+				"file" : 42,
+				"line" : 51,
+				"parent" : 116
+			},
+			{
+				"file" : 41,
+				"parent" : 117
+			},
+			{
+				"command" : 6,
+				"file" : 41,
+				"line" : 61,
+				"parent" : 118
+			},
+			{
+				"command" : 7,
+				"file" : 18,
+				"line" : 518,
+				"parent" : 19
+			},
+			{
+				"file" : 44,
+				"parent" : 120
+			},
+			{
+				"command" : 7,
+				"file" : 44,
+				"line" : 51,
+				"parent" : 121
+			},
+			{
+				"file" : 43,
+				"parent" : 122
+			},
+			{
+				"command" : 6,
+				"file" : 43,
+				"line" : 61,
+				"parent" : 123
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 111,
+				"parent" : 13
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 125
+			},
+			{
+				"file" : 46,
+				"parent" : 126
+			},
+			{
+				"command" : 7,
+				"file" : 46,
+				"line" : 53,
+				"parent" : 127
+			},
+			{
+				"file" : 45,
+				"parent" : 128
+			},
+			{
+				"command" : 6,
+				"file" : 45,
+				"line" : 61,
+				"parent" : 129
+			},
+			{
+				"command" : 7,
+				"file" : 46,
+				"line" : 41,
+				"parent" : 127
+			},
+			{
+				"file" : 48,
+				"parent" : 131
+			},
+			{
+				"command" : 17,
+				"file" : 48,
+				"line" : 30,
+				"parent" : 132
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 36,
+				"parent" : 133
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 134
+			},
+			{
+				"file" : 47,
+				"parent" : 135
+			},
+			{
+				"command" : 16,
+				"file" : 47,
+				"line" : 6,
+				"parent" : 136
+			},
+			{
+				"command" : 5,
+				"file" : 29,
+				"line" : 76,
+				"parent" : 137
+			},
+			{
+				"command" : 7,
+				"file" : 20,
+				"line" : 40,
+				"parent" : 16
+			},
+			{
+				"file" : 50,
+				"parent" : 139
+			},
+			{
+				"command" : 17,
+				"file" : 50,
+				"line" : 30,
+				"parent" : 140
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 36,
+				"parent" : 141
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 142
+			},
+			{
+				"file" : 49,
+				"parent" : 143
+			},
+			{
+				"command" : 5,
+				"file" : 49,
+				"line" : 75,
+				"parent" : 144
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 36,
+				"parent" : 141
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 146
+			},
+			{
+				"file" : 51,
+				"parent" : 147
+			},
+			{
+				"command" : 16,
+				"file" : 51,
+				"line" : 6,
+				"parent" : 148
+			},
+			{
+				"command" : 5,
+				"file" : 29,
+				"line" : 76,
+				"parent" : 149
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 36,
+				"parent" : 141
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 151
+			},
+			{
+				"file" : 52,
+				"parent" : 152
+			},
+			{
+				"command" : 16,
+				"file" : 52,
+				"line" : 6,
+				"parent" : 153
+			},
+			{
+				"command" : 5,
+				"file" : 29,
+				"line" : 76,
+				"parent" : 154
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 36,
+				"parent" : 141
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 156
+			},
+			{
+				"file" : 53,
+				"parent" : 157
+			},
+			{
+				"command" : 16,
+				"file" : 53,
+				"line" : 6,
+				"parent" : 158
+			},
+			{
+				"command" : 5,
+				"file" : 29,
+				"line" : 76,
+				"parent" : 159
+			},
+			{
+				"command" : 9,
+				"file" : 5,
+				"line" : 36,
+				"parent" : 133
+			},
+			{
+				"command" : 8,
+				"file" : 4,
+				"line" : 47,
+				"parent" : 161
+			},
+			{
+				"file" : 55,
+				"parent" : 162
+			},
+			{
+				"command" : 16,
+				"file" : 55,
+				"line" : 6,
+				"parent" : 163
+			},
+			{
+				"command" : 8,
+				"file" : 29,
+				"line" : 69,
+				"parent" : 164
+			},
+			{
+				"file" : 54,
+				"parent" : 165
+			},
+			{
+				"command" : 5,
+				"file" : 54,
+				"line" : 25,
+				"parent" : 166
+			},
+			{
+				"command" : 20,
+				"file" : 0,
+				"line" : 654,
+				"parent" : 65
+			},
+			{
+				"command" : 19,
+				"file" : 56,
+				"line" : 620,
+				"parent" : 168
+			},
+			{
+				"command" : 18,
+				"file" : 56,
+				"line" : 79,
+				"parent" : 169
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-DQT_QML_DEBUG -O3 -DNDEBUG"
+				},
+				{
+					"fragment" : "'-std=gnu++17'"
+				}
+			],
+			"defines" : 
+			[
+				{
+					"backtrace" : 6,
+					"define" : "QT_CORE_LIB"
+				},
+				{
+					"backtrace" : 62,
+					"define" : "QT_GUI_LIB"
+				},
+				{
+					"backtrace" : 6,
+					"define" : "QT_NO_DEBUG"
+				},
+				{
+					"backtrace" : 62,
+					"define" : "QT_WIDGETS_LIB"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 0,
+					"path" : "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include_Release"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "/Applications/Qt/6.6.0/ios/include/QtCore"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "/Applications/Qt/6.6.0/ios/include"
+				},
+				{
+					"backtrace" : 6,
+					"isSystem" : true,
+					"path" : "/Applications/Qt/6.6.0/ios/mkspecs/macx-ios-clang"
+				},
+				{
+					"backtrace" : 62,
+					"isSystem" : true,
+					"path" : "/Applications/Qt/6.6.0/ios/include/QtWidgets"
+				},
+				{
+					"backtrace" : 62,
+					"isSystem" : true,
+					"path" : "/Applications/Qt/6.6.0/ios/include/QtGui"
+				}
+			],
+			"language" : "CXX",
+			"languageStandard" : 
+			{
+				"backtraces" : 
+				[
+					6,
+					6
+				],
+				"standard" : "17"
+			},
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"id" : "ZERO_CHECK::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 0,
+			"id" : "notepadTut_autogen::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "notepadTut::@6890427a1f51a3e7e1df",
+	"install" : 
+	{
+		"destinations" : 
+		[
+			{
+				"backtrace" : 5,
+				"path" : "."
+			}
+		],
+		"prefix" : 
+		{
+			"path" : "/usr/local"
+		}
+	},
+	"link" : 
+	{
+		"commandFragments" : 
+		[
+			{
+				"fragment" : "-DQT_QML_DEBUG -O3 -DNDEBUG",
+				"role" : "flags"
+			},
+			{
+				"fragment" : "",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "'-Wl,-e,_qt_main_wrapper'",
+				"role" : "flags"
+			},
+			{
+				"backtrace" : 58,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/objects-Release/Widgets_resources_1/.rcc/qrc_qstyle.cpp.o",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 58,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/objects-Release/Widgets_resources_2/.rcc/qrc_qstyle1.cpp.o",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 58,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/objects-Release/Widgets_resources_3/.rcc/qrc_qmessagebox.cpp.o",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 61,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/objects-Release/Gui_resources_1/.rcc/qrc_qpdf.cpp.o",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 61,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/objects-Release/Gui_resources_2/.rcc/qrc_gui_shaders.cpp.o",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6Core.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 62,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6Widgets.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/imageformats/libqgif.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/imageformats/libqicns.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/imageformats/libqico.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/platforms/libqios.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/imageformats/libqjpeg.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/imageformats/libqmacheif.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/imageformats/libqmacjp2.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/imageformats/libqpdf.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/iconengines/libqsvgicon.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/imageformats/libqsvg.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/imageformats/libqtga.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/imageformats/libqtiff.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/imageformats/libqwbmp.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 67,
+				"fragment" : "/Applications/Qt/6.6.0/ios/./plugins/imageformats/libqwebp.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 72,
+				"fragment" : "-framework AudioToolbox",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 72,
+				"fragment" : "-framework QuartzCore",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 81,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6OpenGL.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 72,
+				"fragment" : "-framework AssetsLibrary",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 72,
+				"fragment" : "-framework UniformTypeIdentifiers",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 72,
+				"fragment" : "-framework Photos",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 91,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibjpeg.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 102,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6Pdf.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 111,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6Network.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 114,
+				"fragment" : "-framework Security",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 114,
+				"fragment" : "-framework CFNetwork",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 114,
+				"fragment" : "-framework SystemConfiguration",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 119,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6Svg.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 58,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6Gui.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 72,
+				"fragment" : "-framework CoreGraphics",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 124,
+				"fragment" : "-framework ImageIO",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 6,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6Core.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 130,
+				"fragment" : "-framework IOKit",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 130,
+				"fragment" : "-framework CoreFoundation",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 130,
+				"fragment" : "-lm",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 138,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6BundledPcre2.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 130,
+				"fragment" : "-framework MobileCoreServices",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 145,
+				"fragment" : "-framework OpenGLES",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 61,
+				"fragment" : "-framework CoreText",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 130,
+				"fragment" : "-framework Foundation",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 130,
+				"fragment" : "-framework UIKit",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 72,
+				"fragment" : "-framework Metal",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 150,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6BundledHarfbuzz.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 155,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6BundledFreetype.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 160,
+				"fragment" : "/Applications/Qt/6.6.0/ios/lib/libQt6BundledLibpng.a",
+				"role" : "libraries"
+			},
+			{
+				"backtrace" : 167,
+				"fragment" : "-lz",
+				"role" : "libraries"
+			}
+		],
+		"language" : "CXX"
+	},
+	"name" : "notepadTut",
+	"nameOnDisk" : "notepadTut",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0,
+				1,
+				2
+			]
+		},
+		{
+			"name" : "Header Files",
+			"sourceIndexes" : 
+			[
+				3,
+				6
+			]
+		},
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				4
+			]
+		},
+		{
+			"name" : "Resources",
+			"sourceIndexes" : 
+			[
+				5
+			]
+		},
+		{
+			"name" : "Object Libraries",
+			"sourceIndexes" : 
+			[
+				7,
+				8,
+				9,
+				10,
+				11,
+				12,
+				13,
+				14,
+				15,
+				16,
+				17,
+				18,
+				19,
+				20
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/mocs_compilation.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "main.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "mainwindow.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "mainwindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "mainwindow.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 170,
+			"path" : "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/.qt/launch_screen_storyboards/notepadTut/LaunchScreen.storyboard",
+			"sourceGroupIndex" : 3
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/notepadTut_autogen/include/ui_mainwindow.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QGifPlugin_init/QGifPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QICNSPlugin_init/QICNSPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QICOPlugin_init/QICOPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/platforms/objects-Release/QIOSIntegrationPlugin_init/QIOSIntegrationPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QJpegPlugin_init/QJpegPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QMacHeifPlugin_init/QMacHeifPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QMacJp2Plugin_init/QMacJp2Plugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QPdfPlugin_init/QPdfPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/iconengines/objects-Release/QSvgIconPlugin_init/QSvgIconPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QSvgPlugin_init/QSvgPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QTgaPlugin_init/QTgaPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QTiffPlugin_init/QTiffPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QWbmpPlugin_init/QWbmpPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 67,
+			"isGenerated" : true,
+			"path" : "/Applications/Qt/6.6.0/ios/plugins/imageformats/objects-Release/QWebpPlugin_init/QWebpPlugin_init.cpp.o",
+			"sourceGroupIndex" : 4
+		}
+	],
+	"type" : "EXECUTABLE"
+}

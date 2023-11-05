@@ -1,0 +1,495 @@
+<!DOCTYPE html><html lang="ru"><head>
+                    <title>Object3D — Руководство по Вердж3Д — Софт Эйт Софт</title>
+                    <meta name="description" content="Узнайте как использовать Object3D в интерактивных 3Д-веб-приложениях сделанных на Вердж3Д">
+                
+    <meta charset="utf-8">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/api/ru/core/Object3D.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Object3D — Руководство по Вердж3Д — Софт Эйт Софт">
+            <meta property="og:description" content="Узнайте как использовать Object3D в интерактивных 3Д-веб-приложениях сделанных на Вердж3Д">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/api/ru/core/Object3D.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Object3D — Руководство по Вердж3Д — Софт Эйт Софт">
+            <meta name="twitter:description" content="Узнайте как использовать Object3D в интерактивных 3Д-веб-приложениях сделанных на Вердж3Д">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        </head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="api/ru/index.html">Руководство разработчика</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/programmers_guide/Programming-basics.html" id="Основные_темы_Основы_программирования">Основы программирования</a></li><li><a href="manual/ru/programmers_guide/Integration-with-Reactjs-Vuejs.html" id="Основные_темы_Интеграция_с_React.js/Vue.js">Интеграция с React.js/Vue.js</a></li><li><a href="manual/ru/programmers_guide/Developer-Kit.html" id="Основные_темы_Комплект_разработчика">Комплект разработчика</a></li><li><a href="manual/ru/programmers_guide/Wordpress-Advanced-Guide.html" id="Основные_темы_Расширенное_руководство_«ВордПресс»">Расширенное руководство «ВордПресс»</a></li><li><a href="manual/ru/programmers_guide/Matrix-transformations.html" id="Основные_темы_Матричные_преобразования">Матричные преобразования</a></li><li><a href="manual/ru/programmers_guide/Animation-system.html" id="Основные_темы_Система_анимации">Система анимации</a></li><li><a href="manual/ru/programmers_guide/Drawing-lines.html" id="Основные_темы_Рендеринг_линий">Рендеринг линий</a></li><li><a href="manual/ru/programmers_guide/How-to-update-things.html" id="Основные_темы_Как_обновлять_объекты">Как обновлять объекты</a></li><li><a href="manual/ru/programmers_guide/How-to-obtain-Verge3D-sources.html" id="Основные_темы_Как_получить_исходники">Как получить исходники</a></li></ul></div><div><h2>Анимация</h2><ul id="Анимация"><li><a href="api/ru/animation/AnimationAction.html" id="Анимация_AnimationAction">AnimationAction</a></li><li><a href="api/ru/animation/AnimationClip.html" id="Анимация_AnimationClip">AnimationClip</a></li><li><a href="api/ru/animation/AnimationMixer.html" id="Анимация_AnimationMixer">AnimationMixer</a></li><li><a href="api/ru/animation/AnimationObjectGroup.html" id="Анимация_AnimationObjectGroup">AnimationObjectGroup</a></li><li><a href="api/ru/animation/AnimationUtils.html" id="Анимация_AnimationUtils">AnimationUtils</a></li><li><a href="api/ru/animation/KeyframeTrack.html" id="Анимация_KeyframeTrack">KeyframeTrack</a></li><li><a href="api/ru/animation/PropertyBinding.html" id="Анимация_PropertyBinding">PropertyBinding</a></li><li><a href="api/ru/animation/PropertyMixer.html" id="Анимация_PropertyMixer">PropertyMixer</a></li></ul></div><div><h2>Анимация / Треки</h2><ul id="Анимация_/_Треки"><li><a href="api/ru/animation/tracks/BooleanKeyframeTrack.html" id="Анимация_/_Треки_BooleanKeyframeTrack">BooleanKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/ColorKeyframeTrack.html" id="Анимация_/_Треки_ColorKeyframeTrack">ColorKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/NumberKeyframeTrack.html" id="Анимация_/_Треки_NumberKeyframeTrack">NumberKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/QuaternionKeyframeTrack.html" id="Анимация_/_Треки_QuaternionKeyframeTrack">QuaternionKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/StringKeyframeTrack.html" id="Анимация_/_Треки_StringKeyframeTrack">StringKeyframeTrack</a></li><li><a href="api/ru/animation/tracks/VectorKeyframeTrack.html" id="Анимация_/_Треки_VectorKeyframeTrack">VectorKeyframeTrack</a></li></ul></div><div><h2>Приложение</h2><ul id="Приложение"><li><a href="api/ru/extras/App.html" id="Приложение_App">App</a></li><li><a href="api/ru/extras/AppUtils.html" id="Приложение_AppUtils">AppUtils</a></li></ul></div><div><h2>Аудио</h2><ul id="Аудио"><li><a href="api/ru/audio/Audio.html" id="Аудио_Audio">Audio</a></li><li><a href="api/ru/audio/AudioAnalyser.html" id="Аудио_AudioAnalyser">AudioAnalyser</a></li><li><a href="api/ru/audio/AudioContext.html" id="Аудио_AudioContext">AudioContext</a></li><li><a href="api/ru/audio/AudioListener.html" id="Аудио_AudioListener">AudioListener</a></li><li><a href="api/ru/audio/PositionalAudio.html" id="Аудио_PositionalAudio">PositionalAudio</a></li></ul></div><div><h2>Камеры</h2><ul id="Камеры"><li><a href="api/ru/cameras/ArrayCamera.html" id="Камеры_ArrayCamera">ArrayCamera</a></li><li><a href="api/ru/cameras/Camera.html" id="Камеры_Camera">Camera</a></li><li><a href="api/ru/cameras/CubeCamera.html" id="Камеры_CubeCamera">CubeCamera</a></li><li><a href="api/ru/cameras/OrthographicCamera.html" id="Камеры_OrthographicCamera">OrthographicCamera</a></li><li><a href="api/ru/cameras/PerspectiveCamera.html" id="Камеры_PerspectiveCamera">PerspectiveCamera</a></li><li><a href="api/ru/cameras/StereoCamera.html" id="Камеры_StereoCamera">StereoCamera</a></li></ul></div><div><h2>Константы</h2><ul id="Константы"><li><a href="api/ru/constants/Animation.html" id="Константы_Animation">Animation</a></li><li><a href="api/ru/constants/Controls.html" id="Константы_Controls">Controls</a></li><li><a href="api/ru/constants/Core.html" id="Константы_Core">Core</a></li><li><a href="api/ru/constants/CustomBlendingEquations.html" id="Константы_CustomBlendingEquation">CustomBlendingEquation</a></li><li><a href="api/ru/constants/Lights.html" id="Константы_Lights">Lights</a></li><li><a href="api/ru/constants/Materials.html" id="Константы_Materials">Materials</a></li><li><a href="api/ru/constants/Renderer.html" id="Константы_Renderer">Renderer</a></li><li><a href="api/ru/constants/Textures.html" id="Константы_Textures">Textures</a></li></ul></div><div><h2>Ограничители</h2><ul id="Ограничители"><li><a href="api/ru/constraints/ChildOfConstraint.html" id="Ограничители_ChildOfConstraint">ChildOfConstraint</a></li><li><a href="api/ru/constraints/Constraint.html" id="Ограничители_Constraint">Constraint</a></li><li><a href="api/ru/constraints/CopyLocationConstraint.html" id="Ограничители_CopyLocationConstraint">CopyLocationConstraint</a></li><li><a href="api/ru/constraints/CopyRotationConstraint.html" id="Ограничители_CopyRotationConstraint">CopyRotationConstraint</a></li><li><a href="api/ru/constraints/CopyScaleConstraint.html" id="Ограничители_CopyScaleConstraint">CopyScaleConstraint</a></li><li><a href="api/ru/constraints/FloorConstraint.html" id="Ограничители_FloorConstraint">FloorConstraint</a></li><li><a href="api/ru/constraints/LimitLocationConstraint.html" id="Ограничители_LimitLocationConstraint">LimitLocationConstraint</a></li><li><a href="api/ru/constraints/LimitRotationConstraint.html" id="Ограничители_LimitRotationConstraint">LimitRotationConstraint</a></li><li><a href="api/ru/constraints/LimitScaleConstraint.html" id="Ограничители_LimitScaleConstraint">LimitScaleConstraint</a></li><li><a href="api/ru/constraints/LockedTrackConstraint.html" id="Ограничители_LockedTrackConstraint">LockedTrackConstraint</a></li><li><a href="api/ru/constraints/TargetConstraint.html" id="Ограничители_TargetConstraint">TargetConstraint</a></li><li><a href="api/ru/constraints/TrackToConstraint.html" id="Ограничители_TrackToConstraint">TrackToConstraint</a></li></ul></div><div><h2>Контролы</h2><ul id="Контролы"><li><a href="api/ru/controls/KeyListener.html" id="Контролы_KeyListener">KeyListener</a></li><li><a href="api/ru/controls/OrbitControls.html" id="Контролы_OrbitControls">OrbitControls</a></li></ul></div><div><h2>Ядро</h2><ul id="Ядро"><li><a href="api/ru/core/BufferAttribute.html" id="Ядро_BufferAttribute">BufferAttribute</a></li><li><a href="api/ru/core/BufferGeometry.html" id="Ядро_BufferGeometry">BufferGeometry</a></li><li><a href="api/ru/core/Clock.html" id="Ядро_Clock">Clock</a></li><li><a href="api/ru/core/Detector.html" id="Ядро_Detector">Detector</a></li><li><a href="api/ru/core/EventDispatcher.html" id="Ядро_EventDispatcher">EventDispatcher</a></li><li><a href="api/ru/core/Geometry.html" id="Ядро_Geometry">Geometry</a></li><li><a href="api/ru/core/InstancedBufferAttribute.html" id="Ядро_InstancedBufferAttribute">InstancedBufferAttribute</a></li><li><a href="api/ru/core/InstancedBufferGeometry.html" id="Ядро_InstancedBufferGeometry">InstancedBufferGeometry</a></li><li><a href="api/ru/core/InstancedInterleavedBuffer.html" id="Ядро_InstancedInterleavedBuffer">InstancedInterleavedBuffer</a></li><li><a href="api/ru/core/InterleavedBuffer.html" id="Ядро_InterleavedBuffer">InterleavedBuffer</a></li><li><a href="api/ru/core/InterleavedBufferAttribute.html" id="Ядро_InterleavedBufferAttribute">InterleavedBufferAttribute</a></li><li><a href="api/ru/core/Layers.html" id="Ядро_Layers">Layers</a></li><li><a href="api/ru/core/Object3D.html" id="Ядро_Object3D">Object3D</a></li><li><a href="api/ru/core/Raycaster.html" id="Ядро_Raycaster">Raycaster</a></li><li><a href="api/ru/core/Uniform.html" id="Ядро_Uniform">Uniform</a></li></ul></div><div><h2>Ядро / BufferAttributes</h2><ul id="Ядро_/_BufferAttributes"><li><a href="api/ru/core/bufferAttributeTypes/BufferAttributeTypes.html" id="Ядро_/_BufferAttributes_BufferAttribute_Types">BufferAttribute Types</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="api/ru/extras/Earcut.html" id="Прочее_Earcut">Earcut</a></li><li><a href="api/ru/extras/ImageUtils.html" id="Прочее_ImageUtils">ImageUtils</a></li><li><a href="api/ru/extras/PMREMGenerator.html" id="Прочее_PMREMGenerator">PMREMGenerator</a></li><li><a href="api/ru/extras/Preloader.html" id="Прочее_Preloader">Preloader</a></li><li><a href="api/ru/extras/PuzzlesLoader.html" id="Прочее_PuzzlesLoader">PuzzlesLoader</a></li><li><a href="api/ru/extras/SceneUtils.html" id="Прочее_SceneUtils">SceneUtils</a></li><li><a href="api/ru/extras/ShapeUtils.html" id="Прочее_ShapeUtils">ShapeUtils</a></li><li><a href="api/ru/extras/SimplePreloader.html" id="Прочее_SimplePreloader">SimplePreloader</a></li></ul></div><div><h2>Прочее / Ядро</h2><ul id="Прочее_/_Ядро"><li><a href="api/ru/extras/core/Curve.html" id="Прочее_/_Ядро_Curve">Curve</a></li><li><a href="api/ru/extras/core/CurvePath.html" id="Прочее_/_Ядро_CurvePath">CurvePath</a></li><li><a href="api/ru/extras/core/Font.html" id="Прочее_/_Ядро_Font">Font</a></li><li><a href="api/ru/extras/core/Interpolations.html" id="Прочее_/_Ядро_Interpolations">Interpolations</a></li><li><a href="api/ru/extras/core/Path.html" id="Прочее_/_Ядро_Path">Path</a></li><li><a href="api/ru/extras/core/Shape.html" id="Прочее_/_Ядро_Shape">Shape</a></li><li><a href="api/ru/extras/core/ShapePath.html" id="Прочее_/_Ядро_ShapePath">ShapePath</a></li></ul></div><div><h2>Прочее / Кривые</h2><ul id="Прочее_/_Кривые"><li><a href="api/ru/extras/curves/ArcCurve.html" id="Прочее_/_Кривые_ArcCurve">ArcCurve</a></li><li><a href="api/ru/extras/curves/CatmullRomCurve3.html" id="Прочее_/_Кривые_CatmullRomCurve3">CatmullRomCurve3</a></li><li><a href="api/ru/extras/curves/CubicBezierCurve.html" id="Прочее_/_Кривые_CubicBezierCurve">CubicBezierCurve</a></li><li><a href="api/ru/extras/curves/CubicBezierCurve3.html" id="Прочее_/_Кривые_CubicBezierCurve3">CubicBezierCurve3</a></li><li><a href="api/ru/extras/curves/EllipseCurve.html" id="Прочее_/_Кривые_EllipseCurve">EllipseCurve</a></li><li><a href="api/ru/extras/curves/LineCurve.html" id="Прочее_/_Кривые_LineCurve">LineCurve</a></li><li><a href="api/ru/extras/curves/LineCurve3.html" id="Прочее_/_Кривые_LineCurve3">LineCurve3</a></li><li><a href="api/ru/extras/curves/QuadraticBezierCurve.html" id="Прочее_/_Кривые_QuadraticBezierCurve">QuadraticBezierCurve</a></li><li><a href="api/ru/extras/curves/QuadraticBezierCurve3.html" id="Прочее_/_Кривые_QuadraticBezierCurve3">QuadraticBezierCurve3</a></li><li><a href="api/ru/extras/curves/SplineCurve.html" id="Прочее_/_Кривые_SplineCurve">SplineCurve</a></li></ul></div><div><h2>Прочее / Объекты</h2><ul id="Прочее_/_Объекты"><li><a href="api/ru/extras/objects/LineHTML.html" id="Прочее_/_Объекты_LineHTML">LineHTML</a></li><li><a href="api/ru/extras/objects/MeshLine.html" id="Прочее_/_Объекты_MeshLine">MeshLine</a></li><li><a href="api/ru/extras/objects/MeshLineIndexed.html" id="Прочее_/_Объекты_MeshLineIndexed">MeshLineIndexed</a></li><li><a href="api/ru/extras/objects/MeshLineMaterial.html" id="Прочее_/_Объекты_MeshLineMaterial">MeshLineMaterial</a></li></ul></div><div><h2>Геометрия</h2><ul id="Геометрия"><li><a href="api/ru/geometries/BoxBufferGeometry.html" id="Геометрия_BoxBufferGeometry">BoxBufferGeometry</a></li><li><a href="api/ru/geometries/BoxGeometry.html" id="Геометрия_BoxGeometry">BoxGeometry</a></li><li><a href="api/ru/geometries/CircleBufferGeometry.html" id="Геометрия_CircleBufferGeometry">CircleBufferGeometry</a></li><li><a href="api/ru/geometries/CircleGeometry.html" id="Геометрия_CircleGeometry">CircleGeometry</a></li><li><a href="api/ru/geometries/ConeBufferGeometry.html" id="Геометрия_ConeBufferGeometry">ConeBufferGeometry</a></li><li><a href="api/ru/geometries/ConeGeometry.html" id="Геометрия_ConeGeometry">ConeGeometry</a></li><li><a href="api/ru/geometries/CylinderBufferGeometry.html" id="Геометрия_CylinderBufferGeometry">CylinderBufferGeometry</a></li><li><a href="api/ru/geometries/CylinderGeometry.html" id="Геометрия_CylinderGeometry">CylinderGeometry</a></li><li><a href="api/ru/geometries/DodecahedronBufferGeometry.html" id="Геометрия_DodecahedronBufferGeometry">DodecahedronBufferGeometry</a></li><li><a href="api/ru/geometries/DodecahedronGeometry.html" id="Геометрия_DodecahedronGeometry">DodecahedronGeometry</a></li><li><a href="api/ru/geometries/EdgesGeometry.html" id="Геометрия_EdgesGeometry">EdgesGeometry</a></li><li><a href="api/ru/geometries/ExtrudeBufferGeometry.html" id="Геометрия_ExtrudeBufferGeometry">ExtrudeBufferGeometry</a></li><li><a href="api/ru/geometries/ExtrudeGeometry.html" id="Геометрия_ExtrudeGeometry">ExtrudeGeometry</a></li><li><a href="api/ru/geometries/IcosahedronBufferGeometry.html" id="Геометрия_IcosahedronBufferGeometry">IcosahedronBufferGeometry</a></li><li><a href="api/ru/geometries/IcosahedronGeometry.html" id="Геометрия_IcosahedronGeometry">IcosahedronGeometry</a></li><li><a href="api/ru/geometries/LatheBufferGeometry.html" id="Геометрия_LatheBufferGeometry">LatheBufferGeometry</a></li><li><a href="api/ru/geometries/LatheGeometry.html" id="Геометрия_LatheGeometry">LatheGeometry</a></li><li><a href="api/ru/geometries/OctahedronBufferGeometry.html" id="Геометрия_OctahedronBufferGeometry">OctahedronBufferGeometry</a></li><li><a href="api/ru/geometries/OctahedronGeometry.html" id="Геометрия_OctahedronGeometry">OctahedronGeometry</a></li><li><a href="api/ru/geometries/ParametricBufferGeometry.html" id="Геометрия_ParametricBufferGeometry">ParametricBufferGeometry</a></li><li><a href="api/ru/geometries/ParametricGeometry.html" id="Геометрия_ParametricGeometry">ParametricGeometry</a></li><li><a href="api/ru/geometries/PlaneBufferGeometry.html" id="Геометрия_PlaneBufferGeometry">PlaneBufferGeometry</a></li><li><a href="api/ru/geometries/PlaneGeometry.html" id="Геометрия_PlaneGeometry">PlaneGeometry</a></li><li><a href="api/ru/geometries/PolyhedronBufferGeometry.html" id="Геометрия_PolyhedronBufferGeometry">PolyhedronBufferGeometry</a></li><li><a href="api/ru/geometries/PolyhedronGeometry.html" id="Геометрия_PolyhedronGeometry">PolyhedronGeometry</a></li><li><a href="api/ru/geometries/RingBufferGeometry.html" id="Геометрия_RingBufferGeometry">RingBufferGeometry</a></li><li><a href="api/ru/geometries/RingGeometry.html" id="Геометрия_RingGeometry">RingGeometry</a></li><li><a href="api/ru/geometries/ShapeBufferGeometry.html" id="Геометрия_ShapeBufferGeometry">ShapeBufferGeometry</a></li><li><a href="api/ru/geometries/ShapeGeometry.html" id="Геометрия_ShapeGeometry">ShapeGeometry</a></li><li><a href="api/ru/geometries/SphereBufferGeometry.html" id="Геометрия_SphereBufferGeometry">SphereBufferGeometry</a></li><li><a href="api/ru/geometries/SphereGeometry.html" id="Геометрия_SphereGeometry">SphereGeometry</a></li><li><a href="api/ru/geometries/TetrahedronBufferGeometry.html" id="Геометрия_TetrahedronBufferGeometry">TetrahedronBufferGeometry</a></li><li><a href="api/ru/geometries/TetrahedronGeometry.html" id="Геометрия_TetrahedronGeometry">TetrahedronGeometry</a></li><li><a href="api/ru/geometries/TextBufferGeometry.html" id="Геометрия_TextBufferGeometry">TextBufferGeometry</a></li><li><a href="api/ru/geometries/TextGeometry.html" id="Геометрия_TextGeometry">TextGeometry</a></li><li><a href="api/ru/geometries/TorusBufferGeometry.html" id="Геометрия_TorusBufferGeometry">TorusBufferGeometry</a></li><li><a href="api/ru/geometries/TorusGeometry.html" id="Геометрия_TorusGeometry">TorusGeometry</a></li><li><a href="api/ru/geometries/TorusKnotBufferGeometry.html" id="Геометрия_TorusKnotBufferGeometry">TorusKnotBufferGeometry</a></li><li><a href="api/ru/geometries/TorusKnotGeometry.html" id="Геометрия_TorusKnotGeometry">TorusKnotGeometry</a></li><li><a href="api/ru/geometries/TubeBufferGeometry.html" id="Геометрия_TubeBufferGeometry">TubeBufferGeometry</a></li><li><a href="api/ru/geometries/TubeGeometry.html" id="Геометрия_TubeGeometry">TubeGeometry</a></li><li><a href="api/ru/geometries/WireframeGeometry.html" id="Геометрия_WireframeGeometry">WireframeGeometry</a></li></ul></div><div><h2>Объекты-помощники</h2><ul id="Объекты-помощники"><li><a href="api/ru/helpers/ArrowHelper.html" id="Объекты-помощники_ArrowHelper">ArrowHelper</a></li><li><a href="api/ru/helpers/AxesHelper.html" id="Объекты-помощники_AxesHelper">AxesHelper</a></li><li><a href="api/ru/helpers/BoxHelper.html" id="Объекты-помощники_BoxHelper">BoxHelper</a></li><li><a href="api/ru/helpers/Box3Helper.html" id="Объекты-помощники_Box3Helper">Box3Helper</a></li><li><a href="api/ru/helpers/CameraHelper.html" id="Объекты-помощники_CameraHelper">CameraHelper</a></li><li><a href="api/ru/helpers/DirectionalLightHelper.html" id="Объекты-помощники_DirectionalLightHelper">DirectionalLightHelper</a></li><li><a href="api/ru/helpers/GridHelper.html" id="Объекты-помощники_GridHelper">GridHelper</a></li><li><a href="api/ru/helpers/PolarGridHelper.html" id="Объекты-помощники_PolarGridHelper">PolarGridHelper</a></li><li><a href="api/ru/helpers/HemisphereLightHelper.html" id="Объекты-помощники_HemisphereLightHelper">HemisphereLightHelper</a></li><li><a href="api/ru/helpers/PlaneHelper.html" id="Объекты-помощники_PlaneHelper">PlaneHelper</a></li><li><a href="api/ru/helpers/PointLightHelper.html" id="Объекты-помощники_PointLightHelper">PointLightHelper</a></li><li><a href="api/ru/helpers/SkeletonHelper.html" id="Объекты-помощники_SkeletonHelper">SkeletonHelper</a></li><li><a href="api/ru/helpers/SpotLightHelper.html" id="Объекты-помощники_SpotLightHelper">SpotLightHelper</a></li></ul></div><div><h2>Источники света</h2><ul id="Источники_света"><li><a href="api/ru/lights/AmbientLight.html" id="Источники_света_AmbientLight">AmbientLight</a></li><li><a href="api/ru/lights/CubeReflectionProbe.html" id="Источники_света_CubeReflectionProbe">CubeReflectionProbe</a></li><li><a href="api/ru/lights/DirectionalLight.html" id="Источники_света_DirectionalLight">DirectionalLight</a></li><li><a href="api/ru/lights/HemisphereLight.html" id="Источники_света_HemisphereLight">HemisphereLight</a></li><li><a href="api/ru/lights/Light.html" id="Источники_света_Light">Light</a></li><li><a href="api/ru/lights/PointLight.html" id="Источники_света_PointLight">PointLight</a></li><li><a href="api/ru/lights/RectAreaLight.html" id="Источники_света_RectAreaLight">RectAreaLight</a></li><li><a href="api/ru/lights/SpotLight.html" id="Источники_света_SpotLight">SpotLight</a></li></ul></div><div><h2>Тени</h2><ul id="Тени"><li><a href="api/ru/lights/shadows/DirectionalLightShadow.html" id="Тени_DirectionalLightShadow">DirectionalLightShadow</a></li><li><a href="api/ru/lights/shadows/LightShadow.html" id="Тени_LightShadow">LightShadow</a></li><li><a href="api/ru/lights/shadows/PointLightShadow.html" id="Тени_PointLightShadow">PointLightShadow</a></li><li><a href="api/ru/lights/shadows/SpotLightShadow.html" id="Тени_SpotLightShadow">SpotLightShadow</a></li></ul></div><div><h2>Загрузчики</h2><ul id="Загрузчики"><li><a href="api/ru/loaders/AudioLoader.html" id="Загрузчики_AudioLoader">AudioLoader</a></li><li><a href="api/ru/loaders/Cache.html" id="Загрузчики_Cache">Cache</a></li><li><a href="api/ru/loaders/CompressedTextureLoader.html" id="Загрузчики_CompressedTextureLoader">CompressedTextureLoader</a></li><li><a href="api/ru/loaders/CubeTextureLoader.html" id="Загрузчики_CubeTextureLoader">CubeTextureLoader</a></li><li><a href="api/ru/loaders/DataTextureLoader.html" id="Загрузчики_DataTextureLoader">DataTextureLoader</a></li><li><a href="api/ru/loaders/FileLoader.html" id="Загрузчики_FileLoader">FileLoader</a></li><li><a href="api/ru/loaders/FontLoader.html" id="Загрузчики_FontLoader">FontLoader</a></li><li><a href="api/ru/loaders/ImageBitmapLoader.html" id="Загрузчики_ImageBitmapLoader">ImageBitmapLoader</a></li><li><a href="api/ru/loaders/ImageLoader.html" id="Загрузчики_ImageLoader">ImageLoader</a></li><li><a href="api/ru/loaders/GLTFLoader.html" id="Загрузчики_GLTFLoader">GLTFLoader</a></li><li><a href="api/ru/loaders/Loader.html" id="Загрузчики_Loader">Loader</a></li><li><a href="api/ru/loaders/LoaderUtils.html" id="Загрузчики_LoaderUtils">LoaderUtils</a></li><li><a href="api/ru/loaders/TextureLoader.html" id="Загрузчики_TextureLoader">TextureLoader</a></li></ul></div><div><h2>Менеджеры загрузки</h2><ul id="Менеджеры_загрузки"><li><a href="api/ru/loaders/managers/DefaultLoadingManager.html" id="Менеджеры_загрузки_DefaultLoadingManager">DefaultLoadingManager</a></li><li><a href="api/ru/loaders/managers/LoadingManager.html" id="Менеджеры_загрузки_LoadingManager">LoadingManager</a></li></ul></div><div><h2>Материалы</h2><ul id="Материалы"><li><a href="api/ru/materials/LineBasicMaterial.html" id="Материалы_LineBasicMaterial">LineBasicMaterial</a></li><li><a href="api/ru/materials/LineDashedMaterial.html" id="Материалы_LineDashedMaterial">LineDashedMaterial</a></li><li><a href="api/ru/materials/Material.html" id="Материалы_Material">Material</a></li><li><a href="api/ru/materials/MaterialUtils.html" id="Материалы_MaterialUtils">MaterialUtils</a></li><li><a href="api/ru/materials/MeshBasicMaterial.html" id="Материалы_MeshBasicMaterial">MeshBasicMaterial</a></li><li><a href="api/ru/materials/MeshDepthMaterial.html" id="Материалы_MeshDepthMaterial">MeshDepthMaterial</a></li><li><a href="api/ru/materials/MeshDistanceMaterial.html" id="Материалы_MeshDistanceMaterial">MeshDistanceMaterial</a></li><li><a href="api/ru/materials/MeshLambertMaterial.html" id="Материалы_MeshLambertMaterial">MeshLambertMaterial</a></li><li><a href="api/ru/materials/MeshMatcapMaterial.html" id="Материалы_MeshMatcapMaterial">MeshMatcapMaterial</a></li><li><a href="api/ru/materials/MeshNodeMaterial.html" id="Материалы_MeshNodeMaterial">MeshNodeMaterial</a></li><li><a href="api/ru/materials/MeshNormalMaterial.html" id="Материалы_MeshNormalMaterial">MeshNormalMaterial</a></li><li><a href="api/ru/materials/MeshPhongMaterial.html" id="Материалы_MeshPhongMaterial">MeshPhongMaterial</a></li><li><a href="api/ru/materials/MeshPhysicalMaterial.html" id="Материалы_MeshPhysicalMaterial">MeshPhysicalMaterial</a></li><li><a href="api/ru/materials/MeshStandardMaterial.html" id="Материалы_MeshStandardMaterial">MeshStandardMaterial</a></li><li><a href="api/ru/materials/MeshToonMaterial.html" id="Материалы_MeshToonMaterial">MeshToonMaterial</a></li><li><a href="api/ru/materials/PointsMaterial.html" id="Материалы_PointsMaterial">PointsMaterial</a></li><li><a href="api/ru/materials/RawShaderMaterial.html" id="Материалы_RawShaderMaterial">RawShaderMaterial</a></li><li><a href="api/ru/materials/ShaderMaterial.html" id="Материалы_ShaderMaterial">ShaderMaterial</a></li><li><a href="api/ru/materials/ShadowMaterial.html" id="Материалы_ShadowMaterial">ShadowMaterial</a></li><li><a href="api/ru/materials/SpriteMaterial.html" id="Материалы_SpriteMaterial">SpriteMaterial</a></li></ul></div><div><h2>Математика</h2><ul id="Математика"><li><a href="api/ru/math/Box2.html" id="Математика_Box2">Box2</a></li><li><a href="api/ru/math/Box3.html" id="Математика_Box3">Box3</a></li><li><a href="api/ru/math/Color.html" id="Математика_Color">Color</a></li><li><a href="api/ru/math/Cylindrical.html" id="Математика_Cylindrical">Cylindrical</a></li><li><a href="api/ru/math/Euler.html" id="Математика_Euler">Euler</a></li><li><a href="api/ru/math/Frustum.html" id="Математика_Frustum">Frustum</a></li><li><a href="api/ru/math/Interpolant.html" id="Математика_Interpolant">Interpolant</a></li><li><a href="api/ru/math/Line3.html" id="Математика_Line3">Line3</a></li><li><a href="api/ru/math/MathUtils.html" id="Математика_MathUtils">MathUtils</a></li><li><a href="api/ru/math/Matrix3.html" id="Математика_Matrix3">Matrix3</a></li><li><a href="api/ru/math/Matrix4.html" id="Математика_Matrix4">Matrix4</a></li><li><a href="api/ru/math/Plane.html" id="Математика_Plane">Plane</a></li><li><a href="api/ru/math/Quaternion.html" id="Математика_Quaternion">Quaternion</a></li><li><a href="api/ru/math/Ray.html" id="Математика_Ray">Ray</a></li><li><a href="api/ru/math/Sphere.html" id="Математика_Sphere">Sphere</a></li><li><a href="api/ru/math/Spherical.html" id="Математика_Spherical">Spherical</a></li><li><a href="api/ru/math/Triangle.html" id="Математика_Triangle">Triangle</a></li><li><a href="api/ru/math/Vector2.html" id="Математика_Vector2">Vector2</a></li><li><a href="api/ru/math/Vector3.html" id="Математика_Vector3">Vector3</a></li><li><a href="api/ru/math/Vector4.html" id="Математика_Vector4">Vector4</a></li></ul></div><div><h2>Математика / Интерполянты</h2><ul id="Математика_/_Интерполянты"><li><a href="api/ru/math/interpolants/CubicInterpolant.html" id="Математика_/_Интерполянты_CubicInterpolant">CubicInterpolant</a></li><li><a href="api/ru/math/interpolants/DiscreteInterpolant.html" id="Математика_/_Интерполянты_DiscreteInterpolant">DiscreteInterpolant</a></li><li><a href="api/ru/math/interpolants/LinearInterpolant.html" id="Математика_/_Интерполянты_LinearInterpolant">LinearInterpolant</a></li><li><a href="api/ru/math/interpolants/QuaternionLinearInterpolant.html" id="Математика_/_Интерполянты_QuaternionLinearInterpolant">QuaternionLinearInterpolant</a></li></ul></div><div><h2>Объекты</h2><ul id="Объекты"><li><a href="api/ru/objects/Annotation.html" id="Объекты_Annotation">Annotation</a></li><li><a href="api/ru/objects/AnnotationControl.html" id="Объекты_AnnotationControl">AnnotationControl</a></li><li><a href="api/ru/objects/Bone.html" id="Объекты_Bone">Bone</a></li><li><a href="api/ru/objects/Group.html" id="Объекты_Group">Group</a></li><li><a href="api/ru/objects/InstancedMesh.html" id="Объекты_InstancedMesh">InstancedMesh</a></li><li><a href="api/ru/objects/Line.html" id="Объекты_Line">Line</a></li><li><a href="api/ru/objects/LineLoop.html" id="Объекты_LineLoop">LineLoop</a></li><li><a href="api/ru/objects/LineSegments.html" id="Объекты_LineSegments">LineSegments</a></li><li><a href="api/ru/objects/LOD.html" id="Объекты_LOD">LOD</a></li><li><a href="api/ru/objects/Mesh.html" id="Объекты_Mesh">Mesh</a></li><li><a href="api/ru/objects/Points.html" id="Объекты_Points">Points</a></li><li><a href="api/ru/objects/Skeleton.html" id="Объекты_Skeleton">Skeleton</a></li><li><a href="api/ru/objects/SkinnedMesh.html" id="Объекты_SkinnedMesh">SkinnedMesh</a></li><li><a href="api/ru/objects/Sprite.html" id="Объекты_Sprite">Sprite</a></li></ul></div><div><h2>Рендеринг</h2><ul id="Рендеринг"><li><a href="api/ru/renderers/RenderUtils.html" id="Рендеринг_RenderUtils">RenderUtils</a></li><li><a href="api/ru/renderers/WebGLCubeRenderTarget.html" id="Рендеринг_WebGLCubeRenderTarget">WebGLCubeRenderTarget</a></li><li><a href="api/ru/renderers/WebGLMultisampleRenderTarget.html" id="Рендеринг_WebGLMultisampleRenderTarget">WebGLMultisampleRenderTarget</a></li><li><a href="api/ru/renderers/WebGLRenderer.html" id="Рендеринг_WebGLRenderer">WebGLRenderer</a></li><li><a href="api/ru/renderers/WebGLRenderTarget.html" id="Рендеринг_WebGLRenderTarget">WebGLRenderTarget</a></li></ul></div><div><h2>Шейдеры</h2><ul id="Шейдеры"><li><a href="api/ru/renderers/shaders/ShaderChunk.html" id="Шейдеры_ShaderChunk">ShaderChunk</a></li><li><a href="api/ru/renderers/shaders/ShaderLib.html" id="Шейдеры_ShaderLib">ShaderLib</a></li><li><a href="api/ru/renderers/shaders/UniformsLib.html" id="Шейдеры_UniformsLib">UniformsLib</a></li><li><a href="api/ru/renderers/shaders/UniformsUtils.html" id="Шейдеры_UniformsUtils">UniformsUtils</a></li></ul></div><div><h2>Сцены</h2><ul id="Сцены"><li><a href="api/ru/scenes/Fog.html" id="Сцены_Fog">Fog</a></li><li><a href="api/ru/scenes/FogExp2.html" id="Сцены_FogExp2">FogExp2</a></li><li><a href="api/ru/scenes/Scene.html" id="Сцены_Scene">Scene</a></li><li><a href="api/ru/scenes/SceneBackground.html" id="Сцены_SceneBackground">SceneBackground</a></li></ul></div><div><h2>Текстуры</h2><ul id="Текстуры"><li><a href="api/ru/textures/CanvasTexture.html" id="Текстуры_CanvasTexture">CanvasTexture</a></li><li><a href="api/ru/textures/CompressedTexture.html" id="Текстуры_CompressedTexture">CompressedTexture</a></li><li><a href="api/ru/textures/CubeTexture.html" id="Текстуры_CubeTexture">CubeTexture</a></li><li><a href="api/ru/textures/DataTexture.html" id="Текстуры_DataTexture">DataTexture</a></li><li><a href="api/ru/textures/DataTexture3D.html" id="Текстуры_DataTexture3D">DataTexture3D</a></li><li><a href="api/ru/textures/DepthTexture.html" id="Текстуры_DepthTexture">DepthTexture</a></li><li><a href="api/ru/textures/Texture.html" id="Текстуры_Texture">Texture</a></li><li><a href="api/ru/textures/VideoTexture.html" id="Текстуры_VideoTexture">VideoTexture</a></li></ul></div></div>
+        </nav>
+    <h1>Object3D</h1>
+
+    <p class="desc">
+      Это базовый класс для большинства объектов в Verge3D, предоставляющий набор свойств и методов для манипулирования объектами в трехмерном пространстве.<br><br>
+
+      Обратите внимание, что его можно использовать для группировки объектов с помощью метода <a href="api/ru/core/Object3D.html#add">.add</a>(object), который добавляет объект в качестве дочернего, однако для этого лучше использовать <a href="api/ru/objects/Group.html">Group</a>.
+    </p>
+
+
+    <h2>Конструктор</h2>
+
+
+    <h3>Object3D()</h3>
+    <p>
+      Конструктор не принимает никаких аргументов.
+    </p>
+
+
+    <h2>Свойства</h2>
+
+    <h3><a href="api/ru/core/Object3D.html#animations" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#animations" id="animations">animations</a> : <a href="api/ru/animation/AnimationClip.html" class="param">AnimationClip</a></h3>
+    <p>Массив с анимационными клипами объекта.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#castShadow" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#castShadow" id="castShadow">castShadow</a> : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>Будет ли объект рендериться в карту теней. По умолчанию <strong>false</strong>.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#children" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#children" id="children">children</a> : <a href="api/ru/core/Object3D.html" class="param">Object3D</a></h3>
+    <p>Массив с дочерними объектами объекта. Информацию о ручном группировании объектов см. в <a href="api/ru/objects/Group.html">Group</a>.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#customDepthMaterial" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#customDepthMaterial" id="customDepthMaterial">customDepthMaterial</a> : <a href="api/ru/materials/Material.html" class="param">Material</a></h3>
+    <p>
+      Пользовательский материал глубины, который будет использоваться при рендеринге на карту глубины. Может использоваться только в контексте сетки. При создании теней с помощью <a href="api/ru/lights/DirectionalLight.html">DirectionalLight</a> или <a href="api/ru/lights/SpotLight.html">SpotLight</a>, если вы (a) изменяете положение вершин в вершинном шейдере, (b) используете карту смещения, (c) используете альфа-карту с alphaTest или (d) используете прозрачную текстуру с alphaTest, вы должны указать пользовательский материал глубины (customDepthMaterial) для правильных теней. По умолчанию - <strong>undefined</strong>.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#customDistanceMaterial" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#customDistanceMaterial" id="customDistanceMaterial">customDistanceMaterial</a> : <a href="api/ru/materials/Material.html" class="param">Material</a></h3>
+    <p>
+      То же, что и <a href="api/ru/core/Object3D.html#customDepthMaterial">customDepthMaterial</a>, но используется с <a href="api/ru/lights/PointLight.html">PointLight</a>. По умолчанию - <strong>undefined</strong>.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#frustumCulled" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#frustumCulled" id="frustumCulled">frustumCulled</a> : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+      Если этот параметр установлен, каждый кадр проверяется, находится ли объект во фрустуме камеры, перед отрисовкой объекта.
+      В противном случае объект будет отображаться каждый кадр, даже если он не виден. По умолчанию <strong>true</strong>.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#groupNames" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#groupNames" id="groupNames">groupNames</a> : <a href="javascript:;" class="param">Array</a></h3>
+    <p>
+      Массив, указывающий группы, к которым принадлежит данный объект. Используется для группировки/ссылки на коллекции объектов.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#id" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#id" id="id">id</a> : <a href="javascript:;" class="param">Integer</a></h3>
+    <p>readonly – Уникальный номер для данного экземпляра объекта.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#layers" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#layers" id="layers">layers</a> : <a href="api/ru/core/Layers.html" class="param">Layers</a></h3>
+    <p>
+      Принадлежность объекта к слою. Объект виден, только если у него есть хотя бы один общий слой с используемой <a href="api/ru/cameras/Camera.html">Camera</a>. Это свойство также можно использовать для отсеивания нежелательных объектов в тестах пересечения лучей при использовании <a href="api/ru/core/Raycaster.html">Raycaster</a>.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#matrix" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#matrix" id="matrix">matrix</a> : <a href="api/ru/math/Matrix4.html" class="param">Matrix4</a></h3>
+    <p>Матрица локального преобразования.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#matrixAutoUpdate" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#matrixAutoUpdate" id="matrixAutoUpdate">matrixAutoUpdate</a> : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+      Если этот параметр установлен, он вычисляет матрицу положения, (вращения или кватерниона) и масштаба каждый кадр, а также пересчитывает свойство matrixWorld. По умолчанию <a href="api/ru/core/Object3D.html#DefaultMatrixAutoUpdate">Object3D.DefaultMatrixAutoUpdate</a> (true).
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#matrixWorld" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#matrixWorld" id="matrixWorld">matrixWorld</a> : <a href="api/ru/math/Matrix4.html" class="param">Matrix4</a></h3>
+    <p>
+      Глобальное преобразование объекта. Если у объекта Object3D нет родителя, то оно идентично локальному преобразованию <a href="api/ru/core/Object3D.html#matrix">.matrix</a>.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#matrixWorldNeedsUpdate" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#matrixWorldNeedsUpdate" id="matrixWorldNeedsUpdate">matrixWorldNeedsUpdate</a> : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+      Когда это значение установлено, вычисляется matrixWorld в этом кадре и сбрасывается это свойство в false. По умолчанию <strong>false</strong>.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#modelViewMatrix" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#modelViewMatrix" id="modelViewMatrix">modelViewMatrix</a> : <a href="api/ru/math/Matrix4.html" class="param">Matrix4</a></h3>
+    <p>Этот параметр передается в шейдер и используется для расчета положения объекта.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#name" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#name" id="name">name</a> : <a href="javascript:;" class="param">String</a></h3>
+    <p>Необязательное имя объекта (не обязательно уникальное). По умолчанию это пустая строка.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#normalMatrix" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#normalMatrix" id="normalMatrix">normalMatrix</a> : <a href="api/ru/math/Matrix3.html" class="param">Matrix3</a></h3>
+    <p>
+      Это значение передается в шейдер и используется для расчета освещения объекта. Это транспонирование обратной величины левой верхней подматрицы 3x3 матрицы modelViewMatrix этого объекта.<br><br>
+
+      Причина создания этой специальной матрицы заключается в том, что простое использование матрицы modelViewMatrix может привести к неединичной длине нормалей (при масштабировании) или неперпендикулярному направлению (при неравномерном масштабировании).<br><br>
+
+      С другой стороны, часть перевода матрицы modelViewMatrix не имеет значения для расчета нормалей. Поэтому достаточно матрицы Matrix3.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#onAfterRender" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#onAfterRender" id="onAfterRender">onAfterRender</a> : <a href="javascript:;" class="param">Function</a></h3>
+    <p>
+      Необязательный обратный вызов, который выполняется сразу после рендеринга Object3D. Эта функция вызывается со следующими параметрами: рендерер, сцена, камера, геометрия, материал, группа.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#onBeforeRender" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#onBeforeRender" id="onBeforeRender">onBeforeRender</a> : <a href="javascript:;" class="param">Function</a></h3>
+    <p>
+      Необязательный обратный вызов, который выполняется непосредственно перед рендерингом Object3D. Эта функция вызывается со следующими параметрами: рендерер, сцена, камера, геометрия, материал, группа.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#parent" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#parent" id="parent">parent</a> : <a href="api/ru/core/Object3D.html" class="param">Object3D</a></h3>
+    <p>Родитель объекта в  <a href="https://en.wikipedia.org/wiki/Scene_graph"  target="_blank">scene graph</a>. У объекта может быть не более одного родителя.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#position" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#position" id="position">position</a> : <a href="api/ru/math/Vector3.html" class="param">Vector3</a></h3>
+    <p><a href="api/ru/math/Vector3.html">Vector3</a>, представляющий локальную позицию объекта. По умолчанию (0, 0, 0)..</p>
+
+    <h3><a href="api/ru/core/Object3D.html#quaternion" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#quaternion" id="quaternion">quaternion</a> : <a href="api/ru/math/Quaternion.html" class="param">Quaternion</a></h3>
+    <p>Локальное вращение объекта как <a href="api/ru/math/Quaternion.html">Quaternion</a>..</p>
+
+    <h3><a href="api/ru/core/Object3D.html#receiveShadow" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#receiveShadow" id="receiveShadow">receiveShadow</a> : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>Принимает ли материал тени. По умолчанию <strong>false</strong>..</p>
+
+    <h3><a href="api/ru/core/Object3D.html#renderOrder" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#renderOrder" id="renderOrder">renderOrder</a> : <a href="javascript:;" class="param">Number</a></h3>
+    <p>
+      Это значение позволяет переопределить порядок рендеринга объектов <a href="https://en.wikipedia.org/wiki/Scene_graph"  target="_blank">scene graph</a> по умолчанию, хотя непрозрачные и прозрачные объекты остаются отсортированными независимо. Когда это свойство установлено для экземпляра <a href="api/ru/objects/Group.html">Group</a>, все объекты-потомки будут отсортированы и отрисованы вместе. Сортировка производится от низшего к высшему порядку рендеринга. Значение по умолчанию - <strong>0</strong>.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#rotation" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#rotation" id="rotation">rotation</a> : <a href="api/ru/math/Euler.html" class="param">Euler</a></h3>
+    <p>
+      Локальное вращение объекта (см. <a href="https://en.wikipedia.org/wiki/Euler_angles"  target="_blank">Euler angles</a>), в радианах.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#scale" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#scale" id="scale">scale</a> : <a href="api/ru/math/Vector3.html" class="param">Vector3</a></h3>
+    <p>
+      Локальный масштаб объекта. По умолчанию <a href="api/ru/math/Vector3.html">Vector3</a>(1, 1, 1).
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#up" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#up" id="up">up</a> : <a href="api/ru/math/Vector3.html" class="param">Vector3</a></h3>
+    <p>
+      Это используется методом <a href="api/ru/core/Object3D.html#lookAt">lookAt</a>, например, для определения ориентации результата.<br>
+      По умолчанию это <a href="api/ru/core/Object3D.html#DefaultUp">Object3D.DefaultUp</a> - то есть (0, 1, 0).
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#userData" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#userData" id="userData">userData</a> : <a href="javascript:;" class="param">Object</a></h3>
+    <p>
+      Объект, который можно использовать для хранения пользовательских данных об объекте Object3D. Он не должен содержать ссылки на функции, так как они не будут клонироваться.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#uuid" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#uuid" id="uuid">uuid</a> : <a href="javascript:;" class="param">String</a></h3>
+    <p>
+    <a href="http://en.wikipedia.org/wiki/Universally_unique_identifier"  target="_blank">UUID</a> данного экземпляра объекта. Он присваивается автоматически, поэтому его не следует редактировать.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#visible" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#visible" id="visible">visible</a> : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>Объект отображается, если <strong>true</strong>. По умолчанию <strong>true</strong>.</p>
+
+
+
+
+    <h2>Статические Свойства</h2>
+    <p>
+      Статические свойства и методы определяются для каждого класса, а не для каждого экземпляра этого класса.
+      Это означает, что изменение <a href="api/ru/core/Object3D.html#DefaultUp">Object3D.DefaultUp</a> или <a href="api/ru/core/Object3D.html#DefaultMatrixAutoUpdate">Object3D.DefaultMatrixAutoUpdate</a>
+      изменит значения <a href="api/ru/core/Object3D.html#up">up</a> и <a href="api/ru/core/Object3D.html#matrixAutoUpdate">matrixAutoUpdate</a> для
+      <em>каждого</em> экземпляра Object3D (или производных классов), созданный после внесения изменения (уже созданные Object3D не будут затронуты).
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#DefaultUp" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#DefaultUp" id="DefaultUp">DefaultUp</a> : <a href="api/ru/math/Vector3.html" class="param">Vector3</a></h3>
+    <p>
+      Направление по умолчанию <a href="api/ru/core/Object3D.html#up">up</a> для объектов, также используется как положение по умолчанию для <a href="api/ru/lights/DirectionalLight.html">DirectionalLight</a>, <a href="api/ru/lights/HemisphereLight.html">HemisphereLight</a> и <a href="javascript:;">Spotlight</a> (которые создают свет, светящий сверху вниз).<br>
+      По умолчанию имеет значение (0, 1, 0).
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#DefaultMatrixAutoUpdate" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#DefaultMatrixAutoUpdate" id="DefaultMatrixAutoUpdate">DefaultMatrixAutoUpdate</a> : <a href="javascript:;" class="param">Boolean</a></h3>
+    <p>
+      Настройка по умолчанию для <a href="api/ru/core/Object3D.html#matrixAutoUpdate">matrixAutoUpdate</a> для вновь созданных Object3D.<br>
+
+    </p>
+
+
+    <h2>Методы</h2>
+
+    <h3><a href="api/ru/core/EventDispatcher.html">EventDispatcher</a> methods are available on this class.</h3>
+
+    <h3><a href="api/ru/core/Object3D.html#add" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#add" id="add">add</a>(object : <a href="api/ru/core/Object3D.html" class="param">Object3D</a>, ...) → <a href="javascript:;" class="param">this</a></h3>
+    <p>
+      Добавляет <strong>object</strong> в качестве дочернего объекта данного объекта. Может быть добавлено произвольное количество объектов. Любой текущий родитель объекта, переданного здесь, будет удален, так как объект может иметь не более одного родителя.<br><br>
+
+      Информацию о ручном группировании объектов см. в <a href="api/ru/objects/Group.html">Group</a>.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#applyMatrix4" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#applyMatrix4" id="applyMatrix4">applyMatrix4</a>(matrix : <a href="api/ru/math/Matrix4.html" class="param">Matrix4</a>) → <a href="javascript:;" class="param">null</a></h3>
+    <p>Применяет матричное преобразование к объекту и обновляет положение, поворот и масштаб объекта.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#applyQuaternion" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#applyQuaternion" id="applyQuaternion">applyQuaternion</a>(quaternion : <a href="api/ru/math/Quaternion.html" class="param">Quaternion</a>) → <a href="javascript:;" class="param">this</a></h3>
+    <p>Применяет к объекту вращение, представленное кватернионом.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#attach" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#attach" id="attach">attach</a>(object : <a href="api/ru/core/Object3D.html" class="param">Object3D</a>) → <a href="javascript:;" class="param">this</a></h3>
+    <p>Добавляет <strong>объект</strong> в качестве дочернего объекта, сохраняя преобразование мира объекта.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#clone" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#clone" id="clone">clone</a>(recursive : <a href="javascript:;" class="param">Boolean</a>) → <a href="api/ru/core/Object3D.html" class="param">Object3D</a></h3>
+    <p>
+    recursive -- если true, потомки объекта также клонируются. По умолчанию - true.<br><br>
+
+    Возвращает клон этого объекта и, по желанию, всех потомков.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#copy" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#copy" id="copy">copy</a>(object : <a href="api/ru/core/Object3D.html" class="param">Object3D</a>, recursive : <a href="javascript:;" class="param">Boolean</a>) → <a href="javascript:;" class="param">this</a></h3>
+    <p>
+    recursive -- если true, потомки объекта также копируются. По умолчанию - true.<br><br>
+
+    Копирует заданный объект в этот объект.
+
+    Примечание: слушатели событий и пользовательские обратные вызовы (<a href="api/ru/core/Object3D.html#onAfterRender">.onAfterRender</a> и <a href="api/ru/core/Object3D.html#onBeforeRender">.onBeforeRender</a>) не копируются.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#getObjectById" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#getObjectById" id="getObjectById">getObjectById</a>(id : <a href="javascript:;" class="param">Integer</a>) → <a href="api/ru/core/Object3D.html" class="param">Object3D</a></h3>
+    <p>
+    id -- Уникальный номер экземпляра объекта<br><br>
+
+    Выполняет поиск объекта и его дочерних элементов, начиная с самого объекта, и возвращает первый с совпадающим id.<br>
+    Обратите внимание, что идентификаторы присваиваются в хронологическом порядке: 1, 2, 3, ..., увеличиваясь на единицу для каждого нового объекта.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#getObjectByName" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#getObjectByName" id="getObjectByName">getObjectByName</a>(name : <a href="javascript:;" class="param">String</a>) → <a href="api/ru/core/Object3D.html" class="param">Object3D</a></h3>
+    <p>
+    name -- Строка для сопоставления с дочерним свойством Object3D.name. <br><br>
+
+    Выполняет поиск объекта и его дочерних элементов, начиная с самого объекта, и возвращает первый с подходящим именем.<br>
+    Обратите внимание, что для большинства объектов имя по умолчанию является пустой строкой. Вам придется задать его вручную, чтобы воспользоваться этим методом.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#getObjectByProperty" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#getObjectByProperty" id="getObjectByProperty">getObjectByProperty</a>(name : <a href="javascript:;" class="param">String</a>, value : <a href="javascript:;" class="param">Float</a>) → <a href="api/ru/core/Object3D.html" class="param">Object3D</a></h3>
+    <p>
+    name -- имя свойства для поиска. <br>
+    value -- значение данного свойства. <br><br>
+
+    Выполняет поиск по объекту и его дочерним объектам, начиная с самого объекта, и возвращает первый объект, свойство которого соответствует заданному значению.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#getWorldPosition" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#getWorldPosition" id="getWorldPosition">getWorldPosition</a>(target : <a href="api/ru/math/Vector3.html" class="param">Vector3</a>) → <a href="api/ru/math/Vector3.html" class="param">Vector3</a></h3>
+    <p>
+    <a href="api/ru/math/Vector3.html">target</a> — результат будет скопирован в этот Vector3. <br><br>
+
+    Возвращает вектор, представляющий положение объекта в мировом пространстве.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#getWorldQuaternion" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#getWorldQuaternion" id="getWorldQuaternion">getWorldQuaternion</a>(target : <a href="api/ru/math/Quaternion.html" class="param">Quaternion</a>) → <a href="api/ru/math/Quaternion.html" class="param">Quaternion</a></h3>
+    <p>
+    <a href="api/ru/math/Quaternion.html">target</a> — результат будет скопирован в этот кватернион. <br><br>
+
+    Возвращает кватернион, представляющий вращение объекта в мировом пространстве.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#getWorldScale" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#getWorldScale" id="getWorldScale">getWorldScale</a>(target : <a href="api/ru/math/Vector3.html" class="param">Vector3</a>) → <a href="api/ru/math/Vector3.html" class="param">Vector3</a></h3>
+    <p>
+    <a href="api/ru/math/Vector3.html">target</a> — результат будет скопирован в этот Vector3. <br><br>
+
+    Возвращает вектор масштабных коэффициентов, применяемых к объекту для каждой оси в мировом пространстве.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#getWorldDirection" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#getWorldDirection" id="getWorldDirection">getWorldDirection</a>(target : <a href="api/ru/math/Vector3.html" class="param">Vector3</a>) → <a href="api/ru/math/Vector3.html" class="param">Vector3</a></h3>
+    <p>
+    <a href="api/ru/math/Vector3.html">target</a> — результат будет скопирован в этот Vector3. <br><br>
+
+    Возвращает вектор, представляющий направление положительной оси z объекта в мировом пространстве.
+    </p>
+
+
+    <h3><a href="api/ru/core/Object3D.html#localToWorld" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#localToWorld" id="localToWorld">localToWorld</a>(vector : <a href="api/ru/math/Vector3.html" class="param">Vector3</a>) → <a href="api/ru/math/Vector3.html" class="param">Vector3</a></h3>
+    <p>
+    vector - Вектор, представляющий позицию в локальном пространстве этого объекта.<br><br>
+
+    Преобразует вектор из локального пространства этого объекта в мировое пространство.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#lookAt" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#lookAt" id="lookAt">lookAt</a>(vector : <a href="api/ru/math/Vector3.html" class="param">Vector3</a>) → <a href="javascript:;" class="param">null</a><br>
+    <a href="api/ru/core/Object3D.html#lookAt" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#lookAt" id="lookAt">lookAt</a>(x : <a href="javascript:;" class="param">Float</a>, y : <a href="javascript:;" class="param">Float</a>, z : <a href="javascript:;" class="param">Float</a>) → <a href="javascript:;" class="param">null</a></h3>
+    <p>
+    vector - Вектор, представляющий позицию в мировом пространстве.<br><br>
+    Опционально, компоненты <a href="api/ru/core/Object3D.html#x">x</a>, <a href="api/ru/core/Object3D.html#y">y</a> и <a href="api/ru/core/Object3D.html#z">z</a> положения в мировом пространстве..<br><br>
+
+    Поворачивает объект лицом к точке в мировом пространстве.<br><br>
+
+    Этот метод не поддерживает объекты с неоднородно масштабированными родителями.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#raycast" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#raycast" id="raycast">raycast</a>(raycaster : <a href="api/ru/core/Raycaster.html" class="param">Raycaster</a>, intersects : <a href="javascript:;" class="param">Array</a>) → <a href="javascript:;" class="param">Array</a></h3>
+    <p>
+      Абстрактный (пустой) метод для получения пересечений между брошенным лучом и данным объектом. Подклассы, такие как <a href="api/ru/objects/Mesh.html">Mesh</a>, <a href="api/ru/objects/Line.html">Line</a> и <a href="api/ru/objects/Points.html">Points</a>, реализуют этот метод, чтобы использовать отбрасывание лучей.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#remove" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#remove" id="remove">remove</a>(object : <a href="api/ru/core/Object3D.html" class="param">Object3D</a>, ...) → <a href="javascript:;" class="param">this</a></h3>
+    <p>
+      Удаляет <strong>объект</strong> как дочерний объект данного объекта. Может быть удалено произвольное количество объектов.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#clear" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#clear" id="clear">clear</a>() → <a href="javascript:;" class="param">this</a></h3>
+    <p>
+      Удаляет все дочерние объекты.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#rotateOnAxis" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#rotateOnAxis" id="rotateOnAxis">rotateOnAxis</a>(axis : <a href="api/ru/math/Vector3.html" class="param">Vector3</a>, angle : <a href="javascript:;" class="param">Float</a>) → <a href="javascript:;" class="param">this</a></h3>
+    <p>
+    axis -- Нормированный вектор в пространстве объектов. <br>
+    angle -- Угол в радианах.<br><br>
+
+    Поворот объекта вдоль оси в пространстве объекта. Предполагается, что ось нормализована.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#rotateOnWorldAxis" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#rotateOnWorldAxis" id="rotateOnWorldAxis">rotateOnWorldAxis</a>(axis : <a href="api/ru/math/Vector3.html" class="param">Vector3</a>, angle : <a href="javascript:;" class="param">Float</a>) → <a href="javascript:;" class="param">this</a></h3>
+    <p>
+    axis -- Нормированный вектор в мировом пространстве. <br>
+    angle -- Угол в радианах.<br><br>
+
+    Поворот объекта вдоль оси в мировом пространстве. Предполагается, что ось нормализована. Метод Предполагает отсутствие повернутого родителя.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#rotateX" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#rotateX" id="rotateX">rotateX</a>(rad : <a href="javascript:;" class="param">Float</a>) → <a href="javascript:;" class="param">this</a></h3>
+    <p>
+    rad - угол поворота в радианах.<br><br>
+
+    Поворачивает объект вокруг оси x в локальном пространстве.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#rotateY" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#rotateY" id="rotateY">rotateY</a>(rad : <a href="javascript:;" class="param">Float</a>) → <a href="javascript:;" class="param">this</a></h3>
+    <p>
+    rad - угол поворота в радианах.<br><br>
+
+    Поворачивает объект вокруг оси y в локальном пространстве.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#rotateZ" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#rotateZ" id="rotateZ">rotateZ</a>(rad : <a href="javascript:;" class="param">Float</a>) → <a href="javascript:;" class="param">this</a></h3>
+    <p>
+    rad - угол поворота в радианах.<br><br>
+
+    Поворачивает объект вокруг оси z в локальном пространстве.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#setRotationFromAxisAngle" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#setRotationFromAxisAngle" id="setRotationFromAxisAngle">setRotationFromAxisAngle</a>(axis : <a href="api/ru/math/Vector3.html" class="param">Vector3</a>, angle : <a href="javascript:;" class="param">Float</a>) → <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      axis -- Нормированный вектор в пространстве объектов. <br>
+      angle -- угол в радианах<br><br>
+
+      Вызывает <a href="api/ru/math/Quaternion.html#setFromAxisAngle">setFromAxisAngle</a>(<a href="javascript:;">axis</a>, <a href="javascript:;">angle</a>)
+      на <a href="api/ru/core/Object3D.html#quaternion">.quaternion</a>.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#setRotationFromEuler" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#setRotationFromEuler" id="setRotationFromEuler">setRotationFromEuler</a>(euler : <a href="api/ru/math/Euler.html" class="param">Euler</a>) → <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      euler -- Угол Эйлера, определяющий величину поворота.<br>
+
+      Вызывает <a href="api/ru/math/Quaternion.html#setRotationFromEuler">setRotationFromEuler</a>(<a href="api/ru/math/Euler.html">euler</a>)
+      на [страница:.кватернион].
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#setRotationFromMatrix" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#setRotationFromMatrix" id="setRotationFromMatrix">setRotationFromMatrix</a>(m : <a href="api/ru/math/Matrix4.html" class="param">Matrix4</a>) → <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      m -- повернуть кватернион по компоненту вращения матрицы.<br>
+
+      Вызывает <a href="api/ru/math/Quaternion.html#setFromRotationMatrix">setFromRotationMatrix</a>(<a href="api/ru/math/Matrix4.html">m</a>) на <a href="api/ru/core/Object3D.html#quaternion">.quaternion</a>.<br><br>
+
+      Обратите внимание, что это предполагает, что верхние 3x3 из m являются чистой матрицей вращения (т.е. немасштабированной).
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#setRotationFromQuaternion" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#setRotationFromQuaternion" id="setRotationFromQuaternion">setRotationFromQuaternion</a>(q : <a href="api/ru/math/Quaternion.html" class="param">Quaternion</a>) → <a href="javascript:;" class="param">null</a></h3>
+    <p>
+      q -- нормализованный кватернион.<br><br>
+
+      Скопируйте заданный кватернион в <a href="api/ru/core/Object3D.html#quaternion">.quaternion</a>.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#translateOnAxis" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#translateOnAxis" id="translateOnAxis">translateOnAxis</a>(axis : <a href="api/ru/math/Vector3.html" class="param">Vector3</a>, distance : <a href="javascript:;" class="param">Float</a>) → <a href="javascript:;" class="param">this</a></h3>
+    <p>
+    axis -- Нормализованный вектор в пространстве объекта.<br>
+    distance -- Расстояние для перевода.<br><br>
+
+    Перевести объект на расстояние вдоль оси в пространстве объекта. Предполагается, что ось нормализована.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#translateX" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#translateX" id="translateX">translateX</a>(distance : <a href="javascript:;" class="param">Float</a>) → <a href="javascript:;" class="param">this</a></h3>
+    <p>Перемещает объект вдоль оси x в пространстве объекта на единицы <strong>distance</strong>.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#translateY" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#translateY" id="translateY">translateY</a>(distance : <a href="javascript:;" class="param">Float</a>) → <a href="javascript:;" class="param">this</a></h3>
+    <p>Переводит объект вдоль оси y в пространстве объекта на единицы <strong>distance</strong>.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#translateZ" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#translateZ" id="translateZ">translateZ</a>(distance : <a href="javascript:;" class="param">Float</a>) → <a href="javascript:;" class="param">this</a></h3>
+    <p>Перемещает объект вдоль оси z в пространстве объекта на единицы <strong>distance</strong>.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#traverse" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#traverse" id="traverse">traverse</a>(callback : <a href="javascript:;" class="param">Function</a>) → <a href="javascript:;" class="param">null</a></h3>
+    <p>
+    callback - Функция, первым аргументом которой является объект object3D.<br><br>
+
+    Выполняет обратный вызов для этого объекта и всех потомков.<br>
+    Примечание: Не рекомендуется изменять граф сцены внутри обратного вызова.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#traverseVisible" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#traverseVisible" id="traverseVisible">traverseVisible</a>(callback : <a href="javascript:;" class="param">Function</a>) → <a href="javascript:;" class="param">null</a></h3>
+    <p>
+    callback - Функция, первым аргументом которой является объект object3D.<br><br>
+
+    Аналогично traverse, но обратный вызов будет выполняться только для видимых объектов.
+    Потомки невидимых объектов не обходятся.<br>
+    Примечание: Не рекомендуется изменять граф сцены внутри обратного вызова.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#traverseAncestors" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#traverseAncestors" id="traverseAncestors">traverseAncestors</a>(callback : <a href="javascript:;" class="param">Function</a>) → <a href="javascript:;" class="param">null</a></h3>
+    <p>
+    callback - Функция, первым аргументом которой является объект object3D.<br><br>
+
+    Выполняет обратный вызов для всех предков.<br>
+    Примечание: Не рекомендуется изменять граф сцены внутри обратного вызова.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#updateMatrix" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#updateMatrix" id="updateMatrix">updateMatrix</a>() → <a href="javascript:;" class="param">null</a></h3>
+    <p>Обновляет локальное преобразование.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#updateMatrixWorld" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#updateMatrixWorld" id="updateMatrixWorld">updateMatrixWorld</a>(force : <a href="javascript:;" class="param">Boolean</a>) → <a href="javascript:;" class="param">null</a></h3>
+    <p>Обновляет глобальное преобразование объекта и его потомков.</p>
+
+    <h3><a href="api/ru/core/Object3D.html#updateWorldMatrix" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#updateWorldMatrix" id="updateWorldMatrix">updateWorldMatrix</a>(updateParents : <a href="javascript:;" class="param">Boolean</a>, updateChildren : <a href="javascript:;" class="param">Boolean</a>) → <a href="javascript:;" class="param">null</a></h3>
+    <p>
+    updateParents - рекурсивно обновляет глобальное преобразование предков.<br>
+    updateChildren - рекурсивно обновляет глобальное преобразование потомков.<br><br>
+
+    Обновляет глобальное преобразование объекта.
+    </p>
+
+    <h3><a href="api/ru/core/Object3D.html#worldToLocal" class="permalink">#</a> .<a href="api/ru/core/Object3D.html#worldToLocal" id="worldToLocal">worldToLocal</a>(vector : <a href="api/ru/math/Vector3.html" class="param">Vector3</a>) → <a href="api/ru/math/Vector3.html" class="param">Vector3</a></h3>
+    <p>
+    vector - Вектор, представляющий положение в мировом пространстве.<br><br>
+
+    Преобразует вектор из мирового пространства в локальное пространство этого объекта.
+    </p>
+
+    <h2>Исходный файл</h2><p>О том как получить исходный код этого модуля читайте <a href="manual/ru/programmers_guide/How-to-obtain-Verge3D-sources.html">тут</a>.</p>
+  
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

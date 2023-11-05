@@ -1,0 +1,65 @@
+Performing C++ SOURCE FILE Test HAVE_EGL failed with the following output:
+Change Dir: /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_e8320 -parallelizeTargets -configuration Debug -hideShellScriptEnvironment && Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project CMAKE_TRY_COMPILE.xcodeproj build -target cmTC_e8320 -parallelizeTargets -configuration Debug -hideShellScriptEnvironment
+
+User defaults from command line:
+    HideShellScriptEnvironment = YES
+    IDEPackageSupportUseBuiltinSCM = YES
+
+Computing target dependency graph and provisioning inputs
+
+Create build description
+Build description signature: 866354417ee40d6e659a08878e4018e7
+Build description path: /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/build/XCBuildData/866354417ee40d6e659a08878e4018e7-desc.xcbuild
+
+note: Building targets in dependency order
+CreateBuildDirectory /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp
+    cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.xcodeproj
+    builtin-create-build-directory /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp
+
+CreateBuildDirectory /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/EagerLinkingTBDs
+    cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.xcodeproj
+    builtin-create-build-directory /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/EagerLinkingTBDs
+
+CreateBuildDirectory /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/Debug
+    cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.xcodeproj
+    builtin-create-build-directory /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/Debug
+
+MkDir /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/Debug/cmTC_e8320.app (in target 'cmTC_e8320' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp
+    /bin/mkdir -p /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/Debug/cmTC_e8320.app
+
+ProcessInfoPlistFile /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/Debug/cmTC_e8320.app/Info.plist /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e8320.dir/Info.plist (in target 'cmTC_e8320' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp
+    builtin-infoPlistUtility /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMakeFiles/cmTC_e8320.dir/Info.plist -producttype com.apple.product-type.application -genpkginfo /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/Debug/cmTC_e8320.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -requiredArchitecture arm64 -o /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/Debug/cmTC_e8320.app/Info.plist
+
+WriteAuxiliaryFile /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug-iphoneos/cmTC_e8320.build/Objects-normal/arm64/cmTC_e8320.LinkFileList (in target 'cmTC_e8320' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp
+    write-file /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug-iphoneos/cmTC_e8320.build/Objects-normal/arm64/cmTC_e8320.LinkFileList
+
+CompileC /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug-iphoneos/cmTC_e8320.build/Objects-normal/arm64/src.o /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/src.cxx normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_e8320' from project 'CMAKE_TRY_COMPILE')
+    cd /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -target arm64-apple-ios14.0 -fmessage-length\=0 -fdiagnostics-show-note-include-stack -fmacro-backtrace-limit\=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-bool-conversion -Wno-enum-conversion -Wno-float-conversion -Wno-non-literal-null-conversion -Wno-objc-literal-conversion -Wshorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions -Wno-implicit-fallthrough -DCMAKE_INTDIR\=\"Debug-iphoneos\" -DHAVE_EGL -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -g -Wno-sign-conversion -Wno-infinite-recursion -Wno-move -Wno-comma -Wno-block-capture-autoreleasing -Wno-strict-prototypes -Wno-range-loop-analysis -Wno-semicolon-before-method-body -I/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/Debug/include -I/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug-iphoneos/cmTC_e8320.build/DerivedSources-normal/arm64 -I/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug-iphoneos/cmTC_e8320.build/DerivedSources/arm64 -I/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug-iphoneos/cmTC_e8320.build/DerivedSources -F/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/Debug -DQT_QML_DEBUG -std\=gnu++17 -MMD -MT dependencies -MF /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug-iphoneos/cmTC_e8320.build/Objects-normal/arm64/src.d --serialize-diagnostics /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug-iphoneos/cmTC_e8320.build/Objects-normal/arm64/src.dia -c /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/src.cxx -o /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug-iphoneos/cmTC_e8320.build/Objects-normal/arm64/src.o
+/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/src.cxx:2:10: fatal error: 'EGL/egl.h' file not found
+#include <EGL/egl.h>
+         ^~~~~~~~~~~
+1 error generated.
+
+** BUILD FAILED **
+
+
+The following build commands failed:
+	CompileC /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/CMAKE_TRY_COMPILE.build/Debug-iphoneos/cmTC_e8320.build/Objects-normal/arm64/src.o /Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Tutorials/Note\ pad/build-notepadTut-Qt_6_6_0_for_iOS/CMakeFiles/CMakeTmp/src.cxx normal arm64 c++ com.apple.compilers.llvm.clang.1_0.compiler (in target 'cmTC_e8320' from project 'CMAKE_TRY_COMPILE')
+(1 failure)
+
+
+Source file was:
+
+#include <EGL/egl.h>
+
+int main(int, char **) {
+    EGLint x = 0; EGLDisplay dpy = 0; EGLContext ctx = 0;
+    eglDestroyContext(dpy, ctx);
+}

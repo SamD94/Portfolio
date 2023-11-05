@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Verge3D Material Browser</title>
+    <link rel="shortcut icon" href="../files/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="../files/main.css">
+    <style>
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      #newWindow {
+        display: block;
+        position: absolute;
+        bottom: 0.3em;
+        left: 0.5em;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Import maps polyfill -->
+    <!-- Remove this when import maps will be widely supported -->
+    <script async src="https://unpkg.com/es-module-shims@1.3.6/dist/es-module-shims.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "v3d": "../files/v3d.module.js",
+          "v3d/addons/": "../files/jsm/"
+        }
+      }
+    </script>
+
+    <a id='newWindow' href='./material-browser.html' target='_blank'>Open in New Window</a>
+
+    <script type="module">
+
+      import * as v3d from 'v3d';
+      import { GUI } from 'v3d/addons/libs/lil-gui.module.min.js';
+      import { RoomEnvironment } from 'v3d/addons/environments/RoomEnvironment.js';
+
+      const constants = {
+
+        combine: {
+
+          'v3d.MultiplyOperation': v3d.MultiplyOperation,
+          'v3d.MixOperation': v3d.MixOperation,
+          'v3d.AddOperation': v3d.AddOperation
+
+        },
+
+        side: {
+
+          'v3d.FrontSide': v3d.FrontSide,
+          'v3d.BackSide': v3d.BackSide,
+          'v3d.DoubleSide': v3d.DoubleSide
+
+        },
+
+        blendingMode: {
+
+          'v3d.NoBlending': v3d.NoBlending,
+          'v3d.NormalBlending': v3d.NormalBlending,
+          'v3d.AdditiveBlending': v3d.AdditiveBlending,
+          'v3d.SubtractiveBlending': v3d.SubtractiveBlending,
+          'v3d.MultiplyBlending': v3d.MultiplyBlending,
+          'v3d.CustomBlending': v3d.CustomBlending
+
+        },
+
+        equations: {
+
+          'v3d.AddEquation': v3d.AddEquation,
+          'v3d.SubtractEquation': v3d.SubtractEquation,
+          'v3d.ReverseSubtractEquation': v3d.ReverseSubtractEquation
+
+        },
+
+        destinationFactors: {
+
+          'v3d.ZeroFactor': v3d.ZeroFactor,
+          'v3d.OneFactor': v3d.OneFactor,
+          'v3d.SrcColorFactor': v3d.SrcColorFactor,
+          'v3d.OneMinusSrcColorFactor': v3d.OneMinusSrcColorFactor,
+          'v3d.SrcAlphaFactor': v3d.SrcAlphaFactor,
+          'v3d.OneMinusSrcAlphaFactor': v3d.OneMinusSrcAlphaFactor,
+          'v3d.DstAlphaFactor': v3d.DstAlphaFactor,
+          'v3d.OneMinusDstAlphaFactor': v3d.OneMinusDstAlphaFactor
+
+        },
+
+        sourceFactors: {
+
+          'v3d.DstColorFactor': v3d.DstColorFactor,
+          'v3d.OneMinusDstColorFactor': v3d.OneMinusDstColorFactor,
+          'v3d.SrcAlphaSaturateFactor': v3d.SrcAlphaSaturateFactor
+
+        }
+
+      };
+
+      function getObjectsKeys(obj) {
+
+        const keys = [];
+
+        for (const key in obj) {
+
+          if (obj.hasOwnProperty(key)) {
+
+            keys.push(key);
+
+          }
+
+        }
+
+        return keys;
+
+      }
+
+      const textureLoader = new v3d.TextureLoader();
+      const cubeTextureLoader = new v3d.CubeTextureLoader();
+
+      const envMaps = (function() {
+
+        const path = '../files/textures/cube/SwedishRoyalCastle/';
+        const format = '.jpg';
+        const urls = [
+          path + 'px' + format, path + 'nx' + format,
+          path + 'py' + format, path + 'ny' + format,
+          path + 'pz' + format, path + 'nz' + format
+        ];
+
+        const reflectionCube = cubeTextureLoader.load(urls);
+
+        const refractionCube = cubeTextureLoader.load(urls);
+        refractionCube.mapping = v3d.CubeRefractionMapping;
+
+        return {
+          none: null,
+          reflection: reflectionCube,
+          refraction: refractionCube
+        };
+
+      })();
+
+      const diffuseMaps = (function() {
+
+        const bricks = textureLoader.load('../files/textures/brick_diffuse.jpg');
+        bricks.wrapS = v3d.RepeatWrapping;
+        bricks.wrapT = v3d.RepeatWrapping;
+        bricks.repeat.set(9, 1);
+
+        return {
+          none: null,
+          bricks: bricks
+        };
+
+      })();
+
+      const roughnessMaps = (function() {
+
+        const bricks = textureLoader.load('../files/textures/brick_roughness.jpg');
+        bricks.wrapT = v3d.RepeatWrapping;
+        bricks.wrapS = v3d.RepeatWrapping;
+        bricks.repeat.set(9, 1);
+
+        return {
+          none: null,
+          bricks: bricks
+        };
+
+      })();
+
+      const matcaps = (function() {
+
+        return {
+          none: null,
+          porcelainWhite: textureLoader.load('../files/textures/matcaps/matcap-porcelain-white.jpg')
+        };
+
+      })();
+
+      const alphaMaps = (function() {
+
+        const fibers = textureLoader.load('../files/textures/alphaMap.jpg');
+        fibers.wrapT = v3d.RepeatWrapping;
+        fibers.wrapS = v3d.RepeatWrapping;
+        fibers.repeat.set(9, 1);
+
+        return {
+          none: null,
+          fibers: fibers
+        };
+
+      })();
+
+      const gradientMaps = (function() {
+
+        const threeTone = textureLoader.load('../files/textures/gradientMaps/threeTone.jpg');
+        threeTone.minFilter = v3d.NearestFilter;
+        threeTone.magFilter = v3d.NearestFilter;
+
+        const fiveTone = textureLoader.load('../files/textures/gradientMaps/fiveTone.jpg');
+        fiveTone.minFilter = v3d.NearestFilter;
+        fiveTone.magFilter = v3d.NearestFilter;
+
+        return {
+          none: null,
+          threeTone: threeTone,
+          fiveTone: fiveTone
+        };
+
+      })();
+
+      const envMapKeys = getObjectsKeys(envMaps);
+      const envMapKeysPBR = envMapKeys.slice(0, 2);
+      const diffuseMapKeys = getObjectsKeys(diffuseMaps);
+      const roughnessMapKeys = getObjectsKeys(roughnessMaps);
+      const matcapKeys = getObjectsKeys(matcaps);
+      const alphaMapKeys = getObjectsKeys(alphaMaps);
+      const gradientMapKeys = getObjectsKeys(gradientMaps);
+
+      function generateVertexColors(geometry) {
+
+        const positionAttribute = geometry.attributes.position;
+
+        const colors = [];
+        const color = new v3d.Color();
+
+        for (let i = 0, il = positionAttribute.count; i < il; i++) {
+
+          color.setHSL(i / il * Math.random(), 0.5, 0.5);
+          colors.push(color.r, color.g, color.b);
+
+        }
+
+        geometry.setAttribute('color', new v3d.Float32BufferAttribute(colors, 3));
+
+      }
+
+      function handleColorChange(color, converSRGBToLinear = false) {
+
+        return function(value) {
+
+          if (typeof value === 'string') {
+
+            value = value.replace('#', '0x');
+
+          }
+
+          color.setHex(value);
+
+          if (converSRGBToLinear === true) color.convertSRGBToLinear();
+
+        };
+
+      }
+
+      function needsUpdate(material, geometry) {
+
+        return function() {
+
+          material.side = parseInt(material.side); //Ensure number
+          material.needsUpdate = true;
+          geometry.attributes.position.needsUpdate = true;
+          geometry.attributes.normal.needsUpdate = true;
+          geometry.attributes.color.needsUpdate = true;
+
+        };
+
+      }
+
+      function updateCombine(material) {
+
+        return function(combine) {
+
+          material.combine = parseInt(combine);
+          material.needsUpdate = true;
+
+        };
+
+      }
+
+      function updateTexture(material, materialKey, textures) {
+
+        return function(key) {
+
+          material[materialKey] = textures[key];
+          material.needsUpdate = true;
+
+        };
+
+      }
+
+      function guiScene(gui, scene) {
+
+        const folder = gui.addFolder('Scene');
+
+        const data = {
+          background: '#000000',
+          'ambient light': ambientLight.color.getHex()
+        };
+
+        folder.addColor(data, 'ambient light').onChange(handleColorChange(ambientLight.color, true));
+
+        guiSceneFog(folder, scene);
+
+      }
+
+      function guiSceneFog(folder, scene) {
+
+        const fogFolder = folder.addFolder('scene.fog');
+
+        const fog = new v3d.Fog(0x3f7b9d, 0, 60);
+
+        const data = {
+          fog: {
+            'v3d.Fog()': false,
+            'scene.fog.color': fog.color.getHex()
+          }
+        };
+
+        fogFolder.add(data.fog, 'v3d.Fog()').onChange(function(useFog) {
+
+          if (useFog) {
+
+            scene.fog = fog;
+
+          } else {
+
+            scene.fog = null;
+
+          }
+
+        });
+
+        fogFolder.addColor(data.fog, 'scene.fog.color').onChange(handleColorChange(fog.color));
+
+      }
+
+      function guiMaterial(gui, mesh, material, geometry) {
+
+        const folder = gui.addFolder('v3d.Material');
+
+        folder.add(material, 'transparent').onChange(needsUpdate(material, geometry));
+        folder.add(material, 'opacity', 0, 1).step(0.01);
+        // folder.add(material, 'blending', constants.blendingMode);
+        // folder.add(material, 'blendSrc', constants.destinationFactors);
+        // folder.add(material, 'blendDst', constants.destinationFactors);
+        // folder.add(material, 'blendEquation', constants.equations);
+        folder.add(material, 'depthTest');
+        folder.add(material, 'depthWrite');
+        // folder.add(material, 'polygonOffset');
+        // folder.add(material, 'polygonOffsetFactor');
+        // folder.add(material, 'polygonOffsetUnits');
+        folder.add(material, 'alphaTest', 0, 1).step(0.01).onChange(needsUpdate(material, geometry));
+        folder.add(material, 'visible');
+        folder.add(material, 'side', constants.side).onChange(needsUpdate(material, geometry));
+
+      }
+
+      function guiMeshBasicMaterial(gui, mesh, material, geometry) {
+
+        const data = {
+          color: material.color.getHex(),
+          envMaps: envMapKeys[0],
+          map: diffuseMapKeys[0],
+          alphaMap: alphaMapKeys[0]
+        };
+
+        const folder = gui.addFolder('v3d.MeshBasicMaterial');
+
+        folder.addColor(data, 'color').onChange(handleColorChange(material.color, true));
+        folder.add(material, 'wireframe');
+        folder.add(material, 'vertexColors').onChange(needsUpdate(material, geometry));
+        folder.add(material, 'fog').onChange(needsUpdate(material, geometry));
+
+        folder.add(data, 'envMaps', envMapKeys).onChange(updateTexture(material, 'envMap', envMaps));
+        folder.add(data, 'map', diffuseMapKeys).onChange(updateTexture(material, 'map', diffuseMaps));
+        folder.add(data, 'alphaMap', alphaMapKeys).onChange(updateTexture(material, 'alphaMap', alphaMaps));
+        folder.add(material, 'combine', constants.combine).onChange(updateCombine(material));
+        folder.add(material, 'reflectivity', 0, 1);
+        folder.add(material, 'refractionRatio', 0, 1);
+
+      }
+
+      function guiMeshDepthMaterial(gui, mesh, material) {
+
+        const data = {
+          alphaMap: alphaMapKeys[0]
+        };
+
+        const folder = gui.addFolder('v3d.MeshDepthMaterial');
+
+        folder.add(material, 'wireframe');
+
+        folder.add(data, 'alphaMap', alphaMapKeys).onChange(updateTexture(material, 'alphaMap', alphaMaps));
+
+      }
+
+      function guiMeshNormalMaterial(gui, mesh, material, geometry) {
+
+        const folder = gui.addFolder('v3d.MeshNormalMaterial');
+
+        folder.add(material, 'flatShading').onChange(needsUpdate(material, geometry));
+        folder.add(material, 'wireframe');
+
+      }
+
+      function guiLineBasicMaterial(gui, mesh, material, geometry) {
+
+        const data = {
+          color: material.color.getHex()
+        };
+
+        const folder = gui.addFolder('v3d.LineBasicMaterial');
+
+        folder.addColor(data, 'color').onChange(handleColorChange(material.color, true));
+        folder.add(material, 'linewidth', 0, 10);
+        folder.add(material, 'linecap', ['butt', 'round', 'square']);
+        folder.add(material, 'linejoin', ['round', 'bevel', 'miter']);
+        folder.add(material, 'vertexColors').onChange(needsUpdate(material, geometry));
+        folder.add(material, 'fog').onChange(needsUpdate(material, geometry));
+
+      }
+
+      function guiMeshLambertMaterial(gui, mesh, material, geometry) {
+
+        const data = {
+          color: material.color.getHex(),
+          emissive: material.emissive.getHex(),
+          envMaps: envMapKeys[0],
+          map: diffuseMapKeys[0],
+          alphaMap: alphaMapKeys[0]
+        };
+
+        const folder = gui.addFolder('v3d.MeshLambertMaterial');
+
+        folder.addColor(data, 'color').onChange(handleColorChange(material.color, true));
+        folder.addColor(data, 'emissive').onChange(handleColorChange(material.emissive, true));
+
+        folder.add(material, 'wireframe');
+        folder.add(material, 'vertexColors').onChange(needsUpdate(material, geometry));
+        folder.add(material, 'fog').onChange(needsUpdate(material, geometry));
+
+        folder.add(data, 'envMaps', envMapKeys).onChange(updateTexture(material, 'envMap', envMaps));
+        folder.add(data, 'map', diffuseMapKeys).onChange(updateTexture(material, 'map', diffuseMaps));
+        folder.add(data, 'alphaMap', alphaMapKeys).onChange(updateTexture(material, 'alphaMap', alphaMaps));
+        folder.add(material, 'combine', constants.combine).onChange(updateCombine(material));
+        folder.add(material, 'reflectivity', 0, 1);
+        folder.add(material, 'refractionRatio', 0, 1);
+
+      }
+
+      function guiMeshMatcapMaterial(gui, mesh, material, geometry) {
+
+        const data = {
+          color: material.color.getHex(),
+          matcap: matcapKeys[1],
+          alphaMap: alphaMapKeys[0]
+        };
+
+        const folder = gui.addFolder('v3d.MeshMatcapMaterial');
+
+        folder.addColor(data, 'color').onChange(handleColorChange(material.color, true));
+
+        folder.add(material, 'flatShading').onChange(needsUpdate(material, geometry));
+        folder.add(data, 'matcap', matcapKeys).onChange(updateTexture(material, 'matcap', matcaps));
+        folder.add(data, 'alphaMap', alphaMapKeys).onChange(updateTexture(material, 'alphaMap', alphaMaps));
+
+      }
+
+      function guiMeshPhongMaterial(gui, mesh, material, geometry) {
+
+        const data = {
+          color: material.color.getHex(),
+          emissive: material.emissive.getHex(),
+          specular: material.specular.getHex(),
+          envMaps: envMapKeys[0],
+          map: diffuseMapKeys[0],
+          alphaMap: alphaMapKeys[0]
+        };
+
+        const folder = gui.addFolder('v3d.MeshPhongMaterial');
+
+        folder.addColor(data, 'color').onChange(handleColorChange(material.color, true));
+        folder.addColor(data, 'emissive').onChange(handleColorChange(material.emissive, true));
+        folder.addColor(data, 'specular').onChange(handleColorChange(material.specular));
+
+        folder.add(material, 'shininess', 0, 100);
+        folder.add(material, 'flatShading').onChange(needsUpdate(material, geometry));
+        folder.add(material, 'wireframe');
+        folder.add(material, 'vertexColors').onChange(needsUpdate(material, geometry));
+        folder.add(material, 'fog').onChange(needsUpdate(material, geometry));
+        folder.add(data, 'envMaps', envMapKeys).onChange(updateTexture(material, 'envMap', envMaps));
+        folder.add(data, 'map', diffuseMapKeys).onChange(updateTexture(material, 'map', diffuseMaps));
+        folder.add(data, 'alphaMap', alphaMapKeys).onChange(updateTexture(material, 'alphaMap', alphaMaps));
+        folder.add(material, 'combine', constants.combine).onChange(updateCombine(material));
+        folder.add(material, 'reflectivity', 0, 1);
+        folder.add(material, 'refractionRatio', 0, 1);
+
+      }
+
+      function guiMeshToonMaterial(gui, mesh, material) {
+
+        const data = {
+          color: material.color.getHex(),
+          map: diffuseMapKeys[0],
+          gradientMap: gradientMapKeys[1],
+          alphaMap: alphaMapKeys[0]
+        };
+
+        const folder = gui.addFolder('v3d.MeshToonMaterial');
+
+        folder.addColor(data, 'color').onChange(handleColorChange(material.color, true));
+        folder.add(data, 'map', diffuseMapKeys).onChange(updateTexture(material, 'map', diffuseMaps));
+        folder.add(data, 'gradientMap', gradientMapKeys).onChange(updateTexture(material, 'gradientMap', gradientMaps));
+        folder.add(data, 'alphaMap', alphaMapKeys).onChange(updateTexture(material, 'alphaMap', alphaMaps));
+
+      }
+
+      function guiMeshStandardMaterial(gui, mesh, material, geometry) {
+
+        const data = {
+          color: material.color.getHex(),
+          emissive: material.emissive.getHex(),
+          envMaps: envMapKeysPBR[0],
+          map: diffuseMapKeys[0],
+          roughnessMap: roughnessMapKeys[0],
+          alphaMap: alphaMapKeys[0]
+        };
+
+        const folder = gui.addFolder('v3d.MeshStandardMaterial');
+
+        folder.addColor(data, 'color').onChange(handleColorChange(material.color, true));
+        folder.addColor(data, 'emissive').onChange(handleColorChange(material.emissive, true));
+
+        folder.add(material, 'roughness', 0, 1);
+        folder.add(material, 'metalness', 0, 1);
+        folder.add(material, 'flatShading').onChange(needsUpdate(material, geometry));
+        folder.add(material, 'wireframe');
+        folder.add(material, 'vertexColors').onChange(needsUpdate(material, geometry));
+        folder.add(material, 'fog').onChange(needsUpdate(material, geometry));
+        folder.add(data, 'envMaps', envMapKeysPBR).onChange(updateTexture(material, 'envMap', envMaps));
+        folder.add(data, 'map', diffuseMapKeys).onChange(updateTexture(material, 'map', diffuseMaps));
+        folder.add(data, 'roughnessMap', roughnessMapKeys).onChange(updateTexture(material, 'roughnessMap', roughnessMaps));
+        folder.add(data, 'alphaMap', alphaMapKeys).onChange(updateTexture(material, 'alphaMap', alphaMaps));
+
+        // TODO metalnessMap
+
+      }
+
+      function guiMeshPhysicalMaterial(gui, mesh, material, geometry) {
+
+        const data = {
+          color: material.color.getHex(),
+          emissive: material.emissive.getHex(),
+          envMaps: envMapKeys[0],
+          map: diffuseMapKeys[0],
+          roughnessMap: roughnessMapKeys[0],
+          alphaMap: alphaMapKeys[0]
+        };
+
+        const folder = gui.addFolder('v3d.MeshPhysicalMaterial');
+
+        folder.addColor(data, 'color').onChange(handleColorChange(material.color, true));
+        folder.addColor(data, 'emissive').onChange(handleColorChange(material.emissive, true));
+
+        folder.add(material, 'roughness', 0, 1);
+        folder.add(material, 'metalness', 0, 1);
+        folder.add(material, 'reflectivity', 0, 1);
+        folder.add(material, 'clearcoat', 0, 1).step(0.01);
+        folder.add(material, 'clearcoatRoughness', 0, 1).step(0.01);
+        folder.add(material, 'flatShading').onChange(needsUpdate(material, geometry));
+        folder.add(material, 'wireframe');
+        folder.add(material, 'vertexColors').onChange(needsUpdate(material, geometry));
+        folder.add(material, 'fog').onChange(needsUpdate(material, geometry));
+        folder.add(data, 'envMaps', envMapKeysPBR).onChange(updateTexture(material, 'envMap', envMaps));
+        folder.add(data, 'map', diffuseMapKeys).onChange(updateTexture(material, 'map', diffuseMaps));
+        folder.add(data, 'roughnessMap', roughnessMapKeys).onChange(updateTexture(material, 'roughnessMap', roughnessMaps));
+        folder.add(data, 'alphaMap', alphaMapKeys).onChange(updateTexture(material, 'alphaMap', alphaMaps));
+
+        // TODO metalnessMap
+
+      }
+
+      function chooseFromHash(gui, mesh, geometry) {
+
+        const selectedMaterial = window.location.hash.substring(1) || 'MeshBasicMaterial';
+
+        let material;
+
+        switch (selectedMaterial) {
+
+          case 'MeshBasicMaterial' :
+
+            material = new v3d.MeshBasicMaterial({ color: 0x049EF4 });
+            guiMaterial(gui, mesh, material, geometry);
+            guiMeshBasicMaterial(gui, mesh, material, geometry);
+
+            return material;
+
+            break;
+
+          case 'MeshLambertMaterial' :
+
+            material = new v3d.MeshLambertMaterial({ color: 0x049EF4 });
+            guiMaterial(gui, mesh, material, geometry);
+            guiMeshLambertMaterial(gui, mesh, material, geometry);
+
+            return material;
+
+            break;
+
+          case 'MeshMatcapMaterial' :
+
+            material = new v3d.MeshMatcapMaterial({ matcap: matcaps.porcelainWhite });
+            guiMaterial(gui, mesh, material, geometry);
+            guiMeshMatcapMaterial(gui, mesh, material, geometry);
+
+            // no need for lights
+
+            light1.visible = false;
+            light2.visible = false;
+            light3.visible = false;
+
+            return material;
+
+            break;
+
+          case 'MeshPhongMaterial' :
+
+            material = new v3d.MeshPhongMaterial({ color: 0x049EF4 });
+            guiMaterial(gui, mesh, material, geometry);
+            guiMeshPhongMaterial(gui, mesh, material, geometry);
+
+            return material;
+
+            break;
+
+          case 'MeshToonMaterial' :
+
+            material = new v3d.MeshToonMaterial({ color: 0x049EF4, gradientMap: gradientMaps.threeTone });
+            guiMaterial(gui, mesh, material, geometry);
+            guiMeshToonMaterial(gui, mesh, material);
+
+            // only use a single point light
+
+            light1.visible = false;
+            light3.visible = false;
+
+            return material;
+
+            break;
+
+          case 'MeshStandardMaterial' :
+
+            material = new v3d.MeshStandardMaterial({ color: 0x049EF4 });
+            guiMaterial(gui, mesh, material, geometry);
+            guiMeshStandardMaterial(gui, mesh, material, geometry);
+
+            // only use scene environment
+
+            light1.visible = false;
+            light2.visible = false;
+            light3.visible = false;
+
+            return material;
+
+            break;
+
+          case 'MeshPhysicalMaterial' :
+
+            material = new v3d.MeshPhysicalMaterial({ color: 0x049EF4 });
+            guiMaterial(gui, mesh, material, geometry);
+            guiMeshPhysicalMaterial(gui, mesh, material, geometry);
+
+            // only use scene environment
+
+            light1.visible = false;
+            light2.visible = false;
+            light3.visible = false;
+
+            return material;
+
+            break;
+
+          case 'MeshDepthMaterial' :
+
+            material = new v3d.MeshDepthMaterial();
+            guiMaterial(gui, mesh, material, geometry);
+            guiMeshDepthMaterial(gui, mesh, material);
+
+            return material;
+
+            break;
+
+          case 'MeshNormalMaterial' :
+
+            material = new v3d.MeshNormalMaterial();
+            guiMaterial(gui, mesh, material, geometry);
+            guiMeshNormalMaterial(gui, mesh, material, geometry);
+
+            return material;
+
+            break;
+
+          case 'LineBasicMaterial' :
+
+            material = new v3d.LineBasicMaterial({ color: 0x2194CE });
+            guiMaterial(gui, mesh, material, geometry);
+            guiLineBasicMaterial(gui, mesh, material, geometry);
+
+            return material;
+
+            break;
+
+        }
+
+      }
+
+      //
+
+      const selectedMaterial = window.location.hash.substring(1);
+
+      if (v3d[selectedMaterial] !== undefined) {
+
+        document.getElementById('newWindow').href += '#' + selectedMaterial;
+
+      }
+
+      const gui = new GUI();
+
+      const renderer = new v3d.WebGLRenderer({ antialias: true });
+      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.outputEncoding = v3d.sRGBEncoding;
+      document.body.appendChild(renderer.domElement);
+
+      const pmremGenerator = new v3d.PMREMGenerator(renderer);
+
+      const scene = new v3d.Scene();
+      scene.background = new v3d.Color(0x444444);
+      scene.environment = pmremGenerator.fromScene(new RoomEnvironment(), 0.04).texture;
+
+      const camera = new v3d.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 10, 100);
+      camera.position.z = 35;
+
+      const ambientLight = new v3d.AmbientLight(0x000000);
+      scene.add(ambientLight);
+
+      const light1 = new v3d.PointLight(0xffffff, 1, 0);
+      light1.position.set(0, 200, 0);
+      scene.add(light1);
+
+      const light2 = new v3d.PointLight(0xffffff, 1, 0);
+      light2.position.set(100, 200, 100);
+      scene.add(light2);
+
+      const light3 = new v3d.PointLight(0xffffff, 1, 0);
+      light3.position.set(- 100, -200, -100);
+      scene.add(light3);
+
+      guiScene(gui, scene);
+
+      const geometry = new v3d.TorusKnotGeometry(10, 3, 200, 32).toNonIndexed();
+
+      generateVertexColors(geometry);
+
+      const mesh = new v3d.Mesh(geometry);
+      mesh.material = chooseFromHash(gui, mesh, geometry);
+
+      scene.add(mesh);
+
+      let prevFog = false;
+
+      function render() {
+
+        requestAnimationFrame(render);
+
+        mesh.rotation.x += 0.005;
+        mesh.rotation.y += 0.005;
+
+        if (prevFog !== scene.fog) {
+
+          mesh.material.needsUpdate = true;
+          prevFog = scene.fog;
+
+        }
+
+        renderer.render(scene, camera);
+
+      }
+
+      window.addEventListener('resize', function() {
+
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+      }, false);
+
+      render();
+
+    </script>
+  </body>
+</html>

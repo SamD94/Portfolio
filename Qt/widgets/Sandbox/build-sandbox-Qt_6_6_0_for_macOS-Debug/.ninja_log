@@ -1,0 +1,23 @@
+# ninja log v5
+0	928	1684565079868270859	sandbox_autogen/timestamp	b97e88263a6aa6c1
+0	928	1684565079868270859	sandbox_autogen/mocs_compilation.cpp	b97e88263a6aa6c1
+0	928	1684565079868270859	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_macOS-Debug/sandbox_autogen/timestamp	b97e88263a6aa6c1
+0	928	1684565079868270859	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_macOS-Debug/sandbox_autogen/mocs_compilation.cpp	b97e88263a6aa6c1
+929	3517	1684565082463594079	CMakeFiles/sandbox.dir/sandbox_autogen/mocs_compilation.cpp.o	a5aa4c89f4aa9915
+929	3536	1684565082482853082	CMakeFiles/sandbox.dir/main.cpp.o	c0ffc92d56857edc
+929	3595	1684565082538193875	CMakeFiles/sandbox.dir/mainwindow.cpp.o	505e812f83709eab
+3596	4070	1684565083022990748	sandbox.app/Contents/MacOS/sandbox	178222056c1a6274
+85	190	1684647576572280535	sandbox_autogen/timestamp	b97e88263a6aa6c1
+85	190	1684647576572280535	sandbox_autogen/mocs_compilation.cpp	b97e88263a6aa6c1
+85	190	1684647576572280535	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_macOS-Debug/sandbox_autogen/timestamp	b97e88263a6aa6c1
+85	190	1684647576572280535	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_macOS-Debug/sandbox_autogen/mocs_compilation.cpp	b97e88263a6aa6c1
+196	2839	1684647579209230329	CMakeFiles/sandbox.dir/mainwindow.cpp.o	505e812f83709eab
+2840	3413	1684647579786545062	sandbox.app/Contents/MacOS/sandbox	178222056c1a6274
+49	759	1684827053261554000	sandbox_autogen/timestamp	b97e88263a6aa6c1
+49	759	1684827053261554000	sandbox_autogen/mocs_compilation.cpp	b97e88263a6aa6c1
+49	759	1684827053261554000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_macOS-Debug/sandbox_autogen/timestamp	b97e88263a6aa6c1
+49	759	1684827053261554000	/Users/rainhome/Library/CloudStorage/OneDrive-Personal/Desktop/Career/Portfolio/Qt/widgets/Sandbox/build-sandbox-Qt_6_6_0_for_macOS-Debug/sandbox_autogen/mocs_compilation.cpp	b97e88263a6aa6c1
+760	3860	1684827056372454241	CMakeFiles/sandbox.dir/sandbox_autogen/mocs_compilation.cpp.o	a5aa4c89f4aa9915
+760	3972	1684827056482154115	CMakeFiles/sandbox.dir/main.cpp.o	c0ffc92d56857edc
+760	4212	1684827056724688485	CMakeFiles/sandbox.dir/mainwindow.cpp.o	505e812f83709eab
+4212	4681	1684827057200560439	sandbox.app/Contents/MacOS/sandbox	178222056c1a6274

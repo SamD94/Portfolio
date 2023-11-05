@@ -1,0 +1,1145 @@
+<!DOCTYPE html><html lang="en"><head>
+    <title>Verge3D for 3ds Max: Lighting and Rendering — Soft8Soft</title>
+    <meta charset="utf-8">
+    <meta name="description" content="This page contains the information about 3ds Max' Lighting and rendering settings supported in Verge3D.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/en/max/Lighting-and-Rendering.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Verge3D for 3ds Max: Lighting and Rendering — Soft8Soft">
+            <meta property="og:description" content="This page contains the information about 3ds Max' Lighting and rendering settings supported in Verge3D.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_en.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/en/max/Lighting-and-Rendering.html">
+            <meta property="og:site_name" content="Soft8Soft">
+            <meta property="og:locale" content="en_US">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Verge3D for 3ds Max: Lighting and Rendering — Soft8Soft">
+            <meta name="twitter:description" content="This page contains the information about 3ds Max' Lighting and rendering settings supported in Verge3D.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_en.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-cubemap-create.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-cubemap-effect.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-cubemap-params.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-plane-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-plane-create.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/light-probe-reflection-plane-params.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/rendering-settings-global-common.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/shadows-max/shadow-settings-global.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/animation-max/global-animation-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/rendering-settings-global-ao.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/outline-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/rendering-settings-global-ao.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-blender/outline-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/outline-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/rendering-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/adv-rendering-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/hidpi-compositing.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/visibility-breakpoints.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/line-rendering-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/line-rendering-properties.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/clipping-plane-example.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/lighting-max/clipping-plane-new.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/en/index.html">Verge3D User Manual</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Type to filter" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Getting Started</h2><ul id="Getting_Started"><li><a href="manual/en/introduction/Beginners-Guide.html" id="Getting_Started_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/introduction/Workflow.html" id="Getting_Started_Workflow">Workflow</a></li><li><a href="manual/en/introduction/App-Manager.html" id="Getting_Started_App_Manager">App Manager</a></li><li><a href="manual/en/introduction/Puzzles-Visual-Logic-Editor.html" id="Getting_Started_Puzzles">Puzzles</a></li><li><a href="manual/en/introduction/Features.html" id="Getting_Started_Verge3D_Features">Verge3D Features</a></li><li><a href="manual/en/introduction/Project-Structure.html" id="Getting_Started_Project_Structure">Project Structure</a></li><li><a href="manual/en/introduction/Updating.html" id="Getting_Started_Updating_for_New_Versions">Updating for New Versions</a></li><li><a href="manual/en/introduction/FAQ.html" id="Getting_Started_FAQ">FAQ</a></li></ul></div><div><h2>General Topics</h2><ul id="General_Topics"><li><a href="manual/en/introduction/Optimizing-WebGL-performance.html" id="General_Topics_Optimization_Techniques">Optimization Techniques</a></li><li><a href="manual/en/introduction/Asset-compression.html" id="General_Topics_Asset_Compression">Asset Compression</a></li><li><a href="manual/en/introduction/Texture-Compression.html" id="General_Topics_Texture_Compression">Texture Compression</a></li><li><a href="manual/en/introduction/HTML-based-user-interfaces.html" id="General_Topics_HTML-Based_User_Interfaces">HTML-Based User Interfaces</a></li><li><a href="manual/en/introduction/Text-Rendering.html" id="General_Topics_Text_Rendering">Text Rendering</a></li><li><a href="manual/en/introduction/AR-VR-development.html" id="General_Topics_AR/VR_Development">AR/VR Development</a></li><li><a href="manual/en/introduction/Physics-Guide.html" id="General_Topics_Physics_Guide">Physics Guide</a></li><li><a href="manual/en/introduction/Personalizing-Verge3D-Apps.html" id="General_Topics_Personalizing_Verge3D_Apps">Personalizing Verge3D Apps</a></li><li><a href="manual/en/introduction/Wordpress-Plugin.html" id="General_Topics_WordPress_Plugin">WordPress Plugin</a></li><li><a href="manual/en/introduction/Using-JavaScript.html" id="General_Topics_Using_JavaScript">Using JavaScript</a></li><li><a href="manual/en/introduction/Creating-Desktop-Apps.html" id="General_Topics_Creating_Desktop_Apps">Creating Desktop Apps</a></li><li><a href="manual/en/introduction/Creating-Mobile-Apps.html" id="General_Topics_Creating_Mobile_Apps">Creating Mobile Apps</a></li><li><a href="manual/en/introduction/Creating-SCORM-Courses.html" id="General_Topics_Creating_SCORM_Courses">Creating SCORM Courses</a></li><li><a href="manual/en/introduction/Performance-Bottlenecks.html" id="General_Topics_Performance_Bottlenecks">Performance Bottlenecks</a></li><li><a href="manual/en/introduction/Hardware-Related-Issues.html" id="General_Topics_Hardware-Related_Issues">Hardware-Related Issues</a></li><li><a href="manual/en/introduction/Testing-Mobile-Browsers.html" id="General_Topics_Testing_on_Mobile_Browsers">Testing on Mobile Browsers</a></li></ul></div><div><h2>Blender Artist's Guide</h2><ul id="Blender_Artist_s_Guide"><li><a href="manual/en/blender/Beginners-Guide.html" id="Blender_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/blender/Installation.html" id="Blender_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/blender/Material-System.html" id="Blender_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/blender/Lighting-and-Rendering.html" id="Blender_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/blender/Camera.html" id="Blender_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/blender/Shader-Nodes-Reference.html" id="Blender_Artist_s_Guide_Shader_Nodes">Shader Nodes</a></li><li><a href="manual/en/blender/Animation.html" id="Blender_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/blender/Morphing.html" id="Blender_Artist_s_Guide_Shape_Keys_(Morphing)">Shape Keys (Morphing)</a></li><li><a href="manual/en/blender/Shadows.html" id="Blender_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/blender/Transparency.html" id="Blender_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/blender/GLTF-Materials.html" id="Blender_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/blender/Object-Constraints.html" id="Blender_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/blender/Material-Library.html" id="Blender_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>3ds Max Artist's Guide</h2><ul id="3ds_Max_Artist_s_Guide"><li><a href="manual/en/max/Beginners-Guide.html" id="3ds_Max_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/max/Installation.html" id="3ds_Max_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/max/Viewport-Render-Preview.html" id="3ds_Max_Artist_s_Guide_Viewport_and_Render_Preview">Viewport and Render Preview</a></li><li><a href="manual/en/max/Material-System.html" id="3ds_Max_Artist_s_Guide_Material_System_Overview">Material System Overview</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html" id="3ds_Max_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/max/Camera.html" id="3ds_Max_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/max/Materials-Maps-Reference.html" id="3ds_Max_Artist_s_Guide_Materials_and_Maps">Materials and Maps</a></li><li><a href="manual/en/max/Animation.html" id="3ds_Max_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/max/Morphing.html" id="3ds_Max_Artist_s_Guide_Morphing">Morphing</a></li><li><a href="manual/en/max/Shadows.html" id="3ds_Max_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/max/Transparency.html" id="3ds_Max_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/max/GLTF-Materials.html" id="3ds_Max_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/max/Animation-Constraints.html" id="3ds_Max_Artist_s_Guide_Animation_Constraints">Animation Constraints</a></li><li><a href="manual/en/max/Material-Library.html" id="3ds_Max_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Maya Artist's Guide</h2><ul id="Maya_Artist_s_Guide"><li><a href="manual/en/maya/Beginners-Guide.html" id="Maya_Artist_s_Guide_Beginner_s_Guide">Beginner's Guide</a></li><li><a href="manual/en/maya/Installation.html" id="Maya_Artist_s_Guide_Installation">Installation</a></li><li><a href="manual/en/maya/Materials.html" id="Maya_Artist_s_Guide_Materials_&amp;_Textures">Materials &amp; Textures</a></li><li><a href="manual/en/maya/Lighting-and-Rendering.html" id="Maya_Artist_s_Guide_Lighting_and_Rendering">Lighting and Rendering</a></li><li><a href="manual/en/maya/Camera.html" id="Maya_Artist_s_Guide_Camera">Camera</a></li><li><a href="manual/en/maya/Shadows.html" id="Maya_Artist_s_Guide_Shadows">Shadows</a></li><li><a href="manual/en/maya/Animation.html" id="Maya_Artist_s_Guide_Animation">Animation</a></li><li><a href="manual/en/maya/Blend-Shapes.html" id="Maya_Artist_s_Guide_Blend_Shapes_(Morphing)">Blend Shapes (Morphing)</a></li><li><a href="manual/en/maya/Transparency.html" id="Maya_Artist_s_Guide_Transparency">Transparency</a></li><li><a href="manual/en/maya/GLTF-Materials.html" id="Maya_Artist_s_Guide_glTF_Materials">glTF Materials</a></li><li><a href="manual/en/maya/Object-Constraints.html" id="Maya_Artist_s_Guide_Object_Constraints">Object Constraints</a></li><li><a href="manual/en/maya/Material-Library.html" id="Maya_Artist_s_Guide_Using_Material_Library">Using Material Library</a></li></ul></div><div><h2>Puzzles Reference</h2><ul id="Puzzles_Reference"><li><a href="manual/en/puzzles/Initialization.html" id="Puzzles_Reference_Initialization">Initialization</a></li><li><a href="manual/en/puzzles/Events.html" id="Puzzles_Reference_Events">Events</a></li><li><a href="manual/en/puzzles/Selectors.html" id="Puzzles_Reference_Selectors">Selectors</a></li><li><a href="manual/en/puzzles/Objects.html" id="Puzzles_Reference_Objects">Objects</a></li><li><a href="manual/en/puzzles/Materials.html" id="Puzzles_Reference_Materials">Materials</a></li><li><a href="manual/en/puzzles/Animation.html" id="Puzzles_Reference_Animation_(+Constraints)">Animation (+Constraints)</a></li><li><a href="manual/en/puzzles/Camera.html" id="Puzzles_Reference_Cameras/Lights">Cameras/Lights</a></li><li><a href="manual/en/puzzles/Scenes.html" id="Puzzles_Reference_Scenes">Scenes</a></li><li><a href="manual/en/puzzles/Time.html" id="Puzzles_Reference_Time">Time</a></li><li><a href="manual/en/puzzles/HTML.html" id="Puzzles_Reference_HTML">HTML</a></li><li><a href="manual/en/puzzles/AR_VR.html" id="Puzzles_Reference_AR/VR">AR/VR</a></li><li><a href="manual/en/puzzles/Sound.html" id="Puzzles_Reference_Audio/Video">Audio/Video</a></li><li><a href="manual/en/puzzles/Physics.html" id="Puzzles_Reference_Physics">Physics</a></li><li><a href="manual/en/puzzles/Postprocessing.html" id="Puzzles_Reference_Post-processing">Post-processing</a></li><li><a href="manual/en/puzzles/Logic.html" id="Puzzles_Reference_Logic">Logic</a></li><li><a href="manual/en/puzzles/Loops.html" id="Puzzles_Reference_Loops">Loops</a></li><li><a href="manual/en/puzzles/Text.html" id="Puzzles_Reference_Text">Text</a></li><li><a href="manual/en/puzzles/Numbers.html" id="Puzzles_Reference_Numbers">Numbers</a></li><li><a href="manual/en/puzzles/Lists.html" id="Puzzles_Reference_Lists">Lists</a></li><li><a href="manual/en/puzzles/Dictionaries.html" id="Puzzles_Reference_Dictionaries">Dictionaries</a></li><li><a href="manual/en/puzzles/Variables.html" id="Puzzles_Reference_Variables">Variables</a></li><li><a href="manual/en/puzzles/Procedures.html" id="Puzzles_Reference_Procedures">Procedures</a></li><li><a href="manual/en/puzzles/System.html" id="Puzzles_Reference_System">System</a></li><li><a href="manual/en/puzzles/Advanced.html" id="Puzzles_Reference_Advanced">Advanced</a></li><li><a href="manual/en/puzzles/ECommerce.html" id="Puzzles_Reference_E-Commerce">E-Commerce</a></li><li><a href="manual/en/puzzles/SCORM.html" id="Puzzles_Reference_E-Learning/SCORM">E-Learning/SCORM</a></li><li><a href="manual/en/puzzles/Library.html" id="Puzzles_Reference_Library">Library</a></li><li><a href="manual/en/puzzles/Plugins.html" id="Puzzles_Reference_Plugins">Plugins</a></li></ul></div></div>
+        </nav><article>
+
+    <h1>Lighting and Rendering / 3ds Max</h1>
+
+    <p>
+    This page contains the information about 3ds Max' lighting and rendering settings which can be used with Verge3D.
+    </p>
+
+    <!-- TOC -->
+<ul><li><a href="manual/en/max/Lighting-and-Rendering.html#renderers">Renderers</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#environment_lighting">Environment Lighting</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#lights">Lights</a><ul><li><a href="manual/en/max/Lighting-and-Rendering.html#photometric_lights">Photometric Lights</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#standard_lights">Standard Lights</a></li></ul></li><li><a href="manual/en/max/Lighting-and-Rendering.html#light_probes">Reflection Cubemap Light Probes</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#reflection_plane_light_probes">Reflection Plane Light Probes</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings">Global Rendering Settings</a><ul><li><a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings_common">Common Tab</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings_shadows">Shadows Tab</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings_animation">Animation Tab</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings_ao">AO Tab</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings_outline">Outlining Tab</a></li></ul></li><li><a href="manual/en/max/Lighting-and-Rendering.html#ambient_occlusion">Ambient Occlusion</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#outline_rendering">Outline Rendering</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#exposure_control">Exposure Control</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#per_object_rendering_settings">Per-Object Rendering Settings</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#hidpi_rendering">Rendering on HiDPI (Retina) Screens</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#visibility_breakpoints">Visibility Breakpoints</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#line_rendering">Line Rendering</a></li><li><a href="manual/en/max/Lighting-and-Rendering.html#clipping_planes">Clipping Planes</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#renderers" id="renderers" class="permalink">#</a></p>
+
+    <h2>Renderers</h2>
+
+    <p>
+      Verge3D supports three renderers provided by 3ds Max: <strong>Scanline</strong>, <strong>ART</strong>, and <strong>Arnold</strong> (recommended). The Scanline renderer is intended for use with Standard lights and materials, while the ART/Arnold is typically used with Photometric lights and Physical materials.
+    </p>
+
+    <p>
+      Choosing the right renderer is the first thing you should consider before starting to work with graphics. If you are not sure which renderer to choose, we recommend using Arnold. In order to set the renderer in 3ds Max, use the <a href="manual/en/max/Viewport-Render-Preview.html#arnold_scanline_rendering">"Render Setup..."</a> window.
+    </p>
+
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#environment_lighting" id="environment_lighting" class="permalink">#</a></p>
+
+    <h2>Environment Lighting</h2>
+
+    <p>
+      Environment lighting is a very important component of Verge3D graphics pipeline based on Physical materials. You may illuminate your scene with an environment map alone, without using any light objects (as in the <a href="https://www.soft8soft.com/gallery/scooter-3d-product-customizer/" target="_blank">Scooter demo</a>).
+    </p>
+
+    <iframe class="video-480p" src="https://www.youtube.com/embed/TqqdzI5kgH0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <p>
+    The default cube template provides an HDR texture for image-based lighting. You can replace this texture with your own file, or setup environment lighting from scratch as shown in this <a href="https://www.youtube.com/watch?v=s_QjxCr8I6k" target="_blank">video</a>.
+    </p>
+
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#lights" id="lights" class="permalink">#</a></p>
+
+    <h2>Lights</h2>
+
+    <p>
+      If you'd like to have dynamic shadows in your scene, or if you need to move the source of light (as with car lights), you may utilize <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2023/ENU/3DSMax-Lighting-Shading/files/GUID-57B15284-C5F3-46A8-BBD3-6333FE5E80DE-htm.html" target="_blank">light objects</a>.
+    </p>
+
+    <p>
+    Verge3D supports two types of lights provided by 3ds Max: <strong>standard</strong> and <strong>photometric</strong>.
+    </p>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#photometric_lights" id="photometric_lights" class="permalink">#</a></p>
+
+    <h3>Photometric Lights</h3>
+
+    <p>
+      Photometric lights are typically used with <a href="manual/en/max/Materials-Maps-Reference.html#Physical">Physical materials</a>. Verge3D reproduces them by using 3ds Max' Arnold renderer as reference. In addition, you may use Physical Camera <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2023/ENU/3DSMax-Rendering/files/GUID-E1A6D466-CABB-4C8A-97A9-0C191C69F9BD-htm.html" target="_blank">Exposure Control</a> settings to tweak the brightness and color range of your renderings.
+    </p>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#standard_lights" id="standard_lights" class="permalink">#</a></p>
+
+    <h3>Standard Lights</h3>
+
+    <p>
+      Standard lights are typically used with <a href="manual/en/max/Materials-Maps-Reference.html#Standard">Standard materials</a>. Verge3D reproduces them by using 3ds Max' Scanline renderer as reference.
+    </p>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#light_probes" id="light_probes" class="permalink">#</a></p>
+
+    <h2>Reflection Cubemap Light Probes</h2>
+
+    <p>
+      Verge3D add-on adds a custom light probe object called <strong>V3DReflectionCubemap</strong>,
+      which can be used to apply indirect lighting to objects via a local
+      reflection cubemap.
+    </p>
+
+    <iframe class="video-480p" src="https://www.youtube.com/embed/J3gV2zpvgwo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <p class="demoNote">For usage example, check out the following demo from the Asset Store: <a href="http://localhost:8668/store?req=status#light_probe" target="_blank" rel="nofollow" title="Open Light Probe in Verge3D Asset Store (requires App Manager running)">Light Probe</a>.</p>
+
+    <p>
+      The object can be found in the <strong>Create</strong> panel → <strong>Helpers</strong> category → <strong>Verge3D</strong> subcategory:
+    </p>
+
+    <img src="files/lighting-max/light-probe-reflection-cubemap-create.png" alt="Adding light probe helper in 3ds Max" style="max-width: 351px">
+
+    <p>
+      A reflection cubemap object defines a volume of influence represented by
+      a box or a sphere. All objects contained inside that volume will use a
+      local reflection cubemap generated in runtime instead of the scene's
+      global environment texture/color.<br><br>
+
+      The advantage of using a local reflection map is that it has surrounding
+      objects baked in it, while the scene's global map only contains the
+      background texture/color specified in Max's environment settings. Local
+      reflection maps also have a parallax effect depending on the geometry of
+      the <a href="manual/en/max/Lighting-and-Rendering.html#influence_volume">influence</a>
+      or <a href="manual/en/max/Lighting-and-Rendering.html#parallax_volume">parallax</a>
+      volume.
+    </p>
+
+    <figure style="max-width: 915px">
+      <img src="files/lighting-max/light-probe-reflection-cubemap-effect.png" alt="Reflection cubemap in Max viewport and Verge3D">
+      <figcaption>
+        Left - reflection cubemap object in Max viewport, right - effect it adds
+        to a reflective material in Verge3D.
+      </figcaption>
+    </figure>
+
+    <p>
+      Reflection Cubemap objects have the following parameters:
+    </p>
+
+    <img src="files/lighting-max/light-probe-reflection-cubemap-params.png" alt="Cubemap light probe settings" style="max-width: 312px">
+
+    <dl>
+      <dt>General</dt>
+      <dd>
+        General probe settings:
+
+        <dl>
+          <dt id="influence_volume">Influence Type</dt>
+          <dd>
+            Type of the influence volume: <strong>Sphere</strong> or <strong>Box</strong>. Only objects
+            located inside this volume are affected by the probe's lighting.
+          </dd>
+
+          <dt>Influence Distance</dt>
+          <dd>
+            The size of the influence volume. You can also change object scaling
+            and make the shape of the influence volume non-uniform.
+          </dd>
+
+          <dt>Intensity</dt>
+          <dd>
+            The intensity of the indirect lighting. Any value different from 1.0
+            is not physically correct.
+          </dd>
+
+          <dt>Clipping Start</dt>
+          <dd>
+            Near clip distance. Objects located closer than this value won't be
+            rendered into the reflection cubemap.
+          </dd>
+
+          <dt>Clipping End</dt>
+          <dd>
+            Far clip distance. Objects located further than this value won't be
+            rendered into the reflection cubemap.
+          </dd>
+        </dl>
+      </dd>
+
+      <dt>Visibility Selection Set</dt>
+      <dd>
+        Object visibility settings:
+
+        <dl>
+          <dt>Selection Set</dt>
+          <dd>
+            Limit objects that should appear on the reflection cubemap to those
+            belonging to this selection set. Choose the empty string option ("")
+            in order to not specify any set of objects - that way all scene
+            objects will be used for generating the reflection cubemap.
+          </dd>
+
+          <dt>Invert Visibility</dt>
+          <dd>
+            Invert the selection of objects visible to this probe if
+            <strong>Selection Set</strong> is specified.
+          </dd>
+        </dl>
+      </dd>
+
+      <dt id="parallax_volume">Custom Parallax</dt>
+      <dd>
+        Parallax settings:
+
+        <dl>
+          <dt>Enable Custom Parallax</dt>
+          <dd>
+            Enable custom settings for the parallax correction. This group of
+            settings defines a parallax volume, which is used to project the
+            lighting captured by the probe. If <strong>Custom Parallax</strong> is not enabled
+            the parallax effect is calculated based on <strong>Influence Type</strong> and
+            <strong>Influence Distance</strong>.
+          </dd>
+
+          <dt>Parallax Type</dt>
+          <dd>
+            Type of the parallax volume: <strong>Sphere</strong> or <strong>Box</strong>.
+          </dd>
+
+          <dt>Parallax Distance</dt>
+          <dd>
+            The size of the parallax volume.
+          </dd>
+        </dl>
+      </dd>
+
+      <dt>Custom Influence</dt>
+      <dd>
+        custom influence settings:
+
+        <dl>
+          <dt>Enable Custom Influence</dt>
+          <dd>
+            Enable custom influence settings. This group of settings allows
+            defining a selection set of objects that will be affected by this
+            light probe. <strong>Influence Selection Set</strong> (if specified) will be used
+            instead of the <strong>Influence Type</strong> and <strong>Influence Distance</strong> general
+            probe settings.
+          </dd>
+
+          <dt>Influence Selection Set</dt>
+          <dd>
+            Limit objects that should be affected by this light probe to this
+            selection set. If specified it is used instead of the
+            <strong>Influence Type</strong> and <strong>Influence Distance</strong> general probe settings.
+          </dd>
+
+          <dt>Invert Influence</dt>
+          <dd>
+            Invert the selection of objects affected by this probe if
+            <strong>Influence Selection Set</strong> is specified.
+          </dd>
+        </dl>
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#reflection_plane_light_probes" id="reflection_plane_light_probes" class="permalink">#</a></p>
+
+    <h2>Reflection Plane Light Probes</h2>
+
+    <p>
+      Reflection Plane Light Probes used to apply real-time reflections (indirect lighting) to planar objects, such as mirrors, floors, walls, etc.
+    </p>
+
+    <figure style="max-width: 804px">
+      <img src="files/lighting-max/light-probe-reflection-plane-example.jpg" alt="Load Unload demo with reflection planes">
+      <figcaption>Reflection planes are used to render the floor reflections in the <a href="http://localhost:8668/store?req=status#load_unload" target="_blank" rel="nofollow" title="Open Load Unload in Verge3D Asset Store (requires App Manager running)">Load Unload</a> demo.</figcaption>
+    </figure>
+
+    <p class="demoNote">For usage example, check out the following demo from the Asset Store: <a href="http://localhost:8668/store?req=status#light_probe" target="_blank" rel="nofollow" title="Open Light Probe in Verge3D Asset Store (requires App Manager running)">Light Probe</a>.</p>
+
+    <p>
+      Verge3D plugin adds a custom light probe object called <strong>V3DReflectionPlane</strong>. The object can be found in the <strong>Create</strong> panel → <strong>Helpers</strong> category → <strong>Verge3D</strong> subcategory:
+    </p>
+
+    <img src="files/lighting-max/light-probe-reflection-plane-create.jpg" alt="Adding reflection plane helper in 3ds Max" style="max-width: 363px">
+
+    <p>
+      Reflection plane objects have the following parameters:
+    </p>
+
+    <img src="files/lighting-max/light-probe-reflection-plane-params.jpg" alt="Reflection plane parameters" style="max-width: 355px">
+
+    <dl>
+      <dt>Length</dt>
+      <dd>
+        Reflection plane length.
+      </dd>
+      <dt>Width</dt>
+      <dd>
+        Reflection plane width.
+      </dd>
+      <dt>Influence Dist.</dt>
+      <dd>
+        Influence distance of the probe.
+      </dd>
+      <dt>Falloff</dt>
+      <dd>
+        Controls how fast the probe influence decreases.
+      </dd>
+      <dt>Clip Offset</dt>
+      <dd>
+        Near camera clipping for objects rendered in the light probe.
+      </dd>
+      <dt>Visibility Selection Set</dt>
+      <dd>
+        Selection set of the objects visible for the probe.
+      </dd>
+    </dl>
+
+    <h3>Performance Considerations</h3>
+
+    <p>
+      Planar reflection probes can greatly reduce performance of your scene, since they multiply the number of draw calls by a factor <strong>N+1</strong>. To make rendering faster, specify a limited set of reflected objects by means of the <strong>Visibility Selection Set</strong> property.
+    </p>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings" id="global_rendering_settings" class="permalink">#</a></p>
+
+    <h2>Global Rendering Settings</h2>
+
+    <p>Global rendering settings accessible from the <strong>Verge3D Export Settings</strong> dialog window (<strong>Verge3D</strong> → <strong>Export Settings...</strong> in 3ds Max menu).</p>
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings_common" id="global_rendering_settings_common" class="permalink">#</a></p>
+
+    <h3>Common Tab</h3>
+
+    <img src="files/lighting-max/rendering-settings-global-common.jpg" alt="Common rendering settings window" style="max-width: 272px">
+
+    <dl>
+      <dt>Scene Copyright</dt>
+      <dd>Assign if you want your copyright info to be present in all exported files.</dd>
+
+      <dt>Bake Text</dt>
+      <dd>Whether to export Font objects as is or bake them to geometry meshes. Read more about these two modes in the <a href="manual/en/introduction/Text-Rendering.html">Text Rendering</a> section of this manual.</dd>
+
+      <dt>Enable LZMA Compression</dt>
+      <dd>Enable LZMA compression for exported glTF files. Check out the <a href="manual/en/introduction/Asset-compression.html">Asset Compression</a> section for more info.</dd>
+
+      <dt>Compress Textures</dt>
+      <dd>Store exported textures in <a href="manual/en/introduction/Texture-Compression.html">KTX2 compression format</a>.</dd>
+
+      <dt>Anti-Aliasing</dt>
+      <dd>
+        Select what anti-aliasing algorithm to use for the scene:
+        <dl>
+          <dt>Auto</dt>
+          <dd>Use system default method. In most cases this would be MSAA 4x.</dd>
+
+          <dt>MSAA 4x</dt>
+          <dd>Prefer multisample anti-aliasing with 4x samples if the target hardware supports it. Provides decent quality and performance.</dd>
+
+          <dt>MSAA 8x</dt>
+          <dd>Prefer multisample anti-aliasing with 8x samples if the target hardware supports it. This algorithm provides better AA quality at the expense of reduced performance.</dd>
+
+          <dt>MSAA 16x</dt>
+          <dd>Prefer multisample anti-aliasing with 16x samples if the target hardware supports it. This algorithm provides way better AA quality compared to MSAA 4x/8x but has the worst performance.</dd>
+
+          <dt>FXAA</dt>
+          <dd>Force fast approximate anti-aliasing (FXAA). Enable this algorithm if you experience <a href="manual/en/introduction/Hardware-Related-Issues.html#aa_issues">aliasing issues with procedural textures</a>.</dd>
+
+          <dt>None</dt>
+          <dd>Disable anti-aliasing. Use this option as an aggressive performance optimization when quality does not matter.</dd>
+        </dl>
+      </dd>
+
+      <dt>Use HDR Rendering</dt>
+      <dd>
+        <p>Enable high-dynamic-range rendering.</p>
+        <p>If activated, Verge3D will use 16-bit float textures as rendering buffers. This feature can significantly improve rendering of the Bloom post-processing as well as smoothness of node-based gradient textures. The downside of this — increased GPU memory consumption and reduced performance.</p>
+
+        <p class="note">This feature is not related to <strong>.hdr</strong> textures which are commonly used to produce image-based lighting, thus activating it won't improve rendering of such textures.</p>
+      </dd>
+
+      <dt>Environment Map Size</dt>
+      <dd>
+        Texture size to use for environment lighting:
+        <dl>
+          <dt>256</dt>
+          <dd>Optimum quality with low memory consumption (default value).</dd>
+          <dt>512</dt>
+          <dd>Better quality with moderate memory consumption and reduced performance. Use it to render high quality reflections e.g for rendering jewelry.</dd>
+          <dt>1024</dt>
+          <dd>Best quality with high memory consumption and low performance (generally not recommended).</dd>
+        </dl>
+      </dd>
+
+      <dt id="ibl_environment_mode">IBL Environment Mode</dt>
+      <dd>
+        <dl>
+          <dt>PMREM (slow)</dt>
+          <dd>Use prefiltered, mipmapped radiance environment maps (PMREMs). This property is selected by default because it offers the highest quality and decent performance at the same time.</dd>
+
+          <dt>Light Probe + Cubemap (deprecated)</dt>
+          <dd>This mode was deprecated in Verge3D 4.3. Specifying it will make your scene fallback to PMREM lighting.</dd>
+
+          <dt>Light Probe (fast)</dt>
+          <dd>Disable image-based specular reflections altogether, still the diffuse component will be applied. This mode is fast but provides decent quality for non-metallic surfaces only (e.g. rendered with <em>Standard</em> or <em>Lambert</em> shaders).</dd>
+
+          <dt>None (fastest)</dt>
+          <dd>Disable image-based lighting for both specular and diffuse reflections. This is the fastest mode among all. It is perfect if you use shadeless (emissive) surfaces or rely solely on light sources to shade your scene.</dd>
+        </dl>
+      </dd>
+
+      <dt>Optimize Mesh Attrs</dt>
+      <dd>Remove unused geometry attributes (such as tangents) from exported meshes.</dd>
+    </dl>
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings_shadows" id="global_rendering_settings_shadows" class="permalink">#</a></p>
+
+    <h3>Shadows Tab</h3>
+
+    <img src="files/shadows-max/shadow-settings-global.jpg" alt="Shadow settings window" style="max-width: 272px">
+
+    <p>Global shadow settings. Read more about these in the <a href="manual/en/max/Shadows.html#global_settings">corresponding section</a>.</p>
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings_animation" id="global_rendering_settings_animation" class="permalink">#</a></p>
+
+    <h3>Animation Tab</h3>
+
+    <img src="files/animation-max/global-animation-settings.jpg" alt="Verge3D for 3ds Max animation settings window" style="max-width: 272px">
+
+    <p>
+      Global animation settings. See <a href="manual/en/max/Animation.html#verge3d_global_settings">here</a> for the explanation.
+    </p>
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings_ao" id="global_rendering_settings_ao" class="permalink">#</a></p>
+
+    <h3>AO Tab</h3>
+
+    <img src="files/lighting-max/rendering-settings-global-ao.jpg" alt="Ambient occlusion settings window" style="max-width: 272px">
+
+    <p>
+      Ambient occlusion settings. See <a href="manual/en/max/Lighting-and-Rendering.html#ambient_occlusion">below</a>.
+    </p>
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#global_rendering_settings_outline" id="global_rendering_settings_outline" class="permalink">#</a></p>
+
+    <h3>Outlining Tab</h3>
+
+    <img src="files/lighting-max/outline-settings.jpg" alt="Outline settings window" style="max-width: 272px">
+
+    <p>
+      Outline effect settings. See <a href="manual/en/max/Lighting-and-Rendering.html#outline_rendering">below</a>.
+    </p>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#ambient_occlusion" id="ambient_occlusion" class="permalink">#</a></p>
+
+    <h2>Ambient Occlusion</h2>
+
+    <p>
+      Ambient Occlusion is a rendering technique that improves a scene's realism
+      by adding soft shadows from indirect (ambient) lighting based on how much
+      the point is exposed to the light sources.
+    </p>
+
+    <p>
+      Verge3D implements Ground Truth Ambient Occlusion (GTAO), which settings
+      you can find in the <strong>AO</strong> section of <strong>Verge3D Export Settings</strong> (accessible
+      through <strong>Verge3D</strong> → <strong>Export Settings...</strong> in 3ds Max menu):
+    </p>
+
+    <img src="files/lighting-max/rendering-settings-global-ao.jpg" alt="Ambient occlusion settings window" style="max-width: 272px">
+
+    <p class="note">
+      Verge3D adds the ambient occlusion effect only for <strong>Physical Material</strong>
+      nodes and only if the scene has <a href="manual/en/max/Lighting-and-Rendering.html#environment_lighting">environment lighting</a>
+      (either as a color or a map).
+    </p>
+
+    <dl>
+      <dt>Enabled</dt>
+      <dd>
+        Enable Ambient Occlusion in the scene.
+      </dd>
+      <dt>Distance</dt>
+      <dd>
+        The radius (in system units) within which to calculate ambient occlusion.
+        Higher values make the effect more noticeable by over-darkening and
+        expanding the area of it, but also can decrease performance. Lower
+        values make occlusion less noticeable.
+      </dd>
+      <dt>Factor</dt>
+      <dd>
+        The strength of the occlusion effect.
+      </dd>
+      <dt>Trace Precision</dt>
+      <dd>
+        Higher precision means more accurate occlusion at increased performance
+        cost. Lower precision means better performance but the effect appears
+        less prominent.
+      </dd>
+      <dt>Bent Normals</dt>
+      <dd>
+        Use modified (or "bent") normals to sample the environment instead of
+        the original ones. The modified normals represent the least occluded
+        direction and make environment lighting a bit more realistic.
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#outline_rendering" id="outline_rendering" class="permalink">#</a></p>
+
+    <h2>Outline Rendering</h2>
+
+    <p>
+      Outline rendering (aka silhouette edge rendering) is a common non-photorealistic rendering (NPR) technique that can significantly enhance the visual perception of your scene. This effect can be used for various applications such as e-learning, games, architecture visualization, and technical drawing.
+    </p>
+
+    <figure style="max-width: 819px">
+      <img src="files/lighting-blender/outline-example.jpg" alt="Example of outline effect">
+      <figcaption>Outline effect used to highlight selections in the <a href="http://localhost:8668/store?req=status#industrial_robot" target="_blank" rel="nofollow" title="Open Industrial Robot in Verge3D Asset Store (requires App Manager running)">Industrial Robot</a> demo.</figcaption>
+    </figure>
+
+    <p>
+      To use object outlining (and optional glowing) in your Verge3D application, first enable the effect in the <strong>Verge3D Export Settings</strong> dialog:
+    </p>
+
+    <img src="files/lighting-max/outline-settings.jpg" alt="Outline settings window" style="max-width: 272px">
+
+    <p>
+      then use the <a href="manual/en/puzzles/Objects.html#outline">outline</a> puzzle to apply it to your object(s).
+    </p>
+
+    <p class="note">
+      The outline rendering does not work inside AR/VR sessions. Use other methods to highlight your objects, such as animation or changing material's color.
+    </p>
+
+    <p>You can tweak outlining using the following properties:</p>
+
+    <dl>
+      <dt>Enabled</dt>
+      <dd>Enable/disable the effect.</dd>
+
+      <dt>Edge Strength</dt>
+      <dd>Outlining strength factor.</dd>
+
+      <dt>Edge Glow</dt>
+      <dd>Intensity of additional glowing (rendered beyond the main outline edge).</dd>
+
+      <dt>Edge Thickness</dt>
+      <dd>Outline edge thickness factor.</dd>
+
+      <dt>Pulse Period</dt>
+      <dd>Pulse period in seconds. Specify to make the effect animated.</dd>
+
+      <dt>Visible Edge Color</dt>
+      <dd>Visible edge color.</dd>
+
+      <dt>Hidden Edge Color</dt>
+      <dd>Color of the outline edge being rendered behind any other scene objects.</dd>
+
+      <dt>Render Hidden Edge</dt>
+      <dd>Enable/disable rendering of the outline edge behind other scene objects.</dd>
+    </dl>
+
+    <p class="note">Though it's possible to render glowing objects, in the most cases the outline rendering is used to improve visual clarity of your scene. If you need glowing from lamps or another bright objects, consider using the <a href="manual/en/puzzles/Postprocessing.html#bloom">bloom post-processing</a> instead.</p>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#exposure_control" id="exposure_control" class="permalink">#</a></p>
+
+    <h2>Exposure Control</h2>
+
+    <p>Verge3D for 3ds Max supports the following exposure control algorithms:</p>
+
+    <ul>
+      <li><strong>Physical Camera Exposure Control</strong></li>
+      <li><strong>Logarithmic Exposure Control</strong></li>
+    </ul>
+
+    <p>See the Autodesk's official <a href="https://knowledge.autodesk.com/support/3ds-max/learn-explore/caas/CloudHelp/cloudhelp/2023/ENU/3DSMax-Rendering/files/GUID-E1A6D466-CABB-4C8A-97A9-0C191C69F9BD-htm.html" target="_blank">documentation</a> for more information on how to configure exposure controls for your scene.</p>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#per_object_rendering_settings" id="per_object_rendering_settings" class="permalink">#</a></p>
+
+    <h2>Per-Object Rendering Settings</h2>
+
+    <p>
+      Verge3D supports the following additional rendering properties for your objects:
+    </p>
+
+    <h3>Verge3D Rendering Params panel</h3>
+
+    <img src="files/lighting-max/rendering-settings.jpg" alt="Per-object rendering parameters panel" style="max-width: 319px">
+
+    <dl>
+      <dt>Render Order</dt>
+      <dd>
+        Modifies the rendering order for a particular object. The smaller the index, the earlier the object will be rendered. In most cases, you need to tweak this value when using Blend transparency to eliminate transparency artifacts.
+      </dd>
+
+      <dt>Frustum Culling</dt>
+      <dd>
+        Enables/disables frustum culling optimization for the object. Uncheck this option if you have some skinned object which can move beyond the screen space to prevent it from being culled.
+      </dd>
+    </dl>
+
+    <h3>Verge3D Adv. Rendering Params panel</h3>
+
+    <img src="files/lighting-max/adv-rendering-settings.jpg" alt="Advanced per-object rendering parameters panel" style="max-width: 362px">
+
+    <dl>
+      <dt>Fit to Camera Edge</dt>
+      <dd>
+        See <a href="manual/en/max/Camera.html#fit_to_camera_edge">here</a> for more info.
+      </dd>
+
+      <dt>Visibility Breakpoints</dt>
+      <dd>
+        Enable object visibility breakpoints. See <a href="manual/en/max/Lighting-and-Rendering.html#visibility_breakpoints">here</a>.
+      </dd>
+
+      <dt>HiDPI Compositing</dt>
+      <dd>
+        Render object using HiDPI compositing pass. See <a href="manual/en/max/Lighting-and-Rendering.html#hidpi_rendering">below</a> for more info.
+      </dd>
+
+      <dt>Fix Ortho Zoom</dt>
+      <dd>
+        Apply inverse orthographic camera zoom as scaling factor for this object. Enable this property for object parented to ortho camera, so they don't move/scale when the user zooms the camera.
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#hidpi_rendering" id="hidpi_rendering" class="permalink">#</a></p>
+
+    <h2>Rendering on HiDPI (Retina) Screens</h2>
+
+    <p>
+      As of today, most mobile and many desktop screens have high pixel density (so called "Retina" displays). These displays allow you to substantially increase quality of your renderings. The downside of rendering many pixels is reduced performance.
+    </p>
+
+    <p>
+      There are two approaches how to make your content look better and do not make your scenes really slow:
+    </p>
+
+    <ul>
+      <li>Using somewhat better resolution, e.g by setting screen scaling factor to 1.5 or so. See <a href="manual/en/puzzles/System.html#set_screen_scale">here</a> for more info.</li>
+      <li>Using HiDPI rendering only for important content, such as text, screen-space UI elements, etc.</li>
+    </ul>
+
+    <p>
+      The latter approach can be easily achieved by enabling the <strong>HiDPI Compositing</strong> property located on the <strong>Verge3D Adv. Rendering Params</strong> panel:
+    </p>
+
+    <img src="files/lighting-max/hidpi-compositing.jpg" alt="Activating HiDPI compositing in 3ds Max" style="max-width: 362px">
+
+    <p class="demoNote">For usage example, check out the following demo from the Asset Store: <a href="http://localhost:8668/store?req=status#ring" target="_blank" rel="nofollow" title="Open Ring in Verge3D Asset Store (requires App Manager running)">Ring</a>.</p>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#visibility_breakpoints" id="visibility_breakpoints" class="permalink">#</a></p>
+
+    <h2>Visibility Breakpoints</h2>
+
+    <p>
+      <em>Visibility Breakpoints</em> allow you to show/hide content depending on 3D viewport width/height or orientation settings. The most important use case of this feature — adapting your scene to different screen sizes and orientations. E.g you may have two different models for portrait and landscape screen orientations.
+    </p>
+
+    <p>
+      If assigned to the current camera, tries to switch to an alternative camera (must have acceptable visibility breakpoints) in the scene, if no alternative camera is found, does nothing.
+    </p>
+
+    <p>
+      You can configure the breakpoints on the <strong>Verge3D Adv. Rendering Params</strong> panel:
+    </p>
+
+    <img src="files/lighting-max/visibility-breakpoints.jpg" alt="Configuring visiblity breakpoints" style="max-width: 362px">
+
+    <dl>
+      <dt>Min Width</dt>
+      <dd>
+        Minimum canvas width the object stays visible.
+      </dd>
+      <dt>Max Width</dt>
+      <dd>
+        Maximum canvas width the object stays visible.
+      </dd>
+      <dt>Min Height</dt>
+      <dd>
+        Minimum canvas height the object stays visible.
+      </dd>
+      <dt>Max Height</dt>
+      <dd>
+        Maximum canvas height the object stays visible.
+      </dd>
+      <dt>Orientation</dt>
+      <dd>
+        Screen orientation the object stays visible.
+      </dd>
+    </dl>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#line_rendering" id="line_rendering" class="permalink">#</a></p>
+
+    <h2>Line Rendering</h2>
+
+    <p>
+      With this feature you can render 3ds Max objects by using lines. The most common use case of Line Rendering is drawing curve objects, which do not have any geometry on their own. However, you can also apply this technique to regular meshes and surfaces:
+    </p>
+
+    <figure>
+      <img src="files/lighting-max/line-rendering-example.jpg" alt="Object wireframes displayed with the line rendering feature">
+      <figcaption>Object wireframes displayed with the line rendering feature.</figcaption>
+    </figure>
+
+    <p>
+      Line Rendering is activated in <strong>Verge3D Settings</strong> located on the <strong>Object Data Properties</strong> panel:
+    </p>
+
+    <img src="files/lighting-max/line-rendering-properties.jpg" alt="Line rendering properties">
+
+    <p>
+      Here you can also assign color and width of the rendered lines. In Verge3D lines are rendered with the Emission shader.
+    </p>
+
+    <p class="demoNote">For usage example, check out the following demo from the Asset Store: <a href="http://localhost:8668/store?req=status#lines" target="_blank" rel="nofollow" title="Open Lines in Verge3D Asset Store (requires App Manager running)">Lines</a>.</p>
+
+
+    <p><a href="manual/en/max/Lighting-and-Rendering.html#clipping_planes" id="clipping_planes" class="permalink">#</a></p>
+
+    <h2>Clipping Planes</h2>
+
+    <p>
+      Clipping planes (aka section planes, cross-section planes, mesh sections) is a technique used to show internal arrangement of complex objects, such as buildings, cars, appliances, gadgets, machines etc.
+    </p>
+
+    <figure>
+      <img src="files/lighting-max/clipping-plane-example.jpg" alt="Clipping planes used to show the internals of a meat grinder">
+      <figcaption>Clipping planes used to show the internals of a meat grinder.</figcaption>
+    </figure>
+
+    <p>
+      To add a new clipping plane, use the <strong>Create</strong> → <strong>Helpers</strong> → <strong>Verge3D</strong> → <strong>ClippingPlane</strong> button in 3ds Max:
+    </p>
+
+    <img src="files/lighting-max/clipping-plane-new.jpg" alt="Clipping plane settings panel in 3ds Max" style="max-width: 347px">
+
+    <p>
+      The objects on your scene will be clipped in the negative <strong>Z</strong> direction of the clipping plane object.
+    </p>
+
+    <p>
+      Clipping planes have the following parameters:
+    </p>
+
+    <dl>
+      <dt>Affected Objects</dt>
+      <dd>
+        Selection set of the objects clipped by the plane. If empty, all scene objects will be clipped.
+      </dd>
+      <dt>Negated</dt>
+      <dd>
+        Swap clipped and unclipped sides.
+      </dd>
+      <dt>Clip Shadows</dt>
+      <dd>
+        Clip shadows cast from the clipped objects.
+      </dd>
+      <dt>Union Planes</dt>
+      <dd>
+        Construct a union from all the clipping planes, affecting the object, not their intersection.
+      </dd>
+      <dt>Cross-Section</dt>
+      <dd>
+        Fill cross-section between the clipping plane and the affected objects.
+      </dd>
+      <dt>Cross-Section Color</dt>
+      <dd>
+        Cross-section diffuse color and opacity.
+      </dd>
+      <dt>Render Side</dt>
+      <dd>
+        Cross-section render side. Specify <strong>Double-sided</strong> to render complex geometry with cuts and holes.
+      </dd>
+      <dt>Cross-Sect. Size</dt>
+      <dd>
+        Cross-section plane size. Increase this value if you use larger scene size.
+      </dd>
+    </dl>
+
+    <p class="demoNote">For usage example, check out the following demo from the Asset Store: <a href="http://localhost:8668/store?req=status#clipping_planes" target="_blank" rel="nofollow" title="Open Clipping Planes in Verge3D Asset Store (requires App Manager running)">Clipping Planes</a>.</p>
+
+
+    <h2>Got Questions?</h2>
+
+    <p>Feel free to ask on the <a href="https://www.soft8soft.com/forums/" target="_blank">forums</a>!</p>
+
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/" target="_blank">Soft8Soft – 3D Solutions for the Web</a><div>Last updated on July 24, 2023</div></footer></body></html>

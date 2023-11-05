@@ -1,0 +1,767 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Спецификация на движок Вердж3Д — Софт Эйт Софт</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Создержит список функций и возможностей трёхмерного движка для создания интерактивных веб-приложений Вердж3Д.">
+    <base href="../../../">
+    <script src="list.js"></script>
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+    <style>
+      table, td, th !important {
+        text-align: left;
+        min-width: 180px;
+        font-size: 16px;
+      }
+      table {
+        width:100%;
+        margin-bottom: 20px;
+      }
+      th {
+        font-size: 17px;
+      }
+      th:nth-of-type(1) {
+        width: 10%
+      }
+      th:nth-of-type(2) {
+        width: 30%
+      }
+      th:nth-of-type(3) {
+        width: 30%
+      }
+      th:nth-of-type(4) {
+        width: 30%
+      }
+      td ul {
+        margin: 10px 0px;
+        padding-left: 20px;
+      }
+      td {
+        vertical-align: top;
+      }
+      td.centered {
+        text-align: center;
+      }
+    </style>
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Features.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Спецификация на движок Вердж3Д — Софт Эйт Софт">
+            <meta property="og:description" content="Создержит список функций и возможностей трёхмерного движка для создания интерактивных веб-приложений Вердж3Д.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Features.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Спецификация на движок Вердж3Д — Софт Эйт Софт">
+            <meta name="twitter:description" content="Создержит список функций и возможностей трёхмерного движка для создания интерактивных веб-приложений Вердж3Д.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        </head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство&nbsp;«Вердж3Д»</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_Менеджер_приложений">Менеджер приложений</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Пазлы">Пазлы</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Спецификация">Спецификация</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_проекта">Структура проекта</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Установка_обновлений">Установка обновлений</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_Вопрос-ответ">Вопрос-ответ</a></li></ul></div><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_темы_Методы_оптимизации">Методы оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_темы_Компрессия_ассетов">Компрессия ассетов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html" id="Основные_темы_Текстурная_компрессия">Текстурная компрессия</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_темы_Интерфейс_на_основе_ХТМЛ">Интерфейс на основе ХТМЛ</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_темы_Рендеринг_текста">Рендеринг текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_темы_Вирт./доп._реальность">Вирт./доп. реальность</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_темы_Руководство_по_физике">Руководство по физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_темы_Персонализация_приложений">Персонализация приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_темы_«ВордПресс»-плагин">«ВордПресс»-плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_темы_Использование_«ЯваСкрипт»">Использование «ЯваСкрипт»</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_темы_Создание_десктопных_приложений">Создание десктопных приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_темы_Создание_мобильных_приложений">Создание мобильных приложений</a></li><li><a href="manual/ru/introduction/Creating-SCORM-Courses.html" id="Основные_темы_Создание_обучающих_приложений">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_темы_Поиск_проблем_с_производительностью">Поиск проблем с производительностью</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_темы_Исправление_неполадок">Исправление неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_темы_Тестирование_в_мобильных_браузерах">Тестирование в мобильных браузерах</a></li></ul></div><div><h2>Блендер</h2><ul id="Блендер"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Блендер_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Блендер_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Блендер_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Блендер_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/blender/Camera.html" id="Блендер_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Блендер_Обзор_шейдерных_нод">Обзор шейдерных нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Блендер_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Блендер_Ключи_формы_(морфинг)">Ключи формы (морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Блендер_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Блендер_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Блендер_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Блендер_Ограничители">Ограничители</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Блендер_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>3дс Макс</h2><ul id="3дс_Макс"><li><a href="manual/ru/max/Beginners-Guide.html" id="3дс_Макс_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="3дс_Макс_Установка">Установка</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="3дс_Макс_Настройка_вьюпорта">Настройка вьюпорта</a></li><li><a href="manual/ru/max/Material-System.html" id="3дс_Макс_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="3дс_Макс_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/max/Camera.html" id="3дс_Макс_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="3дс_Макс_Материалы_и_текстуры">Материалы и текстуры</a></li><li><a href="manual/ru/max/Animation.html" id="3дс_Макс_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="3дс_Макс_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="3дс_Макс_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="3дс_Макс_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="3дс_Макс_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="3дс_Макс_Анимационные_ограничители">Анимационные ограничители</a></li><li><a href="manual/ru/max/Material-Library.html" id="3дс_Макс_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Майя</h2><ul id="Майя"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Майя_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Майя_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Майя_Материалы_и_текстурные_ноды">Материалы и текстурные ноды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Майя_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/maya/Camera.html" id="Майя_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Майя_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Майя_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Майя_Бленд_шейпы_(морфинг)">Бленд шейпы (морфинг)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Майя_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Майя_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Майя_Ограничители">Ограничители</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Майя_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Пазлы</h2><ul id="Пазлы"><li><a href="manual/ru/puzzles/Initialization.html" id="Пазлы_Инициализация">Инициализация</a></li><li><a href="manual/ru/puzzles/Events.html" id="Пазлы_События">События</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Пазлы_Селекторы">Селекторы</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Пазлы_Объекты">Объекты</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Пазлы_Материалы">Материалы</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Пазлы_Анимация_и_ограничители">Анимация и ограничители</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Пазлы_Камера_и_свет">Камера и свет</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Пазлы_Сцены">Сцены</a></li><li><a href="manual/ru/puzzles/Time.html" id="Пазлы_Время">Время</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Пазлы_ХТМЛ">ХТМЛ</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Пазлы_ВР/ДР">ВР/ДР</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Пазлы_Аудио/видео">Аудио/видео</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Пазлы_Физика">Физика</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Пазлы_Постпроцессинг">Постпроцессинг</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Пазлы_Логические_операции">Логические операции</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Пазлы_Циклы">Циклы</a></li><li><a href="manual/ru/puzzles/Text.html" id="Пазлы_Текст">Текст</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Пазлы_Числа">Числа</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Пазлы_Списки">Списки</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Пазлы_Словари">Словари</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Пазлы_Переменные">Переменные</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Пазлы_Процедуры">Процедуры</a></li><li><a href="manual/ru/puzzles/System.html" id="Пазлы_Системные">Системные</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Пазлы_Продвинутые">Продвинутые</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Пазлы_Электронная_коммерция">Электронная коммерция</a></li><li><a href="manual/ru/puzzles/SCORM.html" id="Пазлы_Электронное_обучение">Электронное обучение</a></li><li><a href="manual/ru/puzzles/Library.html" id="Пазлы_Библиотеки">Библиотеки</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Пазлы_Плагины">Плагины</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="manual/ru/programmers_guide/Terms.html" id="Прочее_Словарь_терминов">Словарь терминов</a></li></ul></div></div>
+        </nav><article>
+    <h1>Спецификация «Вердж3Д»</h1>
+
+    <p>Ниже приведен список основных функций и возможностей ПО «Вердж3Д».</p>
+
+    <iframe class="video-480p" src="https://rutube.ru/play/embed/0fc5dcb28de3c133befd1786aee98d65" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+
+    <h2>Содержание</h2>
+
+    <ul>
+      <li><a href="manual/ru/introduction/Features.html#feature_dcc">Создание контента</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_ecommerce">Электронная коммерция</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_elearning">Электронное обучение</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_materials">Система материалов</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_lighting">Освещение</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_shadows">Тени</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_app_management">Менеджер приложений</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_animation">Анимация</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_visual_scripting">Визуальное программирование</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_programming">Программирование</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_publishing">Публикация приложения</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_ui">Интерфейс пользователя и ХТМЛ</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_networking">Серверные функции и сеть</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_postprocessing">Постпроцессинговые эффекты</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_vr">Виртуальная реальность</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_ar">Дополненная реальность</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_shaders">Шейдеры</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_physics">Физика</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_audio">Звук</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_video">Видео</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_material_libraries">Библиотеки материалов</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_demos">Демо и примеры</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_import_formats">Форматы импорта</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_export_formats">Форматы экспорта</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_camera_controls">Управление камерой</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_3d_primitives">3Д-примитивы</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_requirements">Системные требования</a></li>
+      <li><a href="manual/ru/introduction/Features.html#feature_dev_requirements">Системные требования для разработки</a></li>
+    </ul>
+
+    <h2>Возможности и требования</h2>
+
+    <table>
+
+      <tbody><tr id="feature_dcc">
+        <th rowspan="3">Создание контента</th>
+        <th>«Вердж3Д для Блендера»</th>
+        <th>«Вердж3Д для 3дс Макса»</th>
+        <th>«Вердж3Д для Майи»</th>
+      </tr>
+
+      <tr>
+        <td>«Блендер» версий 2.83-3.5</td>
+        <td>«Автодеск 3дс Макс» версий 2020-2023</td>
+        <td>«Автодеск Майя» версий 2019-2023</td>
+      </tr>
+
+      <tr>
+        <td colspan="3">
+          Кроме того, вы можете использовать любой пакет моделирования, поддерживающий экспорт в формат ГЛТФ 2.0, а также любое программное обеспечение для 3Д-графики, поддерживающее экспорт в <a href="manual/ru/introduction/Features.html#feature_import_formats">любой из 20 поддерживаемых форматов</a> включая FBX, OBJ, КОЛЛАДА и 3DS.
+        </td>
+      </tr>
+
+
+      <tr id="feature_ecommerce">
+        <th>Электронная коммерция</th>
+        <td colspan="3">
+          <p>«Вердж3Д» включает в себя следующие возможности по созданию 3Д-приложений для электронной коммерции:</p>
+          <ul>
+            <li>Платежи «ПейПал» с использованием пазлов.</li>
+            <li>Интеграция с системой «ВуКоммерц».</li>
+          </ul>
+
+          <p>Кроме того, «Вердж3Д» включает в себя полноценную систему электронной коммерции на базе плагина для системы управления контентом ВордПресс, позволяющую</p>
+          <ul>
+            <li>Принимать заказы с помощью форм или низкоуровневого РЕСТ АПИ.</li>
+            <li>Возможность создавать конфигурируемые продукты с неограниченным числом вариаций.</li>
+            <li>Уведомления по электронной почте о новых, обновлённых и исполненных заказах.</li>
+            <li>Система расчёта цен.</li>
+            <li>Генерирование счетов на оплату и инвойсов.</li>
+            <li>Продажа скачиваемых продуктов.</li>
+            <li>Оплата с помощью ПейПал.</li>
+          </ul>
+
+          <p>
+            Кроме того, в вашем распоряжении более 300 блоков визуального программирования, с помощью которых можно создавать интерактивные 3Д-магазины, конфигураторы, презентации, промо-контент и браузерные игры.
+          </p>
+
+          <p>
+            Системы, включённые в поставку «Вердж3Д», никак не ограничивают ваши возможности по созданию собственных визуализаций для 3Д-коммерции (в том числе с использованием виртуальной и дополненной реальности). В базовом исполнении это могут быть обычные крутящиеся модели товаров, интегрированные в стороннюю систему электронной коммерции (в частности, ВуКомерц).
+          </p>
+        </td>
+      </tr>
+
+      <tr id="feature_elearning">
+        <th>Электронное обучение</th>
+        <td colspan="3">
+          В составе «Вердж3Д» имеется следующий набор функций для создания систем электронного обучения:
+          <ul>
+            <li>Генератор курсов в формате СКОРМ 1.2 (SCORM 1.2), которые могут быть запущены в любой совместимой системе электронного обучения: «Модл» (Moodle), «Чамило» (Chamilo), «СКОРМ Клауд» (SCORM Cloud), «КАНВАС» (CANVAS), «айСпринг» (iSpring).</li>
+            <li>Пазлы для СКОРМ 1.2.</li>
+            <li>Более 300 других пазлов для реализации интерактивных обучающих материалов.</li>
+          </ul>
+        </td>
+      </tr>
+
+
+      <tr id="feature_materials">
+        <th rowspan="2">Система материалов</th>
+        <th>«Вердж3Д для Блендера»</th>
+        <th>«Вердж3Д для 3дс Макса»</th>
+        <th>«Вердж3Д для Майи»</th>
+      </tr>
+
+      <tr>
+        <td>
+          <ul>
+            <li>
+              <a href="manual/ru/blender/Material-System.html#Eevee">Нодовые материалы рендера «Иви»</a>.
+            </li>
+            <li>
+              <a href="manual/ru/blender/Material-System.html#Cycles">Нодовые материалы рендера «Сайклз»</a>.
+            </li>
+            <li>
+              <a href="manual/ru/blender/Material-System.html#glTF_compliant_PBR">ГЛТФ-совместимый</a>.
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>
+              <a href="manual/ru/max/Material-System.html#Physical">Физические материалы</a> рендера «Арнольд».
+            </li>
+            <li>
+              <a href="manual/ru/max/Material-System.html#Standard">Стандартный материалы</a> рендера «Сканлайн».
+            </li>
+            <li>
+              <a href="manual/ru/max/Material-System.html#Physical_glTF_compliant">ГЛТФ-совместимый</a>.
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>
+              <a href="manual/ru/maya/Materials.html#standardSurface">Standard Surface</a>
+            </li>
+            <li>
+              Основанный на шейдере <a href="manual/ru/maya/Materials.html#aiStandardSurface">aiStandardSurface</a> рендера «Арнольд».
+            </li>
+            <li>
+              Аппроксимированные шейдеры <a href="manual/ru/maya/Materials.html#lambert">«Ламберт», «Фонг», «Блинн», «Стингрей ПБС»</a>
+            </li>
+            <li>
+              <a href="manual/ru/maya/GLTF-Materials.html">ГЛТФ-совместимый</a>.
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_lighting">
+        <th rowspan="3">Освещение</th>
+        <th>«Вердж3Д для Блендера»</th>
+        <th>«Вердж3Д для 3дс Макса»</th>
+        <th>«Вердж3Д для Майи»</th>
+      </tr>
+
+      <tr>
+        <td>
+          <ul>
+            <li>
+              Источники света:
+              <ul>
+                <li>Точечный</li>
+                <li>Cолнце</li>
+                <li>Прожектор</li>
+                <li>Источник-область</li>
+              </ul>
+            </li>
+            <li>
+              Освещение, основанное на использовании карты окружения (шейдерные ноды мира)
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>
+              Фотометрические источники света
+              <ul>
+                <li>Свободный</li>
+                <li>Таргетированный</li>
+              </ul>
+            </li>
+            <li>
+              Стандартные источники света:
+              <ul>
+                <li>Таргетированный прожектор</li>
+                <li>Свободный прожектор</li>
+                <li>Таргетированный однонаправленный</li>
+                <li>Свободный однонаправленный</li>
+                <li>Всенаправленный</li>
+              </ul>
+            </li>
+            <li>
+              Освещение, основанное на использовании карты окружения
+            </li>
+          </ul></td>
+          <td>
+          <ul>
+            <li>
+              Источники света:
+              <ul>
+                <li>Окружение</li>
+                <li>Однонаправленный</li>
+                <li>Точечный</li>
+                <li>Прожектор</li>
+              </ul>
+            </li>
+            <li>
+              Освещение, основанное на использовании текстур совместно с aiSkyDomeLight.
+            </li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">Кроме того, вы можете создавать прямоугольные и полусферические источники света с помощью «ЯваСкрипт».</td>
+      </tr>
+
+      <tr id="feature_shadows">
+        <th>Тени</th>
+        <td colspan="3">
+          «Вердж3Д» поддерживает отбрасывание теней от направленных, точечных и прожекторных источников света:
+          <ul>
+            <li>Базовые жёсткие тени.</li>
+            <li>Билинейные тени.</li>
+            <li>ПЦФ-тени.</li>
+            <li>Билинейные ПЦФ-тени.</li>
+            <li>ПЦФ-тени с диском Пуассона.</li>
+            <li>ЕСМ-тени.</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_app_management">
+        <th>Менеджер приложений</th>
+        <td colspan="3">
+          Менеджер приложений — это удобный инструмент предлагающий:
+          <ul>
+            <li>Создание новых приложений на основе шаблонов.</li>
+            <li>Запуск приложений и программ для 3Д-моделирования («Блендер», «3дс Макс», «Майя»).</li>
+            <li>Редактирование и запуск визуального редактора логики.</li>
+            <li>Обновление приложений до новых версий «Вердж3Д».</li>
+            <li>Публикация приложений в «Вердж3Д Нетворк».</li>
+            <li>Управление лицензионными ключами.</li>
+            <li>Доступ к документации и каналам поддержки «Вердж3Д».</li>
+          </ul>
+          К менеджеру приложений легко получить доступ прямо из «Блендера», «3дс Макса» или «Майи».
+        </td>
+      </tr>
+
+      <tr id="feature_animation">
+        <th rowspan="2">Анимация</th>
+        <th>«Вердж3Д для Блендера»</th>
+        <th>«Вердж3Д для 3дс Макса»</th>
+        <th>«Вердж3Д для Майи»</th>
+      </tr>
+
+      <tr>
+        <td>
+          <ul>
+            <li>Скелетная анимация.</li>
+            <li>Объектная анимация (перемещение, вращение, масштабирование).</li>
+            <li>Анимация с использованием нод RGB и Value.</li>
+            <li>Шейповая анимация (морфинг).</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Скелетная анимация.</li>
+            <li>Объектная анимация (перемещение, вращение, масштабирование).</li>
+            <li>Анимационный контроллер материалов. Поддерживаемые параметры float и color.</li>
+          </ul>
+        </td>
+        <td>
+          <ul>
+            <li>Скелетная анимация.</li>
+            <li>Объектная анимация (перемещение, вращение, масштабирование).</li>
+            <li>Анимация параметров материала.</li>
+            <li>Морфинг.</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_visual_scripting">
+        <th>Визуальное программирование</th>
+        <td colspan="3">
+          <a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html">Пазлы «Вердж3Д»</a> — визуальный конструктор логики, позволяющий быстро создавать интерактивные сценарии, путем перетаскивания блоков мышью. Его возможности:
+          <ul>
+            <li>Обработка пользовательских событий, таких как клик, тач, ховер, драг.</li>
+            <li>Получение объектов сцены, анимации, групп и материалов.</li>
+            <li>Перемещение, вращение и масштабирование 3Д-объектов, определение дистанции между объектами.</li>
+            <li>Отображение и скрытие объектов.</li>
+            <li>Изменение иерархии объектов.</li>
+            <li>Добавление к сцене 2Д текстовых аннотаций (билбордов).</li>
+            <li>Изменение параметров материала, загрузка текстур. </li>
+            <li>Управление анимацией. </li>
+            <li>Перемещение и вращение камеры. Выбор активной камеры.</li>
+            <li>Динамическая загрузка ресурсов. </li>
+            <li>Загрузка и скачивание данных по сети в форматах «Джейсон», ЦСВ, текст.</li>
+            <li>Загрузка пользовательских изображений. </li>
+            <li>Реализация функций «отменить»/«повторить». </li>
+            <li>Составление и отправка кастомных заказов. </li>
+            <li>Определение параметров пользователя, таких как браузер, ОС и т.д.</li>
+            <li>Взаимодействие с логикой, написанной на «ЯваСкрипт».</li>
+            <li>Выполнение событий по таймеру. </li>
+            <li>Инициализация сеансов виртуальной и дополненной реальности.</li>
+            <li>Управление ХТМЛ/ЦСС загруженной страницы.</li>
+            <li>Воспроизведение звуков.</li>
+            <li>Симуляция физики.</li>
+            <li>Включение эффектов постпроцессинга.</li>
+            <li>Управление логикой и данными приложения.</li>
+            <li>Математические функции.</li>
+            <li>Запуск собственного кода «ЯваСкрипт».</li>
+          </ul>
+          <p>В дополнение к этому вы можете создавать свои собственные блоки, используя плагины редактора пазлов.</p>
+        </td>
+      </tr>
+
+      <tr id="feature_programming">
+        <th>Программирование</th>
+        <td colspan="3">
+          <p>Функциональность приложения может быть <a href="manual/ru/introduction/Using-JavaScript.html">расширена с помощью «ЯваСкрипта»</a>, путем изменения исходников или интеграции кода, созданного в редакторе пазлов.</p>
+          <p>«Вердж3Д» также предоставляет программный интерфейс (АПИ), совместимый с фреймворком «Три-Джей-Эс», что упрощает портирование имеющегося кода.</p>
+        </td>
+      </tr>
+
+      <tr id="feature_publishing">
+        <th>Публикация приложения</th>
+        <td colspan="3">
+          Вы можете распространять свой контент, используя:
+          <ul>
+            <li>Ваш собственный сервер.</li>
+            <li>Любой веб-хостинг («Яндекс Облако», «ГоуДедди», «ДиджиталОушн», «Амазон АВС» и т.д.).</li>
+            <li><a href="https://www.soft8soft.com/ru/verge3d-network/" target="_blank">«Вердж3Д Нетворк»</a>.</li>
+            <li>В виде компьютерного или мобильного приложения, созданного с помощью фреймворков «Электрон» и «Кордова».
+            </li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_ui">
+        <th>Пользовательский интерфейс и ХТМЛ</th>
+        <td colspan="3">
+          Интерфейс приложения, созданный с помощью внешних редакторов ВИЗИВИГ, можно <a href="manual/ru/introduction/HTML-based-user-interfaces.html">связать с пазлами</a>, для управления 3Д-сценой.
+          <br>Мы рекомендуем использовать <a href="https://webflow.grsm.io/3441118" target="_blank">«Вебфлоу»</a> — визуальный конструктор сайтов.
+        </td>
+      </tr>
+
+      <tr id="feature_networking">
+        <th>Серверные функции и сеть</th>
+        <td colspan="3">
+          «Вердж3Д» содержит <a href="manual/ru/introduction/Wordpress-Plugin.html">плагин для «ВордПресс»</a>, самой популярной системы управления контентом. Плагин включает в себя следующие функции:
+          <ul>
+            <li>Размещение и публикация приложений (встраивание).</li>
+            <li>Постоянное хранилище файлов.</li>
+            <li>Полностью настраиваемая система электронной коммерции для обработки заказов клиентов. </li>
+          </ul>
+            В дополнение к этому, редактор визуальной логики поддерживает блоки для отправки и получения данных по сети в формате «Джейсон», ЦСВ или обычного текста.
+        </td>
+      </tr>
+
+      <tr id="feature_postprocessing">
+        <th>Постпроцессинговые эффекты</th>
+        <td colspan="3">
+          Следующие эффекты можно <a href="manual/ru/puzzles/Postprocessing.html">включить с помощью пазлов</a>:
+          <ul>
+            <li>Эмбиент окклюжн</li>
+            <li>Блум</li>
+            <li>Яркость/контраст</li>
+            <li>Глубина резкости</li>
+            <li>Ч/б</li>
+            <li>Контур</li>
+            <li>ССР</li>
+            <li>Суперсемплинговый анти-алиасинг (ССАА)</li>
+          </ul>
+          Дополнительно вы можете включить с использованием «ЯваСкрипт»:
+          <ul>
+            <li>Адаптивный тон-маппинг</li>
+            <li>Солнечные лучи</li>
+            <li>Расширенный морфологический субпиксельный анти-алиасинг (СМАА)</li>
+            <li>Глитч</li>
+            <li>Кросс-фейдинг изображений</li>
+            <li>Маскирование изображений</li>
+            <li>Размытие при движении</li>
+            <li>Пикселизованное изображение</li>
+            <li>Собелевский фильтр</li>
+            <li>Темпоральный анти-алиасинг (ТАА)</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_vr">
+        <th>Виртуальная реальность</th>
+        <td colspan="3">
+          <p><a href="manual/ru/introduction/AR-VR-development.html">Поддерживаются</a> следующие технологии виртуальной реальности:</p>
+          <ul>
+            <li>ВебИксЭр</li>
+            <li>ВебВиЭр — через модуль совместимости.</li>
+            <li>Кардборд — на мобильных устройствах, которые еще не поддерживают стандарты ВебИксЭр/ВебВиЭр.</li>
+            <li>Анаглифный 3Д — может быть активирован с помощью «ЯваСкрипт».</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_ar">
+        <th>Дополненная реальность</th>
+        <td colspan="3">
+          Поддерживается в «Хроме» для «Андроида» (требуется мобильное устройство, поддерживающее ARCore, также известное как Google Play Services для AR) и Mozilla WebXR Viewer на «Айос».
+        </td>
+      </tr>
+
+      <tr id="feature_shaders">
+        <th>Шейдеры</th>
+        <td colspan="3">
+          Пользовательские шейдеры могут быть добавлены с использованием OpenGL ES Shading Language 2.0 (ВебГЛ 1.0) или 3.0 (ВебГЛ 2.0).
+        </td>
+      </tr>
+
+      <tr id="feature_physics">
+        <th>Физика</th>
+        <td colspan="3">
+          <a href="manual/ru/introduction/Physics-Guide.html">Физический модуль</a> обеспечивает обнаружение столкновений, динамическое перемещение объектов, поддержку персонажей и транспортных средств, имитацию пружин, веревок и ткани. Начиная с версии 2.11, физические симуляции можно создавать и управлять ими без программирования с помощью пазлов.
+        </td>
+      </tr>
+
+      <tr id="feature_audio">
+        <th>Звук</th>
+        <td colspan="3">
+          Фоновую музыку, а также сэмплы можно добавить с помощью <a href="manual/ru/puzzles/Sound.html">звуковых пазлов</a> или с «ЯваСкрипт». Кроме того, вы можете программировать расположение аудиоисточников и слушателей с помощью серверной части Веб Аудио АПИ.
+        </td>
+      </tr>
+
+      <tr id="feature_video">
+        <th>Видео</th>
+        <td colspan="3">
+          Видео текстуры можно назначать и воспроизводить с помощью <a href="manual/ru/puzzles/Sound.html">специальных пазлов</a> или «ЯваСкрипт».
+        </td>
+      </tr>
+
+      <tr id="feature_material_libraries">
+        <th rowspan="2">Библиотеки материалов</th>
+        <th>«Вердж3Д для Блендера»</th>
+        <th>«Вердж3Д для 3дс Макса»</th>
+        <th>«Вердж3Д для Майи»</th>
+      </tr>
+      <tr>
+        <td>
+          <ul>
+            <li>Базовая библиотека для «Блендера»</li>
+            <li>Ювелирная библиотека для «Блендера»</li>
+          </ul>
+          <p>
+            Читайте об использовании этих библиотек в «Блендере» и «Вердж3Д» <a href="manual/ru/blender/Material-Library.html">здесь</a>.
+          </p>
+        </td>
+        <td>
+          <ul>
+            <li>Базовая библиотека для «3дс Макса»</li>
+          </ul>
+          <p>
+            Читайте об использовании этой библиотеки в «3дс Максе» и «Вердж3Д» <a href="manual/ru/max/Material-Library.html">здесь</a>.
+          </p>
+        </td>
+        <td>
+          <ul>
+            <li>Базовая библиотека для «Майи»</li>
+          </ul>
+          <p>
+            Читайте об использовании этой библиотеки в «Майе» и «Вердж3Д» <a href="manual/ru/maya/Material-Library.html">здесь</a>.
+          </p>
+        </td>
+      </tr>
+
+      <tr id="feature_demos">
+        <th>Демо и примеры</th>
+        <td colspan="3">
+          Более 150 примеров в коде и ряд полнофункциональных демонстрационных приложений, включая:
+          <ul>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/arcade_racing/arcade_racing.html" target="_blank">«Аркадные гонки»</a> — гонки с реалистичной физикой.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/augmented_reality/augmented_reality.html" target="_blank">«Дополненная реальность»</a> — базовое демо-приложение для виртуальной реальности.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/clipping_planes/clipping_planes.html" target="_blank">«Мясорубка»</a> — показывает работу секущих плоскостей, используемых для показа внутренней структуры инженерно-технических изделий.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/custom_image/custom_image.html" target="_blank">«Фоторамка»</a> — виртуальная фоторамка с возможностью загрузки, хранения и публикации изображений.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/e-learning/e-learning.html" target="_blank">«Электронное обучение»</a> — простое приложение для электронного обучения.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/farmers_journey/index.html" target="_blank">«Приключения фермера»</a> — аркадная браузерная игра.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/global_illumination/global_illumination.html" target="_blank">«Глобальное освещение»</a> — реалистичная визуализация интерьера (используются кубические карты отражений и источники освещения в виде области).</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/gltf_compat/gltf_compat.html" target="_blank">«ГЛТФ»</a> — демонстрация материалов совместимых с ГЛТФ 2.0.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/industrial_robot/index.html" target="_blank">«Промышленный робот»</a> — интерактивная симуляция робота. Поддерживается режим виртуальной и дополненной реальности.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/jewelry_configurator/index.html" target="_blank">«Ювелирный конфигуратор»</a> — продвинутый ювелирный конфигуратор для электронной коммерции.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/load_unload/load_unload.html" target="_blank">«Загружаем-выгружаем»</a> — пример использования динамической загрузки ассетов.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/parametric_models/index.html" target="_blank">«Параметрические модели»</a> — 3Д-конфигуратор параметрических моделей.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/recliner/index.html" target="_blank">«Кресло»</a> — 3Д-конфигуратор и готовый к использованию шаблон интернет-магазина.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/ring/ring.html" target="_blank">«Кольцо»</a> — простой 3Д-конфигуратор ювелирных изделий с возможностью онлайн-заказа.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/scooter/index.html" target="_blank">«Скутер»</a> — мощный 3Д-конфигуратор с реалистичными материалами и широким выбором.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/scroll_animation/scroll_animation.html" target="_blank">«Скролл-анимация»</a> — демонстрация возможностей современного прокручиваемого сайта с настраиваемой 3Д-моделью.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/simple_configurator/simple_configurator.html" target="_blank">«Простой конфигуратор»</a> — простое обучающее демо для электронной коммерции.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/spinner/spinner.html" target="_blank">«Спиннер»</a> — простая презентация продукта с изменяемыми материалами и анимацией.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/swiss_army_knife/index.html" target="_blank">«Швейцарский нож»</a> — продвинутое обучающее демо-приложение электронной коммерции.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/teapot_heater/index.html" target="_blank">«Подогреватель чайников»</a> — необычное интерактивное 3Д-приложение созданное при помощи пазлов.</li>
+            <li><a href="https://cdn.soft8soft.com/demo/blender/video_texture/video_texture.html" target="_blank">«Телевизор»</a> — пример использования видеотекстур.</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_import_formats">
+        <th>Форматы импорта</th>
+        <td colspan="3">
+          <p>В дополнение к ГЛТФ 2.0 вы можете импортировать следующие форматы.</p>
+          <p>Геометрия и материалы:</p>
+          <ul>
+            <li>3DS — старый формат проектов Autodesk 3дс Макс.</li>
+            <li>3MF — 3Д manufacturing format.</li>
+            <li>AMF — Additive manufacturing file format.</li>
+            <li>AWD — используется в движке Away3D.</li>
+            <li>babylon — используется в движке Babylon.js.</li>
+            <li>КОЛЛАДА</li>
+            <li>CTM — формат OpenCTM.</li>
+            <li>FBX</li>
+            <li>ГЛТФ 1.0 — устаревший формат. Используйте ГЛТФ 2.0.</li>
+            <li>KMZ — Keyhole Markup Language.</li>
+            <li>OBJ/MTL</li>
+            <li>PCD — 3Д point cloud data format.</li>
+            <li>PDB — Protein Data Bank format.</li>
+            <li>PlayCanvas — ДжейСон-подобный формат, используемый в движке PlayCanvas.</li>
+            <li>PLY — Polygon File Format, предназначен для хранения трехмерных данных с 3Д-сканеров.</li>
+            <li>PRWM — Packed Raw WebGL Model.</li>
+            <li>STL — формат данных стереолитографии. Берет свое начало от программного обеспечения CAD от 3Д Systems.</li>
+            <li>SEA3D — формат с открытым исходным кодом для разработки игр.</li>
+            <li>VRML — специализированный формат для VR.</li>
+            <li>VRM — формат 3Д avatar, основанный на ГЛТФ.</li>
+            <li>VTK — формат Visualization Toolkit.</li>
+            <li>X — формат ДиректИкс.</li>
+          </ul>
+          <p>Анимация:</p>
+          <ul>
+            <li>BVH — Формат файлов анимации персонажей Biovision Hierarchy.</li>
+            <li>MD2 — используется в движке Quake II.</li>
+            <li>MMD — формат MikuMikuDance.</li>
+          </ul>
+          <p>Изображения:</p>
+          <ul>
+            <li>DDS — сжатая текстура.</li>
+            <li>EXR — OpenEXR, формат растрового файла с высоким динамическим диапазоном .</li>
+            <li>PVR — сжатая текстура.</li>
+            <li>HDR — RGBE или Radiance HDR.</li>
+            <li>KTX — формат текстуры от Khronos.</li>
+            <li>NRRD — "nearly raw raster data" format.</li>
+            <li>SVG</li>
+            <li>TGA — Truevision TGA - растровый графический формат.</li>
+            <li>TTF</li>
+            <li>WebP — формат, разработанный «Гугл» для замены JPEG, PNG, и GIF.</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_export_formats">
+        <th>Форматы экспорта</th>
+        <td colspan="3">
+          В дополнении к ГЛТФ 2.0 поддерживается экспорт в следующие форматы:
+          <ul>
+            <li>КОЛЛАДА</li>
+            <li>MMD</li>
+            <li>OBJ</li>
+            <li>PLY</li>
+            <li>STL</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_camera_controls">
+        <th>Управление камерой</th>
+        <td colspan="3">
+          Эти режимы управления камерой доступны по умолчанию:
+          <ul>
+            <li>Орбитальные контролы — привязка камеры к определенному объекту в сцене.</li>
+            <li>Полёт — свободное перемещение камеры в сцене.</li>
+            <li>ШПЛ (шутер от первого лица) — управление камерой от первого лица.</li>
+            <li>Контрол виртуальной реальности — специализирвоанный режим камеры для использования в виртуальной реальности.</li>
+          </ul>
+          Эти режимы управления камерой можно включить с помощью «ЯваСкрипт»:
+          <ul>
+            <li>Конторлы облёта</li>
+            <li>Контролы вращения с заблокированной мышью.</li>
+            <li>Контролы положения устройства — использование гироскопа мобильного устройства.</li>
+            <li>Контроллы облёта карты</li>
+            <li>Тракболл-контролы</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_3d_primitives">
+        <th>3Д-примитивы</th>
+        <td colspan="3">
+          Вы можете загрузить геометрию, экспортированную из любого пакета моделирования. В дополнение к этому, 3Д-примитивы могут быть созданы с помощью «ЯваСкрипт»:
+          <ul>
+            <li>Круг</li>
+            <li>Конус</li>
+            <li>Выпуклая оболочка</li>
+            <li>Куб</li>
+            <li>Цилиндр</li>
+            <li>Додекаэдр — многогранник с двенадцатью гранями.</li>
+            <li>Экструдированная поверхность</li>
+            <li>Икосаэдр — многогранник с 20 гранями.</li>
+            <li>Шрифт — процедурный текст, созданный из шрифтов <em>typeface.json</em>.</li>
+            <li>Поверхность вращения — 3Д-объект с осевой симметрией.</li>
+            <li>Линия</li>
+            <li>НУРБС</li>
+            <li>Октаэдр —  многогранник с 8 гранями.</li>
+            <li>Плоскость</li>
+            <li>Кольцо</li>
+            <li>Сфера</li>
+            <li>Сплайн</li>
+            <li>Тетраэдр — треугольная пирамида.</li>
+            <li>Многогранник</li>
+            <li>Текст</li>
+            <li>Тор</li>
+            <li>Трубка</li>
+            <li>Чайник «Юта»</li>
+            <li>Каркас</li>
+          </ul>
+        </td>
+      </tr>
+
+      <tr id="feature_requirements">
+        <th>Системные требования</th>
+        <td colspan="3">
+          Приложения «Вердж3Д» можно запускать в любой системе, способной запускать веб-браузер с поддержкой технологии ВебГЛ (см. список браузеров <a href="https://www.soft8soft.com/webgl-supported-browsers-and-troubleshooting/" target="_blank"> здесь</a>).
+        </td>
+      </tr>
+
+      <tr id="feature_dev_requirements">
+        <th rowspan="2">Системные требования для разработки</th>
+        <th>«Вердж3Д для Блендера»</th>
+        <th>«Вердж3Д для 3дс Макса»</th>
+        <th>«Вердж3Д для Майи»</th>
+      </tr>
+
+      <tr>
+        <td>
+          <a href="https://www.blender.org/download/requirements/" target="_blank">Соответствуют требованиям «Блендера»</a>
+        </td>
+        <td>
+          <a href="https://knowledge.autodesk.com/support/3ds-max/troubleshooting/caas/sfdcarticles/sfdcarticles/System-requirements-for-Autodesk-3ds-Max-2023.html" target="_blank">Соответствуют требованиям «3дс Макса»</a>
+        </td>
+        <td>
+          <a href="https://knowledge.autodesk.com/support/maya/troubleshooting/caas/sfdcarticles/sfdcarticles/System-requirements-for-Autodesk-Maya-2023.html" target="_blank">Соответствуют требованиям «Майи»</a>
+        </td>
+      </tr>
+    </tbody></table>
+
+
+    <p><a href="manual/ru/introduction/Features.html#see_also" id="see_also" class="permalink">#</a></p>
+    <h2>Все еще есть вопросы?</h2>
+
+    <p>Задавайте их на нашем <a href="https://www.soft8soft.com/ru/форумы/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>

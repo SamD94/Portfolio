@@ -1,0 +1,657 @@
+<!DOCTYPE html><html lang="ru"><head>
+    <title>Вердж3Д плагин для ВордПресс — Софт Эйт Софт</title>
+    <meta charset="utf-8">
+    <meta name="description" content="Как настроить и использовать плагин Вердж3Д ВордПресс для целей публикации и электронной коммерции.">
+    <base href="../../../">
+    <script src="page.js"></script>
+    <link type="text/css" rel="stylesheet" href="page.css">
+  
+            <link rel="canonical" href="https://www.soft8soft.com/docs/manual/ru/introduction/Wordpress-Plugin.html">
+
+            <meta property="og:type" content="article">
+            <meta property="og:title" content="Вердж3Д плагин для ВордПресс — Софт Эйт Софт">
+            <meta property="og:description" content="Как настроить и использовать плагин Вердж3Д ВордПресс для целей публикации и электронной коммерции.">
+            <meta property="og:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta property="og:image:width" content="1200">
+            <meta property="og:image:height" content="630">
+            <meta property="og:url" content="https://www.soft8soft.com/docs/manual/ru/introduction/Wordpress-Plugin.html">
+            <meta property="og:site_name" content="Софт Эйт Софт">
+            <meta property="og:locale" content="ru_RU">
+
+            <meta property="article:author" content="https://www.facebook.com/soft8soft">
+
+            <meta property="article:tag" content="Verge3D">
+            <meta property="article:tag" content="WebGL">
+            <meta property="article:tag" content="3D">
+            <meta property="article:tag" content="interactive">
+            <meta property="article:tag" content="realtime">
+            <meta property="article:tag" content="3dweb">
+            <meta property="article:tag" content="web3d">
+
+            <meta name="twitter:card" content="summary_large_image">
+            <meta name="twitter:title" content="Вердж3Д плагин для ВордПресс — Софт Эйт Софт">
+            <meta name="twitter:description" content="Как настроить и использовать плагин Вердж3Д ВордПресс для целей публикации и электронной коммерции.">
+            <meta name="twitter:image" content="https://www.soft8soft.com/docs/files/blank/manual_social_ru.png">
+            <meta name="twitter:creator" content="@soft8soft">
+        
+            <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+            <!-- favicons from realfavicongenerator.net -->
+            <link rel="apple-touch-icon" sizes="180x180" href="https://www.soft8soft.com/docs/files/icons/apple-touch-icon.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://www.soft8soft.com/docs/files/icons/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://www.soft8soft.com/docs/files/icons/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://www.soft8soft.com/docs/files/icons/favicon-16x16.png">
+            <link rel="manifest" href="https://www.soft8soft.com/docs/files/icons/manifest.json">
+            <link rel="mask-icon" href="https://www.soft8soft.com/docs/files/icons/safari-pinned-tab.svg" color="#0048a5">
+        <script type="application/ld+json">[
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/wordpress/app.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/wordpress/upload-app.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/wordpress/app-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/wordpress/woo-replace-product-image.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/wordpress/woo-add-gallery-item.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/wordpress/woo-product-settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/wordpress/send_load_puzzles.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/wordpress/order-form.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/wordpress/orders.png",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/wordpress/products.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/wordpress/get_product_info_puzzles.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ,
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "ImageObject",
+                    "contentUrl": "https://www.soft8soft.com/docs/files/wordpress/settings.jpg",
+                    "license": "https://creativecommons.org/licenses/by/4.0/",
+                    "acquireLicensePage": "https://www.soft8soft.com/contact/",
+                    "creditText": "Verge3D developers",
+                    "creator": {
+                        "@type": "Organization",
+                        "name": "Soft8Soft"
+                    },
+                    "copyrightNotice": "Soft8Soft"
+                }
+            ]</script></head>
+  <body><nav id="panel" class="collapsed">
+          <h1><a href="manual/ru/index.html">Руководство&nbsp;«Вердж3Д»</a></h1>
+
+          <a id="expandButton" href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+          </a>
+
+          <div class="filterBlock">
+            <input type="text" id="filterInput" placeholder="Поиск" autocapitalize="off" spellcheck="false">
+            <a href="#" id="clearFilterButton">x</a>
+          </div>
+
+          <div id="content"><div><h2>Начало работы</h2><ul id="Начало_работы"><li><a href="manual/ru/introduction/Beginners-Guide.html" id="Начало_работы_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/introduction/Workflow.html" id="Начало_работы_Рабочий_процесс">Рабочий процесс</a></li><li><a href="manual/ru/introduction/App-Manager.html" id="Начало_работы_Менеджер_приложений">Менеджер приложений</a></li><li><a href="manual/ru/introduction/Puzzles-Visual-Logic-Editor.html" id="Начало_работы_Пазлы">Пазлы</a></li><li><a href="manual/ru/introduction/Features.html" id="Начало_работы_Спецификация">Спецификация</a></li><li><a href="manual/ru/introduction/Project-Structure.html" id="Начало_работы_Структура_проекта">Структура проекта</a></li><li><a href="manual/ru/introduction/Updating.html" id="Начало_работы_Установка_обновлений">Установка обновлений</a></li><li><a href="manual/ru/introduction/FAQ.html" id="Начало_работы_Вопрос-ответ">Вопрос-ответ</a></li></ul></div><div><h2>Основные темы</h2><ul id="Основные_темы"><li><a href="manual/ru/introduction/Optimizing-WebGL-performance.html" id="Основные_темы_Методы_оптимизации">Методы оптимизации</a></li><li><a href="manual/ru/introduction/Asset-compression.html" id="Основные_темы_Компрессия_ассетов">Компрессия ассетов</a></li><li><a href="manual/ru/introduction/Texture-Compression.html" id="Основные_темы_Текстурная_компрессия">Текстурная компрессия</a></li><li><a href="manual/ru/introduction/HTML-based-user-interfaces.html" id="Основные_темы_Интерфейс_на_основе_ХТМЛ">Интерфейс на основе ХТМЛ</a></li><li><a href="manual/ru/introduction/Text-Rendering.html" id="Основные_темы_Рендеринг_текста">Рендеринг текста</a></li><li><a href="manual/ru/introduction/AR-VR-development.html" id="Основные_темы_Вирт./доп._реальность">Вирт./доп. реальность</a></li><li><a href="manual/ru/introduction/Physics-Guide.html" id="Основные_темы_Руководство_по_физике">Руководство по физике</a></li><li><a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html" id="Основные_темы_Персонализация_приложений">Персонализация приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html" id="Основные_темы_«ВордПресс»-плагин">«ВордПресс»-плагин</a></li><li><a href="manual/ru/introduction/Using-JavaScript.html" id="Основные_темы_Использование_«ЯваСкрипт»">Использование «ЯваСкрипт»</a></li><li><a href="manual/ru/introduction/Creating-Desktop-Apps.html" id="Основные_темы_Создание_десктопных_приложений">Создание десктопных приложений</a></li><li><a href="manual/ru/introduction/Creating-Mobile-Apps.html" id="Основные_темы_Создание_мобильных_приложений">Создание мобильных приложений</a></li><li><a href="manual/ru/introduction/Creating-SCORM-Courses.html" id="Основные_темы_Создание_обучающих_приложений">Создание обучающих приложений</a></li><li><a href="manual/ru/introduction/Performance-Bottlenecks.html" id="Основные_темы_Поиск_проблем_с_производительностью">Поиск проблем с производительностью</a></li><li><a href="manual/ru/introduction/Hardware-Related-Issues.html" id="Основные_темы_Исправление_неполадок">Исправление неполадок</a></li><li><a href="manual/ru/introduction/Testing-Mobile-Browsers.html" id="Основные_темы_Тестирование_в_мобильных_браузерах">Тестирование в мобильных браузерах</a></li></ul></div><div><h2>Блендер</h2><ul id="Блендер"><li><a href="manual/ru/blender/Beginners-Guide.html" id="Блендер_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/blender/Installation.html" id="Блендер_Установка">Установка</a></li><li><a href="manual/ru/blender/Material-System.html" id="Блендер_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/blender/Lighting-and-Rendering.html" id="Блендер_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/blender/Camera.html" id="Блендер_Камера">Камера</a></li><li><a href="manual/ru/blender/Shader-Nodes-Reference.html" id="Блендер_Обзор_шейдерных_нод">Обзор шейдерных нод</a></li><li><a href="manual/ru/blender/Animation.html" id="Блендер_Анимация">Анимация</a></li><li><a href="manual/ru/blender/Morphing.html" id="Блендер_Ключи_формы_(морфинг)">Ключи формы (морфинг)</a></li><li><a href="manual/ru/blender/Shadows.html" id="Блендер_Тени">Тени</a></li><li><a href="manual/ru/blender/Transparency.html" id="Блендер_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/blender/GLTF-Materials.html" id="Блендер_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/blender/Object-Constraints.html" id="Блендер_Ограничители">Ограничители</a></li><li><a href="manual/ru/blender/Material-Library.html" id="Блендер_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>3дс Макс</h2><ul id="3дс_Макс"><li><a href="manual/ru/max/Beginners-Guide.html" id="3дс_Макс_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/max/Installation.html" id="3дс_Макс_Установка">Установка</a></li><li><a href="manual/ru/max/Viewport-Render-Preview.html" id="3дс_Макс_Настройка_вьюпорта">Настройка вьюпорта</a></li><li><a href="manual/ru/max/Material-System.html" id="3дс_Макс_Обзор_системы_материалов">Обзор системы материалов</a></li><li><a href="manual/ru/max/Lighting-and-Rendering.html" id="3дс_Макс_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/max/Camera.html" id="3дс_Макс_Камера">Камера</a></li><li><a href="manual/ru/max/Materials-Maps-Reference.html" id="3дс_Макс_Материалы_и_текстуры">Материалы и текстуры</a></li><li><a href="manual/ru/max/Animation.html" id="3дс_Макс_Анимация">Анимация</a></li><li><a href="manual/ru/max/Morphing.html" id="3дс_Макс_Морфинг">Морфинг</a></li><li><a href="manual/ru/max/Shadows.html" id="3дс_Макс_Тени">Тени</a></li><li><a href="manual/ru/max/Transparency.html" id="3дс_Макс_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/max/GLTF-Materials.html" id="3дс_Макс_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/max/Animation-Constraints.html" id="3дс_Макс_Анимационные_ограничители">Анимационные ограничители</a></li><li><a href="manual/ru/max/Material-Library.html" id="3дс_Макс_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Майя</h2><ul id="Майя"><li><a href="manual/ru/maya/Beginners-Guide.html" id="Майя_Руководство_для_начинающих">Руководство для начинающих</a></li><li><a href="manual/ru/maya/Installation.html" id="Майя_Установка">Установка</a></li><li><a href="manual/ru/maya/Materials.html" id="Майя_Материалы_и_текстурные_ноды">Материалы и текстурные ноды</a></li><li><a href="manual/ru/maya/Lighting-and-Rendering.html" id="Майя_Освещение_и_рендеринг">Освещение и рендеринг</a></li><li><a href="manual/ru/maya/Camera.html" id="Майя_Камера">Камера</a></li><li><a href="manual/ru/maya/Shadows.html" id="Майя_Тени">Тени</a></li><li><a href="manual/ru/maya/Animation.html" id="Майя_Анимация">Анимация</a></li><li><a href="manual/ru/maya/Blend-Shapes.html" id="Майя_Бленд_шейпы_(морфинг)">Бленд шейпы (морфинг)</a></li><li><a href="manual/ru/maya/Transparency.html" id="Майя_Прозрачность">Прозрачность</a></li><li><a href="manual/ru/maya/GLTF-Materials.html" id="Майя_ГЛТФ-материалы">ГЛТФ-материалы</a></li><li><a href="manual/ru/maya/Object-Constraints.html" id="Майя_Ограничители">Ограничители</a></li><li><a href="manual/ru/maya/Material-Library.html" id="Майя_Библиотеки_материалов">Библиотеки материалов</a></li></ul></div><div><h2>Пазлы</h2><ul id="Пазлы"><li><a href="manual/ru/puzzles/Initialization.html" id="Пазлы_Инициализация">Инициализация</a></li><li><a href="manual/ru/puzzles/Events.html" id="Пазлы_События">События</a></li><li><a href="manual/ru/puzzles/Selectors.html" id="Пазлы_Селекторы">Селекторы</a></li><li><a href="manual/ru/puzzles/Objects.html" id="Пазлы_Объекты">Объекты</a></li><li><a href="manual/ru/puzzles/Materials.html" id="Пазлы_Материалы">Материалы</a></li><li><a href="manual/ru/puzzles/Animation.html" id="Пазлы_Анимация_и_ограничители">Анимация и ограничители</a></li><li><a href="manual/ru/puzzles/Camera.html" id="Пазлы_Камера_и_свет">Камера и свет</a></li><li><a href="manual/ru/puzzles/Scenes.html" id="Пазлы_Сцены">Сцены</a></li><li><a href="manual/ru/puzzles/Time.html" id="Пазлы_Время">Время</a></li><li><a href="manual/ru/puzzles/HTML.html" id="Пазлы_ХТМЛ">ХТМЛ</a></li><li><a href="manual/ru/puzzles/AR_VR.html" id="Пазлы_ВР/ДР">ВР/ДР</a></li><li><a href="manual/ru/puzzles/Sound.html" id="Пазлы_Аудио/видео">Аудио/видео</a></li><li><a href="manual/ru/puzzles/Physics.html" id="Пазлы_Физика">Физика</a></li><li><a href="manual/ru/puzzles/Postprocessing.html" id="Пазлы_Постпроцессинг">Постпроцессинг</a></li><li><a href="manual/ru/puzzles/Logic.html" id="Пазлы_Логические_операции">Логические операции</a></li><li><a href="manual/ru/puzzles/Loops.html" id="Пазлы_Циклы">Циклы</a></li><li><a href="manual/ru/puzzles/Text.html" id="Пазлы_Текст">Текст</a></li><li><a href="manual/ru/puzzles/Numbers.html" id="Пазлы_Числа">Числа</a></li><li><a href="manual/ru/puzzles/Lists.html" id="Пазлы_Списки">Списки</a></li><li><a href="manual/ru/puzzles/Dictionaries.html" id="Пазлы_Словари">Словари</a></li><li><a href="manual/ru/puzzles/Variables.html" id="Пазлы_Переменные">Переменные</a></li><li><a href="manual/ru/puzzles/Procedures.html" id="Пазлы_Процедуры">Процедуры</a></li><li><a href="manual/ru/puzzles/System.html" id="Пазлы_Системные">Системные</a></li><li><a href="manual/ru/puzzles/Advanced.html" id="Пазлы_Продвинутые">Продвинутые</a></li><li><a href="manual/ru/puzzles/ECommerce.html" id="Пазлы_Электронная_коммерция">Электронная коммерция</a></li><li><a href="manual/ru/puzzles/SCORM.html" id="Пазлы_Электронное_обучение">Электронное обучение</a></li><li><a href="manual/ru/puzzles/Library.html" id="Пазлы_Библиотеки">Библиотеки</a></li><li><a href="manual/ru/puzzles/Plugins.html" id="Пазлы_Плагины">Плагины</a></li></ul></div><div><h2>Прочее</h2><ul id="Прочее"><li><a href="manual/ru/programmers_guide/Terms.html" id="Прочее_Словарь_терминов">Словарь терминов</a></li></ul></div></div>
+        </nav><article>
+    <h1>Плагин для «ВордПресс»</h1>
+
+    <p>
+      «Вердж3Д» поставляется с плагином для «ВордПресс», самой популярной из используемых систем управления контентом (60+ миллионов установок).
+    </p>
+
+    <p>Плагин предоставляет следующие возможности:</p>
+    <ul>
+      <li>Размещение и публикация ВебГЛ-приложений (прямое встраивание на страницы, через элементы iframe или с помощью коротких кодов «ВордПресс»).</li>
+      <li>Интеграция с системой «ВуКоммерц». Вы можете вставлять визуализацию на страницы товаров, а также создавать мощные конфигураторы с помощью пазлов или «ЯваСкрипт».</li>
+      <li>Постоянное хранилище файлов.</li>
+      <li>Система электронной коммерции для обработки заказов клиентов, отправляемых с помощью пазлов <a href="manual/ru/puzzles/ECommerce.html#place_order" target="_parent">place order</a>, <a href="manual/ru/puzzles/ECommerce.html#place_order_adv" target="_parent">place order+</a> и <a href="manual/ru/puzzles/Advanced.html#send_data" target="_parent">send data</a>.</li>
+      <li>Генератор счетов и инвойсов.</li>
+      <li>Платежи с помощью карт и «ПейПал»-кошельков.</li>
+      <li>Поддержка скачиваемых продуктов.</li>
+    </ul>
+
+    <p>Эти функции могут работать независимо друг от друга. Например, вам может понадобиться только встраивание, или вы можете обрабатывать заказы, полученные из приложения «Вердж3Д», размещенного в другом месте (например, в «Вердж3Д Нетворк» и т. д.).</p>
+
+    <p class="note">
+      На данный момент деятельность «ПейПал» в России и Белоруссии приостановлена. В качестве альтернативы используйте интеграцию плагина с открытой системой «ВуКоммерц», в которой есть возможность осуществления платежей с помощью российских сервисов, таких как «Робокасса».
+    </p>
+
+
+    <h2>Содержание</h2>
+
+    <!-- TOC -->
+<ul><li><a href="manual/ru/introduction/Wordpress-Plugin.html#sandbox">Песочница</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html#installation">Установка</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html#uploading_applications">Загрузка приложений</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html#application_settings">Настройки приложения</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html#woocommerce">Интеграция с «ВуКоммерц»</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html#uploading_files">Загрузка файлов</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html#receiving_orders_with_order_form">Получение заказов с помощью формы заказа</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html#receiving_orders_rest_api">Получение заказов с помощью РЕСТ АПИ</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html#managing_orders">Управление заказами</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html#managing_products">Управление продуктами</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html#getting_product_info">Получение информации о продуктах</a></li><li><a href="manual/ru/introduction/Wordpress-Plugin.html#plug_in_settings">Настройки плагина</a></li></ul><!-- /TOC -->
+
+
+    <p><a href="manual/ru/introduction/Wordpress-Plugin.html#sandbox" id="sandbox" class="permalink">#</a></p>
+
+    <h2>Песочница</h2>
+
+    <p>Чтобы опробовать возможности плагина, загляните в <a href="https://sandbox.soft8soft.com" target="_blank">песочницу «Вердж3Д»/«ВордПресс»</a>. Она обеспечивает безопасную среду, которую можно использовать для тестирования приложений «Вердж3Д».</p>
+
+
+    <p><a href="manual/ru/introduction/Wordpress-Plugin.html#installation" id="installation" class="permalink">#</a></p>
+
+    <h2>Установка</h2>
+
+    <p>Перед установкой плагина убедитесь, что у вас есть «ВордПресс» как минимум 5-ой версии. Для загрузки приложений на сервер вам необходимо иметь современный браузер, такой как «Гугл Хром», «Файрфокс», «Майкрософт Эдж» или «Эпл Сафари».</p>
+
+    <p>Последовательность установки:</p>
+
+    <ul>
+      <li>Нажмите <strong>Add New</strong> на странице плагинов в панели администратора «ВордПресс».</li>
+      <li>Найдите плагин «Вердж3Д» в официальном <a href="https://ru.wordpress.org/plugins/verge3d/" target="_blank">репозитории</a> WordPress.org и установите его.</li>
+      <li>Активируйте плагин. Меню <strong>Verge3D</strong> должно появиться на панели администратора.</li>
+    </ul>
+
+    <p>В некоторых случаях вам может понадобиться установить плагин из дистрибутива «Вердж3Д» (например, когда вы собираетесь опробовать новую функцию, доступную в пре-релизной версии «Вердж3Д»). Для этого выполните следующие действия:</p>
+    <ul>
+      <li>Загрузите архив плагина из <em>verge3d/wordpress/verge3d.zip</em> через интерфейс администратора «ВордПресс».</li>
+      <li>Активируйте плагин в меню <strong>Plugins</strong>. Меню <strong>Verge3D</strong> должно появиться в панели администратора.</li>
+    </ul>
+
+    <p>После активации попробуйте загрузить несколько своих приложений или создать тестовый заказ, чтобы убедиться, что плагин работает так, как нужно.</p>
+
+    <p class="note">
+      Обратите внимание, что конфигурация вашего сервера «ВордПресс» может иметь жесткие ограничения на загрузку. Если у вас возникают проблемы при загрузке приложений, вам необходимо изменить следующие настройки в файле php.ini:
+      <code>upload_max_filesize = 128M
+post_max_size = 128M</code>
+      См. официальную <a href="http://php.net/manual/ru/ini.core.php" target="_blank">документацию ПХП</a> для получения дополнительной информации о настройках php.ini.
+    </p>
+
+
+    <p><a href="manual/ru/introduction/Wordpress-Plugin.html#uploading_applications" id="uploading_applications" class="permalink">#</a></p>
+
+    <h2>Загрузка приложений</h2>
+
+    <p>Используйте меню администратора <strong>Applications</strong> для доступа к экрану <strong>Verge3D Applications</strong>:</p>
+
+    <img src="files/wordpress/app.png">
+
+    <p>
+      Чтобы загрузить свое приложение, нажмите кнопку <strong>Add New</strong>, введите имя приложения, далее нажмите <strong>Next</strong>. Загрузится диалог <strong>Manage Verge3D Application</strong>. В этом диалоге нажмите <strong>Choose Files</strong>, выберите папку приложения, далее <strong>Upload</strong>:
+    </p>
+
+    <img src="files/wordpress/upload-app.jpg">
+
+    <p>Здесь же вы можете настроить размер iframe (холста) вашего приложения и разрешить/запретить использование полноэкранного режима.</p>
+
+    <p>Для встраивания приложений «Вердж3Д» в страницы/посты «ВордПресс» используйте следующий код:</p>
+
+    <code>[verge3d id="YOUR_APP_ID"]</code>
+
+    <p>где <em>YOUR_APP_ID</em> это идентификатор вашего приложения, которое отображается в таблице на экране <strong>Verge3D Application</strong>.</p>
+
+
+    <p><a href="manual/ru/introduction/Wordpress-Plugin.html#application_settings" id="application_settings" class="permalink">#</a></p>
+
+    <h2>Настройки приложения</h2>
+
+    <p>
+      На экране <strong>Manage Verge3D Application</strong> находятся следующие настройки приложений:
+    </p>
+
+    <img src="files/wordpress/app-settings.jpg">
+
+    <dl>
+      <dt>Title</dt>
+      <dd>Имя «Вердж3Д»-приложения. Это значение требуется только в админ-интерфейсе «ВордПресс», например чтобы назначить приложение на страницу товара «ВуКоммерс». Чтобы поменять заголовок отображаемый в браузере (а также в поиске «Яндекса» или «Гугла») необходимо редактировать ХТМЛ файл приложения. Как это сделать читайте <a href="manual/ru/introduction/Personalizing-Verge3D-Apps.html#title_description">в соответствующем разделе</a>.</dd>
+      <dt>iframe width</dt>
+      <dd>Ширина 3Д-окна на страницах/постах/продуктах «ВордПресс» (в пикселях). Учтите, что реальные размеры 3Д-окна могут отличаться, поскольку зависят от используемой темы, компоновки страницы, ЦСС-стилей и т.д.</dd>
+      <dt>iframe height</dt>
+      <dd>Высота 3Д-окна на страницах/постах/продуктах «ВордПресс» (в пикселях). Учтите, что реальные размеры 3Д-окна могут отличаться, поскольку зависят от используемой темы, компоновки страницы, ЦСС-стилей и т.д.</dd>
+      <dt>Allow fullscreen mode</dt>
+      <dd>Разрешить/запретить использование полноэкранного режима. Если галочка снята, кнопка входа в полноэкранный режим будет удалена из приложения, сделав невозможным использование данного режима.</dd>
+      <dt>App Image</dt>
+      <dd>Картинка приложения. Эта картинка заменяет штатную картинку с изображением 3Д-просмотра, показываемую в галерее картинок товара «ВуКоммерц». Смотрите <a href="manual/ru/introduction/Wordpress-Plugin.html#woocommerce">ниже</a> для получения дополнительной информации.</dd>
+    </dl>
+
+
+    <p><a href="manual/ru/introduction/Wordpress-Plugin.html#woocommerce" id="woocommerce" class="permalink">#</a></p>
+
+    <h2>Интеграция с «ВуКоммерц»</h2>
+
+    <p>«ВуКоммерц» — это популярная система электронной коммерции, на которой работает более 28% всех интернет-магазинов. «Вердж3Д» предлагает интеграцию с «ВуКоммерц» через этот плагин «ВордПресс» и <a href="manual/ru/puzzles/ECommerce.html">пазлы электронной коммерции</a>.</p>
+
+    <p>Для получения дополнительной информации о том, как использовать эту функцию, воспользуйтесь следующим <a href="https://www.soft8soft.com/making-3d-product-configurator-for-woocommerce/" target="_blank">руководством</a> (англ.). Также вы можете просмотреть это <a href="https://www.youtube.com/watch?v=dJdUKwSxA8c" target="_blank">видео</a> (англ.).</p>
+
+    <h3>Поддерживаемые типы продуктов</h3>
+
+    <p>
+      Плагин поддерживает следующие типы продуктов:
+    </p>
+
+    <ul>
+      <li>Simple</li>
+      <li>Grouped</li>
+      <li>External/Affiliate</li>
+      <li>Variable</li>
+    </ul>
+
+    <p>Посмотрите демо-приложение <a href="http://localhost:8668/store?req=status#drink_shop" target="_blank" rel="nofollow" title="Открыть «Магазин напитков» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Магазин напитков»</a> из магазина ассетов чтобы увидеть как различные типы продуктов интегрируются с «Вердж3Д»-приложениями.</p>
+
+    <h3>3Д-продукт или 2Д-продукт с 3Д-просмотром</h3>
+
+    <p>
+      Существует два способа интеграции «Вердж3Д»-приложения в страницу товара. В первом случае вы полностью заменяете картинку товара 3Д-визуализацией:
+    </p>
+
+    <figure>
+      <img src="files/wordpress/woo-replace-product-image.jpg">
+      <figcaption>Демо-приложение <a href="https://sandbox.soft8soft.com/product/spinner/" target="_blank">«Спиннер»</a> из тестового магазина «Вердж3Д».</figcaption>
+    </figure>
+
+    <p>
+      Этот метод лучше использовать тогда, когда 3Д-визуализация полностью определяет вид товара, то есть когда вам не нужно использовать 2Д-изображения и фото.
+    </p>
+
+    <p>
+      Второй способ просто добавляет 3Д-просмотр в галерею картинок товара:
+    </p>
+
+    <figure>
+      <img src="files/wordpress/woo-add-gallery-item.jpg">
+      <figcaption>Демо-приложение <a href="https://sandbox.soft8soft.com/product/4k-curved-tv/" target="_blank">«Телевизор»</a> из тестового магазина «Вердж3Д».</figcaption>
+    </figure>
+
+    <p>
+      Для переключения режимов есть специальная настройка <strong>Show as gallery item</strong> расположенная на панели <strong>Product data</strong> настроек товара (см. ниже).
+    </p>
+
+
+    <h3>Настройки товара</h3>
+
+    <p>Для каждого поддерживаемого продукта имеется группа настроек, расположенная на вкладке <strong>Verge3D</strong> на панели <strong>Product data</strong>:</p>
+
+    <img src="files/wordpress/woo-product-settings.jpg">
+
+    <dl>
+      <dt>Application</dt>
+      <dd>«Вердж3Д»-приложение отображаемое на странице товара.</dd>
+      <dt>Show as gallery item</dt>
+      <dd>Запускать приложение по клику на картинке «3Д-просмотр» или полностью заменить изображение продукта 3Д-визуализацией.</dd>
+      <dt>Switch to 3D on update</dt>
+      <dd>При использовании режима «3Д-просмотра» переключать в 3Д при любых изменениях товаров. Опция используется для конфигурируемых товаров <strong>Grouped</strong> и <strong>Variable</strong>. Если опция выключена, «ВуКоммерц» будет переключать на первое 2Д-изображение в галерее при изменениях конфигурации товаров.</dd>
+    </dl>
+
+    <h3>Использование пазлов</h3>
+
+    <p>С помощью пазлов <a href="manual/ru/puzzles/ECommerce.html#woo_connect">connect to WooCommerce</a> и <a href="manual/ru/puzzles/ECommerce.html#woo_product_info">product info</a> вы можете создавать приложения любой сложности (например полноценные 3Д-конфигураторы) посредством получения данных о выбранных конфигурациях и свойствах товаров из «ВуКоммерц».</p>
+
+    <p class="demoNote">Смотрите пример в магазине ассетов — <a href="http://localhost:8668/store?req=status#spinner" target="_blank" rel="nofollow" title="Открыть «Спиннер» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Спиннер»</a>.</p>
+
+
+    <p><a href="manual/ru/introduction/Wordpress-Plugin.html#uploading_files" id="uploading_files" class="permalink">#</a></p>
+
+    <h2>Загрузка файлов</h2>
+
+    <p>Эта функция позволяет пользователям постоянно хранить контент, созданный в приложениях «Вердж3Д», например, сделанные скриншоты, загруженные текстуры или сохраненные конфигурации.</p>
+
+    <p>Для загрузки файла на сервер используйте следующий метод РЕСТ АПИ:</p>
+
+    <code class="language-html">https://ИМЯ_ХОСТА/wp-json/verge3d/v1/upload_file/</code>
+
+    <p>Где ИМЯ_ХОСТА — это имя хоста вашего сервера «ВордПресс», например <em>sandbox.soft8soft.com</em></p>
+
+    <p>В случае успеха этот метод возвращает следующий «Джейсон»-файл с информацией о загруженном файле:</p>
+    <code>
+    {
+        "id": THE_ID_OF_THE_UPLOADED_FILE,
+        "link": LINK_TO_THE_UPLOADED_FILE,
+        "size": FILE_SIZE
+    }</code>
+
+    <p>Для получения файла воспользуйтесь ссылкой, указанной в запросе, или используйте ID и РЕСТ АПИ метод <em>get_file</em>:</p>
+
+    <code class="language-html">https://ИМЯ_ХОСТА/wp-json/verge3d/v1/get_file/ID</code>
+
+    <h3>Использование пазлов</h3>
+
+    <p>Используйте пазлы <strong>send data</strong> и <strong>loaded data</strong>, чтобы загружать ваши файлы. Парсить поля «Джейсон»-ответа можно с помощью пазла <strong>in dict ... get key ...</strong>.</p>
+    <p>Пример ниже загружает выбранный пользователем файл, указанный в пазле "opened file", в песочнецу Софт Эйт Софт, а затем сохраняет веб-адрес этого файла в переменной <strong>link</strong>:</p>
+
+    <img src="files/wordpress/send_load_puzzles.png">
+
+    <p>Чтобы извлечь/скачать ваши файлы используйте <strong>load data</strong> и <strong>loaded data</strong> пазлы.</p>
+
+    <p class="demoNote">Смотрите пример в магазине ассетов — <a href="http://localhost:8668/store?req=status#custom_image" target="_blank" rel="nofollow" title="Открыть «Фоторамка» в магазине ассетов «Вёрдж3Д» (потребуется запустить менеджер приложений)">«Фоторамка»</a>.</p>
+
+
+    <p><a href="manual/ru/introduction/Wordpress-Plugin.html#receiving_orders_with_order_form" id="receiving_orders_with_order_form" class="permalink">#</a></p>
+
+    <h2>Получение заказов с помощью формы заказа</h2>
+
+    <p>Для обработки простых заказов, отправляемых вашими приложениями «Вердж3Д» (с использованием пазлов <a href="manual/ru/puzzles/ECommerce.html#place_order" target="_parent">place order</a> и <a href="manual/ru/puzzles/ECommerce.html#place_order_adv" target="_parent">place order+</a>), добавьте форму заказа на какую-либо страницу/пост «ВордПресс» с помощью следующего короткого кода:</p>
+
+    <code>[verge3d_order]</code>
+
+    <p>Затем укажите ссылку на эту страницу/пост в качестве параметра "send to" пазлов <strong>place order</strong>/<strong>place order +</strong>. Каждый раз при выполнении этого пазла, ваше приложение будет перенаправлять пользователей на форму заказа:</p>
+
+    <img src="files/wordpress/order-form.jpg" style="max-width: 867px;">
+
+
+    <p><a href="manual/ru/introduction/Wordpress-Plugin.html#receiving_orders_rest_api" id="receiving_orders_rest_api" class="permalink">#</a></p>
+
+    <h2>Получение заказов с помощью РЕСТ АПИ</h2>
+
+    <p>В некоторых случаях вы можете захотеть расширить функциональность вашей системы электронной коммерции отправляя заказы в фоне, а не через страницу заказа.</p>
+
+    <p>Для примера, вы хотите создать простой конфигуратор столов. Вот так могут выглядеть отправляемые данные:</p>
+
+    <code>
+    {
+        "user_name": "Иван Петров",
+        "user_email": "ivan.petrov@example.com",
+        "user_phone": "+123456789"
+        "items": [
+            {
+                "sku": "table_top_white",
+                "quantity": 1
+            },
+            {
+                "sku": "table_leg_brown",
+                "quantity": 4
+            },
+        ]
+    }</code>
+
+    <p>Вы можете составить эту структуру с помощью пазлов словарей, а затем отправить ее на сервер с помощью пазла "send data".</p>
+
+    <p>В завершение нужно назначить правильный УРЛ для вашего пазла "send data". Он выглядит следующим образом:</p>
+
+    <code class="language-html">https://ИМЯ_ХОСТА/wp-json/verge3d/v2/place_order/</code>
+
+    <p>Где ИМЯ_ХОСТА — это имя хоста вашего сервера «ВордПресс», например <em>sandbox.soft8soft.com</em></p>
+
+
+    <p><a href="manual/ru/introduction/Wordpress-Plugin.html#managing_orders" id="managing_orders" class="permalink">#</a></p>
+
+    <h2>Управление заказами</h2>
+
+    <p>Используйте меню <strong>Orders</strong> для доступа к экрану <strong>E-Commerce Orders</strong>:</p>
+
+    <img src="files/wordpress/orders.png">
+
+    <p>Заказы в этом списке создаются автоматически при получении запросов от приложений «Вердж3Д». Вы можете использовать этот экран для просмотра и управления заказами клиентов.</p>
+
+
+    <p><a href="manual/ru/introduction/Wordpress-Plugin.html#managing_products" id="managing_products" class="permalink">#</a></p>
+
+    <h2>Управление продуктами</h2>
+
+    <p>
+      Используйте меню <strong>Products</strong> для доступа к экрану <strong>E-Commerce Products</strong>:
+    </p>
+
+    <img src="files/wordpress/products.jpg">
+
+    <p>Продукты имеют следующие настройки:</p>
+
+    <dl>
+      <dt>Title</dt>
+      <dd>Заголовок продукта, например «Вердж3Д для Блендера» или «Спиннер». Это поле является обязательным.</dd>
+      <dt>SKU</dt>
+      <dd>Артикул товара. Это значение нужно не только для учёта товара, но прежде всего как идентификатор указываемый в пазлах <strong>place order +</strong> и <strong>send data</strong>.</dd>
+      <dt>Price</dt>
+      <dd>Цена продукта, может быть нулевой.</dd>
+      <dt>Download link</dt>
+      <dd>Ссылка на скачку для цифровых продуктов.</dd>
+    </dl>
+
+
+    <p><a href="manual/ru/introduction/Wordpress-Plugin.html#getting_product_info" id="getting_product_info" class="permalink">#</a></p>
+
+    <h2>Получение информации о продуктах</h2>
+
+    <p>Эта функция позволяет вам получить информацию о продуктах с сервера.</p>
+
+    <p>Для её использования вам потребуется следующий метод РЕСТ АПИ:</p>
+
+    <code class="language-html">https://ИМЯ_ХОСТА/wp-json/verge3d/v1/get_product_info/АРТИКУЛ</code>
+
+    <p>Где ИМЯ_ХОСТА — адрес сервера где размещён «ВордПресс» (например <em>sandbox.soft8soft.com</em>), а АРТИКУЛ — артикул нужного вам продукта.</p>
+
+    <p>В случае успеха этот метод возвращает структуру в формате «Джейсон» с информацией о продукте:</p>
+    <code>
+    {
+        "status": "ok",
+        "title": "Имя продукта",
+        "sku": "Артикул",
+        "price": "Цена"
+        "currency": "Символ валюты, например ₽"
+    }</code>
+
+    <h3>Использование пазлов</h3>
+
+    <p>
+      Используйте пазлы <strong>load data</strong> и <strong>loaded data</strong> для получения информации о продуктах:
+    </p>
+
+    <img src="files/wordpress/get_product_info_puzzles.jpg">
+
+
+    <p><a href="manual/ru/introduction/Wordpress-Plugin.html#plug_in_settings" id="plug_in_settings" class="permalink">#</a></p>
+
+    <h2>Настройки плагина</h2>
+
+    <p>Используйте меню администратора <strong>Settings</strong>, чтобы менять глобальные настройки плагина «Вердж3Д для ВордПресс»:</p>
+
+    <img src="files/wordpress/settings.jpg">
+
+    <h3>Вкладка General</h3>
+
+    <dl>
+      <dt>Currency</dt>
+      <dd>Валюта хранения/отображения цен.</dd>
+      <dt>Price decimals</dt>
+      <dd>Количество знаков после запятой, используемых для обозначения цен.</dd>
+      <dt>Merchant info</dt>
+      <dd>Информация о продавце: компания/бренд, адрес, контакты, логотип и т.д.</dd>
+      <dt>Order form fields</dt>
+      <dd>Поля которые нужно включить в форму заказа.</dd>
+      <dt>Order success text</dt>
+      <dd>Текст отображаемый в случае успешного размещения заказа.</dd>
+      <dt>Order failed text</dt>
+      <dd>Тест отображаемый в случае ошибок при размещении заказа.</dd>
+    </dl>
+
+    <h3>Вкладка Mail</h3>
+
+    <dl>
+      <dt>Order notification e-mail</dt>
+      <dd>Электронная почта лица, ответственного за получение заказов. Когда потенциальный покупатель размещает новый заказ, уведомления об этом буду направлены на данную почту..</dd>
+      <dt>Order e-mails "From"</dt>
+      <dd>Опция используется для указания имени/организации и электронной почты лица, ответственного за связь с клиентом. Это может быть почтовый адрес менеджера по продажам, общий адрес, например <em>sales@yourcompany.com</em> или просто адрес не предполагающий ответ, например <em>noreply@yourcompany.com</em>.</dd>
+      <dt>New order notifications</dt>
+      <dd>Опции конфигурации электронной почты, отправляемой покупателю и продавцу при получении заказа. Сюда входит заголовок писем, их содержимое и вложения.</dd>
+      <dt>Updated order notifications</dt>
+      <dd>Опции конфигурации электронной почты, отправляемой покупателю и продавцу при изменении существующего заказа. Сюда входит заголовок писем, их содержимое и вложения.</dd>
+      <dt>Sales quotes</dt>
+      <dd>Опции конфигурации счетов, выставляемых клиентам.</dd>
+      <dt>Invoices</dt>
+      <dd>Опции конфигурации инвойсов, выставляемых клиентам.</dd>
+    </dl>
+
+    <h3>Вкладка Documents</h3>
+
+    <p>Для полноценного использования этой функции вам необходимо установить браузер «Хром»/«Хромиум» на вашем сервере. Он будет работать в так называемом <a href="https://developers.google.com/web/updates/2017/04/headless-chrome" target="_blank">скрытом режиме</a> для преобразования ХТМЛ-заказов в формат ПДФ. Укажите путь к исполняемому файлу «Хрома»/«Хромиума», если вы установили его в какой-то пользовательский каталог, или оставьте поле пути пустым, если вы установили его по всей системе.</p>
+    <p>Обратите внимание, что для установки «Хрома» на всю систему необходимо иметь права администратора сервера. Если у вас его нет, скачайте <a href="https://www.chromium.org/getting-involved/download-chromium" target="_blank">последний билд «Хромиума»</a>, распакуйте его в какой-нибудь доступный пользователю каталог на вашем сервере, а затем укажите путь к исполняемому файлу в поле path (например <em>/home/ubuntu/chrome-linux/chrome)</em>..</p>
+
+    <dl>
+      <dt>PDF Generator</dt>
+      <dd>Путь к исполняемому файлу браузера «Хром»/«Хромиум», используемого для конвертации документов в формат ПДФ. Отставьте поле пустым, если вы установили этот браузер по всей системе.</dd>
+      <dt>Quotes</dt>
+      <dd>Дополнительный контент, отображаемый в выставляемых счетах.</dd>
+      <dt>Invoices</dt>
+      <dd>Дополнительный контент, отображаемый в выставляемых инвойсах.</dd>
+    </dl>
+
+    <h3>Вкладка Payment</h3>
+
+    <dl>
+      <dt>Paid status</dt>
+      <dd>Статус заказа, который нужно выставить для успешных заказов. Например если вы продаёте физические товары, лучше всего выставлять этот статус в <strong>Processing</strong>, что будет означать, что заказ находится в обработке и готовится к отправке. Если вы продаёте цифровые товары, имеет смысл выставить статус в <strong>Completed</strong>. В этом случае заказ будет считаться завершённым, что также приведёт к тому, что ссылка на скачиваемый товар будет выслана на почту покупателя.</dd>
+      <dt>PayPal</dt>
+      <dd>Опция активации и идентификатор клиента «ПейПал». Используйте инструкции <a href="https://developer.paypal.com/developer/applications/" target="_blank">с этой страницы</a> чтобы узнать как получить данный идентификатор.</dd>
+    </dl>
+
+    <h3>Вкладка Security</h3>
+
+    <p>
+      Чтобы сделать сервер более защищённым, всегда выключайте функции которые вам не нужны.
+    </p>
+
+    <dl>
+      <dt>Enable REST APIs</dt>
+      <dd>Данные опции используются для включения/выключения АПИ управления заказами и продуктами, а также АПИ постоянного хранения файлов, предоставляемых плагином.</dd>
+      <dt>Cross-domain requests</dt>
+      <dd>Используется для включения/выключения кросс-доменных (исходящих с разных хостов) запросов к РЕСТ АПИ, предоставляемых плагином.</dd>
+      <dt>Custom products</dt>
+      <dd>Allow receiving orders with custom product prices and/or SKUs.</dd>
+    </dl>
+
+
+    <h2>Остались вопросы?</h2>
+
+    <p>Задавайте их на нашем <a href="https://www.soft8soft.com/ru/форумы/" target="_blank">форуме</a>!</p>
+
+  </article>
+
+
+<!-- Yandex.Metrika counter --> <script type="text/javascript"> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(46001298, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, ecommerce:"dataLayer" }); ym(46001298, 'addFileExtension', 'xz');</script> <noscript><div><img src="https://mc.yandex.ru/watch/46001298" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+        <footer class="copyright">© <a href="https://www.soft8soft.com/ru" target="_blank">«Софт Эйт Софт» – трёхмерные решения для веба</a><div>Последнее обновление: 24 июля 2023 г.</div></footer></body></html>
