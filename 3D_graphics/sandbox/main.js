@@ -49,7 +49,7 @@ boxMaterial.roughness = .5;
 boxMaterial.metalness = .75;
 const boxMesh = new THREE.Mesh(boxGeometry, boxMaterial);
 boxMesh.position.y = 1;
-//scene.add(boxMesh);
+scene.add(boxMesh);
 
 const planeGeometry = new THREE.PlaneGeometry(10, 10);
 const planeMaterial = new THREE.MeshPhysicalMaterial({ color:0xaaaaaa });
