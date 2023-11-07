@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="utf-8">
-	<title>three.js sandbox</title>
-	<style>
-		body {
-			margin: 0;
-		}
-	</style>
-</head>
-
-<body>
-	<canvas class="webgl"></canvas>
-	<script type="importmap">
-		{
-			"imports": {
-				"three": "https://unpkg.com/three@0.158.0/build/three.module",
-				"three/": "https://unpkg.com/three@0.158.0/"
+	<head>
+		<meta charset="utf-8">
+		<title>three.js sandbox</title>
+		<style>
+			body {
+				margin: 0;
 			}
-		}
-	</script>
-	<script type="module" src="./main.js"></script>
-</body>
+		</style>
+	</head>
+
+	<body>
+		<canvas class="webgl"></canvas>
+		<script type="importmap">
+			{
+				"imports": {
+					"three": "https://unpkg.com/three@0.158.0/build/three.module",
+					"three/": "https://unpkg.com/three@0.158.0/"
+				}
+			}
+		</script>
+		<script type="module" src="./3d-sandbox.js"></script>
+	</body>
 
 </html>
