@@ -12,16 +12,16 @@
 	</head>
 
 	<body>
-		<canvas class="webgl"></canvas>
+		<canvas id="renderCanvas" class="webgl"></canvas>
 		<script type="importmap">
 			{
 				"imports": {
-					"three": "https://unpkg.com/three@0.158.0/build/three.module",
-					"three/": "https://unpkg.com/three@0.158.0/"
+					"babylon": "https://cdn.babylonjs.com/babylon.js",
+					"babylon/": "https://cdn.babylonjs.com/"
 				}
 			}
 		</script>
-		<script type="module" src="./3d-sandbox.js"></script>
+		<script type="module" src="./babylonjs-sandbox.js"></script>
 	</body>
 
 </html>
