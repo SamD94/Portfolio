@@ -15,8 +15,8 @@ const axes = new THREE.AxesHelper(5);
 scene.add(grid);
 scene.add(axes);
 
-const loader = new OBJLoader();
-loader.load('./logo.obj', (object) => {
+const loader = new FBXLoader();
+loader.load('./ameriquartz7121standard.fbx', (object) => {
     scene.add(object);
 }, undefined, (error) => {
     console.error(error);

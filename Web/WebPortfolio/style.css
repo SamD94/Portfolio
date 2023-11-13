@@ -4,9 +4,9 @@
 }
 :root {
   --background: #333333;
-  --dominant: rgba(0, 194, 55, 0.5);
-  --secondary: rgba(0, 210, 105, 0.5);
-  --accent: rgb(13, 10, 253);
+  --dominant: rgba(39, 165, 75, 0.75);
+  --secondary: rgba(40, 152, 96, 0.75);
+  --accent: rgb(40, 39, 128);
 }
 a {
   color: var(--accent);
@@ -20,6 +20,9 @@ a:hover {
 h1 {
   text-align: center;
 }
+h1, h2, h3 {
+  font-family: new-rodin;
+}
 h2, p {
   margin: 10px;
 }
@@ -27,9 +30,8 @@ html {
   height: 100%;
 }
 body {
-  font-family: new-rodin;
   background-color: var(--background);
-  color: white;
+  /*color: white;*/
 }
 i {
   font-size: 2rem;
@@ -53,7 +55,7 @@ i {
   color: var(--accent);
 }
 .main-row {
-  background-color: rgba(102, 102, 102, 0.5);
+  background-color: rgba(102, 102, 102, 0.75);
   border-radius: 1em;
 }
 .webgl {
