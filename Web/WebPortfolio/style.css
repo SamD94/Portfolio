@@ -17,6 +17,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
+body {
+  background-color: var(--background);
+  /*color: white;*/
+}
 h1 {
   text-align: center;
 }
@@ -29,13 +33,15 @@ h2, p {
 html {
   height: 100%;
 }
-body {
-  background-color: var(--background);
-  /*color: white;*/
-}
 i {
   font-size: 2rem;
   padding: 10px;
+}
+input, select, textarea {
+  border: none;
+  border-radius: 5pt;
+  margin: 5pt;
+  padding: 1pt 5pt 1pt 5pt;
 }
 .col {
   margin: 1em;
