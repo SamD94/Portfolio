@@ -6,7 +6,7 @@
   --background: #333333;
   --dominant: rgba(39, 165, 75, 0.75);
   --secondary: rgba(40, 152, 96, 0.75);
-  --accent: rgb(40, 39, 128);
+  --accent: rgb(26, 64, 169);
 }
 a {
   color: var(--accent);
@@ -19,7 +19,7 @@ a:hover {
 }
 body {
   background-color: var(--background);
-  /*color: white;*/
+  color: white;
 }
 h1 {
   text-align: center;
